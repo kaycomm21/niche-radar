@@ -2,7 +2,7 @@ name: daily-radar
 # 매일 06:00 KST 수집 → 집계 → data 브랜치에 DB 저장 → GitHub Pages 배포
 on:
   schedule:
-    - cron: "0 21 * * *"        # UTC 21:00 = KST 06:00
+    - cron: "17 21 * * *"       # UTC 21:17 = KST 06:17 (정각은 GitHub 혼잡으로 지연·누락이 잦아 17분으로)
   workflow_dispatch:
     inputs:
       mode:
