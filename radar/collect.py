@@ -156,31 +156,41 @@ def collect_channel_stats(con, yt, today: str, stats: dict) -> None:
     stats["channels_missing"] = len(missing)
 
 
-def collect_recent_videos(con, yt, today: str, stats: dict) -> None:
+def collect_recent_videos(con, yt, today: str, stats: dict, deadline: float | None = None) -> None:
+    """채널 최근 영상: 16채널씩 병렬로 업로드 목록 → 새 영상 통계를 50개 묶음으로 병렬 조회.
+    시간 상한(deadline)에 닿으면 멈추고 지금까지 모은 것을 저장한다 (남은 채널은 다음 날 우선)."""
+    import time
     rows = con.execute("""SELECT channel_id, uploads_playlist FROM channels
                           WHERE active=1 AND uploads_playlist IS NOT NULL
                           ORDER BY (source='seed') DESC, COALESCE(last_videos_at,'') ASC""").fetchall()
     pending: list[str] = []
 
-    def flush():
-        while pending:
-            batch, pending[:] = pending[:50], pending[50:]
-            for it in yt.videos(batch):
+    def flush(force: bool):
+        while len(pending) >= 400 or (force and pending):
+            take = pending[:400]
+            del pending[:400]
+            batches = [take[i:i + 50] for i in range(0, len(take), 50)]
+            for it in yt.videos_many(batches):
                 upsert_video(con, it, today)
                 stats["videos_updated"] += 1
 
-    for r in rows:
-        items = yt.playlist_items(r["uploads_playlist"], config.RECENT_PER_CHANNEL)
-        for it in items:
-            vid = it["contentDetails"]["videoId"]
-            done = con.execute("SELECT 1 FROM videos WHERE video_id=? AND stats_at=?", (vid, today)).fetchone()
-            if not done:
-                pending.append(vid)
-        con.execute("UPDATE channels SET last_videos_at=? WHERE channel_id=?", (today, r["channel_id"]))
-        stats["channels_videos_fetched"] += 1
-        if len(pending) >= 50:
-            flush()
-    flush()
+    for i in range(0, len(rows), 16):
+        if deadline and time.monotonic() > deadline:
+            stats["stopped_by_time"] = True
+            break
+        group = rows[i:i + 16]
+        results = yt.playlist_items_many([r["uploads_playlist"] for r in group], config.RECENT_PER_CHANNEL)
+        for r, items in zip(group, results):
+            for it in items:
+                vid = it["contentDetails"]["videoId"]
+                if not con.execute("SELECT 1 FROM videos WHERE video_id=? AND stats_at=?", (vid, today)).fetchone():
+                    pending.append(vid)
+            con.execute("UPDATE channels SET last_videos_at=? WHERE channel_id=?", (today, r["channel_id"]))
+            stats["channels_videos_fetched"] += 1
+        flush(False)
+        if stats["channels_videos_fetched"] % 160 == 0:
+            print(f"  … 최근 영상 {stats['channels_videos_fetched']}/{len(rows)}채널, 쿼터 {yt.quota.used_today()}", flush=True)
+    flush(True)
 
 
 def prune(con, today: str) -> dict:
@@ -210,15 +220,19 @@ def prune(con, today: str) -> dict:
     return out
 
 
-def run_daily(con, yt, quota: Quota, seed: dict[str, dict], today: str) -> dict:
+def run_daily(con, yt, quota: Quota, seed: dict[str, dict], today: str, time_budget_s: float | None = None) -> dict:
+    import time
+    deadline = time.monotonic() + time_budget_s if time_budget_s else None
     stats = {"date": today, "chart_rows": 0, "chart_missing": [], "new_chart_channels": 0, "channels_updated": 0,
-             "videos_updated": 0, "channels_videos_fetched": 0, "stopped_by_budget": False}
+             "videos_updated": 0, "channels_videos_fetched": 0, "stopped_by_budget": False, "stopped_by_time": False}
     stats["new_seed_channels"] = sync_seed(con, seed, today)
     stats["excluded_channels"] = apply_exclusions(con)
     try:
         collect_charts(con, yt, today, stats)
+        print(f"  차트 {stats['chart_rows']}행 · 채널 통계 시작 (쿼터 {quota.used_today()})", flush=True)
         collect_channel_stats(con, yt, today, stats)
-        collect_recent_videos(con, yt, today, stats)
+        print(f"  채널 {stats['channels_updated']}개 갱신 · 최근 영상 시작 (쿼터 {quota.used_today()})", flush=True)
+        collect_recent_videos(con, yt, today, stats, deadline)
     except BudgetExceeded as e:
         stats["stopped_by_budget"] = True
         stats["budget_message"] = str(e)

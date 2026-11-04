@@ -36,6 +36,10 @@ class RealYouTube:
 
     def _get(self, endpoint: str, params: dict) -> dict:
         self.quota.spend(endpoint)
+        return self._fetch(endpoint, params)
+
+    def _fetch(self, endpoint: str, params: dict) -> dict:
+        """HTTP만 (쿼터 기록은 호출부에서). 스레드에서 호출 가능."""
         q = urllib.parse.urlencode({**params, "key": self._key})
         url = API + endpoint.split(".")[0] + "?" + q
         try:
@@ -62,6 +66,28 @@ class RealYouTube:
         except ChartNotFound:
             return []
         return d.get("items", [])
+
+    def playlist_items_many(self, playlist_ids: list[str], max_results: int = 30, workers: int = 8) -> list[list[dict]]:
+        """여러 채널 업로드 목록을 병렬로. 쿼터는 메인 스레드에서 먼저 기록(SQLite는 스레드 공유 불가)."""
+        from concurrent.futures import ThreadPoolExecutor
+        for _ in playlist_ids:
+            self.quota.spend("playlistItems.list")
+
+        def one(pid):
+            try:
+                return self._fetch("playlistItems.list", {"part": "contentDetails", "playlistId": pid, "maxResults": max_results}).get("items", [])
+            except ChartNotFound:
+                return []
+        with ThreadPoolExecutor(workers) as ex:
+            return list(ex.map(one, playlist_ids))
+
+    def videos_many(self, id_batches: list[list[str]], workers: int = 8) -> list[dict]:
+        from concurrent.futures import ThreadPoolExecutor
+        for _ in id_batches:
+            self.quota.spend("videos.list")
+        with ThreadPoolExecutor(workers) as ex:
+            res = ex.map(lambda b: self._fetch("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(b), "maxResults": 50}).get("items", []), id_batches)
+            return [it for items in res for it in items]
 
     def videos(self, ids: list[str]) -> list[dict]:
         d = self._get("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(ids), "maxResults": 50})
@@ -219,6 +245,12 @@ class FakeYouTube:
             return []
         vids = sorted(self._channel_videos(cid, self.today, 40), key=lambda v: v["pub"], reverse=True)[:max_results]
         return [{"contentDetails": {"videoId": v["id"], "videoPublishedAt": f"{v['pub'].isoformat()}T09:00:00Z"}} for v in vids]
+
+    def playlist_items_many(self, playlist_ids: list[str], max_results: int = 30, workers: int = 8) -> list[list[dict]]:
+        return [self.playlist_items(p, max_results) for p in playlist_ids]
+
+    def videos_many(self, id_batches: list[list[str]], workers: int = 8) -> list[dict]:
+        return [it for b in id_batches for it in self.videos(b)]
 
     def videos(self, ids: list[str]) -> list[dict]:
         self.quota.spend("videos.list")

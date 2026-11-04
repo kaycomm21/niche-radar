@@ -117,3 +117,17 @@ def test_api_error_mid_run_keeps_data(con, monkeypatch):
     stats = collect.run_daily(con, yt, q, seed, "2026-11-04")
     assert stats["errors"] and stats["channels_updated"] > 0
     assert con.execute("SELECT COUNT(*) FROM chart_daily").fetchone()[0] > 0
+
+
+def test_real_client_parallel_batches_log_quota(con, monkeypatch):
+    def fake_urlopen(url, timeout=30):
+        if "/playlistItems?" in url:
+            return FakeResp((FIX / "playlist_items.json").read_bytes())
+        return FakeResp((FIX / "videos_most_popular.json").read_bytes())
+    monkeypatch.setattr("urllib.request.urlopen", fake_urlopen)
+    yt = RealYouTube("k", Quota(con, "2026-11-04", 8000))
+    res = yt.playlist_items_many([f"UU{i}" for i in range(20)])
+    assert len(res) == 20 and res[0][0]["contentDetails"]["videoId"] == "AAAAAAAAAA1"
+    items = yt.videos_many([["a"], ["b"], ["c"]])
+    assert len(items) == 6
+    assert yt.quota.calls_today("playlistItems.list") == 20 and yt.quota.calls_today("videos.list") == 3

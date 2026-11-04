@@ -36,12 +36,14 @@ def cmd_daily(a) -> int:
     seed, excluded = load_seed()
     con = connect(config.DB_PATH)
     yt, quota, mode = _client(con, today, a.fixture, seed)
-    stats = collect.run_daily(con, yt, quota, seed, today.isoformat())
+    stats = collect.run_daily(con, yt, quota, seed, today.isoformat(),
+                              time_budget_s=float(os.environ.get("RADAR_TIME_BUDGET_S", "1200")))
     stats["mode"] = mode
     stats["seed_excluded"] = len(excluded)
     counts = export.build(con, today.isoformat(), last_run=stats)
     print(json.dumps({"mode": mode, "units_used": stats["units_used"], "budget": config.QUOTA_BUDGET,
-                      "stopped_by_budget": stats["stopped_by_budget"], **counts}, ensure_ascii=False))
+                      "stopped_by_budget": stats["stopped_by_budget"], "stopped_by_time": stats["stopped_by_time"],
+                      "errors": stats.get("errors", []), **counts}, ensure_ascii=False))
     return 0
 
 
