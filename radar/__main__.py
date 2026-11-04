@@ -147,6 +147,14 @@ def cmd_alert(a) -> int:
     return 0
 
 
+def cmd_package(a) -> int:
+    from .package import build_briefs
+    today = a.date or date.today().isoformat()
+    paths = build_briefs(connect(config.DB_PATH), config.EXPORTS_DIR / today, today)
+    print(f"brief {len(paths)}건 → exports/{today}/")
+    return 0
+
+
 def quota_plan(n_channels: int, chart_cats: int = len(config.CHART_CATEGORIES)) -> dict:
     charts = chart_cats * config.CHART_PAGES
     ch_stats = -(-n_channels // 50)
@@ -180,6 +188,7 @@ def main(argv=None) -> int:
         s.add_argument("--" + k, default=None)
     s.set_defaults(f=cmd_verdict)
     s = sub.add_parser("quota-plan"); s.set_defaults(f=cmd_quota_plan)
+    s = sub.add_parser("package"); s.add_argument("--date"); s.set_defaults(f=cmd_package)
     s = sub.add_parser("alert"); s.add_argument("--out", default="alert.md"); s.set_defaults(f=cmd_alert)
     s = sub.add_parser("verdict-from-issue"); s.add_argument("--number", required=True); s.set_defaults(f=cmd_verdict_from_issue)
     a = ap.parse_args(argv)
