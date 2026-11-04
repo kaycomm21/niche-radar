@@ -60,9 +60,11 @@ def storyboard(doc: dict) -> dict:
 
 
 def meta(doc: dict, titles: list[str], tags: list[str], disclaimer: str | None) -> dict:
-    chapters = [f"{s['start_s'] // 60}:{s['start_s'] % 60:02d} {re.sub(r'[*`]', '', s['name'])}" for s in doc["sections"]]
-    if chapters:
-        chapters[0] = "0:00 " + chapters[0].split(" ", 1)[1]
+    # 챕터 시각 = 내레이션 누적 길이로 추정 (렌더 후 실제 오디오 길이로 다시 맞출 것)
+    chapters, t = [], 0.0
+    for s in doc["sections"]:
+        chapters.append(f"{int(t) // 60}:{int(t) % 60:02d} {re.sub(r'[*`]', '', s['name'])}")
+        t += len(" ".join(s["narration"])) / CHARS_PER_SEC
     hook = " ".join(doc["sections"][0]["narration"][:3]) if doc["sections"] else ""
     desc = "\n".join([hook, "", "⏱ 목차", *chapters, "", *( [disclaimer] if disclaimer else [] ),
                       "", "#" + " #".join(t.replace(" ", "") for t in tags[:3])])
