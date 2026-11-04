@@ -24,7 +24,7 @@ export type ChannelDetail = {
   hist: [string, number | null, number | null, number | null][];
   f: { subs: number | null; growth: number | null; sub_gain: number | null; view_gain: number | null; efficiency: number | null;
        engagement: number | null; consistency: number | null; outlier_freq: number | null; avg_views: number | null;
-       views30_uploads: number; uploads30: number; rev: [number, number]; flags: string[]; days_hist: number };
+       views30_uploads: number; uploads30: number; rev: [number, number]; flags: string[]; days_hist: number; ppl: [number, number] | null };
   grade: Grade; fc_subs: Forecast; fc_views: Forecast; milestones: Record<string, string | null>;
   fmt: { n: number; short_ratio: number | null; avg_dur: number; title_len: number | null; title_num: number | null; title_q: number | null; heat: number[][] };
   videos: VCard[];
@@ -47,3 +47,6 @@ export function load<T>(path: string): Promise<T> {
   }
   return cache.get(path) as Promise<T>;
 }
+
+export type Trend = { kw: string; n: number; prev: number | null; growth: number | null; examples: { id: string; t: string }[] };
+export type Trends = { date: string; window: [string, string]; has_prev: boolean; rising: Trend[]; frequent: Trend[]; formula: string };

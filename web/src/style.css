@@ -33,8 +33,8 @@ h3 { font-size: 15px; margin: 20px 0 6px; }
 main { max-width: 760px; margin: 0 auto; padding: 0 16px 96px; }
 .top { position: sticky; top: 0; z-index: 5; display: flex; gap: 10px; align-items: baseline; padding: 10px 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
 .brand { font-weight: 700; color: var(--text); }
-.tabs { position: fixed; bottom: 0; left: 0; right: 0; z-index: 5; display: grid; grid-template-columns: repeat(6, 1fr); background: var(--card); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
-.tabs a { text-align: center; padding: 10px 0; font-size: 12px; color: var(--text2); }
+.tabs { position: fixed; bottom: 0; left: 0; right: 0; z-index: 5; display: grid; grid-template-columns: repeat(7, 1fr); background: var(--card); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom); }
+.tabs a { text-align: center; padding: 10px 0; font-size: 11px; white-space: nowrap; overflow: hidden; color: var(--text2); }
 .tabs a.on { color: var(--accent); font-weight: 700; }
 .small { font-size: 13px; } .muted { color: var(--muted); } .grow { flex: 1; min-width: 0; }
 .warn { color: var(--warm); }
@@ -113,3 +113,6 @@ th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line
 .suggest button { width: 100%; text-align: left; border: 0; background: none; color: var(--text); padding: 8px; cursor: pointer; }
 details summary { cursor: pointer; color: var(--text2); margin-top: 6px; }
 @media (min-width: 640px) { .thumb { width: 160px; } .kpis { grid-template-columns: repeat(4, 1fr); } }
+
+.reasons-plain { margin: 4px 0; padding-left: 18px; }
+.reasons-plain a { color: var(--text2); }

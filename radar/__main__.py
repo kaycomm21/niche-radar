@@ -155,6 +155,33 @@ def cmd_package(a) -> int:
     return 0
 
 
+def cmd_weekly(a) -> int:
+    """M3-18 주간 시장 브리핑 (규칙 기반, AI 없음): 그룹별 터진 것 5 / 뜨는 키워드 5 / 따라 할 것 3 / 피할 것 1."""
+    W = config.WEB_DATA_DIR
+    surging = json.loads((W / "surging.json").read_text(encoding="utf-8"))["items"]
+    queue = json.loads((W / "queue.json").read_text(encoding="utf-8"))
+    trends = json.loads((W / "trends.json").read_text(encoding="utf-8"))
+    d = surging and json.loads((W / "summary.json").read_text(encoding="utf-8"))["date"]
+    kws = trends["rising"][:5] or trends["frequent"][:5]
+    cands = queue["top3"] + queue["pending"]
+    follow = [c for c in cands if c.get("g")][:3]
+    avoid = [c for c in sorted(surging, key=lambda v: -(v.get("mx") or 0))
+             if (c.get("sc") or {}).get("excluded") or any("정치" in r or "단정" in r for r in (c.get("sc") or {}).get("reasons", []))][:1]
+    L = [f"## 📊 주간 시장 브리핑 ({d}, 규칙 기반)", "", "### 🔥 이번 주 터진 것 5", "| 영상 | 채널 | 배수 | 조회 |", "|---|---|---:|---:|"]
+    for v in surging[:5]:
+        L.append(f"| [{v['t'][:50].replace('|','/')}](https://www.youtube.com/watch?v={v['id']}) | {v.get('ct') or ''} | {v.get('mx') or 0:.0f}× | {v.get('v') or 0:,} |")
+    L += ["", "### 📈 뜨는 키워드 5" + ("" if trends["has_prev"] else " (지난주 데이터가 쌓이기 전이라 빈도 기준)"), ""]
+    L += [f"- **{k['kw']}** — {k['n']}편" + (f" (지난주 {k['prev']}편, {k['growth']}배)" if k.get("growth") else "") for k in kws]
+    L += ["", "### ✅ 따라 할 것 3 (내 채널 매핑된 판정 대기 카드)", ""]
+    L += [f"- [{c['g']}] {c['t'][:60]} — {c['rc'][0]} {c['rc'][1]} ({c['sc']['total']}/{c['sc']['max']}점)" for c in follow] or ["- 없음"]
+    L += ["", "### ⛔ 피할 것 1", ""]
+    L += [f"- {c['t'][:60]} — {', '.join(c['sc']['reasons'])}" for c in avoid] or ["- 이번 주 해당 없음"]
+    L += ["", "판정은 레이더 🎯 오늘 탭에서 하세요: https://kaycomm21.github.io/niche-radar/"]
+    Path(a.out).write_text("\n".join(L) + "\n", encoding="utf-8")
+    print(f"주간 브리핑 → {a.out}")
+    return 0
+
+
 def quota_plan(n_channels: int, chart_cats: int = len(config.CHART_CATEGORIES)) -> dict:
     charts = chart_cats * config.CHART_PAGES
     ch_stats = -(-n_channels // 50)
@@ -189,6 +216,7 @@ def main(argv=None) -> int:
     s.set_defaults(f=cmd_verdict)
     s = sub.add_parser("quota-plan"); s.set_defaults(f=cmd_quota_plan)
     s = sub.add_parser("package"); s.add_argument("--date"); s.set_defaults(f=cmd_package)
+    s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)
     s = sub.add_parser("alert"); s.add_argument("--out", default="alert.md"); s.set_defaults(f=cmd_alert)
     s = sub.add_parser("verdict-from-issue"); s.add_argument("--number", required=True); s.set_defaults(f=cmd_verdict_from_issue)
     a = ap.parse_args(argv)

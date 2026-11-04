@@ -21,7 +21,10 @@ def build_briefs(con, out_root: Path, today: str) -> list[Path]:
     q = json.loads((config.EXPORTS_DIR / "production_queue.json").read_text(encoding="utf-8"))
     rpm = config.load_rpm()
     out = []
+    done = " ".join(b.read_text(encoding="utf-8") for b in config.EXPORTS_DIR.glob("*/*/brief.md"))
     for item in q:
+        if f"watch?v={item['id']}" in done:      # 이미 만든 brief 는 다시 만들지 않음
+            continue
         v = con.execute("""SELECT v.*, c.title ct, c."group" cg, c.source src,
                                   (SELECT subs FROM channel_daily d WHERE d.channel_id=v.channel_id ORDER BY date DESC LIMIT 1) subs
                            FROM videos v LEFT JOIN channels c USING(channel_id) WHERE video_id=?""", (item["id"],)).fetchone()

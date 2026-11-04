@@ -38,6 +38,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     t = date.fromisoformat(today)
     yday = (t - timedelta(days=1)).isoformat()
     rpm = config.load_rpm()
+    ppl_cfg = config.load_rpm(config.ROOT / "config" / "ppl_kr.yaml")
 
     chans = {r["channel_id"]: dict(r) for r in con.execute("SELECT * FROM channels")}
     vids = [dict(r) for r in con.execute("SELECT * FROM videos")]
@@ -150,7 +151,13 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             flags.append("조회÷구독 5% 미만")
         if growth and growth > 0.1 and view_gain is not None and window and (window[0][2] or 0) and view_gain / window[0][2] < 0.01:
             flags.append("구독 급증 대비 조회 정체")
-        feats[cid] = {"subs": subs, "growth": growth, "sub_gain": sub_gain, "view_gain": view_gain,
+        ppl = None
+        if longs:
+            avg_long = sum(v["views"] or 0 for v in longs) / len(longs)
+            lo_c, hi_c = ppl_cfg.get("cpv_long", (15, 50))
+            mn = ppl_cfg.get("min_fee", (300000, 1000000))
+            ppl = [round(max(mn[0], avg_long * lo_c), -4), round(max(mn[1], avg_long * hi_c), -4)]
+        feats[cid] = {"ppl": ppl, "subs": subs, "growth": growth, "sub_gain": sub_gain, "view_gain": view_gain,
                       "efficiency": eff, "engagement": eng, "consistency": cons, "outlier_freq": ofreq,
                       "avg_views": avg_views, "views30_uploads": views30_uploads, "uploads30": len(v30),
                       "rev": [round(rev_lo), round(rev_hi)], "flags": flags, "days_hist": days_hist}
@@ -267,6 +274,10 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             "country": ch["country"], "hist": h[-365:], "f": {k: f[k] for k in f if k != "grade"}, "grade": f["grade"],
             "fc_subs": fc_subs, "fc_views": fc_views, "milestones": ms, "fmt": fmt,
             "videos": [vcard(v) for v in vs]})
+
+    # ---------------- M1-5 주제 트렌드
+    from .trends import compute as compute_trends
+    _write(out_dir / "trends.json", compute_trends(con, today))
 
     # ---------------- 요약 · 쿼터
     q = [dict(r) for r in con.execute("SELECT date, SUM(units) u FROM quota_log GROUP BY date ORDER BY date DESC LIMIT 30")]

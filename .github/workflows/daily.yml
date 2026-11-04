@@ -100,6 +100,24 @@ jobs:
             git add -A; git commit -qm "alerts state" || true; git push -q origin data || true
           fi
 
+      - name: 생산 패키지 brief 자동 생성 + 주간 브리핑(월요일)
+        if: inputs.mode != 'fixture'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m radar package --date "$(date +%F)"
+          if [ -n "$(git status --porcelain exports/)" ]; then
+            git config user.name "niche-radar-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add exports/ && git commit -qm "package: briefs $(date +%F)"
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+          fi
+          if [ "$(date +%u)" = "1" ] && [ "${{ inputs.mode }}" != "export" ]; then
+            python -m radar weekly --out weekly.md
+            gh label create weekly --color 1D76DB --description "주간 시장 브리핑" 2>/dev/null || true
+            gh issue create --title "📊 주간 시장 브리핑 $(date +%F)" --body-file weekly.md --label weekly
+          fi
+
       - name: 웹 빌드
         working-directory: web
         run: |

@@ -99,3 +99,19 @@ def test_alert_dedup(tmp_env):
     cli.main(["alert", "--out", str(out)])
     assert not out.exists()          # 같은 영상은 두 번 알리지 않음
     assert first == "" or "레퍼런스 채널" in first
+
+
+def test_trends_and_weekly(tmp_env):
+    cli.main(["demo", "--days", "10", "--date", "2026-11-04"])
+    tr = json.loads((config.WEB_DATA_DIR / "trends.json").read_text(encoding="utf-8"))
+    assert tr["frequent"] and tr["has_prev"]
+    out = config.DB_PATH.parent / "w.md"
+    assert cli.main(["weekly", "--out", str(out)]) == 0
+    md = out.read_text(encoding="utf-8")
+    assert "터진 것 5" in md and "뜨는 키워드 5" in md and "피할 것 1" in md
+
+
+def test_ppl_estimate_present(tmp_env):
+    cli.main(["demo", "--days", "2", "--date", "2026-11-04"])
+    ch = json.loads(next((config.WEB_DATA_DIR / "channels").glob("*.json")).read_text(encoding="utf-8"))
+    assert "ppl" in ch["f"]

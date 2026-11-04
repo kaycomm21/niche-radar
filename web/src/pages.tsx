@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { load, type ChannelDetail, type Charts, type Queue, type RankRow, type Summary, type VCard } from "./api";
+import { load, type ChannelDetail, type Charts, type Queue, type RankRow, type Summary, type Trends, type VCard } from "./api";
 import { LineChart, RadarChart, Heatmap } from "./charts";
 import { dur, n, pct, won } from "./fmt";
 import { Est, ExcludeChannel, issueUrl, Loading, Seg, VideoCard } from "./ui";
@@ -182,6 +182,7 @@ export function ChannelPage({ id }: { id: string }) {
         <div className="kpi"><span>구독자</span><b>{n(f.subs)}</b><small>7일 {sign(diff(7))} · 30일 {sign(diff(30))}</small></div>
         <div className="kpi"><span>최근 30일 업로드 조회</span><b>{n(f.views30_uploads)}</b><small>{f.uploads30}편 업로드</small></div>
         <div className="kpi"><span>예상 월 광고수익 <Est formula={F.revenue ?? ""} /></span><b>{won(f.rev[0])}~{won(f.rev[1])}</b><small>추정 · 실측 아님</small></div>
+        <div className="kpi"><span>예상 PPL 단가(1편) <Est formula={F.ppl ?? ""} /></span><b>{f.ppl ? `${won(f.ppl[0])}~${won(f.ppl[1])}` : "–"}</b><small>광고주 관점 추정</small></div>
         <div className="kpi"><span>참여율(중앙값)</span><b>{pct(f.engagement, 2)}</b><small>(좋아요+댓글)÷조회</small></div>
       </div>
 
@@ -289,6 +290,39 @@ export function AboutPage() {
       <h3>시드에서 제외된 항목 ({s.seed_excluded.length})</h3>
       <ul className="small">{s.seed_excluded.map((x) => <li key={x.group + x.q}>{x.group} · {x.q} — {x.reason}</li>)}</ul>
       <p className="small muted">YouTube API 데이터 · 영상/음성은 다운로드하지 않고 메타데이터와 썸네일 URL만 사용합니다.</p>
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ M1-5 주제 트렌드
+export function TrendPage() {
+  const [d, e] = useData<Trends>("trends.json");
+  const [mode, setMode] = useState<"rising" | "frequent">("rising");
+  if (!d) return <Loading err={e} />;
+  const list = mode === "rising" && d.has_prev ? d.rising : d.frequent;
+  const max = Math.max(1, ...list.map((x) => x.n));
+  return (
+    <section>
+      <h2>📈 주제 트렌드 <span className="muted small">{d.window[0]} ~ {d.window[1]}</span></h2>
+      <p className="small muted">{d.formula}</p>
+      <div className="filters"><Seg value={mode} onChange={setMode} options={[["rising", "🚀 급부상"], ["frequent", "🔁 많이 나온"]]} /></div>
+      {mode === "rising" && !d.has_prev && <div className="banner">지난주 데이터가 쌓이면(7일 후) 급부상 순위가 켜집니다. 지금은 빈도 순입니다.</div>}
+      <ol className="rank-list">
+        {list.map((k, i) => (
+          <li key={k.kw} className="rank-row">
+            <span className="badge">{i + 1}</span>
+            <div className="grow">
+              <b>{k.kw}</b> <span className="small muted">{k.n}편{k.growth ? ` · 지난주 ${k.prev}편 → ${k.growth}배` : ""}</span>
+              <div className="part"><span className="part-bar wide"><span style={{ width: `${(k.n / max) * 100}%` }} /></span></div>
+              <ul className="small reasons-plain">{k.examples.map((x) => <li key={x.id}><a href={`https://www.youtube.com/watch?v=${x.id}`} target="_blank" rel="noreferrer">{x.t}</a></li>)}</ul>
+              <div className="row-actions">
+                <a className="btn small primary" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: `kw:${k.kw}`, title: `키워드 기획: ${k.kw}`, channel: "키워드", group: "", recipe: "R2" }, `키워드 기획: ${k.kw}`)}>▶ 기획 큐로</a>
+                <a className="btn small" target="_blank" rel="noreferrer" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(k.kw)}`}>유튜브에서 보기</a>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
     </section>
   );
 }
