@@ -80,6 +80,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             inc24[vid] = (row[1] - y[1], ((row[2] or 0) - (y[2] or 0)) / max(1, y[2] or 0))
     inc_values = sorted(x[0] for x in inc24.values())
 
+    ai_map = {r[0]: json.loads(r[1]) for r in con.execute("SELECT video_id, json FROM ai_teardown")}
     vmap = {}
     for v in vids:
         ch = chans.get(v["channel_id"], {})
@@ -100,8 +101,14 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         else:
             v["views_24h"] = v["comments_24h_growth"] = v["views_24h_pct"] = None
         v["subs"] = None
+        ai = ai_map.get(v["video_id"])
+        if ai and ai.get("group") and ch.get("source") != "seed":
+            v["group"] = ai["group"]                    # Gemini 그룹 판정 우선 (시드 채널은 시드 그룹 유지)
         v["labels"] = M.labels(v)
-        v["score"] = M.rework_score(v)
+        if ai and (ai.get("buzz_24h") or 0) >= 10 and "issue" not in v["labels"]:
+            v["labels"].append("issue")                 # 📣 Brave: 유튜브 밖 24시간 내 언급 10건 이상
+        v["score"] = M.rework_score(v, ai_fit=(ai or {}).get("fit"))
+        v["ai"] = {k: ai[k] for k in ("angle", "reason", "buzz_24h") if ai and k in ai} or None
         v["recipe"] = M.suggest_recipe(v)
         vmap[v["video_id"]] = v
 
@@ -112,7 +119,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                 "mx": round(v["multiple"], 2) if v["multiple"] else None, "med": v["channel_median"],
                 "v24": v["views_24h"], "rk": v["chart_rank"], "lb": v["labels"], "g": v["group"],
                 "sc": v["score"], "rc": list(v["recipe"]), "rpm": [round(v["rpm_lo"]), round(v["rpm_hi"])],
-                "src": v["source"]}
+                "src": v["source"], "ai": v.get("ai")}
 
     # ---------------- 채널 단위
     hist: dict[str, list] = defaultdict(list)

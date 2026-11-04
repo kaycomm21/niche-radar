@@ -82,7 +82,7 @@ export function ScoreBreakdown({ sc }: { sc: VCard["sc"] }) {
             <div key={k} className="part" title={`${name} ${val ?? "미산정"}/${max}`}>
               <span className="part-name">{name}</span>
               <span className="part-bar"><span style={{ width: val === null ? 0 : `${(val / max) * 100}%` }} /></span>
-              <span className="part-val">{val === null ? "P2" : val}</span>
+              <span className="part-val">{val === null ? "키 필요" : val}</span>
             </div>
           );
         })}
@@ -115,6 +115,8 @@ export function VideoCard({ v, rankBadge, detail = false, extra }: { v: VCard; r
       {detail && (
         <>
           <div className="recipe small"><b>{v.rc[0]} {RECIPES[v.rc[0]]}</b> — {v.rc[1]} · 예상 RPM {n(v.rpm[0])}~{n(v.rpm[1])}원 <Est formula="카테고리 RPM 가정치(config/rpm_kr.yaml) × 금융·건강 키워드 보정. 실측 아님" /></div>
+          {v.ai?.angle && <div className="recipe small">🤖 AI 각도: {v.ai.angle}{v.ai.reason ? <span className="muted"> — {v.ai.reason}</span> : null}</div>}
+          {v.ai?.buzz_24h !== undefined && <div className="small muted">📣 유튜브 밖 24시간 언급 {v.ai.buzz_24h}건 (Brave)</div>}
           <ScoreBreakdown sc={v.sc} />
         </>
       )}

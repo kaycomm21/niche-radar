@@ -8,6 +8,7 @@ export type VCard = {
   v: number | null; lk: number | null; cm: number | null; th: string | null; mx: number | null; med: number | null;
   v24: number | null; rk: number | null; lb: string[]; g: string | null; sc: Score; rc: [string, string];
   rpm: [number, number]; src: string | null;
+  ai?: { angle?: string; reason?: string; buzz_24h?: number } | null;
 };
 export type ChartItem = VCard & { rank: number; delta: number | null };
 export type Queue = { date: string; top3: VCard[]; pending: VCard[]; archived: VCard[]; decided: number; card_age: Record<string, string> };

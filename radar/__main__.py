@@ -155,6 +155,27 @@ def cmd_package(a) -> int:
     return 0
 
 
+def cmd_enrich(a) -> int:
+    """Phase 2: 판정 후보에 Gemini 적합도·Brave 이슈화를 붙이고 화면을 다시 만든다 (키 없으면 건너뜀)."""
+    from . import ai
+    today = a.date or date.today().isoformat()
+    con = connect(config.DB_PATH)
+    q = json.loads((config.WEB_DATA_DIR / "queue.json").read_text(encoding="utf-8"))
+    s = json.loads((config.WEB_DATA_DIR / "surging.json").read_text(encoding="utf-8"))
+    ids = [c["id"] for c in q["top3"] + q["pending"]] + [c["id"] for c in s["items"][:30]]
+    ids = list(dict.fromkeys(ids))
+    rows = [dict(r) | {"channel_title": r["ct"]} for r in con.execute(
+        f"SELECT v.*, c.title ct FROM videos v LEFT JOIN channels c USING(channel_id) WHERE video_id IN ({','.join('?' * len(ids))})", ids)]
+    rows.sort(key=lambda r: ids.index(r["video_id"]))
+    n_g = ai.gemini_fit(con, today, rows)
+    top = [(c["id"], ai.search_query(c["t"])) for c in (q["top3"] + q["pending"])[:10]]
+    n_b = len(ai.brave_buzz(con, today, top))
+    print(f"gemini {n_g}건 · brave {n_b}건" + ("" if os.environ.get("GEMINI_API_KEY") or os.environ.get("BRAVE_API_KEY") else " (키 없음 — 건너뜀)"))
+    if n_g or n_b:
+        export.build(con, today, last_run=json.loads((config.WEB_DATA_DIR / "summary.json").read_text(encoding="utf-8")).get("last_run"))
+    return 0
+
+
 def cmd_weekly(a) -> int:
     """M3-18 주간 시장 브리핑 (규칙 기반, AI 없음): 그룹별 터진 것 5 / 뜨는 키워드 5 / 따라 할 것 3 / 피할 것 1."""
     W = config.WEB_DATA_DIR
@@ -216,6 +237,7 @@ def main(argv=None) -> int:
     s.set_defaults(f=cmd_verdict)
     s = sub.add_parser("quota-plan"); s.set_defaults(f=cmd_quota_plan)
     s = sub.add_parser("package"); s.add_argument("--date"); s.set_defaults(f=cmd_package)
+    s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)
     s = sub.add_parser("alert"); s.add_argument("--out", default="alert.md"); s.set_defaults(f=cmd_alert)
     s = sub.add_parser("verdict-from-issue"); s.add_argument("--number", required=True); s.set_defaults(f=cmd_verdict_from_issue)

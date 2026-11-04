@@ -85,7 +85,7 @@ def _has(text: str, kws) -> bool:
     return any(k.lower() in t for k in kws)
 
 
-def rework_score(v: dict) -> dict:
+def rework_score(v: dict, ai_fit: int | None = None) -> dict:
     """재가공 가치 점수. 반환: {total, max, parts:{...}, excluded, reasons:[...]}"""
     title = v.get("title") or ""
     parts: dict[str, float | None] = {}
@@ -104,8 +104,8 @@ def rework_score(v: dict) -> dict:
     dur = v.get("duration_s") or 0
     fit = 0.25 if v.get("is_short") else (1.0 if dur >= LONG_MIN_S else 0.6)
     parts["money"] = round(20 * min(1.0, rpm_hi / 6000) * fit, 1)
-    # 내 채널 적합도 20: AI(Gemini) 판정 — Phase 1 미산정
-    parts["fit"] = None
+    # 내 채널 적합도 20: AI(Gemini) 판정. 판정이 없으면 미산정(None) → 80점 만점
+    parts["fit"] = float(ai_fit) if ai_fit is not None else None
     # 재현 난이도(역) 15
     rep = 8
     if _has(title, FACELESS_KW) or v.get("group") in ("음악플레이리스트", "히스토리X", "지혜의숲", "경제적자유구역"):
@@ -142,7 +142,7 @@ def rework_score(v: dict) -> dict:
     total = sum(x for x in parts.values() if x is not None)
     if excluded:
         total = 0.0
-    return {"total": round(total, 1), "max": 80, "parts": parts, "excluded": excluded, "reasons": reasons}
+    return {"total": round(total, 1), "max": 100 if parts["fit"] is not None else 80, "parts": parts, "excluded": excluded, "reasons": reasons}
 
 
 def suggest_recipe(v: dict) -> tuple[str, str]:
