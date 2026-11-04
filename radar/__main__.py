@@ -155,6 +155,17 @@ def cmd_package(a) -> int:
     return 0
 
 
+def cmd_calibrate(a) -> int:
+    from .calibrate import report
+    today = a.date or date.today().isoformat()
+    md = report(connect(config.DB_PATH), today)
+    out = Path(a.out) if a.out else config.EXPORTS_DIR / f"ⓒ_판정보정리포트_{today.replace('-', '')}.md"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(md, encoding="utf-8")
+    print(md)
+    return 0
+
+
 def cmd_enrich(a) -> int:
     """Phase 2: 판정 후보에 Gemini 적합도·Brave 이슈화를 붙이고 화면을 다시 만든다 (키 없으면 건너뜀)."""
     from . import ai
@@ -237,6 +248,9 @@ def main(argv=None) -> int:
     s.set_defaults(f=cmd_verdict)
     s = sub.add_parser("quota-plan"); s.set_defaults(f=cmd_quota_plan)
     s = sub.add_parser("package"); s.add_argument("--date"); s.set_defaults(f=cmd_package)
+    s = sub.add_parser("oauth-init"); s.add_argument("--name", required=True); s.set_defaults(f=lambda a: (__import__("radar.mychannel", fromlist=["x"]).oauth_init(a.name), 0)[1])
+    s = sub.add_parser("mychannel"); s.add_argument("--days", type=int, default=28); s.set_defaults(f=lambda a: (print(json.dumps([{k: o[k] for k in ("channel", "views", "revenue", "rpm", "median_video_views")} for o in __import__("radar.mychannel", fromlist=["x"]).run(a.days)], ensure_ascii=False)), 0)[1])
+    s = sub.add_parser("calibrate"); s.add_argument("--date"); s.add_argument("--out", default=None); s.set_defaults(f=cmd_calibrate)
     s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)
     s = sub.add_parser("alert"); s.add_argument("--out", default="alert.md"); s.set_defaults(f=cmd_alert)

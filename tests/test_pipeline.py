@@ -115,3 +115,11 @@ def test_ppl_estimate_present(tmp_env):
     cli.main(["demo", "--days", "2", "--date", "2026-11-04"])
     ch = json.loads(next((config.WEB_DATA_DIR / "channels").glob("*.json")).read_text(encoding="utf-8"))
     assert "ppl" in ch["f"]
+
+
+def test_calibrate_report(tmp_env):
+    cli.main(["demo", "--days", "5", "--date", "2026-11-04"])
+    out = config.DB_PATH.parent / "c.md"
+    assert cli.main(["calibrate", "--date", "2026-11-04", "--out", str(out)]) == 0
+    md = out.read_text(encoding="utf-8")
+    assert "급상승 배수 기준" in md and "수집 중단 후보" in md

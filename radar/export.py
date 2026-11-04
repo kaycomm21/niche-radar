@@ -39,6 +39,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     yday = (t - timedelta(days=1)).isoformat()
     rpm = config.load_rpm()
     ppl_cfg = config.load_rpm(config.ROOT / "config" / "ppl_kr.yaml")
+    mp = config.ROOT / "config" / "rpm_measured.yaml"
+    rpm_measured = config.load_rpm(mp) if mp.exists() else {}
 
     chans = {r["channel_id"]: dict(r) for r in con.execute("SELECT * FROM channels")}
     vids = [dict(r) for r in con.execute("SELECT * FROM videos")]
@@ -91,6 +93,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         v["source"] = ch.get("source")
         v["channel_title"] = ch.get("title")
         lo, hi = M.rpm_for(rpm, v["category_id"], v["title"], bool(v["is_short"]), config.FINANCE_KW, config.HEALTH_KW)
+        if not v["is_short"] and v["group"] in rpm_measured:          # M4 실측 RPM 이 있으면 가정치 대신 사용
+            lo, hi = rpm_measured[v["group"]]
         v["rpm_lo"], v["rpm_hi"] = lo, hi
         v["money_kw"] = any(k.lower() in (v["title"] or "").lower() for k in config.FINANCE_KW + config.HEALTH_KW)
         v["chart_rank"] = best_rank.get(v["video_id"])
