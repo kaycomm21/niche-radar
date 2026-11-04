@@ -1,0 +1,172 @@
+{
+ "title": "AI 버블 터지면 내 반도체 주식은? 닷컴버블과 결정적으로 다른 1가지",
+ "channel": "경제적자유구역",
+ "est_total_s": 502,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 18.8,
+   "broll_ko": "서버실 불빛",
+   "prompt_en": "서버실 불빛 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "이 영상은 투자 권유가 아닙니다"
+   ],
+   "narration_excerpt": "지금 미국에서는 \"AI 버블이 곧 터진다\"는 영상이 크게 터지고 있습니다. 그런데 같은 주, 한국에서는 \"AI 인프라 전쟁\"이라는 영상이 터지고"
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 18.8,
+   "duration_s": 18.8,
+   "broll_ko": "주가 그래프가 출렁이는 화면",
+   "prompt_en": "주가 그래프가 출렁이는 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "이 영상은 투자 권유가 아닙니다"
+   ],
+   "narration_excerpt": "지금 미국에서는 \"AI 버블이 곧 터진다\"는 영상이 크게 터지고 있습니다. 그런데 같은 주, 한국에서는 \"AI 인프라 전쟁\"이라는 영상이 터지고"
+  },
+  {
+   "shot": 3,
+   "section": "2000년, 인터넷은 망하지 않았다",
+   "start_hint_s": 50.0,
+   "duration_s": 26.4,
+   "broll_ko": "90년대 컴퓨터",
+   "prompt_en": "90년대 컴퓨터 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시간을 2000년으로 돌려보겠습니다. 그때도 모두가 \"인터넷이 세상을 바꾼다\"고 했습니다. 그리고 그 말은 맞았습니다. 지금 우리는 인터넷 없이"
+  },
+  {
+   "shot": 4,
+   "section": "2000년, 인터넷은 망하지 않았다",
+   "start_hint_s": 76.4,
+   "duration_s": 26.4,
+   "broll_ko": "오래된 신문 그래픽",
+   "prompt_en": "오래된 신문 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시간을 2000년으로 돌려보겠습니다. 그때도 모두가 \"인터넷이 세상을 바꾼다\"고 했습니다. 그리고 그 말은 맞았습니다. 지금 우리는 인터넷 없이"
+  },
+  {
+   "shot": 5,
+   "section": "그럼 지금 AI는?",
+   "start_hint_s": 150.0,
+   "duration_s": 34.5,
+   "broll_ko": "데이터센터 공사 현장",
+   "prompt_en": "데이터센터 공사 현장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 AI에 돈이 몰리는 곳은 크게 세 군데입니다. 데이터센터, 그 안에 들어가는 반도체, 그리고 그걸 돌릴 전력입니다. 한국 영상들이 \"인프라"
+  },
+  {
+   "shot": 6,
+   "section": "그럼 지금 AI는?",
+   "start_hint_s": 184.5,
+   "duration_s": 34.5,
+   "broll_ko": "전력선",
+   "prompt_en": "전력선 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 AI에 돈이 몰리는 곳은 크게 세 군데입니다. 데이터센터, 그 안에 들어가는 반도체, 그리고 그걸 돌릴 전력입니다. 한국 영상들이 \"인프라"
+  },
+  {
+   "shot": 7,
+   "section": "왜 사람들은 버블 꼭대기에서 살까",
+   "start_hint_s": 250.0,
+   "duration_s": 62.5,
+   "broll_ko": "군중이 한 방향으로 걸어가는 장면",
+   "prompt_en": "군중이 한 방향으로 걸어가는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여기서 잠깐, 사람의 심리 이야기를 해보겠습니다. 버블은 숫자보다 마음에서 먼저 생깁니다. 처음엔 소수만 삽니다. 가격이 오르면 언론이 다루기 "
+  },
+  {
+   "shot": 8,
+   "section": "버블을 확인하는 신호 3가지",
+   "start_hint_s": 300.0,
+   "duration_s": 44.6,
+   "broll_ko": "체크리스트 그래픽",
+   "prompt_en": "체크리스트 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그래서 저는 \"버블이냐 아니냐\"를 맞히려 하지 않습니다. 대신 아래 세 가지를 분기마다 확인합니다. 신호 하나, 투자는 느는데 매출이 따라오지 "
+  },
+  {
+   "shot": 9,
+   "section": "버블을 확인하는 신호 3가지",
+   "start_hint_s": 344.6,
+   "duration_s": 44.6,
+   "broll_ko": "하나씩 체크",
+   "prompt_en": "하나씩 체크 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그래서 저는 \"버블이냐 아니냐\"를 맞히려 하지 않습니다. 대신 아래 세 가지를 분기마다 확인합니다. 신호 하나, 투자는 느는데 매출이 따라오지 "
+  },
+  {
+   "shot": 10,
+   "section": "살아남은 회사와 사라진 회사",
+   "start_hint_s": 400.0,
+   "duration_s": 37.5,
+   "broll_ko": "낡은 택배 상자",
+   "prompt_en": "낡은 택배 상자 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "닷컴버블 이야기를 조금만 더 해보겠습니다. 그때 '인터넷 회사'라는 이름만 붙으면 주가가 올랐습니다. 그리고 버블이 꺼지자 수많은 회사가 문을 "
+  },
+  {
+   "shot": 11,
+   "section": "살아남은 회사와 사라진 회사",
+   "start_hint_s": 437.5,
+   "duration_s": 37.5,
+   "broll_ko": "빈 사무실",
+   "prompt_en": "빈 사무실 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "닷컴버블 이야기를 조금만 더 해보겠습니다. 그때 '인터넷 회사'라는 이름만 붙으면 주가가 올랐습니다. 그리고 버블이 꺼지자 수많은 회사가 문을 "
+  },
+  {
+   "shot": 12,
+   "section": "개인투자자가 지킬 원칙",
+   "start_hint_s": 450.0,
+   "duration_s": 19.0,
+   "broll_ko": "저울",
+   "prompt_en": "저울 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 지금 뭘 해야 할까요? 저는 세 가지 원칙만 씁니다. 첫째, 비중. 한 테마가 내 자산의 너무 큰 부분을 차지하지 않게. 둘째, 분할. 한"
+  },
+  {
+   "shot": 13,
+   "section": "개인투자자가 지킬 원칙",
+   "start_hint_s": 469.0,
+   "duration_s": 19.0,
+   "broll_ko": "달력에 동그라미",
+   "prompt_en": "달력에 동그라미 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 지금 뭘 해야 할까요? 저는 세 가지 원칙만 씁니다. 첫째, 비중. 한 테마가 내 자산의 너무 큰 부분을 차지하지 않게. 둘째, 분할. 한"
+  },
+  {
+   "shot": 14,
+   "section": "이런 분은 오늘 꼭 점검하세요",
+   "start_hint_s": 520.0,
+   "duration_s": 23.6,
+   "broll_ko": "휴대폰 증권 앱 화면을 보는 손",
+   "prompt_en": "휴대폰 증권 앱 화면을 보는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로 세 가지 질문을 드리겠습니다. 하나라도 '예'라면 오늘 비중을 한번 보세요. 첫째, 내 투자금 대부분이 AI나 반도체 한 테마에 몰려"
+  },
+  {
+   "shot": 15,
+   "section": "이런 분은 오늘 꼭 점검하세요",
+   "start_hint_s": 543.6,
+   "duration_s": 23.6,
+   "broll_ko": "화면은 흐릿하게",
+   "prompt_en": "화면은 흐릿하게 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로 세 가지 질문을 드리겠습니다. 하나라도 '예'라면 오늘 비중을 한번 보세요. 첫째, 내 투자금 대부분이 AI나 반도체 한 테마에 몰려"
+  },
+  {
+   "shot": 16,
+   "section": "마무리",
+   "start_hint_s": 570.0,
+   "duration_s": 30.4,
+   "broll_ko": "해 뜨는 도시",
+   "prompt_en": "해 뜨는 도시 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI는 아마 인터넷처럼 우리 삶을 바꿀 겁니다. 그런데 기술이 세상을 바꾸는 것과, 내 계좌가 불어나는 건 다른 문제입니다. 다음 편에서는 오늘"
+  }
+ ]
+}

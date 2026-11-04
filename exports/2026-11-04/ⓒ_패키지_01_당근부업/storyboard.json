@@ -1,0 +1,162 @@
+{
+ "title": "당근으로 월 500 번다는 사람들, 진짜 돈은 '이것'에서 나옵니다",
+ "channel": "경제적자유구역",
+ "est_total_s": 523,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 19.2,
+   "broll_ko": "동네 골목",
+   "prompt_en": "동네 골목 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근으로 월 오백, 가능합니다. 단, 여러분이 생각하는 방법은 아닙니다. 집에 있는 물건을 팔아서 부자가 된 사람, 저는 한 명도 못 봤습니다."
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 19.2,
+   "duration_s": 19.2,
+   "broll_ko": "휴대폰 알림이 울리는 손",
+   "prompt_en": "휴대폰 알림이 울리는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근으로 월 오백, 가능합니다. 단, 여러분이 생각하는 방법은 아닙니다. 집에 있는 물건을 팔아서 부자가 된 사람, 저는 한 명도 못 봤습니다."
+  },
+  {
+   "shot": 3,
+   "section": "왜 지금 당근 부업인가",
+   "start_hint_s": 40.0,
+   "duration_s": 11.1,
+   "broll_ko": "장바구니 물가",
+   "prompt_en": "장바구니 물가 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 이런 영상이 터지는 이유는 단순합니다. 물가는 오르는데 월급은 그대로고, 은퇴는 다가오는데 연금만으로는 불안하니까요. 그리고 당근은 이미 "
+  },
+  {
+   "shot": 4,
+   "section": "왜 지금 당근 부업인가",
+   "start_hint_s": 51.1,
+   "duration_s": 11.1,
+   "broll_ko": "달력",
+   "prompt_en": "달력 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 이런 영상이 터지는 이유는 단순합니다. 물가는 오르는데 월급은 그대로고, 은퇴는 다가오는데 연금만으로는 불안하니까요. 그리고 당근은 이미 "
+  },
+  {
+   "shot": 5,
+   "section": "왜 지금 당근 부업인가",
+   "start_hint_s": 62.2,
+   "duration_s": 11.1,
+   "broll_ko": "퇴근길 지하철",
+   "prompt_en": "퇴근길 지하철 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 이런 영상이 터지는 이유는 단순합니다. 물가는 오르는데 월급은 그대로고, 은퇴는 다가오는데 연금만으로는 불안하니까요. 그리고 당근은 이미 "
+  },
+  {
+   "shot": 6,
+   "section": "당근에서 돈 버는 3가지 유형",
+   "start_hint_s": 90.0,
+   "duration_s": 72.5,
+   "broll_ko": "세 칸으로 나뉜 화면 그래픽",
+   "prompt_en": "세 칸으로 나뉜 화면 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근에서 돈이 나오는 길은 크게 세 가지입니다. 첫째, 물건을 파는 사람. 집 정리, 중고 매입 후 되팔기. 가장 많이 하지만 가장 돈이 안 됩"
+  },
+  {
+   "shot": 7,
+   "section": "같은 동네, 다른 결과 — 가상 사례 두 명",
+   "start_hint_s": 200.0,
+   "duration_s": 44.1,
+   "broll_ko": "아파트 단지 두 동",
+   "prompt_en": "아파트 단지 두 동 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이해를 돕기 위해 가상의 두 사람을 비교해 보겠습니다. 실제 인물이 아니라, 이 구조를 설명하기 위한 예시입니다. 같은 아파트에 사는 오십 대 "
+  },
+  {
+   "shot": 8,
+   "section": "같은 동네, 다른 결과 — 가상 사례 두 명",
+   "start_hint_s": 244.1,
+   "duration_s": 44.1,
+   "broll_ko": "저녁 불빛",
+   "prompt_en": "저녁 불빛 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이해를 돕기 위해 가상의 두 사람을 비교해 보겠습니다. 실제 인물이 아니라, 이 구조를 설명하기 위한 예시입니다. 같은 아파트에 사는 오십 대 "
+  },
+  {
+   "shot": 9,
+   "section": "월 500의 진짜 계산서",
+   "start_hint_s": 240.0,
+   "duration_s": 35.3,
+   "broll_ko": "계산기",
+   "prompt_en": "계산기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "시간당 순수익 = (매출 − 비용"
+   ],
+   "narration_excerpt": "자, 이제 숫자로 보겠습니다. 이 부분이 오늘의 핵심입니다. 월 오백이라는 숫자를 볼 때는 반드시 세 가지를 같이 물어보셔야 합니다. 첫째, 매"
+  },
+  {
+   "shot": 10,
+   "section": "월 500의 진짜 계산서",
+   "start_hint_s": 275.3,
+   "duration_s": 35.3,
+   "broll_ko": "화면에 숫자 표",
+   "prompt_en": "화면에 숫자 표 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "시간당 순수익 = (매출 − 비용"
+   ],
+   "narration_excerpt": "자, 이제 숫자로 보겠습니다. 이 부분이 오늘의 핵심입니다. 월 오백이라는 숫자를 볼 때는 반드시 세 가지를 같이 물어보셔야 합니다. 첫째, 매"
+  },
+  {
+   "shot": 11,
+   "section": "세금, 여기서부터는 사업입니다",
+   "start_hint_s": 390.0,
+   "duration_s": 40.5,
+   "broll_ko": "서류",
+   "prompt_en": "서류 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "반복해서 돈을 벌기 시작하면 꼭 짚어야 할 선이 있습니다. 어디까지가 개인 중고거래이고, 어디부터가 사업이냐입니다. 내가 쓰던 물건을 가끔 파는"
+  },
+  {
+   "shot": 12,
+   "section": "세금, 여기서부터는 사업입니다",
+   "start_hint_s": 430.5,
+   "duration_s": 40.5,
+   "broll_ko": "달력의 5월",
+   "prompt_en": "달력의 5월 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "반복해서 돈을 벌기 시작하면 꼭 짚어야 할 선이 있습니다. 어디까지가 개인 중고거래이고, 어디부터가 사업이냐입니다. 내가 쓰던 물건을 가끔 파는"
+  },
+  {
+   "shot": 13,
+   "section": "이 부업, 하면 안 되는 사람 3유형",
+   "start_hint_s": 480.0,
+   "duration_s": 47.3,
+   "broll_ko": "엑스 표시 세 개",
+   "prompt_en": "엑스 표시 세 개 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 약속드린 부분입니다. 하나, 본업이 흔들리는 사람. 부업 때문에 본업 평가가 떨어지면, 그건 손해입니다. 월급이 가장 안정적인 수입이라는 "
+  },
+  {
+   "shot": 14,
+   "section": "정리 — 오늘 영상 한 장 요약",
+   "start_hint_s": 540.0,
+   "duration_s": 57.3,
+   "broll_ko": "노트 한 장에 세 줄이 적히는 장면",
+   "prompt_en": "노트 한 장에 세 줄이 적히는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 내용을 한 장으로 정리하겠습니다. 하나. 당근에서 돈이 나오는 길은 물건, 서비스, 정보력 세 가지이고, 반복되는 건 서비스와 정보력입니다"
+  },
+  {
+   "shot": 15,
+   "section": "오늘 할 일 하나",
+   "start_hint_s": 600.0,
+   "duration_s": 34.5,
+   "broll_ko": "메모장에 펜으로 적는 손",
+   "prompt_en": "메모장에 펜으로 적는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 딱 하나만 해보세요. 내가 돈 받고 해줄 수 있는 일, 세 가지를 적어보는 겁니다. 물건 말고, 시간과 기술로요. 다음 편에서는 그 세 가"
+  }
+ ]
+}
