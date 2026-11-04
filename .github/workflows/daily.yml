@@ -118,3 +118,15 @@ jobs:
     steps:
       - id: d
         uses: actions/deploy-pages@v4
+      - name: 배포 확인 (실제 주소 접속)
+        env:
+          URL: ${{ steps.d.outputs.page_url }}
+        run: |
+          for i in 1 2 3 4 5 6; do
+            code=$(curl -s -o page.html -w '%{http_code}' "$URL")
+            [ "$code" = "200" ] && curl -sf "${URL}data/summary.json" -o s.json && break
+            sleep 10
+          done
+          echo "페이지 HTTP $code"
+          python3 -c "import json;s=json.load(open('s.json'));print('데이터 갱신', s['generated_at'], '모드', s['mode'], s['counts'])"
+          curl -sf "${URL}data/queue.json" | python3 -c "import json,sys;q=json.load(sys.stdin);[print('후보', c['sc']['total'], c['ct'], '|', c['t'][:40]) for c in q['top3']]"
