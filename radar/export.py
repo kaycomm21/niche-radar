@@ -52,10 +52,13 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     for cid, vs in by_channel.items():
         vs.sort(key=lambda v: v["published_at"] or "", reverse=True)
         recent = vs[:config.RECENT_PER_CHANNEL]
-        med_all = M.median([v["views"] for v in recent])
+        # 업로드 3일 미만 영상은 아직 조회가 덜 쌓여 중앙값을 끌어내리므로 기준에서 뺀다 (5편 미만이면 전체 사용)
+        mature = [v for v in recent if (_d(v["published_at"]) or t) <= t - timedelta(days=3)]
+        base = mature if len(mature) >= 5 else recent
+        med_all = M.median([v["views"] for v in base])
         med_fmt = {}
         for fmt in (0, 1):
-            same = [v["views"] for v in recent if v["is_short"] == fmt]
+            same = [v["views"] for v in base if v["is_short"] == fmt]
             med_fmt[fmt] = M.median(same) if len(same) >= 5 else med_all
         for v in vs:
             v["channel_median"] = med_fmt[v["is_short"]]
@@ -81,7 +84,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         ch = chans.get(v["channel_id"], {})
         pub = _d(v["published_at"])
         v["age_days"] = (t - pub).days if pub else None
-        v["group"] = ch.get("group") or assign_group(v["title"] or "")
+        # 레퍼런스(시드) 채널은 시드 그룹, 차트 채널은 영상 제목으로 내 채널 그룹을 매핑
+        v["group"] = ch.get("group") if ch.get("source") == "seed" else assign_group(v["title"] or "")
         v["source"] = ch.get("source")
         v["channel_title"] = ch.get("title")
         lo, hi = M.rpm_for(rpm, v["category_id"], v["title"], bool(v["is_short"]), config.FINANCE_KW, config.HEALTH_KW)
@@ -171,11 +175,15 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             and v["age_days"] is not None and v["age_days"] <= 30]
     cand.sort(key=lambda v: (v["score"]["total"], v["multiple"] or 0), reverse=True)
     pending, archived = [], []
+    per_channel: dict[str, int] = defaultdict(int)
     for v in cand:
         first = cards_state.get(v["video_id"])
         if first and (t - date.fromisoformat(first)).days >= 7:
             archived.append(v["video_id"])     # A4: 7일 무응답 → 자동 보관
             continue
+        if per_channel[v["channel_id"]] >= 2:  # 한 채널이 카드를 독점하지 않게 채널당 2장
+            continue
+        per_channel[v["channel_id"]] += 1
         pending.append(v)
     top3, used_groups = [], set()
     for v in pending:                           # 서로 다른 내 채널 그룹 우선
@@ -214,7 +222,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     _write(out_dir / "charts.json", {"date": today, "categories": config.CHART_CATEGORIES, "charts": charts})
 
     # ---------------- M1-4 급상승 (최근 14일, 배수 3배↑)
-    surging = [v for v in vids if v["age_days"] is not None and v["age_days"] <= 14 and (v["multiple"] or 0) >= 3]
+    surging = [v for v in vids if v["age_days"] is not None and v["age_days"] <= 14 and (v["multiple"] or 0) >= 3
+               and (v["views"] or 0) >= M.MIN_VIEWS]
     surging.sort(key=lambda v: (v["multiple"], v["views_24h"] or 0), reverse=True)
     _write(out_dir / "surging.json", {"date": today, "items": [vcard(v) for v in surging[:300]]})
 

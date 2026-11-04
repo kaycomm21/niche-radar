@@ -11,7 +11,7 @@ def test_median_and_outlier():
 
 
 def test_labels():
-    base = {"multiple": 3.2, "duration_s": 900, "is_short": 0, "rpm_hi": 6000, "age_days": 5}
+    base = {"multiple": 3.2, "views": 50000, "duration_s": 900, "is_short": 0, "rpm_hi": 6000, "age_days": 5}
     assert set(M.labels(base)) == {"fire", "money"}
     assert M.labels({**base, "multiple": 1.5}) == []
     assert M.labels({**base, "multiple": 1.0, "chart_within_7d": True}) == ["fire"]
@@ -66,3 +66,15 @@ def test_rpm_keyword_boost():
     rpm = {"25": (1500, 5000), "default": (800, 2500), "shorts": (30, 120), "kw_finance": (1.6, 1.6)}
     assert M.rpm_for(rpm, "25", "금리 전망", False, ["금리"], []) == (2400, 8000)
     assert M.rpm_for(rpm, "25", "금리 전망", True, ["금리"], []) == (30, 120)
+
+
+def test_min_views_noise_floor():
+    assert M.labels({"multiple": 50, "views": 900}) == []
+    assert M.labels({"multiple": 3, "views": 10_000}) == ["fire"]
+
+
+def test_group_ascii_word_boundary():
+    from radar.collect import assign_group
+    assert assign_group("software update review") is None          # 'war' 오매칭 금지
+    assert assign_group("The war that ended an empire") == "히스토리X"
+    assert assign_group("금리 인하 전망") == "경제적자유구역"

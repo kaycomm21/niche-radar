@@ -5,9 +5,9 @@ import math
 from statistics import median as _median
 
 FORMULAS = {
-    "outlier": "아웃라이어 배수 = 영상 조회수 ÷ 같은 채널 최근 30편(같은 포맷, 5편 미만이면 전체) 조회수 중앙값",
-    "label_fire": "🔥 조회수 터짐 = 아웃라이어 배수 ≥ 3, 또는 업로드 7일 이내 국내 인기 차트 진입",
-    "label_money": "💰 수익화 터짐 = 롱폼(8분 이상) + 고RPM(카테고리 RPM 상한 ≥ 5,000원 또는 금융·건강 키워드) + 업로드 30일 이내 + 배수 ≥ 2. 구독자 10만 미만 채널이면 '작은 채널 대박' 가중",
+    "outlier": "아웃라이어 배수 = 영상 조회수 ÷ 같은 채널 최근 30편 중 업로드 3일 지난 영상(같은 포맷, 5편 미만이면 전체)의 조회수 중앙값. 조회 1만 미만 영상은 터짐 판정에서 제외(잡음 방지)",
+    "label_fire": "🔥 조회수 터짐 = (아웃라이어 배수 ≥ 3 그리고 조회 ≥ 1만), 또는 업로드 7일 이내 국내 인기 차트 진입",
+    "label_money": "💰 수익화 터짐 = 조회 ≥ 1만 + 롱폼(8분 이상) + 고RPM(카테고리 RPM 상한 ≥ 5,000원 또는 금융·건강 키워드) + 업로드 30일 이내 + 배수 ≥ 2. 구독자 10만 미만 채널이면 '작은 채널 대박' 가중",
     "label_issue": "📣 이슈화(유튜브 지표만, Brave 미사용) = 24시간 조회 증가가 추적 영상 상위 5% + 24시간 댓글 증가율 ≥ 10%",
     "rework": "재가공 가치 점수 = 터짐 강도 25 + 수익성 20 + 내 채널 적합도 20(AI, Phase 2) + 재현 난이도(역) 15 + 수명 10 + 정책 안전 10. Phase 1은 AI 항목 제외 80점 만점",
     "grade": "투명 등급 = 성장률 30 + 조회 효율 25 + 참여율 20 + 업로드 일관성 15 + 아웃라이어 빈도 10 (각 항목은 유니버스 내 백분위 × 배점, 데이터가 없는 항목은 빼고 100점으로 환산). S≥85 A≥70 B≥55 C≥40 D<40",
@@ -17,6 +17,7 @@ FORMULAS = {
 }
 
 LONG_MIN_S = 480
+MIN_VIEWS = 10_000          # 터짐 판정 최소 조회수 (작은 수의 배수 잡음 제거)
 REUSE_KW = ["하이라이트", "명장면", "직캠", "full ver", "풀영상", "reaction", "리액션", "반응 모음", "몰래카메라 모음", "모음집", "클립 모음"]
 RISK_KW = ["무조건", "100%", "반드시 오른다", "폭등 확정", "완치", "사기꾼", "범죄자", "탄핵", "구속"]
 POLITICS_KW = ["정치", "대통령", "국회", "여당", "야당", "판결", "검찰", "민주당", "국민의힘"]
@@ -65,6 +66,8 @@ def labels(v: dict) -> list[str]:
     """v: multiple, chart_within_7d, duration_s, is_short, rpm_hi, money_kw, age_days, subs, views_24h_pct, comments_24h_growth."""
     out = []
     mult = v.get("multiple") or 0
+    if (v.get("views") or 0) < MIN_VIEWS:
+        mult = 0
     if mult >= 3 or v.get("chart_within_7d"):
         out.append("fire")
     if (not v.get("is_short") and (v.get("duration_s") or 0) >= LONG_MIN_S

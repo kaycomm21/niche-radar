@@ -35,11 +35,19 @@ def detect_lang(title: str) -> str:
     return "ko" if HANGUL.search(title or "") else "other"
 
 
+def _kw_hit(k: str, text: str) -> bool:
+    """영문 키워드는 단어 경계로만 매칭 ('war' 가 'software' 에 걸리지 않게), 한글은 부분 일치."""
+    k = k.lower()
+    if k.isascii():
+        return re.search(r"(?<![a-z])" + re.escape(k) + r"(?![a-z])", text) is not None
+    return k in text
+
+
 def assign_group(title: str, extra: str = "") -> str | None:
     text = (title + " " + extra).lower()
     best, hits = None, 0
     for g, kws in config.GROUP_RULES.items():
-        n = sum(1 for k in kws if k.lower() in text)
+        n = sum(1 for k in kws if _kw_hit(k, text))
         if n > hits:
             best, hits = g, n
     return best
