@@ -1,0 +1,238 @@
+{
+ "title": "창문을 막고, 수염에 세금을 내고… 세금을 피하려던 인류의 기상천외한 역사",
+ "channel": "히스토리X",
+ "est_total_s": 499,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 17.7,
+   "broll_ko": "영국 옛 벽돌 건물",
+   "prompt_en": "영국 옛 벽돌 건물 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "영국의 오래된 건물을 보면 이상한 게 있습니다. 분명 창문이 있어야 할 자리가, 벽돌로 꽉 막혀 있죠. 이건 디자인 실수가 아닙니다. 그 뒤에는"
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 17.7,
+   "duration_s": 17.7,
+   "broll_ko": "벽돌로 막힌 창문 클로즈업",
+   "prompt_en": "벽돌로 막힌 창문 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "영국의 오래된 건물을 보면 이상한 게 있습니다. 분명 창문이 있어야 할 자리가, 벽돌로 꽉 막혀 있죠. 이건 디자인 실수가 아닙니다. 그 뒤에는"
+  },
+  {
+   "shot": 3,
+   "section": "첫 번째 이야기: 햇빛에 매긴 세금, 창문세",
+   "start_hint_s": 50.0,
+   "duration_s": 18.1,
+   "broll_ko": "17세기 영국 거리",
+   "prompt_en": "17세기 영국 거리 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "1696년, 영국은 새로운 세금을 만들었습니다. 바로 창문세입니다. 집에 창문이 많을수록 세금을 더 내는 방식이었죠. 왜 하필 창문이었을까요? "
+  },
+  {
+   "shot": 4,
+   "section": "첫 번째 이야기: 햇빛에 매긴 세금, 창문세",
+   "start_hint_s": 68.1,
+   "duration_s": 18.1,
+   "broll_ko": "창문 개수를 세는 관리 일러스트",
+   "prompt_en": "창문 개수를 세는 관리 일러스트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "1696년, 영국은 새로운 세금을 만들었습니다. 바로 창문세입니다. 집에 창문이 많을수록 세금을 더 내는 방식이었죠. 왜 하필 창문이었을까요? "
+  },
+  {
+   "shot": 5,
+   "section": "사람들은 창문을 막았다",
+   "start_hint_s": 110.0,
+   "duration_s": 31.3,
+   "broll_ko": "벽돌공이 창문을 메우는 장면",
+   "prompt_en": "벽돌공이 창문을 메우는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그러자 사람들은 어떻게 했을까요? 창문을 벽돌로 막아버렸습니다. 새로 짓는 집은 아예 창문을 적게 만들기도 했고요. 세금은 줄었지만, 대가가 있"
+  },
+  {
+   "shot": 6,
+   "section": "사람들은 창문을 막았다",
+   "start_hint_s": 141.3,
+   "duration_s": 31.3,
+   "broll_ko": "어두운 실내",
+   "prompt_en": "어두운 실내 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그러자 사람들은 어떻게 했을까요? 창문을 벽돌로 막아버렸습니다. 새로 짓는 집은 아예 창문을 적게 만들기도 했고요. 세금은 줄었지만, 대가가 있"
+  },
+  {
+   "shot": 7,
+   "section": "두 번째 이야기: 수염을 기르려면 돈을 내라",
+   "start_hint_s": 200.0,
+   "duration_s": 15.8,
+   "broll_ko": "러시아 궁정 일러스트",
+   "prompt_en": "러시아 궁정 일러스트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이번에는 러시아로 가보겠습니다. 1698년, 러시아의 황제 표트르 대제는 서유럽을 둘러보고 돌아와서 결심합니다. \"러시아를 유럽처럼 바꾸겠다.\""
+  },
+  {
+   "shot": 8,
+   "section": "두 번째 이야기: 수염을 기르려면 돈을 내라",
+   "start_hint_s": 215.8,
+   "duration_s": 15.8,
+   "broll_ko": "수염 난 귀족",
+   "prompt_en": "수염 난 귀족 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이번에는 러시아로 가보겠습니다. 1698년, 러시아의 황제 표트르 대제는 서유럽을 둘러보고 돌아와서 결심합니다. \"러시아를 유럽처럼 바꾸겠다.\""
+  },
+  {
+   "shot": 9,
+   "section": "수염 허가증, 동전 하나",
+   "start_hint_s": 260.0,
+   "duration_s": 29.1,
+   "broll_ko": "구리 동전 클로즈업",
+   "prompt_en": "구리 동전 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "세금을 낸 사람은 일종의 허가증 역할을 하는 동전을 받았습니다. 수염 기른 사람은 이 동전을 들고 다녀야 했고, 없으면 벌금을 내거나 붙잡힐 수"
+  },
+  {
+   "shot": 10,
+   "section": "수염 허가증, 동전 하나",
+   "start_hint_s": 289.1,
+   "duration_s": 29.1,
+   "broll_ko": "수염과 콧수염 문양",
+   "prompt_en": "수염과 콧수염 문양 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "세금을 낸 사람은 일종의 허가증 역할을 하는 동전을 받았습니다. 수염 기른 사람은 이 동전을 들고 다녀야 했고, 없으면 벌금을 내거나 붙잡힐 수"
+  },
+  {
+   "shot": 11,
+   "section": "세 번째 이야기: 소금 한 줌이 제국을 흔들다",
+   "start_hint_s": 330.0,
+   "duration_s": 16.8,
+   "broll_ko": "인도 해안",
+   "prompt_en": "인도 해안 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 이야기는 조금 무겁습니다. 영국이 인도를 지배하던 시절, 인도 사람들은 바닷가에서 소금을 직접 만들거나 팔 수 없었습니다. 소금에는 세금"
+  },
+  {
+   "shot": 12,
+   "section": "세 번째 이야기: 소금 한 줌이 제국을 흔들다",
+   "start_hint_s": 346.8,
+   "duration_s": 16.8,
+   "broll_ko": "하얀 소금밭",
+   "prompt_en": "하얀 소금밭 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 이야기는 조금 무겁습니다. 영국이 인도를 지배하던 시절, 인도 사람들은 바닷가에서 소금을 직접 만들거나 팔 수 없었습니다. 소금에는 세금"
+  },
+  {
+   "shot": 13,
+   "section": "세 번째 이야기: 소금 한 줌이 제국을 흔들다",
+   "start_hint_s": 363.7,
+   "duration_s": 16.8,
+   "broll_ko": "걸어가는 사람들",
+   "prompt_en": "걸어가는 사람들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 이야기는 조금 무겁습니다. 영국이 인도를 지배하던 시절, 인도 사람들은 바닷가에서 소금을 직접 만들거나 팔 수 없었습니다. 소금에는 세금"
+  },
+  {
+   "shot": 14,
+   "section": "작은 행동이 만든 큰 물결",
+   "start_hint_s": 400.0,
+   "duration_s": 37.8,
+   "broll_ko": "수많은 사람이 해변에 모이는 장면",
+   "prompt_en": "수많은 사람이 해변에 모이는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이 한 줌의 소금은 큰 물결이 됐습니다. 인도 곳곳에서 사람들이 소금법을 어기는 비폭력 저항에 나섰고, 수만 명이 체포됐습니다. 간디도 5월에 "
+  },
+  {
+   "shot": 15,
+   "section": "그리고 지금, 우리 시대의 '창문세'",
+   "start_hint_s": 420.0,
+   "duration_s": 20.8,
+   "broll_ko": "현대 도시의 아파트 창문들",
+   "prompt_en": "현대 도시의 아파트 창문들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이 이야기들이 그저 옛날 일 같으신가요? 사실 지금도 비슷한 일은 계속 일어납니다. 세금이나 규칙이 바뀌면, 사람들은 늘 그 경계선 바로 앞에서"
+  },
+  {
+   "shot": 16,
+   "section": "그리고 지금, 우리 시대의 '창문세'",
+   "start_hint_s": 440.8,
+   "duration_s": 20.8,
+   "broll_ko": "택배 상자",
+   "prompt_en": "택배 상자 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이 이야기들이 그저 옛날 일 같으신가요? 사실 지금도 비슷한 일은 계속 일어납니다. 세금이나 규칙이 바뀌면, 사람들은 늘 그 경계선 바로 앞에서"
+  },
+  {
+   "shot": 17,
+   "section": "그리고 지금, 우리 시대의 '창문세'",
+   "start_hint_s": 461.7,
+   "duration_s": 20.8,
+   "broll_ko": "휴대폰 결제 화면",
+   "prompt_en": "휴대폰 결제 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이 이야기들이 그저 옛날 일 같으신가요? 사실 지금도 비슷한 일은 계속 일어납니다. 세금이나 규칙이 바뀌면, 사람들은 늘 그 경계선 바로 앞에서"
+  },
+  {
+   "shot": 18,
+   "section": "세금을 만든 사람들은 왜 이걸 예상하지 못했을까",
+   "start_hint_s": 440.0,
+   "duration_s": 22.5,
+   "broll_ko": "오래된 의회 건물",
+   "prompt_en": "오래된 의회 건물 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로 한 가지 질문이 남습니다. 세금을 만든 사람들은 왜 사람들이 창문을 막을 거라는 걸 예상하지 못했을까요? 아마 예상했을 수도 있습니다"
+  },
+  {
+   "shot": 19,
+   "section": "세금을 만든 사람들은 왜 이걸 예상하지 못했을까",
+   "start_hint_s": 462.5,
+   "duration_s": 22.5,
+   "broll_ko": "서류에 찍히는 도장",
+   "prompt_en": "서류에 찍히는 도장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로 한 가지 질문이 남습니다. 세금을 만든 사람들은 왜 사람들이 창문을 막을 거라는 걸 예상하지 못했을까요? 아마 예상했을 수도 있습니다"
+  },
+  {
+   "shot": 20,
+   "section": "세 개의 세금이 알려주는 것",
+   "start_hint_s": 450.0,
+   "duration_s": 21.0,
+   "broll_ko": "창문",
+   "prompt_en": "창문 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "창문세, 수염세, 소금세. 시대도 나라도 다르지만, 세 가지 공통점이 있습니다. 하나, 세금은 보이는 것에 붙었다. 창문, 수염, 소금처럼 세기"
+  },
+  {
+   "shot": 21,
+   "section": "세 개의 세금이 알려주는 것",
+   "start_hint_s": 471.0,
+   "duration_s": 21.0,
+   "broll_ko": "동전",
+   "prompt_en": "동전 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "창문세, 수염세, 소금세. 시대도 나라도 다르지만, 세 가지 공통점이 있습니다. 하나, 세금은 보이는 것에 붙었다. 창문, 수염, 소금처럼 세기"
+  },
+  {
+   "shot": 22,
+   "section": "세 개의 세금이 알려주는 것",
+   "start_hint_s": 492.1,
+   "duration_s": 21.0,
+   "broll_ko": "소금이 나란히 놓인 정물",
+   "prompt_en": "소금이 나란히 놓인 정물 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "창문세, 수염세, 소금세. 시대도 나라도 다르지만, 세 가지 공통점이 있습니다. 하나, 세금은 보이는 것에 붙었다. 창문, 수염, 소금처럼 세기"
+  },
+  {
+   "shot": 23,
+   "section": "마무리",
+   "start_hint_s": 500.0,
+   "duration_s": 16.2,
+   "broll_ko": "abstract background matching the topic",
+   "prompt_en": "abstract background matching the topic — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음에 오래된 건물의 막힌 창문을 보시면, 그 뒤에 숨은 이야기를 한번 떠올려 보세요. 다음 편에서는 역사 속 가장 이상한 세금 TOP5를 더 "
+  }
+ ]
+}

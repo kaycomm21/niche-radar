@@ -1,0 +1,158 @@
+{
+ "title": "다 그만두고 싶은 날, 오래 산 사람들이 해주는 다섯 가지 이야기",
+ "channel": "지혜의숲",
+ "est_total_s": 446,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "여는 말",
+   "start_hint_s": 0.0,
+   "duration_s": 17.5,
+   "broll_ko": "비 갠 뒤의 골목",
+   "prompt_en": "비 갠 뒤의 골목 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런 날이 있습니다. 아침에 눈을 떴는데, 아무것도 하고 싶지 않은 날. 일도, 사람도, 내가 붙잡고 있던 계획도, 다 내려놓고 싶은 날. 열심"
+  },
+  {
+   "shot": 2,
+   "section": "여는 말",
+   "start_hint_s": 17.5,
+   "duration_s": 17.5,
+   "broll_ko": "물웅덩이에 비친 하늘",
+   "prompt_en": "물웅덩이에 비친 하늘 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런 날이 있습니다. 아침에 눈을 떴는데, 아무것도 하고 싶지 않은 날. 일도, 사람도, 내가 붙잡고 있던 계획도, 다 내려놓고 싶은 날. 열심"
+  },
+  {
+   "shot": 3,
+   "section": "첫 번째 이야기: 지친 건 약해서가 아니라 오래 버텨서다",
+   "start_hint_s": 60.0,
+   "duration_s": 32.5,
+   "broll_ko": "오래된 나무의 굵은 뿌리",
+   "prompt_en": "오래된 나무의 굵은 뿌리 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지쳤다는 건, 내가 약하다는 뜻이 아닙니다. 그만큼 오래, 열심히 버텨왔다는 뜻입니다. 한 번도 힘을 쓰지 않은 사람은 지치지 않습니다. 매일 "
+  },
+  {
+   "shot": 4,
+   "section": "두 번째 이야기: 포기와 쉼은 다르다",
+   "start_hint_s": 120.0,
+   "duration_s": 21.2,
+   "broll_ko": "벤치에 놓인 가방",
+   "prompt_en": "벤치에 놓인 가방 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다 그만두고 싶은 마음이 들 때, 우리는 두 가지를 자주 헷갈립니다. 포기와 쉼입니다. 포기는 문을 닫는 것이고, 쉼은 문을 잠시 열어둔 채 숨"
+  },
+  {
+   "shot": 5,
+   "section": "두 번째 이야기: 포기와 쉼은 다르다",
+   "start_hint_s": 141.2,
+   "duration_s": 21.2,
+   "broll_ko": "잠시 앉아 쉬는 사람의 발",
+   "prompt_en": "잠시 앉아 쉬는 사람의 발 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다 그만두고 싶은 마음이 들 때, 우리는 두 가지를 자주 헷갈립니다. 포기와 쉼입니다. 포기는 문을 닫는 것이고, 쉼은 문을 잠시 열어둔 채 숨"
+  },
+  {
+   "shot": 6,
+   "section": "세 번째 이야기: 오늘 할 일은 딱 하나만",
+   "start_hint_s": 190.0,
+   "duration_s": 33.1,
+   "broll_ko": "책상 위 작은 메모지 한 장",
+   "prompt_en": "책상 위 작은 메모지 한 장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "모든 게 버거울 때는, 계획을 크게 세우지 마세요. 오늘 할 일을 딱 하나만 정하는 겁니다. 창문 열기. 밥 한 끼 제대로 먹기. 동네 한 바퀴"
+  },
+  {
+   "shot": 7,
+   "section": "네 번째 이야기: 혼자 다 짊어지지 않기",
+   "start_hint_s": 260.0,
+   "duration_s": 53.1,
+   "broll_ko": "두 사람이 무거운 짐을 함께 드는 손",
+   "prompt_en": "두 사람이 무거운 짐을 함께 드는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지칠 때 사람은 문을 닫습니다. 걱정 끼치기 싫어서, 약해 보이기 싫어서, 설명하기 귀찮아서요. 그런데 오래 산 분들이 공통으로 하는 말이 있습"
+  },
+  {
+   "shot": 8,
+   "section": "다섯 번째 이야기: 그 시절도 지나갔다",
+   "start_hint_s": 340.0,
+   "duration_s": 35.3,
+   "broll_ko": "계절이 바뀌는 타임랩스 — 겨울나무에서 새순으로",
+   "prompt_en": "계절이 바뀌는 타임랩스 — 겨울나무에서 새순으로 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여든을 넘긴 어르신들에게 인생에서 가장 힘들었던 때를 물으면, 다들 하나씩 떠올립니다. 그리고 이야기 끝에는 늘 같은 말이 붙습니다. \"그런데 "
+  },
+  {
+   "shot": 9,
+   "section": "지친 몸이 먼저 보내는 신호들",
+   "start_hint_s": 360.0,
+   "duration_s": 20.3,
+   "broll_ko": "창가에 놓인 화분",
+   "prompt_en": "창가에 놓인 화분 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마음이 지치면, 몸이 먼저 알려줄 때가 많습니다. 잠들기 어렵거나, 자도 개운하지 않고, 좋아하던 일에도 손이 가지 않고, 작은 일에도 쉽게 짜"
+  },
+  {
+   "shot": 10,
+   "section": "지친 몸이 먼저 보내는 신호들",
+   "start_hint_s": 380.3,
+   "duration_s": 20.3,
+   "broll_ko": "시든 잎과 새 잎",
+   "prompt_en": "시든 잎과 새 잎 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마음이 지치면, 몸이 먼저 알려줄 때가 많습니다. 잠들기 어렵거나, 자도 개운하지 않고, 좋아하던 일에도 손이 가지 않고, 작은 일에도 쉽게 짜"
+  },
+  {
+   "shot": 11,
+   "section": "비교를 잠시 멈추는 연습",
+   "start_hint_s": 380.0,
+   "duration_s": 49.5,
+   "broll_ko": "휴대폰 화면을 끄고 내려놓는 손",
+   "prompt_en": "휴대폰 화면을 끄고 내려놓는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지칠 때 우리를 더 지치게 하는 것이 있습니다. 바로 비교입니다. 남들은 다 잘 사는 것 같고, 나만 제자리인 것 같은 마음. 그런데 우리가 보"
+  },
+  {
+   "shot": 12,
+   "section": "다시 시작하는 사람들의 공통점",
+   "start_hint_s": 390.0,
+   "duration_s": 43.5,
+   "broll_ko": "이른 아침 운동화 끈을 묶는 손",
+   "prompt_en": "이른 아침 운동화 끈을 묶는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "힘든 시기를 지나 다시 일어선 사람들에게는 공통점이 있다고 합니다. 대단한 결심을 한 게 아니라, 아주 작게 다시 시작했다는 겁니다. 어떤 분은"
+  },
+  {
+   "shot": 13,
+   "section": "지친 나에게 해줄 수 있는 말들",
+   "start_hint_s": 400.0,
+   "duration_s": 48.4,
+   "broll_ko": "따뜻한 조명 아래 펼쳐진 노트",
+   "prompt_en": "따뜻한 조명 아래 펼쳐진 노트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 이야기를 마치기 전에, 지친 나에게 해줄 수 있는 말 몇 가지를 적어봤습니다. 마음속으로 천천히 따라 해 보세요. \"오늘은 이만큼만 해도 "
+  },
+  {
+   "shot": 14,
+   "section": "맺는 말",
+   "start_hint_s": 450.0,
+   "duration_s": 16.1,
+   "broll_ko": "해 질 녘 산책길",
+   "prompt_en": "해 질 녘 산책길 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다 그만두고 싶은 날은, 사실 다 그만두고 싶은 게 아니라 조금 쉬고 싶은 날인 경우가 많습니다. 오늘은 조금 쉬어 가세요. 그리고 내일, 딱 "
+  },
+  {
+   "shot": 15,
+   "section": "맺는 말",
+   "start_hint_s": 466.1,
+   "duration_s": 16.1,
+   "broll_ko": "멀리 보이는 집의 불빛",
+   "prompt_en": "멀리 보이는 집의 불빛 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다 그만두고 싶은 날은, 사실 다 그만두고 싶은 게 아니라 조금 쉬고 싶은 날인 경우가 많습니다. 오늘은 조금 쉬어 가세요. 그리고 내일, 딱 "
+  }
+ ]
+}

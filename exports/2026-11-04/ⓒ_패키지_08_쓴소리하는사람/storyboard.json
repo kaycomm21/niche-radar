@@ -1,0 +1,168 @@
+{
+ "title": "곁에 꼭 두어야 할 사람, 듣기 싫은 말을 해주는 사람",
+ "channel": "지혜의숲",
+ "est_total_s": 446,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "여는 말",
+   "start_hint_s": 0.0,
+   "duration_s": 14.4,
+   "broll_ko": "새벽 숲길",
+   "prompt_en": "새벽 숲길 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "살다 보면, 듣기 좋은 말을 해주는 사람은 많습니다. \"괜찮아, 잘하고 있어.\" \"네가 맞아.\" 그런데 나이가 들수록 이상하게, 그런 말보다 오"
+  },
+  {
+   "shot": 2,
+   "section": "여는 말",
+   "start_hint_s": 14.4,
+   "duration_s": 14.4,
+   "broll_ko": "안개",
+   "prompt_en": "안개 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "살다 보면, 듣기 좋은 말을 해주는 사람은 많습니다. \"괜찮아, 잘하고 있어.\" \"네가 맞아.\" 그런데 나이가 들수록 이상하게, 그런 말보다 오"
+  },
+  {
+   "shot": 3,
+   "section": "여는 말",
+   "start_hint_s": 28.7,
+   "duration_s": 14.4,
+   "broll_ko": "천천히 걷는 뒷모습",
+   "prompt_en": "천천히 걷는 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "살다 보면, 듣기 좋은 말을 해주는 사람은 많습니다. \"괜찮아, 잘하고 있어.\" \"네가 맞아.\" 그런데 나이가 들수록 이상하게, 그런 말보다 오"
+  },
+  {
+   "shot": 4,
+   "section": "왜 쓴소리는 귀하게 들리지 않을까",
+   "start_hint_s": 70.0,
+   "duration_s": 42.4,
+   "broll_ko": "찻잔에서 김이 오르는 장면",
+   "prompt_en": "찻잔에서 김이 오르는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쓴소리가 반갑지 않은 건 당연합니다. 누구나 인정받고 싶고, 내가 옳다고 믿고 싶으니까요. 그리고 쓴소리를 하는 사람도 사실은 힘듭니다. 상대가"
+  },
+  {
+   "shot": 5,
+   "section": "곁에 두어야 할 사람의 첫 번째 모습: 칭찬보다 질문을 하는 사람",
+   "start_hint_s": 140.0,
+   "duration_s": 19.7,
+   "broll_ko": "마주 앉은 두 사람의 손",
+   "prompt_en": "마주 앉은 두 사람의 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "좋은 쓴소리를 하는 사람은 먼저 판단하지 않습니다. \"그건 틀렸어\"라고 말하기 전에, \"왜 그렇게 하려고 해?\"라고 묻습니다. 질문은 나를 공격"
+  },
+  {
+   "shot": 6,
+   "section": "곁에 두어야 할 사람의 첫 번째 모습: 칭찬보다 질문을 하는 사람",
+   "start_hint_s": 159.7,
+   "duration_s": 19.7,
+   "broll_ko": "테이블 위 노트",
+   "prompt_en": "테이블 위 노트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "좋은 쓴소리를 하는 사람은 먼저 판단하지 않습니다. \"그건 틀렸어\"라고 말하기 전에, \"왜 그렇게 하려고 해?\"라고 묻습니다. 질문은 나를 공격"
+  },
+  {
+   "shot": 7,
+   "section": "두 번째 모습: 내가 없는 자리에서 나를 깎아내리지 않는 사람",
+   "start_hint_s": 210.0,
+   "duration_s": 41.6,
+   "broll_ko": "창밖으로 비가 내리는 거실",
+   "prompt_en": "창밖으로 비가 내리는 거실 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쓴소리를 하는 사람과 험담을 하는 사람은 겉으로 비슷해 보일 때가 있습니다. 둘 다 듣기 싫은 말을 하니까요. 그런데 결정적인 차이가 있습니다."
+  },
+  {
+   "shot": 8,
+   "section": "세 번째 모습: 내가 잘될 때도 곁에 있는 사람",
+   "start_hint_s": 280.0,
+   "duration_s": 32.2,
+   "broll_ko": "들판 위로 해가 뜨는 장면",
+   "prompt_en": "들판 위로 해가 뜨는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "힘들 때 위로해 주는 사람은 고맙습니다. 그런데 사람의 진짜 마음은 오히려 내가 잘될 때 보인다고 하지요. 내가 잘될 때 진심으로 기뻐해 주면서"
+  },
+  {
+   "shot": 9,
+   "section": "쓴소리를 잘 듣는 법",
+   "start_hint_s": 340.0,
+   "duration_s": 25.8,
+   "broll_ko": "조용한 서재",
+   "prompt_en": "조용한 서재 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "곁에 좋은 사람을 두는 것만큼 중요한 게 있습니다. 그 말을 들을 수 있는 내 마음입니다. 쓴소리를 들었을 때, 세 가지만 기억해 보세요. 첫째"
+  },
+  {
+   "shot": 10,
+   "section": "쓴소리를 잘 듣는 법",
+   "start_hint_s": 365.8,
+   "duration_s": 25.8,
+   "broll_ko": "책장을 넘기는 손",
+   "prompt_en": "책장을 넘기는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "곁에 좋은 사람을 두는 것만큼 중요한 게 있습니다. 그 말을 들을 수 있는 내 마음입니다. 쓴소리를 들었을 때, 세 가지만 기억해 보세요. 첫째"
+  },
+  {
+   "shot": 11,
+   "section": "쓴소리가 상처가 되지 않으려면",
+   "start_hint_s": 380.0,
+   "duration_s": 73.6,
+   "broll_ko": "따뜻한 차를 건네는 손",
+   "prompt_en": "따뜻한 차를 건네는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쓴소리를 하는 사람에게도 지혜가 필요합니다. 같은 말이라도 어떻게 하느냐에 따라 약이 되기도 하고, 상처가 되기도 하니까요. 먼저, 때를 고르는"
+  },
+  {
+   "shot": 12,
+   "section": "오래된 친구가 남긴 한마디",
+   "start_hint_s": 410.0,
+   "duration_s": 24.6,
+   "broll_ko": "오래된 사진첩",
+   "prompt_en": "오래된 사진첩 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 인생을 돌아보며 비슷한 이야기를 합니다. 젊을 때 가장 서운했던 말이, 나이 들어 가장 고마운 말이 되어 있더라고요. \"그때 그 친"
+  },
+  {
+   "shot": 13,
+   "section": "오래된 친구가 남긴 한마디",
+   "start_hint_s": 434.6,
+   "duration_s": 24.6,
+   "broll_ko": "빛바랜 사진 한 장",
+   "prompt_en": "빛바랜 사진 한 장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 인생을 돌아보며 비슷한 이야기를 합니다. 젊을 때 가장 서운했던 말이, 나이 들어 가장 고마운 말이 되어 있더라고요. \"그때 그 친"
+  },
+  {
+   "shot": 14,
+   "section": "나도 누군가의 쓴소리가 될 수 있을까",
+   "start_hint_s": 420.0,
+   "duration_s": 18.4,
+   "broll_ko": "노을 진 강가",
+   "prompt_en": "노을 진 강가 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 한 가지 질문을 드리고 싶습니다. 나는 누군가에게 그런 사람인가요? 나이가 들수록 우리는 쓴소리를 하기보다 피하게 됩니다. 괜히 관"
+  },
+  {
+   "shot": 15,
+   "section": "나도 누군가의 쓴소리가 될 수 있을까",
+   "start_hint_s": 438.4,
+   "duration_s": 18.4,
+   "broll_ko": "벤치에 앉은 두 사람의 실루엣",
+   "prompt_en": "벤치에 앉은 두 사람의 실루엣 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 한 가지 질문을 드리고 싶습니다. 나는 누군가에게 그런 사람인가요? 나이가 들수록 우리는 쓴소리를 하기보다 피하게 됩니다. 괜히 관"
+  },
+  {
+   "shot": 16,
+   "section": "맺는 말",
+   "start_hint_s": 470.0,
+   "duration_s": 36.2,
+   "broll_ko": "숲길 끝으로 햇살이 비치는 장면",
+   "prompt_en": "숲길 끝으로 햇살이 비치는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "듣기 좋은 말은 오늘 하루를 편하게 해주지만, 듣기 싫은 말은 내 인생의 방향을 지켜줍니다. 오늘 하루, 내 곁에 그런 사람이 누구였는지 한번 "
+  }
+ ]
+}

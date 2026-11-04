@@ -1,0 +1,158 @@
+{
+ "title": "역사상 첫 버블 '튤립 파동', 우리가 알던 이야기는 절반이 거짓이었다",
+ "channel": "히스토리X",
+ "est_total_s": 492,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 23.9,
+   "broll_ko": "17세기 네덜란드 풍경화풍의 튤립 밭",
+   "prompt_en": "17세기 네덜란드 풍경화풍의 튤립 밭 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "튤립 한 송이가 집 한 채 값이었다. 사람들은 전 재산을 꽃에 걸었고, 하루아침에 가격이 무너지자 운하에 몸을 던졌다. 한 번쯤 들어보셨을 겁니"
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 23.9,
+   "duration_s": 23.9,
+   "broll_ko": "바람에 흔들리는 꽃",
+   "prompt_en": "바람에 흔들리는 꽃 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "튤립 한 송이가 집 한 채 값이었다. 사람들은 전 재산을 꽃에 걸었고, 하루아침에 가격이 무너지자 운하에 몸을 던졌다. 한 번쯤 들어보셨을 겁니"
+  },
+  {
+   "shot": 3,
+   "section": "우리가 알던 튤립 파동",
+   "start_hint_s": 60.0,
+   "duration_s": 47.6,
+   "broll_ko": "오래된 책 페이지가 넘어가는 장면",
+   "prompt_en": "오래된 책 페이지가 넘어가는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "먼저 잘 알려진 버전부터 보겠습니다. 1600년대 네덜란드는 무역으로 세계에서 가장 부유한 나라 중 하나였습니다. 그곳에 동방에서 건너온 튤립이"
+  },
+  {
+   "shot": 4,
+   "section": "이 이야기는 어디서 왔을까",
+   "start_hint_s": 130.0,
+   "duration_s": 21.3,
+   "broll_ko": "19세기 런던 서재",
+   "prompt_en": "19세기 런던 서재 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런데 이 이야기가 널리 퍼진 건 사건이 일어나고 200년이 지난 뒤였습니다. 1841년, 영국의 작가 찰스 매케이가 쓴 책이 이 이야기를 대중"
+  },
+  {
+   "shot": 5,
+   "section": "이 이야기는 어디서 왔을까",
+   "start_hint_s": 151.3,
+   "duration_s": 21.3,
+   "broll_ko": "깃펜",
+   "prompt_en": "깃펜 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런데 이 이야기가 널리 퍼진 건 사건이 일어나고 200년이 지난 뒤였습니다. 1841년, 영국의 작가 찰스 매케이가 쓴 책이 이 이야기를 대중"
+  },
+  {
+   "shot": 6,
+   "section": "기록이 말하는 진짜 튤립 파동",
+   "start_hint_s": 200.0,
+   "duration_s": 27.8,
+   "broll_ko": "낡은 장부",
+   "prompt_en": "낡은 장부 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 실제 기록은 어땠을까요? 첫째, 거래에 참여한 사람은 생각보다 많지 않았습니다. 나라 전체가 미쳐 돌아간 게 아니라, 주로 형편이 넉넉한 "
+  },
+  {
+   "shot": 7,
+   "section": "기록이 말하는 진짜 튤립 파동",
+   "start_hint_s": 227.8,
+   "duration_s": 27.8,
+   "broll_ko": "촛불",
+   "prompt_en": "촛불 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 실제 기록은 어땠을까요? 첫째, 거래에 참여한 사람은 생각보다 많지 않았습니다. 나라 전체가 미쳐 돌아간 게 아니라, 주로 형편이 넉넉한 "
+  },
+  {
+   "shot": 8,
+   "section": "사람들이 산 건 꽃이 아니라 '종이'였다",
+   "start_hint_s": 270.0,
+   "duration_s": 31.2,
+   "broll_ko": "계약서에 서명하는 손",
+   "prompt_en": "계약서에 서명하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여기서 가장 흥미로운 부분이 나옵니다. 당시 사람들이 겨울에 사고판 건, 땅속에 있는 구근이었습니다. 꽃은 봄이 돼야 피니까요. 그래서 실제로 "
+  },
+  {
+   "shot": 9,
+   "section": "사람들이 산 건 꽃이 아니라 '종이'였다",
+   "start_hint_s": 301.2,
+   "duration_s": 31.2,
+   "broll_ko": "술집 풍경",
+   "prompt_en": "술집 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여기서 가장 흥미로운 부분이 나옵니다. 당시 사람들이 겨울에 사고판 건, 땅속에 있는 구근이었습니다. 꽃은 봄이 돼야 피니까요. 그래서 실제로 "
+  },
+  {
+   "shot": 10,
+   "section": "한 송이에 집 한 채? 숫자의 함정",
+   "start_hint_s": 350.0,
+   "duration_s": 39.8,
+   "broll_ko": "저울 위의 튤립과 금화",
+   "prompt_en": "저울 위의 튤립과 금화 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'튤립 한 송이에 집 한 채'라는 말도 조심해서 봐야 합니다. 가장 비쌌다는 품종의 가격은 자료마다 수천에서 만 길더까지 다르게 전해집니다. 당"
+  },
+  {
+   "shot": 11,
+   "section": "왜 과장된 이야기가 더 오래 살아남을까",
+   "start_hint_s": 370.0,
+   "duration_s": 67.1,
+   "broll_ko": "모닥불 주위에 둘러앉은 사람들의 실루엣",
+   "prompt_en": "모닥불 주위에 둘러앉은 사람들의 실루엣 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 왜 과장된 이야기가 기록보다 더 오래 살아남았을까요? 이유는 단순합니다. 이야기는 극적일수록 잘 퍼지기 때문입니다. \"일부 상인들이 계약을"
+  },
+  {
+   "shot": 12,
+   "section": "그럼 튤립 파동에서 뭘 배워야 할까",
+   "start_hint_s": 400.0,
+   "duration_s": 25.9,
+   "broll_ko": "현대 도시의 증권 전광판",
+   "prompt_en": "현대 도시의 증권 전광판 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 튤립 파동은 쓸모없는 이야기일까요? 아닙니다. 오히려 두 가지를 알려줍니다. 하나, 버블은 실제로 생긴다. 가격이 가치보다 훨씬 앞서 달리"
+  },
+  {
+   "shot": 13,
+   "section": "그럼 튤립 파동에서 뭘 배워야 할까",
+   "start_hint_s": 425.9,
+   "duration_s": 25.9,
+   "broll_ko": "흐릿하게",
+   "prompt_en": "흐릿하게 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 튤립 파동은 쓸모없는 이야기일까요? 아닙니다. 오히려 두 가지를 알려줍니다. 하나, 버블은 실제로 생긴다. 가격이 가치보다 훨씬 앞서 달리"
+  },
+  {
+   "shot": 14,
+   "section": "오늘 한 장 요약",
+   "start_hint_s": 460.0,
+   "duration_s": 61.1,
+   "broll_ko": "노트에 세 줄이 적히는 장면",
+   "prompt_en": "노트에 세 줄이 적히는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "정리하겠습니다. 하나. 튤립 파동은 실제로 있었고, 1637년 2월 초 가격이 무너졌습니다. 둘. 하지만 '나라 전체가 파산하고 사람들이 운하에"
+  },
+  {
+   "shot": 15,
+   "section": "마무리",
+   "start_hint_s": 500.0,
+   "duration_s": 16.5,
+   "broll_ko": "abstract background matching the topic",
+   "prompt_en": "abstract background matching the topic — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사는 사건만큼이나, 그 사건이 어떻게 이야기되었는지도 중요합니다. 다음 편에서는 진짜 나라 하나를 흔든 버블, 1720년 영국의 남해 회사 사"
+  }
+ ]
+}
