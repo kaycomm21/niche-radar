@@ -1,0 +1,50 @@
+name: verdict
+# 웹의 [생산 큐로/보류/폐기/수집 제외] 버튼 → 미리 채운 Issue → 여기서 exports/ 에 기록 → 화면 재생성
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: verdict
+  cancel-in-progress: false
+
+jobs:
+  record:
+    # 저장소 주인이 연 판정 Issue 만 처리 (공개 저장소에서 타인이 판정을 조작하지 못하게)
+    if: github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-verdict')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: 판정 기록
+        id: rec
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          NUMBER: ${{ github.event.issue.number }}
+          TZ: Asia/Seoul
+        run: |
+          python -m radar verdict-from-issue --number "$NUMBER"
+          git config user.name "niche-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exports/
+          git commit -qm "verdict: #$NUMBER" || exit 0
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done
+      - name: Issue 정리 + 화면 재생성
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TITLE: ${{ github.event.issue.title }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          gh label create production-queue --color 0E8A16 --description "생산 큐 (Phase 2 생산 패키지 입력)" 2>/dev/null || true
+          case "$TITLE" in
+            "[생산큐]"*) gh issue edit "$NUMBER" --add-label production-queue
+                         gh issue comment "$NUMBER" --body "✅ 생산 큐에 기록했습니다 (exports/production_queue.json). 이 Issue는 생산이 끝나면 닫으세요." ;;
+            *)           gh issue close "$NUMBER" --comment "✅ 판정을 기록했습니다 (exports/verdicts.json)." ;;
+          esac
+          gh workflow run daily.yml -f mode=export

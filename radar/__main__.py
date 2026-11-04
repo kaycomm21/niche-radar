@@ -14,6 +14,7 @@ import json
 import os
 import sys
 from datetime import date, timedelta
+from pathlib import Path
 
 from . import collect, config, export
 from .db import connect
@@ -84,6 +85,21 @@ def cmd_search(a) -> int:
     return 0
 
 
+def cmd_verdict_from_issue(a) -> int:
+    """verdict 워크플로용: env ISSUE_BODY 의 ```json 블록을 읽어 판정 기록. (셸에 본문을 넣지 않아 주입 위험 없음)"""
+    import re
+    body = os.environ.get("ISSUE_BODY", "")
+    m = re.search(r"```json\s*(\{.*?\})\s*```", body, re.S)
+    if "radar-verdict" not in body or not m:
+        print("판정 양식이 아님 — 건너뜀")
+        return 3
+    d = json.loads(m.group(1))
+    note = body[m.end():].replace("메모:", "").strip()[:500] or None
+    args = argparse.Namespace(id=str(d["id"]), action=d["action"], issue=a.number, title=d.get("title"),
+                              channel=d.get("channel"), group=d.get("group"), recipe=d.get("recipe"), note=note)
+    return cmd_verdict(args)
+
+
 VALID = {"queue": "생산큐", "hold": "보류", "drop": "폐기", "exclude_channel": "채널제외"}
 
 
@@ -105,6 +121,27 @@ def cmd_verdict(a) -> int:
                           "recipe": a.recipe, "date": date.today().isoformat(), "issue": a.issue, "status": "대기"})
         q.write_text(json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{VALID[a.action]} 기록: {a.id}")
+    return 0
+
+
+def cmd_alert(a) -> int:
+    """M5-22: 레퍼런스(시드) 채널의 새 💥(10배↑, 3일 이내) 영상을 Issue 본문(md)으로. 이미 알린 영상은 제외."""
+    q = json.loads((config.WEB_DATA_DIR / "surging.json").read_text(encoding="utf-8"))
+    state_p = config.DB_PATH.parent / "alerts_state.json"
+    seen = json.loads(state_p.read_text(encoding="utf-8")) if state_p.exists() else []
+    new = [v for v in q["items"] if v.get("src") == "seed" and (v.get("mx") or 0) >= 10 and v["id"] not in seen
+           and (date.fromisoformat(q["date"]) - date.fromisoformat(v["pub"])).days <= 3]
+    if not new:
+        print("새 💥 없음")
+        return 0
+    lines = [f"레퍼런스 채널에서 새로 터진 영상 {len(new)}건 ({q['date']}). 판정은 레이더 홈 카드에서 하세요.", "",
+             "| 영상 | 채널 | 배수 | 조회 | → 내 채널 |", "|---|---|---:|---:|---|"]
+    for v in new[:20]:
+        t = v["t"].replace("|", "/")
+        lines.append(f"| [{t}](https://www.youtube.com/watch?v={v['id']}) | {v.get('ct') or ''} | {v['mx']:.1f}× | {v.get('v') or 0:,} | {v.get('g') or '-'} |")
+    Path(a.out).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    state_p.write_text(json.dumps((seen + [v["id"] for v in new])[-2000:]), encoding="utf-8")
+    print(f"새 💥 {len(new)}건 → {a.out}")
     return 0
 
 
@@ -141,6 +178,8 @@ def main(argv=None) -> int:
         s.add_argument("--" + k, default=None)
     s.set_defaults(f=cmd_verdict)
     s = sub.add_parser("quota-plan"); s.set_defaults(f=cmd_quota_plan)
+    s = sub.add_parser("alert"); s.add_argument("--out", default="alert.md"); s.set_defaults(f=cmd_alert)
+    s = sub.add_parser("verdict-from-issue"); s.add_argument("--number", required=True); s.set_defaults(f=cmd_verdict_from_issue)
     a = ap.parse_args(argv)
     return a.f(a)
 

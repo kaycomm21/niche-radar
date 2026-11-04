@@ -66,3 +66,36 @@ def test_cards_auto_archive_after_7_days(tmp_env):
 
 def test_quota_plan_2000_channels_under_budget():
     assert cli.quota_plan(2000)["total"] <= config.QUOTA_BUDGET
+
+
+def test_verdict_from_issue_body(tmp_env, monkeypatch):
+    body = '<!-- radar-verdict: x -->\n```json\n{"action":"hold","id":"vid123","title":"T","channel":"C","group":"G","recipe":"R1"}\n```\n\n메모: 나중에'
+    monkeypatch.setenv("ISSUE_BODY", body)
+    assert cli.main(["verdict-from-issue", "--number", "7"]) == 0
+    v = json.loads((config.EXPORTS_DIR / "verdicts.json").read_text(encoding="utf-8"))
+    assert v["vid123"]["action"] == "hold" and v["vid123"]["issue"] == "7" and v["vid123"]["note"] == "나중에"
+    monkeypatch.setenv("ISSUE_BODY", "그냥 이슈")
+    assert cli.main(["verdict-from-issue", "--number", "8"]) == 3
+
+
+def test_exclude_channel_deactivates(tmp_env):
+    from radar.seed import load_seed
+    seed, _ = load_seed()
+    cid = next(iter(seed))
+    cli.main(["verdict", "--id", cid, "--action", "exclude_channel", "--title", "x"])
+    cli.main(["demo", "--days", "1", "--date", "2026-11-04"])
+    con = connect(config.DB_PATH)
+    # 시드 채널도 제외 판정이 우선 (sync_seed 이후 apply_exclusions)
+    assert con.execute("SELECT active FROM channels WHERE channel_id=?", (cid,)).fetchone()[0] == 0
+
+
+def test_alert_dedup(tmp_env):
+    cli.main(["demo", "--days", "5", "--date", "2026-11-04"])
+    out = config.DB_PATH.parent / "a.md"
+    cli.main(["alert", "--out", str(out)])
+    first = out.read_text(encoding="utf-8") if out.exists() else ""
+    if out.exists():
+        out.unlink()
+    cli.main(["alert", "--out", str(out)])
+    assert not out.exists()          # 같은 영상은 두 번 알리지 않음
+    assert first == "" or "레퍼런스 채널" in first

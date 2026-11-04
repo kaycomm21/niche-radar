@@ -84,6 +84,19 @@ def sync_seed(con, seed: dict[str, dict], today: str) -> int:
     return n
 
 
+def apply_exclusions(con) -> int:
+    """판정 '채널제외'(exports/verdicts.json) → 비활성. 행은 남겨서 차트로 재편입되지 않게 한다."""
+    p = config.EXPORTS_DIR / "verdicts.json"
+    if not p.exists():
+        return 0
+    data = json.loads(p.read_text(encoding="utf-8"))
+    ids = [k for k, v in data.items() if v.get("action") == "exclude_channel"]
+    for cid in ids:
+        con.execute("""INSERT INTO channels(channel_id, title, source, added_at, active) VALUES (?,?, 'excluded', date('now'), 0)
+                       ON CONFLICT(channel_id) DO UPDATE SET active=0, source='excluded'""", (cid, data[cid].get("title")))
+    return len(ids)
+
+
 def collect_charts(con, yt, today: str, stats: dict) -> None:
     from .youtube import ChartNotFound
     universe = con.execute("SELECT COUNT(*) FROM channels WHERE active=1").fetchone()[0]
@@ -197,6 +210,7 @@ def run_daily(con, yt, quota: Quota, seed: dict[str, dict], today: str) -> dict:
     stats = {"date": today, "chart_rows": 0, "chart_missing": [], "new_chart_channels": 0, "channels_updated": 0,
              "videos_updated": 0, "channels_videos_fetched": 0, "stopped_by_budget": False}
     stats["new_seed_channels"] = sync_seed(con, seed, today)
+    stats["excluded_channels"] = apply_exclusions(con)
     try:
         collect_charts(con, yt, today, stats)
         collect_channel_stats(con, yt, today, stats)

@@ -1,0 +1,120 @@
+name: daily-radar
+# 매일 06:00 KST 수집 → 집계 → data 브랜치에 DB 저장 → GitHub Pages 배포
+on:
+  schedule:
+    - cron: "0 21 * * *"        # UTC 21:00 = KST 06:00
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "auto=키 있으면 실제 수집 / fixture=가짜 데이터 화면 확인 / export=수집 없이 화면만 다시 만들기"
+        type: choice
+        options: [auto, fixture, export]
+        default: auto
+      search_q:
+        description: "(선택) search.list 키워드 1회 — 100유닛 소모, 하루 20회 상한"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: daily-radar
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Seoul
+  RADAR_DATA_DIR: data
+  RADAR_DB: data/radar.db
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: npm, cache-dependency-path: web/package-lock.json }
+
+      - name: 이전 DB 복원 (data 브랜치)
+        run: |
+          mkdir -p data
+          if git fetch --depth=1 origin data 2>/dev/null; then
+            git show origin/data:radar.db.gz | gunzip > data/radar.db || true
+            for f in cards_state.json alerts_state.json; do git show origin/data:$f > data/$f 2>/dev/null || rm -f data/$f; done
+          fi
+          ls -la data
+
+      - name: 수집 + 집계
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          MODE: ${{ inputs.mode || 'auto' }}
+          SEARCH_Q: ${{ inputs.search_q }}
+        run: |
+          case "$MODE" in
+            fixture) RADAR_DB=data/fixture.db python -m radar demo --days 30 ;;
+            export)  python -m radar export --date "$(date +%F)" ;;
+            *)       python -m radar daily ;;
+          esac
+          if [ -n "$SEARCH_Q" ] && [ "$MODE" != "export" ]; then python -m radar search --q "$SEARCH_Q"; fi
+          python -m radar quota-plan
+
+      - name: DB 저장 (data 브랜치, 히스토리 없이 최신 1개만 유지)
+        if: inputs.mode != 'fixture'
+        run: |
+          set -e
+          tmp=$(mktemp -d)
+          gzip -c data/radar.db > "$tmp/radar.db.gz"
+          cp data/*.json "$tmp/" 2>/dev/null || true
+          cd "$tmp"
+          git init -q -b data
+          git config user.name "niche-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          printf '# data 브랜치\n자동 생성. radar.db.gz = SQLite 스냅샷(gzip). 직접 수정 금지.\n' > README.md
+          git add -A
+          git commit -qm "data: $(date +%F)"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data:data
+          ls -la
+
+      - name: 알림 Issue (레퍼런스 채널 새 💥)
+        if: inputs.mode != 'fixture' && inputs.mode != 'export'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m radar alert --out alert.md
+          if [ -f alert.md ]; then
+            gh label create alert --color D93F0B --description "레이더 자동 알림" 2>/dev/null || true
+            gh issue create --title "💥 새 터짐 알림 $(date +%F)" --body-file alert.md --label alert
+          fi
+          # 알림 기록을 data 브랜치에도 반영 (다음 날 중복 방지)
+          if [ -f data/alerts_state.json ]; then
+            tmp=$(mktemp -d); cd "$tmp"
+            git clone -q --depth 1 --branch data "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" .
+            cp "$GITHUB_WORKSPACE/data/alerts_state.json" .
+            git config user.name "niche-radar-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A; git commit -qm "alerts state" || true; git push -q origin data || true
+          fi
+
+      - name: 웹 빌드
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: web/dist }
+
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
