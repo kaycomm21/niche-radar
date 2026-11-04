@@ -1,0 +1,208 @@
+{
+ "title": "비행기에는 승객이 모르는 '두 개의 세상'이 있다",
+ "channel": "히스토리X (파일럿, 신규 니치 '생활 공학' 테스트)",
+ "est_total_s": 490,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 18.2,
+   "broll_ko": "장거리 여객기 객실",
+   "prompt_en": "장거리 여객기 객실 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "열 시간 넘게 날아가는 비행기 안. 승객들이 잠든 그 시간, 승무원들도 잠을 잡니다. 그런데 이상하죠. 객실 어디에도 승무원이 누워 있는 자리는"
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 18.2,
+   "duration_s": 18.2,
+   "broll_ko": "승객들이 잠든 어두운 기내",
+   "prompt_en": "승객들이 잠든 어두운 기내 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "열 시간 넘게 날아가는 비행기 안. 승객들이 잠든 그 시간, 승무원들도 잠을 잡니다. 그런데 이상하죠. 객실 어디에도 승무원이 누워 있는 자리는"
+  },
+  {
+   "shot": 3,
+   "section": "첫 번째 비밀: 천장 위의 방",
+   "start_hint_s": 50.0,
+   "duration_s": 19.8,
+   "broll_ko": "기내 천장",
+   "prompt_en": "기내 천장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "답은 여러분의 머리 위에 있습니다. 일부 장거리 여객기에는 객실 천장 위, 동체의 둥근 윗부분에 승무원 전용 휴식 공간이 숨어 있습니다. 입구는"
+  },
+  {
+   "shot": 4,
+   "section": "첫 번째 비밀: 천장 위의 방",
+   "start_hint_s": 69.8,
+   "duration_s": 19.8,
+   "broll_ko": "수하물 칸 클로즈업",
+   "prompt_en": "수하물 칸 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "답은 여러분의 머리 위에 있습니다. 일부 장거리 여객기에는 객실 천장 위, 동체의 둥근 윗부분에 승무원 전용 휴식 공간이 숨어 있습니다. 입구는"
+  },
+  {
+   "shot": 5,
+   "section": "첫 번째 비밀: 천장 위의 방",
+   "start_hint_s": 89.5,
+   "duration_s": 19.8,
+   "broll_ko": "잠긴 문 그래픽",
+   "prompt_en": "잠긴 문 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "답은 여러분의 머리 위에 있습니다. 일부 장거리 여객기에는 객실 천장 위, 동체의 둥근 윗부분에 승무원 전용 휴식 공간이 숨어 있습니다. 입구는"
+  },
+  {
+   "shot": 6,
+   "section": "좁은 방 하나에 숨은 안전 장치들",
+   "start_hint_s": 140.0,
+   "duration_s": 19.9,
+   "broll_ko": "연기 감지기",
+   "prompt_en": "연기 감지기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런데 이 방, 그냥 침대만 놓은 다락방이 아닙니다. 하늘 위에서 사람이 자는 공간이니까, 규칙이 매우 까다롭습니다. 예를 들어 한 신형 기종의"
+  },
+  {
+   "shot": 7,
+   "section": "좁은 방 하나에 숨은 안전 장치들",
+   "start_hint_s": 159.9,
+   "duration_s": 19.9,
+   "broll_ko": "인터폰",
+   "prompt_en": "인터폰 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런데 이 방, 그냥 침대만 놓은 다락방이 아닙니다. 하늘 위에서 사람이 자는 공간이니까, 규칙이 매우 까다롭습니다. 예를 들어 한 신형 기종의"
+  },
+  {
+   "shot": 8,
+   "section": "좁은 방 하나에 숨은 안전 장치들",
+   "start_hint_s": 179.8,
+   "duration_s": 19.9,
+   "broll_ko": "비상 탈출 표시 그래픽",
+   "prompt_en": "비상 탈출 표시 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그런데 이 방, 그냥 침대만 놓은 다락방이 아닙니다. 하늘 위에서 사람이 자는 공간이니까, 규칙이 매우 까다롭습니다. 예를 들어 한 신형 기종의"
+  },
+  {
+   "shot": 9,
+   "section": "두 번째 비밀: 왜 하필 1만 미터일까",
+   "start_hint_s": 220.0,
+   "duration_s": 42.4,
+   "broll_ko": "구름 위를 나는 여객기",
+   "prompt_en": "구름 위를 나는 여객기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 창밖으로 눈을 돌려보겠습니다. 대부분의 여객기는 약 3만 1천에서 4만 2천 피트, 미터로 바꾸면 대략 9.5킬로미터에서 13킬로미터 사이"
+  },
+  {
+   "shot": 10,
+   "section": "두 번째 비밀: 왜 하필 1만 미터일까",
+   "start_hint_s": 262.4,
+   "duration_s": 42.4,
+   "broll_ko": "고도계 그래픽",
+   "prompt_en": "고도계 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 창밖으로 눈을 돌려보겠습니다. 대부분의 여객기는 약 3만 1천에서 4만 2천 피트, 미터로 바꾸면 대략 9.5킬로미터에서 13킬로미터 사이"
+  },
+  {
+   "shot": 11,
+   "section": "그런데 더 높이 날면 안 될까?",
+   "start_hint_s": 330.0,
+   "duration_s": 15.0,
+   "broll_ko": "저울 그래픽",
+   "prompt_en": "저울 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 공기가 얇을수록 좋다면, 더 높이 날면 되지 않을까요? 그렇지 않습니다. 공기가 너무 얇아지면 엔진이 빨아들일 공기도, 날개가 붙잡을 공기"
+  },
+  {
+   "shot": 12,
+   "section": "그런데 더 높이 날면 안 될까?",
+   "start_hint_s": 345.0,
+   "duration_s": 15.0,
+   "broll_ko": "한쪽엔 연료",
+   "prompt_en": "한쪽엔 연료 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 공기가 얇을수록 좋다면, 더 높이 날면 되지 않을까요? 그렇지 않습니다. 공기가 너무 얇아지면 엔진이 빨아들일 공기도, 날개가 붙잡을 공기"
+  },
+  {
+   "shot": 13,
+   "section": "그런데 더 높이 날면 안 될까?",
+   "start_hint_s": 359.9,
+   "duration_s": 15.0,
+   "broll_ko": "한쪽엔 엔진",
+   "prompt_en": "한쪽엔 엔진 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 공기가 얇을수록 좋다면, 더 높이 날면 되지 않을까요? 그렇지 않습니다. 공기가 너무 얇아지면 엔진이 빨아들일 공기도, 날개가 붙잡을 공기"
+  },
+  {
+   "shot": 14,
+   "section": "세 번째 덤: 우리가 숨 쉬는 '가짜 높이'",
+   "start_hint_s": 400.0,
+   "duration_s": 62.0,
+   "broll_ko": "기내 공기 흐름을 보여주는 도해",
+   "prompt_en": "기내 공기 흐름을 보여주는 도해 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로 하나 더. 비행기가 1만 미터를 날 때, 객실 안 공기는 1만 미터의 공기가 아닙니다. 기내는 압력을 높여서, 보통 해발 약 1,80"
+  },
+  {
+   "shot": 15,
+   "section": "다음 비행에서 써먹는 세 가지",
+   "start_hint_s": 430.0,
+   "duration_s": 22.2,
+   "broll_ko": "기내 창가 좌석",
+   "prompt_en": "기내 창가 좌석 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 이야기를 알고 나면, 다음 비행이 조금 달라집니다. 바로 써먹을 수 있는 세 가지를 정리해 드릴게요. 하나, 물을 자주 드세요. 기내 공기"
+  },
+  {
+   "shot": 16,
+   "section": "다음 비행에서 써먹는 세 가지",
+   "start_hint_s": 452.2,
+   "duration_s": 22.2,
+   "broll_ko": "물병",
+   "prompt_en": "물병 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 이야기를 알고 나면, 다음 비행이 조금 달라집니다. 바로 써먹을 수 있는 세 가지를 정리해 드릴게요. 하나, 물을 자주 드세요. 기내 공기"
+  },
+  {
+   "shot": 17,
+   "section": "다음 비행에서 써먹는 세 가지",
+   "start_hint_s": 474.4,
+   "duration_s": 22.2,
+   "broll_ko": "통로를 걷는 승객의 발",
+   "prompt_en": "통로를 걷는 승객의 발 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 이야기를 알고 나면, 다음 비행이 조금 달라집니다. 바로 써먹을 수 있는 세 가지를 정리해 드릴게요. 하나, 물을 자주 드세요. 기내 공기"
+  },
+  {
+   "shot": 18,
+   "section": "오늘 한 장 요약",
+   "start_hint_s": 460.0,
+   "duration_s": 41.3,
+   "broll_ko": "노트에 세 줄이 적히는 장면",
+   "prompt_en": "노트에 세 줄이 적히는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "정리하겠습니다. 하나, 장거리 여객기 중에는 천장 위에 승무원 전용 휴식 공간이 숨어 있는 비행기가 있고, 그 작은 방에도 연기 감지기와 통신 "
+  },
+  {
+   "shot": 19,
+   "section": "마무리",
+   "start_hint_s": 470.0,
+   "duration_s": 17.2,
+   "broll_ko": "착륙하는 여객기",
+   "prompt_en": "착륙하는 여객기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음에 비행기를 타시면 천장을 한번 올려다보세요. 그 위에서 누군가 잠들어 있을지도 모릅니다. 그리고 창밖의 구름을 보면서, 이 비행기가 왜 하"
+  },
+  {
+   "shot": 20,
+   "section": "마무리",
+   "start_hint_s": 487.2,
+   "duration_s": 17.2,
+   "broll_ko": "해 질 녘 활주로",
+   "prompt_en": "해 질 녘 활주로 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음에 비행기를 타시면 천장을 한번 올려다보세요. 그 위에서 누군가 잠들어 있을지도 모릅니다. 그리고 창밖의 구름을 보면서, 이 비행기가 왜 하"
+  }
+ ]
+}
