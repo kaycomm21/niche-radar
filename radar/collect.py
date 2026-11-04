@@ -7,6 +7,7 @@ from datetime import date, timedelta
 
 from . import config
 from .quota import BudgetExceeded, Quota
+from .youtube import ApiError
 
 DUR = re.compile(r"P(?:(\d+)D)?T?(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?")
 HANGUL = re.compile(r"[가-힣]")
@@ -98,7 +99,7 @@ def apply_exclusions(con) -> int:
 
 
 def collect_charts(con, yt, today: str, stats: dict) -> None:
-    from .youtube import ChartNotFound
+    from .youtube import ApiError, ChartNotFound
     universe = con.execute("SELECT COUNT(*) FROM channels WHERE active=1").fetchone()[0]
     for cat in config.CHART_CATEGORIES:
         token, rank = None, {"long": 0, "short": 0}
@@ -107,6 +108,9 @@ def collect_charts(con, yt, today: str, stats: dict) -> None:
                 items, token = yt.most_popular(cat, token)
             except ChartNotFound:
                 stats["chart_missing"].append(cat)
+                break
+            except ApiError as e:          # 카테고리 하나의 오류(400 등)로 전체 수집을 멈추지 않음
+                stats.setdefault("errors", []).append(f"chart {cat}: {e}")
                 break
             for it in items:
                 vid = upsert_video(con, it, today)
@@ -218,6 +222,8 @@ def run_daily(con, yt, quota: Quota, seed: dict[str, dict], today: str) -> dict:
     except BudgetExceeded as e:
         stats["stopped_by_budget"] = True
         stats["budget_message"] = str(e)
+    except ApiError as e:                  # 쿼터 소진(403) 등: 그때까지 모은 데이터는 저장
+        stats.setdefault("errors", []).append(str(e))
     stats["pruned"] = prune(con, today)
     stats["units_used"] = quota.used_today()
     con.commit()

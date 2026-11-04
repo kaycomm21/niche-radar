@@ -103,3 +103,17 @@ def test_real_client_404_is_chart_not_found(con, monkeypatch):
     yt = RealYouTube("k", Quota(con, "2026-11-04", 8000))
     with pytest.raises(ChartNotFound):
         yt.most_popular("29")
+
+
+def test_api_error_mid_run_keeps_data(con, monkeypatch):
+    from radar.youtube import FakeYouTube
+    from datetime import date
+    seed, _ = load_seed()
+    q = Quota(con, "2026-11-04", 8000)
+    yt = FakeYouTube(q, date(2026, 11, 4), seed)
+    def boom(*a, **k):
+        raise ApiError("playlistItems.list HTTP 403 quotaExceeded")
+    monkeypatch.setattr(yt, "playlist_items", boom)
+    stats = collect.run_daily(con, yt, q, seed, "2026-11-04")
+    assert stats["errors"] and stats["channels_updated"] > 0
+    assert con.execute("SELECT COUNT(*) FROM chart_daily").fetchone()[0] > 0
