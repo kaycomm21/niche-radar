@@ -1,0 +1,4 @@
+{"kind":"youtube#videoListResponse","nextPageToken":"CDIQAA","items":[
+ {"kind":"youtube#video","id":"AAAAAAAAAA1","snippet":{"publishedAt":"2026-11-02T10:00:00Z","channelId":"UCsJ6RuBiTVWRX156FVbeaGg","title":"금리 인하, 내 대출은 어떻게 되나","description":"","thumbnails":{"medium":{"url":"https://i.ytimg.com/vi/AAAAAAAAAA1/mqdefault.jpg"}},"channelTitle":"슈카월드","tags":["경제","금리"],"categoryId":"25"},"contentDetails":{"duration":"PT18M42S"},"statistics":{"viewCount":"1520000","likeCount":"41000","commentCount":"5200"}},
+ {"kind":"youtube#video","id":"AAAAAAAAAA2","snippet":{"publishedAt":"2026-11-03T01:00:00Z","channelId":"UCnewchartchannel0000001","title":"이거 실화? #shorts","description":"","thumbnails":{"default":{"url":"https://i.ytimg.com/vi/AAAAAAAAAA2/default.jpg"}},"channelTitle":"새채널","categoryId":"24"},"contentDetails":{"duration":"PT45S"},"statistics":{"viewCount":"880000","likeCount":"20000"}}
+]}

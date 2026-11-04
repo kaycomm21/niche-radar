@@ -1,0 +1,3 @@
+{"kind":"youtube#channelListResponse","items":[
+ {"kind":"youtube#channel","id":"UCsJ6RuBiTVWRX156FVbeaGg","snippet":{"title":"슈카월드","customUrl":"@syukaworld","publishedAt":"2014-01-01T00:00:00Z","country":"KR","thumbnails":{"default":{"url":"https://yt3.ggpht.com/x"}}},"contentDetails":{"relatedPlaylists":{"uploads":"UUsJ6RuBiTVWRX156FVbeaGg"}},"statistics":{"viewCount":"1234567890","subscriberCount":"3730000","hiddenSubscriberCount":false,"videoCount":"1500"}}
+]}
