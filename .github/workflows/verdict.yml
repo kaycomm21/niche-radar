@@ -1,8 +1,10 @@
 name: verdict
-# 웹의 [생산 큐로/보류/폐기/수집 제외] 버튼 → 미리 채운 Issue → 여기서 exports/ 에 기록 → 화면 재생성
+# 웹의 [생산 큐로/보류/폐기/수집 제외] 버튼 → 미리 채운 Issue → exports/ 에 기록 → 화면 재생성
+# 버튼을 연달아 눌러 실행이 취소되더라도, 매 실행이 '아직 기록 안 된 판정 Issue 전부'를 따라잡는다.
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,36 +17,56 @@ concurrency:
 
 jobs:
   record:
-    # 저장소 주인이 연 판정 Issue 만 처리 (공개 저장소에서 타인이 판정을 조작하지 못하게)
-    if: github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-verdict')
+    if: github.event_name == 'workflow_dispatch' || (github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-verdict'))
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - name: 판정 기록
-        id: rec
-        env:
-          ISSUE_BODY: ${{ github.event.issue.body }}
-          NUMBER: ${{ github.event.issue.number }}
-          TZ: Asia/Seoul
-        run: |
-          python -m radar verdict-from-issue --number "$NUMBER"
-          git config user.name "niche-radar-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exports/
-          git commit -qm "verdict: #$NUMBER" || exit 0
-          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done
-      - name: Issue 정리 + 화면 재생성
+      - name: 미기록 판정 Issue 전부 기록
         env:
           GH_TOKEN: ${{ github.token }}
-          TITLE: ${{ github.event.issue.title }}
-          NUMBER: ${{ github.event.issue.number }}
+          OWNER: ${{ github.repository_owner }}
+          TZ: Asia/Seoul
         run: |
+          git config user.name "niche-radar-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           gh label create production-queue --color 0E8A16 --description "생산 큐 (Phase 2 생산 패키지 입력)" 2>/dev/null || true
-          case "$TITLE" in
-            "[생산큐]"*) gh issue edit "$NUMBER" --add-label production-queue
-                         gh issue comment "$NUMBER" --body "✅ 생산 큐에 기록했습니다 (exports/production_queue.json). 이 Issue는 생산이 끝나면 닫으세요." ;;
-            *)           gh issue close "$NUMBER" --comment "✅ 판정을 기록했습니다 (exports/verdicts.json)." ;;
-          esac
-          gh workflow run daily.yml -f mode=export
+          gh issue list --state open --author "$OWNER" --search "radar-verdict in:body" --limit 100 --json number,title,body > issues.json
+          python - <<'PY'
+          import json, os, re, subprocess
+          issues = sorted(json.load(open("issues.json")), key=lambda i: i["number"])
+          try:
+              verdicts = json.load(open("exports/verdicts.json"))
+          except FileNotFoundError:
+              verdicts = {}
+          done = []
+          for it in issues:
+              m = re.search(r"```json\s*(\{.*?\})\s*```", it["body"], re.S)
+              if "radar-verdict" not in it["body"] or not m:
+                  continue
+              d = json.loads(m.group(1))
+              if verdicts.get(str(d.get("id")), {}).get("action") == d.get("action"):
+                  continue      # 이미 같은 판정으로 기록됨 (중복 Issue 포함) → 건너뜀
+              env = {**os.environ, "ISSUE_BODY": it["body"]}
+              r = subprocess.run(["python", "-m", "radar", "verdict-from-issue", "--number", str(it["number"])], env=env)
+              if r.returncode == 0:
+                  done.append(it)
+          json.dump(done, open("done.json", "w"), ensure_ascii=False)
+          print("기록", [i["number"] for i in done])
+          PY
+          git add exports/
+          if git commit -qm "verdict: $(python -c "import json;print(' '.join('#%d'%i['number'] for i in json.load(open('done.json'))))")"; then
+            for i in 1 2 3 4 5; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 5; done
+          fi
+          python - <<'PY'
+          import json, subprocess
+          for it in json.load(open("done.json")):
+              n = str(it["number"])
+              if it["title"].startswith("[생산큐]"):
+                  subprocess.run(["gh", "issue", "edit", n, "--add-label", "production-queue"])
+                  subprocess.run(["gh", "issue", "comment", n, "--body", "✅ 생산 큐에 기록했습니다 (exports/production_queue.json). 생산이 끝나면 이 Issue를 닫으세요."])
+              else:
+                  subprocess.run(["gh", "issue", "close", n, "--comment", "✅ 판정을 기록했습니다 (exports/verdicts.json)."])
+          PY
+          [ -s done.json ] && [ "$(cat done.json)" != "[]" ] && gh workflow run daily.yml -f mode=export || true
