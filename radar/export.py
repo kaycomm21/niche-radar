@@ -314,7 +314,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                "title_q": (sum("?" in x for x in titles) / len(titles)) if titles else None, "heat": heat}
         h_list = hist.get(cid, [])
         daily = []
-        for prev_row, row in zip(h_list[-31:], h_list[-30:]):
+        for prev_row, row in zip(h_list[-366:], h_list[-365:]):
             daily.append({"d": row[0], "subs": row[1], "ds": None if row[1] is None or prev_row[1] is None else row[1] - prev_row[1],
                           "views": row[2], "dv": None if row[2] is None or prev_row[2] is None else row[2] - prev_row[2]})
         allvs = by_channel.get(cid, [])
@@ -343,6 +343,29 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             "country": ch["country"], "hist": h[-365:], "f": {k: f[k] for k in f if k != "grade"}, "grade": f["grade"],
             "fc_subs": fc_subs, "fc_views": fc_views, "milestones": ms, "fmt": fmt,
             "videos": [vcard(v) for v in vs]})
+
+    # ---------------- 홈(플레이보드식) 위젯 데이터
+    def d1(cid, idx):
+        h = hist.get(cid, [])
+        return (h[-1][idx] - h[-2][idx]) if len(h) >= 2 and h[-1][idx] is not None and h[-2][idx] is not None else None
+    rise = []
+    for cid, f in feats.items():
+        g7 = f["sub_gain"] if f["sub_gain"] is not None else d1(cid, 1)
+        if g7:
+            rise.append({"id": cid, "t": chans[cid]["title"], "th": chans[cid]["thumb"], "subs": f["subs"], "gain": g7,
+                         "rate": (g7 / f["subs"]) if f["subs"] else None, "win": "30일" if f["sub_gain"] is not None else "1일"})
+    rise.sort(key=lambda r: -r["gain"])
+    vrise = sorted([c for c in feats], key=lambda c: -(d1(c, 2) or 0))[:20]
+    top24 = sorted([v for v in vids if v["views_24h"]], key=lambda v: -v["views_24h"])[:20]
+    _write(out_dir / "home.json", {
+        "date": today,
+        "chart_long": [vcard(vmap[r[0]]) for r in con.execute("SELECT video_id FROM chart_daily WHERE date=? AND category_id='0' AND format='long' ORDER BY rank LIMIT 10", (today,)) if r[0] in vmap],
+        "chart_short": [vcard(vmap[r[0]]) for r in con.execute("SELECT video_id FROM chart_daily WHERE date=? AND format='short' ORDER BY rank LIMIT 10", (today,)) if r[0] in vmap],
+        "subs_rise": rise[:20],
+        "views_rise": [{"id": c, "t": chans[c]["title"], "th": chans[c]["thumb"], "subs": feats[c]["subs"], "gain": d1(c, 2)} for c in vrise if d1(c, 2)],
+        "top24": [vcard(v) for v in top24],
+        "explode": [vcard(v) for v in sorted([v for v in vids if (v["multiple"] or 0) >= 10 and (v["views"] or 0) >= 10000 and (v["age_days"] or 99) <= 7], key=lambda v: -(v["views_24h"] or 0))[:10]],
+    })
 
     # ---------------- M1-5 주제 트렌드
     from .trends import compute as compute_trends

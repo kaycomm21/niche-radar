@@ -154,11 +154,17 @@ export function ChannelPage({ id }: { id: string }) {
   const [s] = useData<Summary>("summary.json");
   const [metric, setMetric] = useState<"subs" | "views">("subs");
   const [vsort, setVsort] = useState<"mx" | "views" | "recent">("mx");
+  const [per, setPer] = useState<Period>({ key: "30", from: "", to: "" });
   if (!c) return <Loading err={e} />;
+  const [pf, pt] = periodRange(per, c.hist.length ? c.hist[c.hist.length - 1][0] : new Date().toISOString().slice(0, 10));
+  const inP = (d: string) => d >= pf && d <= pt;
+  const pVideos = c.videos.filter((v) => inP(v.pub));
+  const pStats = pVideos.length ? { n: pVideos.length, avg: pVideos.reduce((a, v) => a + (v.v ?? 0), 0) / pVideos.length,
+    like: med(pVideos.filter((v) => v.v).map((v) => (v.lk ?? 0) / (v.v as number))), cm: med(pVideos.filter((v) => v.v).map((v) => (v.cm ?? 0) / (v.v as number))) } : null;
   const f = c.f, F = s?.formulas ?? {};
   const idx = metric === "subs" ? 1 : 2;
   const fc = metric === "subs" ? c.fc_subs : c.fc_views;
-  const hist = c.hist.map((h) => ({ x: h[0], y: h[idx] as number | null }));
+  const hist = c.hist.filter((h) => inP(h[0])).map((h) => ({ x: h[0], y: h[idx] as number | null }));
   const last = c.hist[c.hist.length - 1];
   const fcPts = fc && last ? [{ x: last[0], y: last[idx] as number | null }, ...[30, 90].map((d) => ({ x: addDays(last[0], d), y: fc.forecast[String(d)] }))] : [];
   const diff = (days: number) => {
@@ -176,7 +182,8 @@ export function ChannelPage({ id }: { id: string }) {
           <div className="small muted">{c.handle} · {c.g ?? "그룹 미지정"} · {c.src === "seed" ? "레퍼런스" : "차트 편입"} · <a href={`https://www.youtube.com/channel/${c.id}`} target="_blank" rel="noreferrer">유튜브에서 열기</a></div>
           {f.flags.length > 0 && <div className="warn small">⚠️ 이상 신호: {f.flags.join(", ")} <Est formula={F.fake ?? ""} kind="기준" /></div>}
         </div>
-        <span className={`grade lg g-${c.grade.letter ?? "na"}`}>{c.grade.letter ?? "–"}</span>
+        <div className="grade-wrap"><span className={`grade lg g-${c.grade.letter ?? "na"}`}>{c.grade.letter ?? "–"}</span>
+          <Est kind={`등급 ${c.grade.score ?? "–"}점`} formula={"투명 등급(S·A·B·C·D) = 레이더가 추적하는 채널들 안에서의 상대 평가. " + (F.grade ?? "") + ` · 현재 데이터 ${f.days_hist}일치라 '성장률'은 7일 이상 쌓여야 반영됩니다.`} /></div>
       </div>
 
       <div className="kpis">
@@ -187,6 +194,7 @@ export function ChannelPage({ id }: { id: string }) {
         <div className="kpi"><span>참여율(중앙값)</span><b>{pct(f.engagement, 2)}</b><small>(좋아요+댓글)÷조회</small></div>
       </div>
 
+      <div className="row-actions"><a className="btn small" href={`#/calc?id=${c.id}`}>💰 이 채널 수익 계산기</a></div>
       <div className="chips rank-chips">
         <span className="chip">구독 순위 <b>{c.ranks.subs ?? "–"}</b>/{c.ranks.n}</span>
         <span className="chip">인기도 순위 <b>{c.ranks.pop ?? "–"}</b></span>
@@ -203,18 +211,25 @@ export function ChannelPage({ id }: { id: string }) {
         <tr><td>같은 카테고리({c.perf.category ?? "–"}) 중앙값</td><td>{n(c.perf.category_median)}</td><td>{ratio(c.perf.avg_views, c.perf.category_median)}</td></tr>
       </tbody></table></div>
 
-      <h3>🎞 영상 분석 (최근 90일)</h3>
-      <div className="table-wrap"><table><thead><tr><th>지표</th><th>이 채널</th><th>카테고리 평균</th></tr></thead><tbody>
-        <tr><td>영상 수</td><td>{c.video_stats.mine?.n ?? "–"}</td><td>–</td></tr>
-        <tr><td>평균 조회</td><td>{n(c.video_stats.mine?.avg_views)}</td><td>{n(c.video_stats.category?.avg_views)}</td></tr>
-        <tr><td>좋아요율 (중앙값)</td><td>{pct(c.video_stats.mine?.like_rate, 2)}</td><td>{pct(c.video_stats.category?.like_rate, 2)}</td></tr>
-        <tr><td>댓글율 (중앙값)</td><td>{pct(c.video_stats.mine?.comment_rate, 3)}</td><td>{pct(c.video_stats.category?.comment_rate, 3)}</td></tr>
-      </tbody></table></div>
+      <div className="panel" style={{ marginTop: 14 }}>
+        <b>📆 분석 기간</b> <span className="small muted">— 아래 '영상 분석 · 일별 변화 · 추이' 에 모두 적용</span>
+        <PeriodPicker value={per} onChange={setPer} />
+        <span className="small muted">{pf} ~ {pt}</span>
+      </div>
 
-      <h3>📅 일별 변화 (최근 30일) <Est kind="참고" formula="YouTube API는 구독자 수를 유효숫자 3자리로 반올림해 줍니다(예: 374만). 그래서 큰 채널은 구독 변화가 며칠 동안 +0으로 보일 수 있습니다. 조회수는 정확한 값입니다." /></h3>
+      <h3>🎞 영상 분석 ({pf.slice(5)}~{pt.slice(5)} 업로드)</h3>
+      <div className="table-wrap"><table><thead><tr><th>지표</th><th>이 채널</th><th>카테고리 평균(최근 30편)</th></tr></thead><tbody>
+        <tr><td>영상 수</td><td>{pStats?.n ?? 0}</td><td>–</td></tr>
+        <tr><td>평균 조회</td><td>{n(pStats?.avg)}</td><td>{n(c.video_stats.category?.avg_views)}</td></tr>
+        <tr><td>좋아요율 (중앙값)</td><td>{pct(pStats?.like, 2)}</td><td>{pct(c.video_stats.category?.like_rate, 2)}</td></tr>
+        <tr><td>댓글율 (중앙값)</td><td>{pct(pStats?.cm, 3)}</td><td>{pct(c.video_stats.category?.comment_rate, 3)}</td></tr>
+      </tbody></table></div>
+      <p className="small muted">채널당 최근 30편까지 수집하므로, 업로드가 잦은 채널은 긴 기간을 골라도 최근 30편 안에서만 계산됩니다.</p>
+
+      <h3>📅 일별 변화 <Est kind="참고" formula="YouTube API는 구독자 수를 유효숫자 3자리로 반올림해 줍니다(예: 374만). 그래서 큰 채널은 구독 변화가 며칠 동안 +0으로 보일 수 있습니다. 조회수는 정확한 값입니다." /></h3>
       {c.daily.length === 0 ? <p className="small muted">2일째 데이터부터 표시됩니다.</p> : (
         <div className="table-wrap"><table><thead><tr><th>날짜</th><th>구독 변화</th><th>구독자</th><th>조회 변화</th></tr></thead><tbody>
-          {c.daily.map((r) => <tr key={r.d}><td>{r.d.slice(5)}</td><td className={delta(r.ds)}>{sign(r.ds)}</td><td>{n(r.subs)}</td><td className={delta(r.dv)}>{sign(r.dv)}</td></tr>)}
+          {c.daily.filter((r) => inP(r.d)).map((r) => <tr key={r.d}><td>{r.d.slice(5)}</td><td className={delta(r.ds)}>{sign(r.ds)}</td><td>{n(r.subs)}</td><td className={delta(r.dv)}>{sign(r.dv)}</td></tr>)}
         </tbody></table></div>
       )}
 
@@ -261,6 +276,26 @@ function ms(d: string | null | undefined, cur: number | null, target: number) {
   if (cur !== null && cur >= target) return "달성";
   return d ? `${d} 도달 예상` : "예측 불가(감소·정체 또는 10년 초과)";
 }
+type Period = { key: string; from: string; to: string };
+const PERIODS: [string, string, number][] = [["7", "일주일", 7], ["30", "한달", 30], ["90", "분기", 90], ["180", "반기", 180], ["365", "1년", 365], ["custom", "직접 설정", 0]];
+function periodRange(p: Period, last: string): [string, string] {
+  if (p.key === "custom") return [p.from || "2000-01-01", p.to || last];
+  const days = PERIODS.find((x) => x[0] === p.key)?.[2] ?? 30;
+  return [addDays(last, -(days - 1)), last];
+}
+function PeriodPicker({ value, onChange }: { value: Period; onChange: (p: Period) => void }) {
+  return (
+    <div className="period">
+      <Seg value={value.key} onChange={(k) => onChange({ ...value, key: k })} options={PERIODS.map(([k, l]) => [k, l] as [string, string])} />
+      {value.key === "custom" && <>
+        <input type="date" value={value.from} onChange={(e) => onChange({ ...value, from: e.target.value })} aria-label="시작일" />
+        <span>~</span>
+        <input type="date" value={value.to} onChange={(e) => onChange({ ...value, to: e.target.value })} aria-label="종료일" />
+      </>}
+    </div>
+  );
+}
+function med(xs: number[]) { if (!xs.length) return null; const s = [...xs].sort((a, b) => a - b); return s[Math.floor(s.length / 2)]; }
 function ratio(a: number | null, b: number | null) { return a && b ? `${(a / b).toFixed(1)}배` : "–"; }
 function delta(x: number | null) { return x === null ? "" : x > 0 ? "up" : x < 0 ? "down" : ""; }
 function sign(x: number | null) { return x === null ? "–" : `${x >= 0 ? "+" : ""}${n(x)}`; }
@@ -407,4 +442,90 @@ const GROUPS = ["경제적자유구역", "지혜의숲", "히스토리X", "음�
 function issueUrlAnalyze(q: string, group: string) {
   const body = ["<!-- radar-analyze: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify({ action: "analyze", q, group: group || null }), "```"].join("\n");
   return `https://github.com/kaycomm21/niche-radar/issues/new?${new URLSearchParams({ title: `[채널분석] ${q}`.slice(0, 100), body }).toString()}`;
+}
+
+// ------------------------------------------------------------------ 🏠 홈 (플레이보드형 랭킹 보드)
+type HomeData = { date: string; chart_long: VCard[]; chart_short: VCard[]; top24: VCard[]; explode: VCard[];
+  subs_rise: { id: string; t: string | null; th: string | null; subs: number | null; gain: number; rate: number | null; win: string }[];
+  views_rise: { id: string; t: string | null; th: string | null; subs: number | null; gain: number }[] };
+function VList({ items, val }: { items: VCard[]; val: (v: VCard) => string }) {
+  return <>{items.slice(0, 10).map((v, i) => (
+    <div key={v.id} className="mini"><span className="no">{i + 1}</span>{v.th ? <img src={v.th} alt="" loading="lazy" /> : <span className="ph" />}
+      <div className="tx"><a href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">{v.t}</a><a className="small muted" href={`#/ch/${v.c}`} style={{ fontWeight: 400 }}>{v.ct}</a></div>
+      <span className="val">{val(v)}</span></div>))}</>;
+}
+export function HomeBoard() {
+  const [d, e] = useData<HomeData>("home.json");
+  const [q] = useData<Queue>("queue.json");
+  if (!d) return <Loading err={e} />;
+  return (
+    <>
+      <div className="hero">
+        <h2>오늘 유튜브에서 무엇이 터졌나 <span className="muted small">{d.date}</span></h2>
+        <p className="small muted">국내 인기 차트 + 추적 채널 {""}기준. 마음에 드는 소재는 🎯 생산 큐로 보내면 대본 패키지로 만들어집니다.</p>
+        {q && q.top3.length > 0 && <div className="row-actions"><a className="btn primary" href="#/queue">🎯 오늘의 생산 큐 후보 {q.top3.length}건 보기</a></div>}
+      </div>
+      <div className="board three">
+        <section className="panel"><h3>🌐 인기 차트 (롱폼) <a href="#/chart">더보기</a></h3><VList items={d.chart_long} val={(v) => n(v.v)} /></section>
+        <section className="panel"><h3>📱 인기 쇼츠 <a href="#/chart">더보기</a></h3><VList items={d.chart_short} val={(v) => n(v.v)} /></section>
+        <section className="panel"><h3>⚡ 24시간 최다 조회 증가 <a href="#/surge">더보기</a></h3><VList items={d.top24} val={(v) => "+" + n(v.v24)} /></section>
+        <section className="panel"><h3>📈 구독자 급상승 채널 <a href="#/rank">더보기</a></h3>
+          {d.subs_rise.slice(0, 10).map((r, i) => <div key={r.id} className="mini"><span className="no">{i + 1}</span>{r.th ? <img className="round" src={r.th} alt="" loading="lazy" /> : <span className="ph" />}
+            <div className="tx"><a href={`#/ch/${r.id}`}>{r.t}</a><span className="small muted">구독 {n(r.subs)}</span></div><span className="val up">+{n(r.gain)} <small>({r.win})</small></span></div>)}
+          {d.subs_rise.length === 0 && <div className="small muted">2일째 데이터부터 표시</div>}</section>
+        <section className="panel"><h3>👀 하루 조회 증가 채널</h3>
+          {d.views_rise.slice(0, 10).map((r, i) => <div key={r.id} className="mini"><span className="no">{i + 1}</span>{r.th ? <img className="round" src={r.th} alt="" loading="lazy" /> : <span className="ph" />}
+            <div className="tx"><a href={`#/ch/${r.id}`}>{r.t}</a><span className="small muted">구독 {n(r.subs)}</span></div><span className="val">+{n(r.gain)}</span></div>)}</section>
+        <section className="panel"><h3>💥 이번 주 10배 터진 영상 <a href="#/surge">더보기</a></h3><VList items={d.explode} val={(v) => `${v.mx?.toFixed(0)}×`} />
+          {d.explode.length === 0 && <div className="small muted">해당 없음</div>}</section>
+      </div>
+    </>
+  );
+}
+
+// ------------------------------------------------------------------ 💰 유튜브 수익 계산기
+export function CalcPage({ id }: { id: string }) {
+  const [s] = useData<Summary>("summary.json");
+  const [rk] = useData<{ items: RankRow[] }>("rankings.json");
+  const [daily, setDaily] = useState(10000);
+  const [longPct, setLongPct] = useState(70);
+  const [cat, setCat] = useState("27");
+  const [fin, setFin] = useState(false);
+  const [target, setTarget] = useState(10000000);
+  const [pick, setPick] = useState(id);
+  useEffect(() => {
+    const r = rk?.items.find((x) => x.id === pick);
+    if (r) setDaily(Math.max(1, Math.round((r.v30 || 0) / 30)));
+  }, [pick, rk]);
+  if (!s) return <Loading />;
+  const rpm = s.rpm[cat] ?? s.rpm["default"] ?? [800, 2500];
+  const sh = s.rpm["shorts"] ?? [30, 120];
+  const k = fin ? (s.rpm["kw_finance"]?.[0] ?? 1.6) : 1;
+  const per1000 = (i: 0 | 1) => (longPct / 100) * rpm[i] * k + (1 - longPct / 100) * sh[i];
+  const day = [daily * per1000(0) / 1000, daily * per1000(1) / 1000];
+  const need = [target / 30 / per1000(1) * 1000, target / 30 / per1000(0) * 1000];
+  const chosen = rk?.items.find((x) => x.id === pick);
+  return (
+    <section>
+      <h2>💰 유튜브 수익 계산기 <Est formula="수익 = 일 조회수 × (롱폼 비율 × 카테고리 RPM + 쇼츠 비율 × 쇼츠 RPM) ÷ 1000. RPM은 config/rpm_kr.yaml 의 가정치(실측 아님). 내 채널 실측 RPM이 연결되면 자동 보정." /></h2>
+      <div className="panel calc-grid">
+        <label>채널에서 불러오기 (최근 30일 업로드 조회 ÷ 30)
+          <select value={pick} onChange={(e) => setPick(e.target.value)}><option value="">직접 입력</option>
+            {rk?.items.slice().sort((a, b) => (b.subs ?? 0) - (a.subs ?? 0)).slice(0, 400).map((r) => <option key={r.id} value={r.id}>{r.t}</option>)}</select></label>
+        <label>일 평균 조회수<input type="number" value={daily} min={0} onChange={(e) => { setDaily(Number(e.target.value)); setPick(""); }} /></label>
+        <label>롱폼 비율 {longPct}% (나머지 쇼츠)<input type="range" min={0} max={100} value={longPct} onChange={(e) => setLongPct(Number(e.target.value))} /></label>
+        <label>카테고리<select value={cat} onChange={(e) => setCat(e.target.value)}>{Object.keys(s.rpm).filter((x) => /^\d+$/.test(x)).map((x) => <option key={x} value={x}>{s.categories[x] ?? x} ({n(s.rpm[x][0])}~{n(s.rpm[x][1])}원)</option>)}</select></label>
+        <label style={{ flexDirection: "row", alignItems: "center" }}><input type="checkbox" checked={fin} onChange={(e) => setFin(e.target.checked)} /> 금융·재테크 주제 (RPM ×{s.rpm["kw_finance"]?.[0] ?? 1.6})</label>
+        <label>목표 월 수익 (원)<input type="number" value={target} step={1000000} onChange={(e) => setTarget(Number(e.target.value))} /></label>
+      </div>
+      {chosen && <p className="small muted">불러온 채널: {chosen.t} · 최근 30일 업로드 조회 {n(chosen.v30)}</p>}
+      <div className="kpis">
+        <div className="kpi"><span>예상 일 수익</span><b>{won(day[0])}~{won(day[1])}</b><small>추정</small></div>
+        <div className="kpi"><span>예상 월 수익</span><b>{won(day[0] * 30)}~{won(day[1] * 30)}</b><small>추정</small></div>
+        <div className="kpi"><span>예상 연 수익</span><b>{won(day[0] * 365)}~{won(day[1] * 365)}</b><small>추정</small></div>
+        <div className="kpi"><span>목표 {won(target)}/월에 필요한 일 조회</span><b>{n(need[0])}~{n(need[1])}</b><small>RPM 상한~하한 기준</small></div>
+      </div>
+      <p className="small muted">⚠️ 광고 수익만 계산합니다(PPL·멤버십·슈퍼챗 제외). 실제 RPM은 시청자 국가·시즌·영상 길이에 따라 크게 달라집니다.</p>
+    </section>
+  );
 }
