@@ -95,8 +95,8 @@ export function SurgePage() {
 }
 
 // ------------------------------------------------------------------ M1-2 채널 순위
-type SortKey = "subs" | "sg" | "sgr" | "v30" | "avg" | "gs";
-const SORTS: [SortKey, string][] = [["gs", "등급"], ["sgr", "구독 급상승율"], ["sg", "구독 급상승 수"], ["v30", "30일 조회"], ["avg", "평균 조회"], ["subs", "구독자"]];
+type SortKey = "subs" | "sg" | "sgr" | "v30" | "avg" | "gs" | "pop";
+const SORTS: [SortKey, string][] = [["gs", "등급"], ["pop", "인기도(조회+좋아요×10)"], ["sgr", "구독 급상승율"], ["sg", "구독 급상승 수"], ["v30", "30일 조회"], ["avg", "평균 조회"], ["subs", "구독자"]];
 
 export function RankPage() {
   const [d, e] = useData<{ date: string; items: RankRow[] }>("rankings.json");
@@ -153,6 +153,7 @@ export function ChannelPage({ id }: { id: string }) {
   const [c, e] = useData<ChannelDetail>(`channels/${id}.json`);
   const [s] = useData<Summary>("summary.json");
   const [metric, setMetric] = useState<"subs" | "views">("subs");
+  const [vsort, setVsort] = useState<"mx" | "views" | "recent">("mx");
   if (!c) return <Loading err={e} />;
   const f = c.f, F = s?.formulas ?? {};
   const idx = metric === "subs" ? 1 : 2;
@@ -186,6 +187,37 @@ export function ChannelPage({ id }: { id: string }) {
         <div className="kpi"><span>참여율(중앙값)</span><b>{pct(f.engagement, 2)}</b><small>(좋아요+댓글)÷조회</small></div>
       </div>
 
+      <div className="chips rank-chips">
+        <span className="chip">구독 순위 <b>{c.ranks.subs ?? "–"}</b>/{c.ranks.n}</span>
+        <span className="chip">인기도 순위 <b>{c.ranks.pop ?? "–"}</b></span>
+        <span className="chip">30일 조회 순위 <b>{c.ranks.views30 ?? "–"}</b></span>
+        <span className="chip">{s?.categories[c.ranks.cat_id ?? ""] ?? "카테고리"} 내 <b>{c.ranks.cat ?? "–"}</b>/{c.ranks.cat_n}위</span>
+        <Est kind="유니버스 기준" formula={`순위는 전 세계가 아니라 레이더가 추적하는 ${c.ranks.n}개 채널(레퍼런스 + 국내 인기 차트 등장 채널) 안에서의 순위`} />
+      </div>
+      <p className="small">예상 연 광고수익 <b>{won(c.rev_year[0])}~{won(c.rev_year[1])}</b> <Est formula={(F.revenue ?? "") + " × 12"} /></p>
+
+      <h3>⚔️ 경쟁 대비 성과</h3>
+      <div className="table-wrap"><table><thead><tr><th>비교</th><th>평균 조회</th><th>대비</th></tr></thead><tbody>
+        <tr><td>이 채널</td><td>{n(c.perf.avg_views)}</td><td>–</td></tr>
+        {c.perf.group && <tr><td>같은 그룹({c.perf.group}) 중앙값</td><td>{n(c.perf.group_median)}</td><td>{ratio(c.perf.avg_views, c.perf.group_median)}</td></tr>}
+        <tr><td>같은 카테고리({c.perf.category ?? "–"}) 중앙값</td><td>{n(c.perf.category_median)}</td><td>{ratio(c.perf.avg_views, c.perf.category_median)}</td></tr>
+      </tbody></table></div>
+
+      <h3>🎞 영상 분석 (최근 90일)</h3>
+      <div className="table-wrap"><table><thead><tr><th>지표</th><th>이 채널</th><th>카테고리 평균</th></tr></thead><tbody>
+        <tr><td>영상 수</td><td>{c.video_stats.mine?.n ?? "–"}</td><td>–</td></tr>
+        <tr><td>평균 조회</td><td>{n(c.video_stats.mine?.avg_views)}</td><td>{n(c.video_stats.category?.avg_views)}</td></tr>
+        <tr><td>좋아요율 (중앙값)</td><td>{pct(c.video_stats.mine?.like_rate, 2)}</td><td>{pct(c.video_stats.category?.like_rate, 2)}</td></tr>
+        <tr><td>댓글율 (중앙값)</td><td>{pct(c.video_stats.mine?.comment_rate, 3)}</td><td>{pct(c.video_stats.category?.comment_rate, 3)}</td></tr>
+      </tbody></table></div>
+
+      <h3>📅 일별 변화 (최근 30일) <Est kind="참고" formula="YouTube API는 구독자 수를 유효숫자 3자리로 반올림해 줍니다(예: 374만). 그래서 큰 채널은 구독 변화가 며칠 동안 +0으로 보일 수 있습니다. 조회수는 정확한 값입니다." /></h3>
+      {c.daily.length === 0 ? <p className="small muted">2일째 데이터부터 표시됩니다.</p> : (
+        <div className="table-wrap"><table><thead><tr><th>날짜</th><th>구독 변화</th><th>구독자</th><th>조회 변화</th></tr></thead><tbody>
+          {c.daily.map((r) => <tr key={r.d}><td>{r.d.slice(5)}</td><td className={delta(r.ds)}>{sign(r.ds)}</td><td>{n(r.subs)}</td><td className={delta(r.dv)}>{sign(r.dv)}</td></tr>)}
+        </tbody></table></div>
+      )}
+
       <h3>📈 추이 · 예측</h3>
       <div className="filters"><Seg value={metric} onChange={setMetric} options={[["subs", "구독자"], ["views", "총 조회수"]]} /></div>
       <LineChart series={[{ name: "실측", color: "var(--s1)", points: hist }, ...(fcPts.length ? [{ name: "모델 예측", color: "var(--s2)", points: fcPts, dashed: true }] : [])]} />
@@ -208,8 +240,18 @@ export function ChannelPage({ id }: { id: string }) {
       <p className="small">최근 {c.fmt.n}편 · 쇼츠 비율 {pct(c.fmt.short_ratio, 0)} · 롱폼 평균 {dur(Math.round(c.fmt.avg_dur))} · 제목 평균 {c.fmt.title_len?.toFixed(0) ?? "–"}자 · 숫자 포함 {pct(c.fmt.title_num, 0)} · 질문형 {pct(c.fmt.title_q, 0)}</p>
       <Heatmap heat={c.fmt.heat} />
 
-      <h3>🎬 최근 영상 (배수 순)</h3>
-      {[...c.videos].sort((a, b) => (b.mx ?? 0) - (a.mx ?? 0)).slice(0, 15).map((v) => <VideoCard key={v.id} v={v} />)}
+      <h3>🎬 영상 목록</h3>
+      <div className="filters"><Seg value={vsort} onChange={setVsort} options={[["mx", "배수 순"], ["views", "조회수 TOP"], ["recent", "최신 순"]]} /></div>
+      {(vsort === "views" ? c.top_videos : [...c.videos].sort((a, b) => vsort === "recent" ? b.pub.localeCompare(a.pub) : (b.mx ?? 0) - (a.mx ?? 0))).slice(0, 15).map((v) => <VideoCard key={v.id} v={v} />)}
+
+      <h3>🧭 유사 채널 (같은 카테고리 · 비슷한 규모)</h3>
+      <ol className="rank-list">{c.similar.map((x) => (
+        <li key={x.id} className="rank-row">
+          {x.th ? <img src={x.th} alt="" className="avatar" loading="lazy" /> : <span className="avatar" />}
+          <div className="grow"><a href={`#/ch/${x.id}`} className="vtitle">{x.t ?? x.id}</a><div className="small muted">구독 {n(x.subs)} · 평균 조회 {n(x.avg)}</div>
+            <div className="row-actions"><a className="btn small" href={`#/compare?add=${x.id}`}>비교에 담기</a></div></div>
+          <span className={`grade g-${x.gr ?? "na"}`}>{x.gr ?? "–"}</span>
+        </li>))}</ol>
       <div className="row-actions"><a className="btn" href={`#/compare?add=${c.id}`}>비교에 담기</a><ExcludeChannel id={c.id} title={c.t ?? c.id} /></div>
     </section>
   );
@@ -219,6 +261,8 @@ function ms(d: string | null | undefined, cur: number | null, target: number) {
   if (cur !== null && cur >= target) return "달성";
   return d ? `${d} 도달 예상` : "예측 불가(감소·정체 또는 10년 초과)";
 }
+function ratio(a: number | null, b: number | null) { return a && b ? `${(a / b).toFixed(1)}배` : "–"; }
+function delta(x: number | null) { return x === null ? "" : x > 0 ? "up" : x < 0 ? "down" : ""; }
 function sign(x: number | null) { return x === null ? "–" : `${x >= 0 ? "+" : ""}${n(x)}`; }
 function addDays(iso: string, d: number) { const t = new Date(iso + "T00:00:00Z"); t.setUTCDate(t.getUTCDate() + d); return t.toISOString().slice(0, 10); }
 
@@ -325,4 +369,42 @@ export function TrendPage() {
       </ol>
     </section>
   );
+}
+
+// ------------------------------------------------------------------ 🔍 채널 검색 · 분석 요청
+type SearchRow = [string, string | null, string | null, number | null, string | null];
+export function SearchPage({ q: initial }: { q: string }) {
+  const [idx, e] = useData<SearchRow[]>("search.json");
+  const [q, setQ] = useState(initial);
+  const [g, setG] = useState("");
+  useEffect(() => { const h = `#/search?q=${encodeURIComponent(q)}`; if (location.hash !== h) history.replaceState(null, "", h); }, [q]);
+  if (!idx) return <Loading err={e} />;
+  const k = q.trim().toLowerCase().replace(/^@/, "");
+  const hits = k.length === 0 ? [] : idx.filter((r) => (r[1] ?? "").toLowerCase().includes(k) || (r[2] ?? "").toLowerCase().replace(/^@/, "").includes(k) || r[0].toLowerCase() === k.toLowerCase()).slice(0, 30);
+  const reqUrl = issueUrlAnalyze(q.trim(), g);
+  return (
+    <section>
+      <h2>🔍 채널 검색 · 분석</h2>
+      <div className="search"><input autoFocus value={q} onChange={(x) => setQ(x.target.value)} placeholder="채널 이름 · @핸들 · 유튜브 주소" aria-label="채널 검색" /></div>
+      <p className="small muted">레이더가 추적 중인 {idx.length.toLocaleString()}개 채널에서 바로 찾습니다. 없으면 아래 [분석 요청]으로 추가하면 3~5분 뒤 분석 화면이 생기고, 이후 매일 자동 추적됩니다.</p>
+      {hits.length > 0 && <ol className="rank-list">{hits.map((r) => (
+        <li key={r[0]} className="rank-row"><div className="grow"><a className="vtitle" href={`#/ch/${r[0]}`}>{r[1] ?? r[0]}</a>
+          <div className="small muted">{r[2] ?? ""} · 구독 {n(r[3])} · {r[4] ?? "그룹 미지정"}</div></div>
+          <a className="btn small" href={`#/ch/${r[0]}`}>분석 보기</a></li>))}</ol>}
+      {k.length > 0 && (
+        <div className="vcard">
+          <b>{hits.length === 0 ? "추적 중인 채널에 없습니다." : "찾는 채널이 목록에 없나요?"}</b>
+          <p className="small">유튜브 채널 주소(https://www.youtube.com/@핸들)나 @핸들로 요청하면 쿼터 약 3유닛, 이름으로 요청하면 100유닛(하루 20회 한도)을 씁니다.</p>
+          <div className="filters"><select value={g} onChange={(x) => setG(x.target.value)} aria-label="내 채널 그룹"><option value="">내 채널 그룹(선택)</option>{GROUPS.map((x) => <option key={x}>{x}</option>)}</select></div>
+          <a className="btn primary wide" href={reqUrl} target="_blank" rel="noreferrer">🔍 "{q.trim()}" 분석 요청</a>
+          <p className="small muted">GitHub 화면이 열리면 Submit new issue만 누르세요.</p>
+        </div>
+      )}
+    </section>
+  );
+}
+const GROUPS = ["경제적자유구역", "지혜의숲", "히스토리X", "음악플레이리스트", "레트로TV", "국뽕두그릇", "부자아이", "새시대유감", "깡통봇", "REDPANG", "춘식이만식이", "웃GO", "진영논리"];
+function issueUrlAnalyze(q: string, group: string) {
+  const body = ["<!-- radar-analyze: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify({ action: "analyze", q, group: group || null }), "```"].join("\n");
+  return `https://github.com/kaycomm21/niche-radar/issues/new?${new URLSearchParams({ title: `[채널분석] ${q}`.slice(0, 100), body }).toString()}`;
 }

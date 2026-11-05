@@ -155,6 +155,26 @@ def cmd_package(a) -> int:
     return 0
 
 
+def cmd_add_channel(a) -> int:
+    from .addchannel import add_and_collect
+    today = date.today()
+    seed, _ = load_seed()
+    con = connect(config.DB_PATH)
+    yt, quota, mode = _client(con, today, a.fixture, seed, job="add-channel")
+    try:
+        r = add_and_collect(con, yt, quota, a.q, today.isoformat(), a.group)
+    except Exception as e:  # noqa: BLE001
+        r = {"ok": False, "reason": str(e)}
+    con.commit()
+    r["mode"] = mode
+    print(json.dumps(r, ensure_ascii=False))
+    if a.out:
+        Path(a.out).write_text(json.dumps(r, ensure_ascii=False), encoding="utf-8")
+    if r.get("ok"):
+        export.build(con, today.isoformat(), last_run={"mode": f"add-channel ({mode})"})
+    return 0 if r.get("ok") else 4
+
+
 def cmd_calibrate(a) -> int:
     from .calibrate import report
     today = a.date or date.today().isoformat()
@@ -250,6 +270,7 @@ def main(argv=None) -> int:
     s = sub.add_parser("package"); s.add_argument("--date"); s.set_defaults(f=cmd_package)
     s = sub.add_parser("oauth-init"); s.add_argument("--name", required=True); s.set_defaults(f=lambda a: (__import__("radar.mychannel", fromlist=["x"]).oauth_init(a.name), 0)[1])
     s = sub.add_parser("mychannel"); s.add_argument("--days", type=int, default=28); s.set_defaults(f=lambda a: (print(json.dumps([{k: o[k] for k in ("channel", "views", "revenue", "rpm", "median_video_views")} for o in __import__("radar.mychannel", fromlist=["x"]).run(a.days)], ensure_ascii=False)), 0)[1])
+    s = sub.add_parser("add-channel"); s.add_argument("--q", required=True); s.add_argument("--group"); s.add_argument("--out"); s.add_argument("--fixture", action="store_true"); s.set_defaults(f=cmd_add_channel)
     s = sub.add_parser("calibrate"); s.add_argument("--date"); s.add_argument("--out", default=None); s.set_defaults(f=cmd_calibrate)
     s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)

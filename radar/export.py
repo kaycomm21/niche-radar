@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import json
 import shutil
-from collections import defaultdict
+from collections import Counter, defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
@@ -250,12 +250,44 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     for cid, f in feats.items():
         ch = chans[cid]
         top = max(by_channel.get(cid, [])[:30], key=lambda v: v["multiple"] or 0, default=None)
-        rows.append({"id": cid, "t": ch["title"], "g": ch["group"], "src": ch["source"], "th": ch["thumb"],
+        vs30 = [v for v in by_channel.get(cid, []) if v["age_days"] is not None and v["age_days"] <= 30]
+        pop = sum((v["views"] or 0) + 10 * (v["likes"] or 0) for v in vs30)   # Playboard식 인기도: 조회 + 좋아요×10 (최근 30일 영상)
+        cats = Counter(v["category_id"] for v in by_channel.get(cid, [])[:30] if v["category_id"])
+        f["cat"] = cats.most_common(1)[0][0] if cats else None
+        f["pop"] = pop
+        rows.append({"id": cid, "t": ch["title"], "h": ch["handle"], "cat": f["cat"], "pop": pop, "g": ch["group"], "src": ch["source"], "th": ch["thumb"],
                      "subs": f["subs"], "sg": f["sub_gain"], "sgr": f["growth"], "vg": f["view_gain"],
                      "v30": f["views30_uploads"], "avg": f["avg_views"], "up30": f["uploads30"],
                      "gr": f["grade"]["letter"], "gs": f["grade"]["score"], "fl": f["flags"], "rev": f["rev"],
                      "top": vcard(top) if top and (top["multiple"] or 0) >= 3 else None, "dh": f["days_hist"]})
     _write(out_dir / "rankings.json", {"date": today, "items": rows})
+    _write(out_dir / "search.json", [[r["id"], r["t"], r["h"], r["subs"], r["g"]] for r in rows])   # 🔍 클라이언트 검색 색인
+
+    # ---------------- 순위(SB Rank식) · 카테고리 평균 · 유사 채널 준비
+    def rank_of(key):
+        order = sorted([c for c in feats if feats[c].get(key) is not None], key=lambda c: -feats[c][key])
+        return {c: i + 1 for i, c in enumerate(order)}
+    rk_subs, rk_pop, rk_v30 = rank_of("subs"), rank_of("pop"), rank_of("views30_uploads")
+    cat_members = defaultdict(list)
+    for c, f in feats.items():
+        cat_members[f.get("cat")].append(c)
+    rk_cat = {}
+    for cat, mem in cat_members.items():
+        for i, c in enumerate(sorted(mem, key=lambda c: -(feats[c]["subs"] or 0))):
+            rk_cat[c] = i + 1
+
+    def vid_stats(vs):
+        n = len(vs)
+        if not n:
+            return None
+        views = [v["views"] or 0 for v in vs]
+        return {"n": n, "avg_views": sum(views) / n,
+                "like_rate": M.median([(v["likes"] or 0) / v["views"] for v in vs if v["views"]]),
+                "comment_rate": M.median([(v["comments"] or 0) / v["views"] for v in vs if v["views"]])}
+    cat_stats = {}
+    for cat, mem in cat_members.items():
+        allv = [v for c in mem for v in by_channel.get(c, [])[:30]]
+        cat_stats[cat] = vid_stats(allv)
 
     # ---------------- M2 채널 상세 (6~9, 11~13)
     for cid, f in feats.items():
@@ -280,7 +312,33 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                "title_len": (sum(len(x) for x in titles) / len(titles)) if titles else None,
                "title_num": (sum(any(c.isdigit() for c in x) for x in titles) / len(titles)) if titles else None,
                "title_q": (sum("?" in x for x in titles) / len(titles)) if titles else None, "heat": heat}
-        _write(out_dir / "channels" / f"{cid}.json", {
+        h_list = hist.get(cid, [])
+        daily = []
+        for prev_row, row in zip(h_list[-31:], h_list[-30:]):
+            daily.append({"d": row[0], "subs": row[1], "ds": None if row[1] is None or prev_row[1] is None else row[1] - prev_row[1],
+                          "views": row[2], "dv": None if row[2] is None or prev_row[2] is None else row[2] - prev_row[2]})
+        allvs = by_channel.get(cid, [])
+        v90 = [v for v in allvs if v["age_days"] is not None and v["age_days"] <= 90]
+        mine = vid_stats(v90) or vid_stats(allvs[:30])
+        subs_me = f["subs"] or 0
+        similar = sorted([c for c in cat_members.get(f.get("cat"), []) if c != cid and feats[c]["subs"]],
+                         key=lambda c: abs((feats[c]["subs"] or 0) - subs_me))[:6]
+        group_peers = [c for c in feats if c != cid and chans[c]["group"] and chans[c]["group"] == ch["group"]]
+        peer_avg = M.median([feats[c]["avg_views"] for c in group_peers if feats[c]["avg_views"]]) if group_peers else None
+        cat_avg = M.median([feats[c]["avg_views"] for c in cat_members.get(f.get("cat"), []) if c != cid and feats[c]["avg_views"]])
+        extra = {
+            "ranks": {"subs": rk_subs.get(cid), "pop": rk_pop.get(cid), "views30": rk_v30.get(cid), "cat": rk_cat.get(cid),
+                      "cat_n": len(cat_members.get(f.get("cat"), [])), "n": len(feats), "cat_id": f.get("cat")},
+            "daily": daily[::-1],
+            "video_stats": {"mine": mine, "category": cat_stats.get(f.get("cat"))},
+            "perf": {"avg_views": f["avg_views"], "group_median": peer_avg, "category_median": cat_avg,
+                     "group": ch["group"], "category": config.CATEGORY_NAMES.get(f.get("cat"), f.get("cat"))},
+            "similar": [{"id": c, "t": chans[c]["title"], "th": chans[c]["thumb"], "subs": feats[c]["subs"], "avg": feats[c]["avg_views"],
+                         "gr": feats[c]["grade"]["letter"]} for c in similar],
+            "rev_year": [r * 12 for r in f["rev"]],
+            "top_videos": [vcard(v) for v in sorted(allvs, key=lambda v: -(v["views"] or 0))[:10]],
+        }
+        _write(out_dir / "channels" / f"{cid}.json", {**extra,
             "id": cid, "t": ch["title"], "handle": ch["handle"], "g": ch["group"], "src": ch["source"], "th": ch["thumb"],
             "country": ch["country"], "hist": h[-365:], "f": {k: f[k] for k in f if k != "grade"}, "grade": f["grade"],
             "fc_subs": fc_subs, "fc_views": fc_views, "milestones": ms, "fmt": fmt,

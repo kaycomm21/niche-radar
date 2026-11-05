@@ -116,3 +116,8 @@ details summary { cursor: pointer; color: var(--text2); margin-top: 6px; }
 
 .reasons-plain { margin: 4px 0; padding-left: 18px; }
 .reasons-plain a { color: var(--text2); }
+
+.hsearch { flex: 1; min-width: 0; }
+.hsearch input { width: 100%; min-height: 32px; }
+.rank-chips { margin-top: 10px; }
+td.up { color: var(--s3); } td.down { color: var(--hot); }

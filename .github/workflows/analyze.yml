@@ -1,0 +1,87 @@
+name: analyze-channel
+# 웹 🔍 검색에서 [이 채널 분석 요청] → 미리 채운 Issue → 채널 추가·수집 → data 저장 → 화면 재생성
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      q:
+        description: "채널 URL · @핸들 · 채널ID · 이름(이름은 100유닛)"
+        required: true
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: daily-radar
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Seoul
+  RADAR_DATA_DIR: data
+  RADAR_DB: data/radar.db
+
+jobs:
+  analyze:
+    if: github.event_name == 'workflow_dispatch' || (github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-analyze'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: 요청 읽기
+        id: req
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          INPUT_Q: ${{ inputs.q }}
+        run: |
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os, re
+          q, g = os.environ.get("INPUT_Q") or "", ""
+          if not q:
+              m = re.search(r"```json\s*(\{.*?\})\s*```", os.environ.get("ISSUE_BODY", ""), re.S)
+              d = json.loads(m.group(1)) if m else {}
+              q, g = d.get("q", ""), d.get("group") or ""
+          q = q.replace("\n", " ").strip()[:200]
+          print("q=" + q)
+          print("g=" + g.replace("\n", " ")[:30])
+          PY
+      - name: DB 복원
+        run: |
+          mkdir -p data
+          git fetch --depth=1 origin data && git show origin/data:radar.db.gz | gunzip > data/radar.db
+          for f in cards_state.json alerts_state.json; do git show origin/data:$f > data/$f 2>/dev/null || rm -f data/$f; done
+      - name: 채널 추가·수집
+        id: add
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          Q: ${{ steps.req.outputs.q }}
+          G: ${{ steps.req.outputs.g }}
+        run: |
+          set +e
+          if [ -n "$G" ]; then python -m radar add-channel --q "$Q" --group "$G" --out result.json; else python -m radar add-channel --q "$Q" --out result.json; fi
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+          cat result.json
+      - name: DB 저장
+        if: steps.add.outputs.code == '0'
+        run: |
+          tmp=$(mktemp -d); gzip -c data/radar.db > "$tmp/radar.db.gz"; cp data/*.json "$tmp/" 2>/dev/null || true
+          cd "$tmp"; git init -q -b data
+          git config user.name "niche-radar-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          printf '# data 브랜치\n자동 생성. 직접 수정 금지.\n' > README.md
+          git add -A; git commit -qm "data: add-channel $(date +%F)"
+          git push -q --force "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" data:data
+      - name: 결과 알림 + 화면 재생성
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+        run: |
+          MSG=$(python -c "
+          import json; r=json.load(open('result.json'))
+          print(f'✅ 분석 완료: {r[\"title\"]} — 3~4분 뒤 https://kaycomm21.github.io/niche-radar/#/ch/{r[\"channel_id\"]} (최근 영상 {r[\"videos\"]}편, 이후 매일 자동 추적)' if r.get('ok') else '❌ ' + r.get('reason',''))")
+          echo "$MSG"
+          if [ -n "$NUMBER" ]; then gh issue close "$NUMBER" --comment "$MSG"; fi
+          if [ "${{ steps.add.outputs.code }}" = "0" ]; then gh workflow run daily.yml -f mode=export; fi

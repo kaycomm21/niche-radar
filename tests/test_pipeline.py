@@ -123,3 +123,27 @@ def test_calibrate_report(tmp_env):
     assert cli.main(["calibrate", "--date", "2026-11-04", "--out", str(out)]) == 0
     md = out.read_text(encoding="utf-8")
     assert "급상승 배수 기준" in md and "수집 중단 후보" in md
+
+
+def test_channel_detail_extras_and_search_index(tmp_env):
+    cli.main(["demo", "--days", "4", "--date", "2026-11-04"])
+    ch = json.loads(next((config.WEB_DATA_DIR / "channels").glob("*.json")).read_text(encoding="utf-8"))
+    for k in ("ranks", "daily", "video_stats", "perf", "similar", "rev_year", "top_videos"):
+        assert k in ch, k
+    assert ch["daily"] and "ds" in ch["daily"][0]
+    idx = json.loads((config.WEB_DATA_DIR / "search.json").read_text(encoding="utf-8"))
+    assert len(idx) >= 64 and len(idx[0]) == 5
+
+
+def test_add_channel_by_handle_and_id(tmp_env):
+    from radar.addchannel import parse_query
+    assert parse_query("https://www.youtube.com/@syukaworld") == ("handle", "@syukaworld")
+    assert parse_query("https://www.youtube.com/channel/UCsJ6RuBiTVWRX156FVbeaGg")[0] == "id"
+    assert parse_query("슈카월드") == ("name", "슈카월드")
+    cli.main(["demo", "--days", "1", "--date", "2026-11-04"])
+    con = connect(config.DB_PATH)
+    cid = con.execute("SELECT channel_id FROM channels WHERE source='chart' LIMIT 1").fetchone()[0]
+    assert cli.main(["add-channel", "--q", "@h" + cid[2:13].lower(), "--fixture"]) == 0
+    con = connect(config.DB_PATH)
+    assert con.execute("SELECT source FROM channels WHERE channel_id=?", (cid,)).fetchone()[0] == "manual"
+    assert cli.main(["add-channel", "--q", "@nonexistent", "--fixture"]) == 4

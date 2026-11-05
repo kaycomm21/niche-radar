@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { AboutPage, ChannelPage, ChartPage, ComparePage, Home, RankPage, SurgePage, TrendPage } from "./pages";
+import { AboutPage, ChannelPage, ChartPage, ComparePage, Home, RankPage, SurgePage, TrendPage, SearchPage } from "./pages";
 import "./style.css";
 
 function useHash() {
@@ -19,6 +19,7 @@ function App() {
   else if (path === "/chart") page = <ChartPage />;
   else if (path === "/surge") page = <SurgePage />;
   else if (path === "/trend") page = <TrendPage />;
+  else if (path === "/search") page = <SearchPage key="s" q={new URLSearchParams(qs).get("q") ?? ""} />;
   else if (path === "/rank") page = <RankPage />;
   else if (path === "/compare") page = <ComparePage ids={(new URLSearchParams(qs).get("ids") || "").split(",").filter(Boolean)} add={new URLSearchParams(qs).get("add") ?? undefined} />;
   else if (path === "/about") page = <AboutPage />;
@@ -26,7 +27,10 @@ function App() {
   const active = "#" + (path.startsWith("/ch/") ? "/rank" : path || "/");
   return (
     <>
-      <header className="top"><a href="#/" className="brand">📡 니치 레이더</a><span className="muted small">수집이 아니라 생산을 위한 레이더</span></header>
+      <header className="top"><a href="#/" className="brand">📡 니치 레이더</a>
+        <form className="hsearch" onSubmit={(e) => { e.preventDefault(); const v = (e.currentTarget.elements.namedItem("q") as HTMLInputElement).value; location.hash = `#/search?q=${encodeURIComponent(v)}`; }}>
+          <input name="q" placeholder="🔍 채널 검색" aria-label="채널 검색" />
+        </form></header>
       <main>{page}</main>
       <nav className="tabs">{NAV.map(([href, label]) => <a key={href} href={href} className={active === href ? "on" : ""}>{label}</a>)}</nav>
     </>

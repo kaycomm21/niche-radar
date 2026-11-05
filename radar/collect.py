@@ -140,24 +140,29 @@ def collect_charts(con, yt, today: str, stats: dict) -> None:
                 break
 
 
+def save_channel_items(con, items: list[dict], today: str, stats: dict) -> set[str]:
+    seen = set()
+    for it in items:
+        sn, st, cd = it.get("snippet", {}), it.get("statistics", {}), it.get("contentDetails", {})
+        seen.add(it["id"])
+        subs = None if st.get("hiddenSubscriberCount") else int(st.get("subscriberCount", 0))
+        th = sn.get("thumbnails", {})
+        con.execute("""UPDATE channels SET title=?, handle=?, country=?, uploads_playlist=?, thumb=?, published_at=?, last_stats_at=?
+                       WHERE channel_id=?""",
+                    (sn.get("title"), sn.get("customUrl"), sn.get("country"),
+                     cd.get("relatedPlaylists", {}).get("uploads"),
+                     (th.get("default") or {}).get("url"), sn.get("publishedAt"), today, it["id"]))
+        con.execute("INSERT OR REPLACE INTO channel_daily(channel_id, date, subs, views, videos) VALUES (?,?,?,?,?)",
+                    (it["id"], today, subs, int(st.get("viewCount", 0)), int(st.get("videoCount", 0))))
+        stats["channels_updated"] += 1
+    return seen
+
+
 def collect_channel_stats(con, yt, today: str, stats: dict) -> None:
-    ids = [r[0] for r in con.execute("SELECT channel_id FROM channels WHERE active=1 ORDER BY source='seed' DESC, channel_id")]
+    ids = [r[0] for r in con.execute("SELECT channel_id FROM channels WHERE active=1 ORDER BY source IN ('seed','manual') DESC, channel_id")]
     seen = set()
     for i in range(0, len(ids), 50):
-        batch = ids[i:i + 50]
-        for it in yt.channels(batch):
-            sn, st, cd = it.get("snippet", {}), it.get("statistics", {}), it.get("contentDetails", {})
-            seen.add(it["id"])
-            subs = None if st.get("hiddenSubscriberCount") else int(st.get("subscriberCount", 0))
-            th = sn.get("thumbnails", {})
-            con.execute("""UPDATE channels SET title=?, handle=?, country=?, uploads_playlist=?, thumb=?, published_at=?, last_stats_at=?
-                           WHERE channel_id=?""",
-                        (sn.get("title"), sn.get("customUrl"), sn.get("country"),
-                         cd.get("relatedPlaylists", {}).get("uploads"),
-                         (th.get("default") or {}).get("url"), sn.get("publishedAt"), today, it["id"]))
-            con.execute("INSERT OR REPLACE INTO channel_daily(channel_id, date, subs, views, videos) VALUES (?,?,?,?,?)",
-                        (it["id"], today, subs, int(st.get("viewCount", 0)), int(st.get("videoCount", 0))))
-            stats["channels_updated"] += 1
+        seen |= save_channel_items(con, yt.channels(ids[i:i + 50]), today, stats)
     missing = set(ids) - seen
     for cid in missing:   # API가 돌려주지 않은 채널(삭제·비공개) → 비활성
         con.execute("UPDATE channels SET active=0 WHERE channel_id=?", (cid,))
@@ -170,7 +175,7 @@ def collect_recent_videos(con, yt, today: str, stats: dict, deadline: float | No
     import time
     rows = con.execute("""SELECT channel_id, uploads_playlist FROM channels
                           WHERE active=1 AND uploads_playlist IS NOT NULL
-                          ORDER BY (source='seed') DESC, COALESCE(last_videos_at,'') ASC""").fetchall()
+                          ORDER BY (source IN ('seed','manual')) DESC, COALESCE(last_videos_at,'') ASC""").fetchall()
     pending: list[str] = []
 
     def flush(force: bool):
@@ -220,7 +225,7 @@ def prune(con, today: str) -> dict:
              SELECT video_id FROM (SELECT video_id, ROW_NUMBER() OVER (PARTITION BY channel_id ORDER BY published_at DESC) rn FROM videos)
              WHERE rn > ?) AND video_id NOT IN (SELECT video_id FROM chart_daily)""", (config.RECENT_PER_CHANNEL + 10,)).rowcount
     out["stale_channels"] = con.execute(
-        "UPDATE channels SET active=0 WHERE source!='seed' AND active=1 AND COALESCE(last_stats_at, added_at) < ?", (stale_cut,)).rowcount
+        "UPDATE channels SET active=0 WHERE source NOT IN ('seed','manual') AND active=1 AND COALESCE(last_stats_at, added_at) < ?", (stale_cut,)).rowcount
     # 차트 채널 중 최근 30일 업로드 없음 → 비활성 (기획서 M1-3: 30일 무활동 자동 제외)
     out["inactive_channels"] = con.execute(
         """UPDATE channels SET active=0 WHERE source='chart' AND active=1 AND added_at < ?

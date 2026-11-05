@@ -60,6 +60,14 @@ class RealYouTube:
         d = self._get("channels.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(ids), "maxResults": 50})
         return d.get("items", [])
 
+    def channel_by_handle(self, handle: str) -> list[dict]:
+        d = self._get("channels.list", {"part": "id", "forHandle": handle})
+        return d.get("items", [])
+
+    def search_channel(self, q: str) -> list[dict]:
+        d = self._get("search.list", {"part": "snippet", "q": q, "type": "channel", "regionCode": "KR", "maxResults": 5})
+        return d.get("items", [])
+
     def playlist_items(self, playlist_id: str, max_results: int = 30) -> list[dict]:
         try:
             d = self._get("playlistItems.list", {"part": "contentDetails", "playlistId": playlist_id, "maxResults": max_results})
@@ -229,7 +237,7 @@ class FakeYouTube:
             c = self._channels[cid]
             vids = self._channel_videos(cid, self.today, 40)
             out.append({"kind": "youtube#channel", "id": cid,
-                        "snippet": {"title": c["title"], "customUrl": "@" + cid[-6:].lower(), "country": "KR",
+                        "snippet": {"title": c["title"], "customUrl": "@h" + cid[2:13].lower(), "country": "KR",
                                     "publishedAt": "2020-01-01T00:00:00Z",
                                     "thumbnails": {"default": {"url": f"https://yt3.ggpht.com/{cid}"}}},
                         "contentDetails": {"relatedPlaylists": {"uploads": "UU" + cid[2:]}},
@@ -237,6 +245,15 @@ class FakeYouTube:
                                        "viewCount": str(sum(self._views(v, self.today) for v in vids) * 20),
                                        "videoCount": str(200 + len(vids)), "hiddenSubscriberCount": False}})
         return out
+
+    def channel_by_handle(self, handle: str) -> list[dict]:
+        self.quota.spend("channels.list")
+        h = handle.lower().lstrip("@")
+        return [{"id": cid} for cid in self._channels if "h" + cid[2:13].lower() == h]
+
+    def search_channel(self, q: str) -> list[dict]:
+        self.quota.spend("search.list")
+        return [{"snippet": {"channelId": cid}} for cid, c in self._channels.items() if q in (c["title"] or "")][:5]
 
     def playlist_items(self, playlist_id: str, max_results: int = 30) -> list[dict]:
         self.quota.spend("playlistItems.list")

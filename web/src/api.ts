@@ -13,8 +13,9 @@ export type VCard = {
 export type ChartItem = VCard & { rank: number; delta: number | null };
 export type Queue = { date: string; top3: VCard[]; pending: VCard[]; archived: VCard[]; decided: number; card_age: Record<string, string> };
 export type Charts = { date: string; categories: Record<string, string>; charts: Record<string, { long: ChartItem[]; short: ChartItem[] }> };
+export type VStats = { n: number; avg_views: number; like_rate: number | null; comment_rate: number | null };
 export type RankRow = {
-  id: string; t: string | null; g: string | null; src: string; th: string | null; subs: number | null; sg: number | null;
+  id: string; t: string | null; h?: string | null; cat?: string | null; pop?: number; g: string | null; src: string; th: string | null; subs: number | null; sg: number | null;
   sgr: number | null; vg: number | null; v30: number; avg: number | null; up30: number; gr: string | null; gs: number | null;
   fl: string[]; rev: [number, number]; top: VCard | null; dh: number;
 };
@@ -26,6 +27,13 @@ export type ChannelDetail = {
   f: { subs: number | null; growth: number | null; sub_gain: number | null; view_gain: number | null; efficiency: number | null;
        engagement: number | null; consistency: number | null; outlier_freq: number | null; avg_views: number | null;
        views30_uploads: number; uploads30: number; rev: [number, number]; flags: string[]; days_hist: number; ppl: [number, number] | null };
+  ranks: { subs: number | null; pop: number | null; views30: number | null; cat: number | null; cat_n: number; n: number; cat_id: string | null };
+  daily: { d: string; subs: number | null; ds: number | null; views: number | null; dv: number | null }[];
+  video_stats: { mine: VStats | null; category: VStats | null };
+  perf: { avg_views: number | null; group_median: number | null; category_median: number | null; group: string | null; category: string | null };
+  similar: { id: string; t: string | null; th: string | null; subs: number | null; avg: number | null; gr: string | null }[];
+  rev_year: [number, number];
+  top_videos: VCard[];
   grade: Grade; fc_subs: Forecast; fc_views: Forecast; milestones: Record<string, string | null>;
   fmt: { n: number; short_ratio: number | null; avg_dur: number; title_len: number | null; title_num: number | null; title_q: number | null; heat: number[][] };
   videos: VCard[];
