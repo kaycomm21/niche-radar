@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { AboutPage, CalcPage, ChannelPage, ChartPage, ComparePage, Home, HomeBoard, RankPage, SearchPage, SurgePage, TrendPage, BlogStudio } from "./pages";
+import { AboutPage, CalcPage, ChannelPage, ChartPage, ComparePage, Home, HomeBoard, RankPage, SearchPage, SurgePage, TrendPage, BlogStudio, OverseasPage, PackagesPage } from "./pages";
 import "./style.css";
 
 function useHash() {
@@ -14,9 +14,9 @@ function useHash() {
 }
 
 const NAV: [string, string, string][] = [
-  ["#/", "🏠", "홈"], ["#/queue", "🎯", "오늘의 생산 큐"], ["#/search", "🔍", "채널 검색"],
+  ["#/", "🏠", "홈"], ["#/queue", "🎯", "오늘의 생산 큐"], ["#/packages", "📦", "생산 패키지"], ["#/search", "🔍", "채널 검색"],
   ["#/chart", "🌐", "인기 차트"], ["#/surge", "🚀", "급상승 영상"], ["#/rank", "🏆", "채널 순위"],
-  ["#/trend", "📈", "트렌드 (유튜브·구글)"], ["#/blog", "✍️", "블로그 스튜디오"], ["#/calc", "💰", "수익 계산기"], ["#/compare", "⚖️", "채널 비교"], ["#/about", "📐", "지표 정의"],
+  ["#/overseas", "🌍", "해외 레퍼런스"], ["#/trend", "📈", "트렌드 (유튜브·구글)"], ["#/blog", "✍️", "글공방 (블로그)"], ["#/calc", "💰", "수익 계산기"], ["#/compare", "⚖️", "채널 비교"], ["#/about", "📐", "지표 정의"],
 ];
 
 function App() {
@@ -34,7 +34,9 @@ function App() {
   else if (path === "/about") page = <AboutPage />;
   else if (path === "/calc") page = <CalcPage id={params.get("id") ?? ""} />;
   else if (path === "/queue") page = <Home />;
-  else if (path === "/blog") page = <BlogStudio />;
+  else if (path === "/blog") page = <BlogStudio key={qs} pkg={params.get("pkg") ?? undefined} />;
+  else if (path === "/overseas") page = <OverseasPage />;
+  else if (path === "/packages") page = <PackagesPage />;
   else page = <HomeBoard />;
   const active = "#" + (path.startsWith("/ch/") ? "/rank" : path || "/");
   const [open, setOpen] = useState(false);

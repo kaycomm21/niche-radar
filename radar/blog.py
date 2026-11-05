@@ -25,6 +25,13 @@ def parse_issue(body: str) -> dict:
     if dm:
         draft = IMG.sub("", dm.group(1)).strip()
     images = [a or b for a, b in IMG.findall(body)]
+    if cfg.get("package"):                      # 📦 생산 패키지 대본 → 블로그 글 (영상 1편 = 글 1편)
+        sp = config.ROOT / cfg["package"] / "script.md"
+        if sp.exists():
+            txt = sp.read_text(encoding="utf-8")
+            txt = re.sub(r"^\(B롤:.*\)$|^>.*$|^#.*$", "", txt, flags=re.M)
+            draft = (draft + "\n\n" + txt.split("## 제작 메모")[0]).strip()
+            cfg["mode"] = "rewrite"
     return {**cfg, "draft": draft or cfg.get("draft", ""), "images": images}
 
 

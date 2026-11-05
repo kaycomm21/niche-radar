@@ -193,6 +193,45 @@ def cmd_blog(a) -> int:
     return 0
 
 
+def cmd_autopackage(a) -> int:
+    """생산 큐 항목 → Gemini 자동 패키지. --id 없으면 패키지가 없는 큐 항목 최대 --max 개."""
+    from .autopkg import make_package
+    from .llm import NoKey
+    q = json.loads((config.EXPORTS_DIR / "production_queue.json").read_text(encoding="utf-8"))
+    done = {json.loads(p.read_text(encoding="utf-8"))["queue_item"]["id"] for p in config.EXPORTS_DIR.glob("packages/*/source.json")}
+    items = [x for x in q if (x["id"] == a.id if a.id else x["id"] not in done)][: a.max]
+    con = connect(config.DB_PATH)
+    made = []
+    for it in items:
+        v = con.execute("SELECT * FROM videos WHERE video_id=?", (it["id"],)).fetchone()
+        try:
+            d = make_package(it, dict(v) if v else None)
+        except NoKey:
+            print("NOKEY")
+            return 5
+        except Exception as e:  # noqa: BLE001
+            print(f"실패 {it['id']}: {e}")
+            continue
+        made.append(str(d.relative_to(config.ROOT)) if d.is_relative_to(config.ROOT) else str(d))
+        print(f"OUT={made[-1]}")
+    print(f"패키지 {len(made)}개 생성")
+    return 0
+
+
+def cmd_localize(a) -> int:
+    from .autopkg import localize
+    if not os.environ.get("GEMINI_API_KEY"):
+        print("한국화 기획: 키 없음 — 건너뜀")
+        return 0
+    today = a.date or date.today().isoformat()
+    con = connect(config.DB_PATH)
+    plans = localize(con, today)
+    (config.DB_PATH.parent / "localize.json").write_text(json.dumps(plans, ensure_ascii=False), encoding="utf-8")
+    export.build(con, today, last_run={"mode": "localize"})
+    print(f"한국화 기획 {len(plans)}건")
+    return 0
+
+
 def cmd_calibrate(a) -> int:
     from .calibrate import report
     today = a.date or date.today().isoformat()
@@ -291,6 +330,8 @@ def main(argv=None) -> int:
     s = sub.add_parser("add-channel"); s.add_argument("--q", required=True); s.add_argument("--group"); s.add_argument("--out"); s.add_argument("--fixture", action="store_true"); s.set_defaults(f=cmd_add_channel)
     s = sub.add_parser("gtrends"); s.add_argument("--date"); s.set_defaults(f=cmd_gtrends)
     s = sub.add_parser("blog"); s.add_argument("--number", default=""); s.set_defaults(f=cmd_blog)
+    s = sub.add_parser("autopackage"); s.add_argument("--id"); s.add_argument("--max", type=int, default=3); s.set_defaults(f=cmd_autopackage)
+    s = sub.add_parser("localize"); s.add_argument("--date"); s.set_defaults(f=cmd_localize)
     s = sub.add_parser("calibrate"); s.add_argument("--date"); s.add_argument("--out", default=None); s.set_defaults(f=cmd_calibrate)
     s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)

@@ -158,6 +158,27 @@ def save_channel_items(con, items: list[dict], today: str, stats: dict) -> set[s
     return seen
 
 
+def collect_foreign_charts(con, yt, today: str, stats: dict) -> None:
+    """해외 인기 차트: 영상만 저장(채널은 유니버스에 넣지 않음 → 쿼터 절약). 약 12유닛."""
+    from .youtube import ApiError, ChartNotFound
+    for region, cat, _ in config.FOREIGN_CHARTS:
+        token, rank = None, {"long": 0, "short": 0}
+        for _ in range(2):
+            try:
+                items, token = yt.most_popular(cat, token, region=region)
+            except (ChartNotFound, ApiError):
+                break
+            for it in items:
+                vid = upsert_video(con, it, today)
+                fmt = "short" if con.execute("SELECT is_short FROM videos WHERE video_id=?", (vid,)).fetchone()[0] else "long"
+                rank[fmt] += 1
+                con.execute("INSERT OR REPLACE INTO chart_daily(date, category_id, format, rank, video_id) VALUES (?,?,?,?,?)",
+                            (today, f"{region}:{cat}", fmt, rank[fmt], vid))
+                stats["foreign_rows"] = stats.get("foreign_rows", 0) + 1
+            if not token:
+                break
+
+
 def collect_channel_stats(con, yt, today: str, stats: dict) -> None:
     ids = [r[0] for r in con.execute("SELECT channel_id FROM channels WHERE active=1 ORDER BY source IN ('seed','manual') DESC, channel_id")]
     seen = set()
@@ -242,6 +263,7 @@ def run_daily(con, yt, quota: Quota, seed: dict[str, dict], today: str, time_bud
     stats["excluded_channels"] = apply_exclusions(con)
     try:
         collect_charts(con, yt, today, stats)
+        collect_foreign_charts(con, yt, today, stats)
         print(f"  차트 {stats['chart_rows']}행 · 채널 통계 시작 (쿼터 {quota.used_today()})", flush=True)
         collect_channel_stats(con, yt, today, stats)
         print(f"  채널 {stats['channels_updated']}개 갱신 · 최근 영상 시작 (쿼터 {quota.used_today()})", flush=True)

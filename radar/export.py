@@ -123,7 +123,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                 "mx": round(v["multiple"], 2) if v["multiple"] else None, "med": v["channel_median"],
                 "v24": v["views_24h"], "rk": v["chart_rank"], "lb": v["labels"], "g": v["group"],
                 "sc": v["score"], "rc": list(v["recipe"]), "rpm": [round(v["rpm_lo"]), round(v["rpm_hi"])],
-                "src": v["source"], "ai": v.get("ai")}
+                "src": v["source"], "ai": v.get("ai"), "lang": v["lang"],
+                "cc": (chans.get(v["channel_id"]) or {}).get("country")}
 
     # ---------------- 채널 단위
     hist: dict[str, list] = defaultdict(list)
@@ -237,7 +238,26 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             continue
         p = prev.get((r["category_id"], r["format"], r["video_id"]))
         charts[r["category_id"]][r["format"]].append({**vcard(v), "rank": r["rank"], "delta": None if p is None else p - r["rank"]})
-    _write(out_dir / "charts.json", {"date": today, "categories": config.CHART_CATEGORIES, "charts": charts})
+    kr_charts = {k: v for k, v in charts.items() if ":" not in k}
+    _write(out_dir / "charts.json", {"date": today, "categories": config.CHART_CATEGORIES, "charts": kr_charts})
+    # 🌍 해외 레퍼런스 (한국화 재생산용)
+    fr = {}
+    for region, cat, name in config.FOREIGN_CHARTS:
+        key = f"{region}:{cat}"
+        if key in charts:
+            fr[key] = {"name": name, "long": charts[key]["long"][:50], "short": charts[key]["short"][:30]}
+    loc = _load_json(Path(config.DB_PATH).parent / "localize.json", {})
+    _write(out_dir / "overseas.json", {"date": today, "charts": fr, "plans": loc})
+    # 📦 생산 패키지 보드 (exports 폴더 스캔)
+    pk = []
+    for meta_p in sorted(Path(exports_dir).glob("*/ⓒ_패키지_*/meta.json")) + sorted(Path(exports_dir).glob("packages/*/meta.json")):
+        m = _load_json(meta_p, {})
+        d = meta_p.parent
+        sb = _load_json(d / "storyboard.json", {})
+        pk.append({"dir": str(d.relative_to(config.ROOT)) if d.is_relative_to(config.ROOT) else str(d), "title": m.get("title"),
+                   "channel": sb.get("channel"), "secs": sb.get("est_total_s"), "shots": len(sb.get("shots", [])),
+                   "has_shorts": (d / "shorts.md").exists(), "auto": "packages" in d.parts, "date": d.parts[-2] if "packages" not in d.parts else d.name[:10]})
+    _write(out_dir / "packages.json", {"date": today, "items": pk, "queue": _load_json(Path(exports_dir) / "production_queue.json", [])})
 
     # ---------------- M1-4 급상승 (최근 14일, 배수 3배↑)
     surging = [v for v in vids if v["age_days"] is not None and v["age_days"] <= 14 and (v["multiple"] or 0) >= 3

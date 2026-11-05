@@ -69,4 +69,22 @@ jobs:
               else:
                   subprocess.run(["gh", "issue", "close", n, "--comment", "✅ 판정을 기록했습니다 (exports/verdicts.json)."])
           PY
-          [ -s done.json ] && [ "$(cat done.json)" != "[]" ] && gh workflow run daily.yml -f mode=export || true
+          echo "DONE=$(cat done.json | tr -d '\n')" >> "$GITHUB_ENV"
+      - name: 🎬 Cue → 생산 패키지 자동 생성 (Gemini 키가 있을 때)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+          TZ: Asia/Seoul
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then echo "키 없음 — 자동 패키지 건너뜀"; else
+            mkdir -p data && (git fetch -q --depth=1 origin data && git show origin/data:radar.db.gz | gunzip > data/radar.db) || true
+            RADAR_DB=data/radar.db python -m radar autopackage --max 5 | tee pkg.txt
+            if [ -n "$(git status --porcelain exports/packages)" ]; then
+              git add exports/packages && git commit -qm "autopackage: $(grep -c '^OUT=' pkg.txt) packages"
+              for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done
+              for n in $(python -c "import json,os;print(' '.join(str(i['number']) for i in json.loads(os.environ.get('DONE','[]') or '[]') if i['title'].startswith('[생산큐]')))"); do
+                gh issue comment "$n" --body "📦 생산 패키지 자동 생성 완료 → CCS 사이트 '📦 생산 패키지' 메뉴 또는 https://github.com/${{ github.repository }}/tree/main/exports/packages (대본·제목·콘티·메타·쇼츠·팩트체크)" || true
+              done
+            fi
+          fi
+          gh workflow run daily.yml -f mode=export || true

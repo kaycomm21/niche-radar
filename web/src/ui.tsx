@@ -2,7 +2,8 @@ import { useState, type ReactNode } from "react";
 import type { VCard } from "./api";
 import { dur, LABELS, n, RECIPES } from "./fmt";
 
-export const REPO = "kaycomm21/niche-radar";
+// 저장소 이름을 바꿔도(예: ccs) 자동으로 따라가도록 Pages 주소에서 추출
+export const REPO = `kaycomm21/${(typeof location !== "undefined" && location.hostname.endsWith("github.io") && location.pathname.split("/")[1]) || "niche-radar"}`;
 
 // ---- 판정 기록: 정적 사이트는 쓰기가 불가능 → GitHub Issue(미리 채운 양식)로 보내고, 워크플로가 exports/ 에 기록
 type Action = "queue" | "hold" | "drop" | "exclude_channel";

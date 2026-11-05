@@ -101,8 +101,8 @@ class RealYouTube:
         d = self._get("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(ids), "maxResults": 50})
         return d.get("items", [])
 
-    def most_popular(self, category_id: str, page_token: str | None = None) -> tuple[list[dict], str | None]:
-        p = {"part": "snippet,statistics,contentDetails", "chart": "mostPopular", "regionCode": "KR",
+    def most_popular(self, category_id: str, page_token: str | None = None, region: str = "KR") -> tuple[list[dict], str | None]:
+        p = {"part": "snippet,statistics,contentDetails", "chart": "mostPopular", "regionCode": region,
              "maxResults": 50, "hl": "ko"}
         if category_id != "0":
             p["videoCategoryId"] = category_id
@@ -274,7 +274,7 @@ class FakeYouTube:
         allv = self._all_videos()
         return [self._video_item(allv[i]) for i in ids if i in allv]
 
-    def most_popular(self, category_id: str, page_token: str | None = None) -> tuple[list[dict], str | None]:
+    def most_popular(self, category_id: str, page_token: str | None = None, region: str = "KR") -> tuple[list[dict], str | None]:
         self.quota.spend("videos.list")
         if category_id in ("19", "29"):
             raise ChartNotFound(category_id)

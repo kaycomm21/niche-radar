@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { load, type ChannelDetail, type Charts, type Queue, type RankRow, type Summary, type Trends, type VCard } from "./api";
 import { LineChart, RadarChart, Heatmap } from "./charts";
 import { dur, n, pct, won } from "./fmt";
-import { Est, ExcludeChannel, issueUrl, Loading, Seg, VideoCard } from "./ui";
+import { Est, ExcludeChannel, issueUrl, Loading, REPO, Seg, VideoCard } from "./ui";
 
 function useData<T>(path: string): [T | null, string | undefined] {
   const [d, setD] = useState<T | null>(null);
@@ -51,8 +51,9 @@ export function ChartPage() {
   const [cat, setCat] = useState("0");
   const [fmt, setFmt] = useState<"long" | "short">("long");
   const [limit, setLimit] = useState(30);
+  const [reg, setReg] = useState<"all" | "kr" | "foreign">("kr");
   if (!c) return <Loading err={e} />;
-  const items = c.charts[cat]?.[fmt] ?? [];
+  const items = (c.charts[cat]?.[fmt] ?? []).filter((v) => reg === "all" || (reg === "kr") === isKorean(v));
   return (
     <section>
       <h2>🌐 국내 인기 차트 <span className="muted small">{c.date}</span></h2>
@@ -61,8 +62,11 @@ export function ChartPage() {
           {Object.entries(c.categories).map(([k, v]) => <option key={k} value={k} disabled={!c.charts[k]}>{v}{!c.charts[k] ? " (차트 없음)" : ""}</option>)}
         </select>
         <Seg value={fmt} onChange={setFmt} options={[["long", "롱폼"], ["short", "쇼츠"]]} />
+        <Seg value={reg} onChange={setReg} options={[["kr", "🇰🇷 국내"], ["foreign", "🌍 해외"], ["all", "전체"]]} />
       </div>
-      {items.length === 0 && <div className="empty">이 카테고리·포맷의 오늘 차트가 없습니다.</div>}
+      <div className="chips">{Object.entries(c.categories).filter(([k]) => c.charts[k]).map(([k, v]) => <button key={k} type="button" className={`chip chip-btn ${cat === k ? "on" : ""}`} onClick={() => { setCat(k); setLimit(30); }}>{v}</button>)}</div>
+      <p className="small muted">국내/해외 구분: 제목에 한글이 있거나 채널 국가가 한국이면 국내. 해외 원본으로 한국판을 만들려면 🌍 해외 레퍼런스 메뉴를 쓰세요.</p>
+      {items.length === 0 && <div className="empty">이 조건의 오늘 차트가 없습니다.</div>}
       {items.slice(0, limit).map((v) => (
         <VideoCard key={v.id} v={v} rankBadge={
           <span className="badge rank">{v.rank}<small className={v.delta === null ? "new" : v.delta > 0 ? "up" : v.delta < 0 ? "down" : ""}>
@@ -296,6 +300,7 @@ function PeriodPicker({ value, onChange }: { value: Period; onChange: (p: Period
   );
 }
 function med(xs: number[]) { if (!xs.length) return null; const s = [...xs].sort((a, b) => a - b); return s[Math.floor(s.length / 2)]; }
+function isKorean(v: VCard) { return v.cc === "KR" || v.lang === "ko"; }
 function ratio(a: number | null, b: number | null) { return a && b ? `${(a / b).toFixed(1)}배` : "–"; }
 function delta(x: number | null) { return x === null ? "" : x > 0 ? "up" : x < 0 ? "down" : ""; }
 function sign(x: number | null) { return x === null ? "–" : `${x >= 0 ? "+" : ""}${n(x)}`; }
@@ -479,7 +484,7 @@ export function SearchPage({ q: initial }: { q: string }) {
 const GROUPS = ["경제적자유구역", "지혜의숲", "히스토리X", "음악플레이리스트", "레트로TV", "국뽕두그릇", "부자아이", "새시대유감", "깡통봇", "REDPANG", "춘식이만식이", "웃GO", "진영논리"];
 function issueUrlAnalyze(q: string, group: string) {
   const body = ["<!-- radar-analyze: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify({ action: "analyze", q, group: group || null }), "```"].join("\n");
-  return `https://github.com/kaycomm21/niche-radar/issues/new?${new URLSearchParams({ title: `[채널분석] ${q}`.slice(0, 100), body }).toString()}`;
+  return `https://github.com/${REPO}/issues/new?${new URLSearchParams({ title: `[채널분석] ${q}`.slice(0, 100), body }).toString()}`;
 }
 
 // ------------------------------------------------------------------ 🏠 홈 (플레이보드형 랭킹 보드)
@@ -569,7 +574,7 @@ export function CalcPage({ id }: { id: string }) {
 }
 
 // ------------------------------------------------------------------ ✍️ 블로그 스튜디오
-export function BlogStudio() {
+export function BlogStudio({ pkg }: { pkg?: string }) {
   const init = new URLSearchParams(location.hash.split("?")[1] ?? "");
   const [mode, setMode] = useState<"keyword" | "rewrite">("keyword");
   const [kw, setKw] = useState(init.get("kw") ?? "");
@@ -581,14 +586,15 @@ export function BlogStudio() {
   const [wp, setWp] = useState(true);
   const [nv, setNv] = useState(true);
   useEffect(() => { try { localStorage.setItem("ccs.channel", ch); } catch { /* 무시 */ } }, [ch]);
-  const cfg = { action: "blog", mode, keyword: kw, youtube: yt || null, channel_url: ch || null, length: len, tone, platforms: [wp && "wordpress", nv && "naver"].filter(Boolean) };
+  const cfg = { action: "blog", mode, package: pkg || null, keyword: kw, youtube: yt || null, channel_url: ch || null, length: len, tone, platforms: [wp && "wordpress", nv && "naver"].filter(Boolean) };
   const body = ["<!-- radar-blog: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify(cfg), "```", "", "## 초안", draft.slice(0, 5000), "",
     "<!-- 📷 사진: 이 줄 아래에 사진 파일을 끌어다 놓으세요 (순서대로 섹션에 배치됩니다) -->", ""].join("\n");
-  const url = `https://github.com/kaycomm21/niche-radar/issues/new?${new URLSearchParams({ title: `[블로그] ${mode === "keyword" ? kw : (draft.slice(0, 30) || "초안 다듬기")}`, body }).toString()}`;
-  const ok = mode === "keyword" ? kw.trim().length > 0 : draft.trim().length > 30;
+  const url = `https://github.com/${REPO}/issues/new?${new URLSearchParams({ title: `[블로그] ${mode === "keyword" ? kw : (draft.slice(0, 30) || "초안 다듬기")}`, body }).toString()}`;
+  const ok = Boolean(pkg) || (mode === "keyword" ? kw.trim().length > 0 : draft.trim().length > 30);
   return (
     <section>
-      <h2>✍️ 블로그 스튜디오 <span className="muted small">워드프레스 · 네이버 투트랙</span></h2>
+      <h2>✍️ 글공방 <span className="muted small">CCS 블로그 생성기 · 워드프레스 · 네이버 투트랙</span></h2>
+      {pkg && <div className="banner">📦 생산 패키지 대본을 블로그 글로 변환합니다: <code>{pkg}</code></div>}
       <div className="filters"><Seg value={mode} onChange={setMode} options={[["keyword", "🔑 키워드로 글쓰기"], ["rewrite", "📝 막 쓴 초안 → 블로그 글"]]} /></div>
       <div className="panel calc-grid">
         <label>{mode === "keyword" ? "핵심 키워드" : "참고 키워드(선택)"}<input value={kw} onChange={(e) => setKw(e.target.value)} placeholder="예: 금리 인상 대출 갈아타기" /></label>
@@ -607,6 +613,73 @@ export function BlogStudio() {
         <b>✅ 발행 원칙</b> — 주 2~3편. 글 속 <code>[✍️ 직접 경험 한 줄]</code> 2곳은 반드시 직접 채우세요 (구글·네이버 모두 경험 없는 AI 글을 낮게 평가).<br />
         <b>🔑 필요</b> — GitHub Secret <code>GEMINI_API_KEY</code> (없으면 Issue에 안내가 달립니다).
       </div>
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ 🌍 해외 레퍼런스 → 한국화
+type LocPlan = { ko_title_meaning?: string; why_hit?: string; group?: string | null; ko_titles?: string[]; ko_angle?: string; fit?: number };
+export function OverseasPage() {
+  const [d, e] = useData<{ date: string; charts: Record<string, { name: string; long: VCard[]; short: VCard[] }>; plans: Record<string, LocPlan> }>("overseas.json");
+  const [key, setKey] = useState("US:0");
+  const [fmt, setFmt] = useState<"long" | "short">("long");
+  if (e) return <div className="empty">해외 차트는 다음 자동 수집(매일 06:17) 후 표시됩니다.</div>;
+  if (!d) return <Loading />;
+  const ch = d.charts[key] ?? Object.values(d.charts)[0];
+  const list = (ch?.[fmt] ?? []).filter((v) => !isKorean(v));
+  return (
+    <section>
+      <h2>🌍 해외 레퍼런스 → 한국화 <span className="muted small">{d.date}</span></h2>
+      <p className="small muted">해외에서 지금 터진 영상을 한국 맥락으로 재기획(R6). 원본 번역·짜깁기는 재사용 콘텐츠 정책 위반 — 주제와 공식만 차용합니다. 🤖 한국화 기획안은 Gemini 키가 있으면 상위 영상에 자동 생성.</p>
+      <div className="chips">{Object.entries(d.charts).map(([k, v]) => <button key={k} type="button" className={`chip chip-btn ${key === k ? "on" : ""}`} onClick={() => setKey(k)}>{v.name}</button>)}</div>
+      <div className="filters"><Seg value={fmt} onChange={setFmt} options={[["long", "롱폼"], ["short", "쇼츠"]]} /></div>
+      {list.map((v, i) => {
+        const pl = d.plans[v.id];
+        return (
+          <article key={v.id} className="vcard">
+            <div className="vcard-top"><span className="badge">{i + 1}</span>{v.th ? <img src={v.th} alt="" className="thumb" loading="lazy" /> : <div className="thumb" />}
+              <div className="vcard-meta"><a className="vtitle" href={`https://www.youtube.com/watch?v=${v.id}`} target="_blank" rel="noreferrer">{v.t}</a>
+                <div className="small muted">{v.ct} · 조회 {n(v.v)}{v.v24 ? ` · 24h +${n(v.v24)}` : ""}</div>
+                {pl && <div className="small"><b>뜻</b> {pl.ko_title_meaning} · <b>왜 터졌나</b> {pl.why_hit}</div>}</div></div>
+            {pl && <details className="small" open><summary>🤖 한국화 기획안 → {pl.group ?? "매핑 없음"} (적합 {pl.fit ?? "-"}/10)</summary>
+              <ol>{(pl.ko_titles ?? []).map((t) => <li key={t}>{t}</li>)}</ol><p>{pl.ko_angle}</p></details>}
+            <div className="row-actions">
+              <a className="btn small cue" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: v.id, title: v.t, channel: v.ct, group: pl?.group ?? "", recipe: "R6" }, `[한국화] ${pl?.ko_titles?.[0] ?? v.t}`)}>🎬 Cue (한국화)</a>
+              <a className="btn small" href={`#/blog?kw=${encodeURIComponent(pl?.ko_titles?.[0] ?? v.t)}`}>✍️ 글공방으로</a>
+            </div>
+          </article>);
+      })}
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ 📦 생산 패키지 보드
+type Pkg = { dir: string; title: string | null; channel: string | null; secs: number | null; shots: number; has_shorts: boolean; auto: boolean; date: string };
+const STEPS = ["팩트체크", "톤 다듬기", "TTS·렌더", "B롤", "QC", "비공개 업로드", "공개"];
+export function PackagesPage() {
+  const [d, e] = useData<{ date: string; items: Pkg[]; queue: { id: string; title: string; group: string | null; status: string; issue: string }[] }>("packages.json");
+  const [done, setDone] = useState<Record<string, number>>(() => { try { return JSON.parse(localStorage.getItem("ccs.steps") || "{}"); } catch { return {}; } });
+  const mark = (k: string, i: number) => { const nx = { ...done, [k]: done[k] === i + 1 ? i : i + 1 }; setDone(nx); try { localStorage.setItem("ccs.steps", JSON.stringify(nx)); } catch { /* 무시 */ } };
+  if (!d) return <Loading err={e} />;
+  const gh = `https://github.com/${REPO}/tree/main/`;
+  const waiting = d.queue.filter((q) => !d.items.some((p) => p.dir.includes(q.id)));
+  return (
+    <section>
+      <h2>📦 생산 패키지 <span className="muted small">{d.items.length}개 · Cue 대기 {waiting.length}건</span></h2>
+      <p className="small muted">🎬 Cue → (Gemini 키가 있으면) 1~2분 뒤 패키지 자동 생성 → 로컬 CC가 렌더·업로드. 단계 체크는 이 기기에 저장됩니다.</p>
+      {d.items.slice().reverse().map((p) => (
+        <article key={p.dir} className="vcard">
+          <b className="vtitle">{p.title ?? p.dir}</b>
+          <div className="small muted">{p.channel} · 약 {Math.round((p.secs ?? 0) / 60)}분 · B롤 {p.shots}샷 {p.has_shorts ? "· 쇼츠 포함" : ""} · {p.auto ? "🤖 자동 생성" : "✍️ 수동 제작"} · {p.date}</div>
+          <div className="chips">{STEPS.map((s, i) => <button key={s} type="button" className={`chip chip-btn ${(done[p.dir] ?? 0) > i ? "on" : ""}`} onClick={() => mark(p.dir, i)}>{(done[p.dir] ?? 0) > i ? "✔ " : ""}{s}</button>)}</div>
+          <div className="row-actions">
+            <a className="btn small" href={gh + p.dir} target="_blank" rel="noreferrer">📂 파일 열기</a>
+            <a className="btn small cue" href={`#/blog?pkg=${encodeURIComponent(p.dir)}`}>✍️ 블로그 글로 변환</a>
+          </div>
+        </article>
+      ))}
+      {waiting.length > 0 && <><h3>⏳ 패키지 대기 중인 Cue</h3><ul className="small">{waiting.map((q) => <li key={q.id}>#{q.issue} {q.title} <span className="muted">({q.group || "그룹 미지정"})</span></li>)}</ul>
+        <p className="small muted">GEMINI_API_KEY 를 등록하면 매일 06:17 수집 때 최대 3건씩 자동 생성됩니다.</p></>}
     </section>
   );
 }
