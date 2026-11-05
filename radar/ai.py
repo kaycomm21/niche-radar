@@ -95,6 +95,8 @@ def gemini_fit(con, today: str, videos: list[dict]) -> int:
                                    tags=", ".join(json.loads(v.get("tags") or "[]")[:10]), dur=v.get("duration_s") or 0,
                                    fmt="쇼츠" if v.get("is_short") else "롱폼")
         _log(con, today, "gemini")
+        from .llm import throttle
+        throttle()
         try:
             r = _post(url, {"contents": [{"parts": [{"text": prompt}]}],
                             "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})

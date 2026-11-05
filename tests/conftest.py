@@ -26,4 +26,5 @@ def tmp_env(tmp_path, monkeypatch):
     monkeypatch.setattr(config, "EXPORTS_DIR", tmp_path / "exports")
     monkeypatch.setattr(config, "DB_PATH", tmp_path / "radar.db")
     monkeypatch.delenv("YOUTUBE_API_KEY", raising=False)
+    monkeypatch.setenv("GEMINI_MIN_INTERVAL", "0")
     return tmp_path

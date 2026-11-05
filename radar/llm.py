@@ -12,6 +12,19 @@ class NoKey(RuntimeError):
     pass
 
 
+_last = [0.0]
+
+
+def throttle() -> None:
+    """무료 등급 분당 호출 제한 대비: 호출 간 최소 간격 (env GEMINI_MIN_INTERVAL 초, 기본 7초 ≈ 분당 8회)."""
+    import time
+    gap = float(os.environ.get("GEMINI_MIN_INTERVAL", "7"))
+    wait = _last[0] + gap - time.monotonic()
+    if wait > 0:
+        time.sleep(wait)
+    _last[0] = time.monotonic()
+
+
 def gemini_json(prompt: str, temperature: float = 0.6, timeout: int = 120) -> dict:
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     if not key:
@@ -21,6 +34,7 @@ def gemini_json(prompt: str, temperature: float = 0.6, timeout: int = 120) -> di
     body = {"contents": [{"parts": [{"text": prompt}]}],
             "generationConfig": {"responseMimeType": "application/json", "temperature": temperature}}
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
+    throttle()
     try:
         with urllib.request.urlopen(req, timeout=timeout) as r:
             d = json.loads(r.read().decode())
