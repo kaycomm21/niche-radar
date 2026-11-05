@@ -95,5 +95,9 @@ def run(out_path, today: str) -> int:
     data = {"date": today, "source": RSS, "items": build(items, __import__("radar.llm", fromlist=["x"]).available())}
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    from . import config
+    keep = config.DB_PATH.parent / "gtrends.json"          # data 브랜치에 보관 → 'web' 빠른 배포 때 재사용
+    keep.parent.mkdir(parents=True, exist_ok=True)
+    keep.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     print(f"구글 트렌드 {len(items)}건")
     return len(items)

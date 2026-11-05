@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "auto=키 있으면 실제 수집 / fixture=가짜 데이터 화면 확인 / export=수집 없이 화면만 다시 만들기"
+        description: "auto=실제 수집 / fixture=가짜 데이터 / export=수집 없이 화면+AI 재생성 / web=화면만 빠르게(AI 없음, 디자인 배포용)"
         type: choice
-        options: [auto, fixture, export]
+        options: [auto, fixture, export, web]
         default: auto
       search_q:
         description: "(선택) search.list 키워드 1회 — 100유닛 소모, 하루 20회 상한"
@@ -47,7 +47,7 @@ jobs:
           mkdir -p data
           if git fetch --depth=1 origin data 2>/dev/null; then
             git show origin/data:radar.db.gz | gunzip > data/radar.db || true
-            for f in cards_state.json alerts_state.json; do git show origin/data:$f > data/$f 2>/dev/null || rm -f data/$f; done
+            for f in $(git ls-tree --name-only origin/data | grep '\.json$'); do git show origin/data:$f > data/$f 2>/dev/null || rm -f data/$f; done
           fi
           ls -la data
 
@@ -63,9 +63,11 @@ jobs:
         run: |
           case "$MODE" in
             fixture) RADAR_DB=data/fixture.db python -m radar demo --days 30 ;;
+            web)     python -m radar export --date "$(date +%F)" && python -m radar bids && (cp data/gtrends.json web/public/data/ 2>/dev/null || true) ;;   # 디자인 배포: AI 생략, 약 1분
             export)  python -m radar export --date "$(date +%F)" && python -m radar enrich ;;   # enrich: API 쿼터 0, Gemini만 사용
             *)       python -m radar daily && python -m radar enrich ;;   # enrich: Gemini·Brave 키가 있을 때만 동작
           esac
+          if [ "$MODE" = "web" ]; then exit 0; fi
           python -m radar bids || true         # 🏛 입찰레이더 (DATA_GO_KR_KEY 없으면 예시 데이터)
           python -m radar gtrends || true      # 구글 트렌드 RSS (+ Gemini 키 있으면 AI 기획안)
           if [ "$MODE" != "fixture" ]; then python -m radar localize || true; fi   # 🌍 해외 인기 → 한국화 기획 (키 있을 때)
