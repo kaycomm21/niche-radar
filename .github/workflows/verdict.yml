@@ -89,4 +89,9 @@ jobs:
               done
             fi
           fi
+          mkdir -p data && (git fetch -q --depth=1 origin data && git show origin/data:bids_state.json > data/bids_state.json) 2>/dev/null || true
+          RADAR_DB=data/radar.db python -m radar proposals | tee prop.txt || true
+          if [ -n "$(git status --porcelain exports/proposals)" ]; then
+            git add exports/proposals && git commit -qm "proposals" && (for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done)
+          fi
           gh workflow run daily.yml -f mode=export || true

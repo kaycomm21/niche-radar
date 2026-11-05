@@ -683,3 +683,110 @@ export function PackagesPage() {
     </section>
   );
 }
+
+// ------------------------------------------------------------------ 🏛 입찰레이더
+type Bid = { no: string; name: string; org: string | null; demand: string | null; budget: number | null; method: string; close: string | null; dleft: number | null; url: string; score: number; parts: Record<string, number>; why: string[]; matches: string[] };
+export function BidsPage() {
+  const [d, e] = useData<{ date: string; mode: string; items: Bid[]; formula: string }>("bids.json");
+  const [pk] = useData<{ proposals: { dir: string; name: string }[] }>("packages.json");
+  const [home, setHome] = useState(false);
+  const [nego, setNego] = useState(false);
+  if (e) return <div className="empty">입찰 데이터는 다음 자동 수집(매일 06:17) 후 표시됩니다.</div>;
+  if (!d) return <Loading />;
+  const list = d.items.filter((b) => (!home || b.parts.region === 25) && (!nego || b.method.includes("협상")));
+  return (
+    <section>
+      <h2>🏛 입찰레이더 <span className="muted small">{d.date} · {d.items.length}건</span></h2>
+      {d.mode === "fixture" && <div className="banner">🧪 예시 데이터입니다. 공공데이터포털에서 <b>조달청_나라장터 입찰공고정보서비스</b> 활용신청 → 인증키를 GitHub Secret <code>DATA_GO_KR_KEY</code> 로 등록하면 실제 공고로 바뀝니다.</div>}
+      <p className="small muted">{d.formula}</p>
+      <div className="filters">
+        <button type="button" className={`chip chip-btn ${home ? "on" : ""}`} onClick={() => setHome(!home)}>📍 대구·경북만</button>
+        <button type="button" className={`chip chip-btn ${nego ? "on" : ""}`} onClick={() => setNego(!nego)}>📝 협상계약(제안서 평가)만</button>
+      </div>
+      {list.map((b) => (
+        <article key={b.no} className="vcard">
+          <div className="vcard-top"><span className={`grade ${b.score >= 70 ? "g-A" : b.score >= 50 ? "g-B" : "g-C"}`}>{b.score}</span>
+            <div className="vcard-meta"><a className="vtitle" href={b.url} target="_blank" rel="noreferrer">{b.name}</a>
+              <div className="small muted">{b.org}{b.demand && b.demand !== b.org ? ` · 수요 ${b.demand}` : ""} · {b.method || "계약방식 미상"}</div>
+              <div className="small">예산 <b>{b.budget ? won(b.budget) : "-"}</b> · 마감 <b className={b.dleft !== null && b.dleft <= 5 ? "hot" : ""}>{b.close?.slice(0, 16) ?? "-"} (D-{b.dleft ?? "?"})</b></div>
+              <div className="chips">{b.why.map((w) => <span key={w} className="chip">{w}</span>)}</div></div></div>
+          <div className="row-actions">
+            {pk?.proposals.some((p) => p.dir.includes(b.no)) ? <a className="btn small" href={`https://github.com/${REPO}/tree/main/${pk.proposals.find((p) => p.dir.includes(b.no))!.dir}`} target="_blank" rel="noreferrer">📄 제안서 초안 열기</a>
+              : <a className="btn small cue" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: `bid:${b.no}`, title: b.name, channel: b.org, group: "입찰", recipe: "제안" }, `[입찰] ${b.name}`)}>🎬 제안서 Cue</a>}
+            <a className="btn small" href={b.url} target="_blank" rel="noreferrer">나라장터 원문</a>
+          </div>
+        </article>
+      ))}
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ 🎯 월천 관제탑
+const STREAMS = ["유튜브 광고", "블로그(애드센스·애드포스트)", "행사 기획·연출(입찰·프리)", "크몽·숨고", "PPL·협찬", "교재·출판", "기타"];
+export function CockpitPage() {
+  const [bids] = useData<{ items: Bid[] }>("bids.json");
+  const [q] = useData<Queue>("queue.json");
+  const [pk] = useData<{ items: Pkg[] }>("packages.json");
+  const month = new Date().toISOString().slice(0, 7);
+  const load = () => { try { return JSON.parse(localStorage.getItem("ccs.revenue") || "{}"); } catch { return {}; } };
+  const [rev, setRev] = useState<Record<string, Record<string, number>>>(load);
+  const [lastBlog, setLastBlog] = useState(() => { try { return localStorage.getItem("ccs.lastBlog") ?? ""; } catch { return ""; } });
+  const save = (r: typeof rev) => { setRev(r); try { localStorage.setItem("ccs.revenue", JSON.stringify(r)); } catch { /* 무시 */ } };
+  const cur = rev[month] ?? {};
+  const total = Object.values(cur).reduce((a, b) => a + (b || 0), 0);
+  const goal = 10_000_000;
+  const end = new Date("2027-05-18");
+  const monthsLeft = Math.max(0, (end.getFullYear() - new Date().getFullYear()) * 12 + end.getMonth() - new Date().getMonth());
+  const steps = (() => { try { return JSON.parse(localStorage.getItem("ccs.steps") || "{}"); } catch { return {}; } })();
+  const actions: { t: string; href: string; why: string }[] = [];
+  const hot = bids?.items.find((b) => b.score >= 60 && (b.dleft ?? 99) <= 14);
+  if (hot) actions.push({ t: `입찰 제안서 착수: ${hot.name}`, href: "#/bids", why: `적합도 ${hot.score} · 마감 D-${hot.dleft}` });
+  const next = pk?.items.slice().reverse().find((p) => (steps[p.dir] ?? 0) < 7);
+  if (next) actions.push({ t: `패키지 다음 단계: ${next.title}`, href: "#/packages", why: `진행 ${(steps[next.dir] ?? 0)}/7 단계` });
+  if (q?.top3[0]) actions.push({ t: `오늘의 Cue 판정: ${q.top3[0].t}`, href: "#/queue", why: `재가공 점수 ${q.top3[0].sc.total}` });
+  const days = lastBlog ? Math.floor((Date.now() - Date.parse(lastBlog)) / 86400000) : 99;
+  if (days >= 3) actions.push({ t: "블로그 1편 발행 (주 2~3편 원칙)", href: "#/blog", why: lastBlog ? `마지막 발행 ${days}일 전` : "발행 기록 없음" });
+  return (
+    <section>
+      <h2>🎯 월천 관제탑 <span className="muted small">월 1,000만 원 · 육아휴직 종료까지 {monthsLeft}개월</span></h2>
+      <div className="kpis">
+        <div className="kpi"><span>{month} 누적 수익</span><b>{won(total)}</b><small>목표의 {Math.round((total / goal) * 100)}%</small></div>
+        <div className="kpi"><span>남은 금액</span><b>{won(Math.max(0, goal - total))}</b><small>이번 달</small></div>
+      </div>
+      <div className="part" style={{ margin: "10px 0" }}><span className="part-bar wide"><span style={{ width: `${Math.min(100, (total / goal) * 100)}%`, background: "#ff2d87" }} /></span></div>
+      <h3>✅ 오늘의 3가지 (매출에 가까운 순)</h3>
+      <ol>{actions.slice(0, 3).map((a) => <li key={a.t} style={{ margin: "8px 0" }}><a href={a.href}><b>{a.t}</b></a><div className="small muted">{a.why}</div></li>)}</ol>
+      <h3>💵 이번 달 수입 입력 <span className="muted small">(이 기기에만 저장)</span></h3>
+      <div className="panel calc-grid">{STREAMS.map((k) => <label key={k}>{k}<input type="number" value={cur[k] ?? ""} placeholder="0" onChange={(e) => save({ ...rev, [month]: { ...cur, [k]: Number(e.target.value) } })} /></label>)}
+        <label>마지막 블로그 발행일<input type="date" value={lastBlog} onChange={(e) => { setLastBlog(e.target.value); try { localStorage.setItem("ccs.lastBlog", e.target.value); } catch { /* 무시 */ } }} /></label></div>
+      <h3>📊 월별 추이</h3>
+      <div className="table-wrap"><table><thead><tr><th>월</th><th>합계</th><th>목표 대비</th></tr></thead><tbody>
+        {Object.keys(rev).sort().reverse().map((m) => { const t = Object.values(rev[m]).reduce((a, b) => a + (b || 0), 0); return <tr key={m}><td>{m}</td><td>{won(t)}</td><td>{Math.round((t / goal) * 100)}%</td></tr>; })}
+      </tbody></table></div>
+      <p className="small muted">💡 유튜브 실측 수익은 M4(내 채널 OAuth) 연결 후 자동 입력 예정. 지금은 직접 입력.</p>
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ 🐷 부자아이 공방
+const CONCEPTS: [string, string][] = [["3-5", "돈은 물건과 바꾸는 약속"], ["3-5", "기다리면 더 좋은 것 (저축)"], ["3-5", "필요한 것과 갖고 싶은 것"], ["6-7", "용돈 나누기 (쓰기·모으기·나누기)"], ["6-7", "가격 비교하기"], ["8-10", "용돈 기입장"], ["8-10", "광고는 왜 사고 싶게 만들까"], ["11-13", "이자와 복리"], ["11-13", "회사의 주인이 된다는 것 (주식 기초)"]];
+export function KidsPage() {
+  const [concept, setConcept] = useState("기다리면 더 좋은 것 (저축)");
+  const [age, setAge] = useState("3-5");
+  const [pk] = useData<{ kids: { dir: string; title: string; age: string; concept: string }[] }>("packages.json");
+  const body = ["<!-- radar-kids: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify({ action: "kids", concept, age }), "```"].join("\n");
+  const url = `https://github.com/${REPO}/issues/new?${new URLSearchParams({ title: `[부자아이] ${concept} (${age}세)`, body }).toString()}`;
+  return (
+    <section>
+      <h2>🐷 부자아이 공방 <span className="muted small">금융 개념 1개 → 그림책·활동지·부모 가이드·쇼츠</span></h2>
+      <div className="chips">{CONCEPTS.map(([a, c]) => <button key={c} type="button" className={`chip chip-btn ${concept === c ? "on" : ""}`} onClick={() => { setConcept(c); setAge(a); }}>{a}세 · {c}</button>)}</div>
+      <div className="panel calc-grid">
+        <label>금융 개념 (직접 입력 가능)<input value={concept} onChange={(e) => setConcept(e.target.value)} /></label>
+        <label>연령<select value={age} onChange={(e) => setAge(e.target.value)}><option value="3-5">만 3~5세</option><option value="6-7">만 6~7세</option><option value="8-10">초등 저학년</option><option value="11-13">초등 고학년</option></select></label>
+      </div>
+      <a className="btn cue wide" href={url} target="_blank" rel="noreferrer">🐷 세트 만들기 요청</a>
+      <p className="small muted">GitHub 화면에서 초록 Create → 1~2분 뒤 결과 링크. 그림책 12장면(삽화 지시 포함) · 인쇄용 활동지 HTML · 정답·부모 가이드 · 쇼츠 대본. 단우·도하와 먼저 읽어보고 반응을 기록해 다음 버전에 반영하세요.</p>
+      {pk?.kids && pk.kids.length > 0 && <><h3>📚 만든 세트</h3><ul>{pk.kids.map((k) => <li key={k.dir}><a href={`https://github.com/${REPO}/tree/main/${k.dir}`} target="_blank" rel="noreferrer">{k.title}</a> <span className="muted small">{k.age}세 · {k.concept}</span></li>)}</ul></>}
+    </section>
+  );
+}

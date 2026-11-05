@@ -1,6 +1,6 @@
 import { StrictMode, useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
-import { AboutPage, CalcPage, ChannelPage, ChartPage, ComparePage, Home, HomeBoard, RankPage, SearchPage, SurgePage, TrendPage, BlogStudio, OverseasPage, PackagesPage } from "./pages";
+import { AboutPage, CalcPage, ChannelPage, ChartPage, ComparePage, Home, HomeBoard, RankPage, SearchPage, SurgePage, TrendPage, BlogStudio, OverseasPage, PackagesPage, BidsPage, CockpitPage, KidsPage } from "./pages";
 import "./style.css";
 
 function useHash() {
@@ -14,9 +14,9 @@ function useHash() {
 }
 
 const NAV: [string, string, string][] = [
-  ["#/", "🏠", "홈"], ["#/queue", "🎯", "오늘의 생산 큐"], ["#/packages", "📦", "생산 패키지"], ["#/search", "🔍", "채널 검색"],
+  ["#/cockpit", "🎯", "월천 관제탑"], ["#/", "🏠", "홈 (유튜브)"], ["#/queue", "🎬", "오늘의 생산 큐"], ["#/packages", "📦", "생산 패키지"], ["#/search", "🔍", "채널 검색"],
   ["#/chart", "🌐", "인기 차트"], ["#/surge", "🚀", "급상승 영상"], ["#/rank", "🏆", "채널 순위"],
-  ["#/overseas", "🌍", "해외 레퍼런스"], ["#/trend", "📈", "트렌드 (유튜브·구글)"], ["#/blog", "✍️", "글공방 (블로그)"], ["#/calc", "💰", "수익 계산기"], ["#/compare", "⚖️", "채널 비교"], ["#/about", "📐", "지표 정의"],
+  ["#/overseas", "🌍", "해외 레퍼런스"], ["#/trend", "📈", "트렌드 (유튜브·구글)"], ["#/blog", "✍️", "글공방 (블로그)"], ["#/bids", "🏛", "입찰레이더"], ["#/kids", "🐷", "부자아이 공방"], ["#/calc", "💰", "수익 계산기"], ["#/compare", "⚖️", "채널 비교"], ["#/about", "📐", "지표 정의"],
 ];
 
 function App() {
@@ -37,6 +37,9 @@ function App() {
   else if (path === "/blog") page = <BlogStudio key={qs} pkg={params.get("pkg") ?? undefined} />;
   else if (path === "/overseas") page = <OverseasPage />;
   else if (path === "/packages") page = <PackagesPage />;
+  else if (path === "/bids") page = <BidsPage />;
+  else if (path === "/cockpit") page = <CockpitPage />;
+  else if (path === "/kids") page = <KidsPage />;
   else page = <HomeBoard />;
   const active = "#" + (path.startsWith("/ch/") ? "/rank" : path || "/");
   const [open, setOpen] = useState(false);

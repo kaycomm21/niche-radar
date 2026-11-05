@@ -58,6 +58,7 @@ jobs:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           MODE: ${{ inputs.mode || 'auto' }}
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
           SEARCH_Q: ${{ inputs.search_q }}
         run: |
           case "$MODE" in
@@ -65,6 +66,7 @@ jobs:
             export)  python -m radar export --date "$(date +%F)" && python -m radar enrich ;;   # enrich: API 쿼터 0, Gemini만 사용
             *)       python -m radar daily && python -m radar enrich ;;   # enrich: Gemini·Brave 키가 있을 때만 동작
           esac
+          python -m radar bids || true         # 🏛 입찰레이더 (DATA_GO_KR_KEY 없으면 예시 데이터)
           python -m radar gtrends || true      # 구글 트렌드 RSS (+ Gemini 키 있으면 AI 기획안)
           if [ "$MODE" != "fixture" ]; then python -m radar localize || true; fi   # 🌍 해외 인기 → 한국화 기획 (키 있을 때)
           if [ -n "$SEARCH_Q" ] && [ "$MODE" != "export" ]; then python -m radar search --q "$SEARCH_Q"; fi
@@ -114,7 +116,8 @@ jobs:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           python -m radar package --date "$(date +%F)"
-          if [ -n "$GEMINI_API_KEY$GCP_SA_KEY" ]; then python -m radar autopackage --max 3 || true; fi   # 패키지 없는 큐 항목 자동 생성
+          if [ -n "$GEMINI_API_KEY$GCP_SA_KEY" ]; then python -m radar autopackage --max 3 || true; fi
+          python -m radar proposals || true    # 🏛 Cue 된 입찰 → 제안서 초안   # 패키지 없는 큐 항목 자동 생성
           if [ -n "$(git status --porcelain exports/)" ]; then
             git config user.name "niche-radar-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

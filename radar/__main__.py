@@ -98,7 +98,7 @@ def cmd_verdict_from_issue(a) -> int:
     d = json.loads(m.group(1))
     note = body[m.end():].replace("메모:", "").strip()[:500] or None
     args = argparse.Namespace(id=str(d["id"]), action=d["action"], issue=a.number, title=d.get("title"),
-                              channel=d.get("channel"), group=d.get("group"), recipe=d.get("recipe"), note=note)
+                              channel=d.get("channel"), group=d.get("group"), recipe=d.get("recipe"), note=note, payload=d)
     return cmd_verdict(args)
 
 
@@ -120,7 +120,8 @@ def cmd_verdict(a) -> int:
         items = json.loads(q.read_text(encoding="utf-8")) if q.exists() else []
         if not any(x["id"] == a.id for x in items):
             items.append({"id": a.id, "title": a.title, "channel": a.channel, "group": a.group,
-                          "recipe": a.recipe, "date": date.today().isoformat(), "issue": a.issue, "status": "대기"})
+                          "recipe": a.recipe, "date": date.today().isoformat(), "issue": a.issue, "status": "대기",
+                          "payload": getattr(a, "payload", None)})
         q.write_text(json.dumps(items, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{VALID[a.action]} 기록: {a.id}")
     return 0
@@ -232,6 +233,49 @@ def cmd_localize(a) -> int:
     return 0
 
 
+def cmd_bids(a) -> int:
+    from .bids import run
+    run(config.WEB_DATA_DIR / "bids.json", date.fromisoformat(a.date) if a.date else date.today())
+    return 0
+
+
+def cmd_proposals(a) -> int:
+    """생산 큐의 입찰 항목(id 'bid:') 중 제안서가 없는 것 → 제안서 초안 생성."""
+    from .bids import proposal
+    q = json.loads((config.EXPORTS_DIR / "production_queue.json").read_text(encoding="utf-8")) if (config.EXPORTS_DIR / "production_queue.json").exists() else []
+    done = {json.loads(p.read_text(encoding="utf-8")).get("no") for p in config.EXPORTS_DIR.glob("proposals/*/source.json")}
+    st = config.DB_PATH.parent / "bids_state.json"
+    snap = json.loads(st.read_text(encoding="utf-8")) if st.exists() else {}
+    n = 0
+    for it in q:
+        if not str(it["id"]).startswith("bid:"):
+            continue
+        no = it["id"][4:]
+        if no in done:
+            continue
+        item = snap.get(no) or {**(it.get("payload") or {}), "no": no, "name": it.get("title")}
+        try:
+            d = proposal(item)
+            print(f"OUT={d}")
+            n += 1
+        except Exception as e:  # noqa: BLE001
+            print(f"제안서 실패 {no}: {e}")
+    print(f"제안서 {n}건")
+    return 0
+
+
+def cmd_kids(a) -> int:
+    from .kids import run
+    from .llm import NoKey
+    try:
+        d = run(os.environ.get("ISSUE_BODY", ""), a.number)
+    except NoKey:
+        print("NOKEY")
+        return 5
+    print(f"OUT={d.relative_to(config.ROOT)}")
+    return 0
+
+
 def cmd_calibrate(a) -> int:
     from .calibrate import report
     today = a.date or date.today().isoformat()
@@ -332,6 +376,9 @@ def main(argv=None) -> int:
     s = sub.add_parser("blog"); s.add_argument("--number", default=""); s.set_defaults(f=cmd_blog)
     s = sub.add_parser("autopackage"); s.add_argument("--id"); s.add_argument("--max", type=int, default=3); s.set_defaults(f=cmd_autopackage)
     s = sub.add_parser("localize"); s.add_argument("--date"); s.set_defaults(f=cmd_localize)
+    s = sub.add_parser("bids"); s.add_argument("--date"); s.set_defaults(f=cmd_bids)
+    s = sub.add_parser("proposals"); s.set_defaults(f=cmd_proposals)
+    s = sub.add_parser("kids"); s.add_argument("--number", default=""); s.set_defaults(f=cmd_kids)
     s = sub.add_parser("calibrate"); s.add_argument("--date"); s.add_argument("--out", default=None); s.set_defaults(f=cmd_calibrate)
     s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)

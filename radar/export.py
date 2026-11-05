@@ -257,7 +257,14 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         pk.append({"dir": str(d.relative_to(config.ROOT)) if d.is_relative_to(config.ROOT) else str(d), "title": m.get("title"),
                    "channel": sb.get("channel"), "secs": sb.get("est_total_s"), "shots": len(sb.get("shots", [])),
                    "has_shorts": (d / "shorts.md").exists(), "auto": "packages" in d.parts, "date": d.parts[-2] if "packages" not in d.parts else d.name[:10]})
-    _write(out_dir / "packages.json", {"date": today, "items": pk, "queue": _load_json(Path(exports_dir) / "production_queue.json", [])})
+    props = []
+    for sp in sorted(Path(exports_dir).glob("proposals/*/source.json")):
+        it = _load_json(sp, {})
+        props.append({"dir": str(sp.parent.relative_to(config.ROOT)) if sp.parent.is_relative_to(config.ROOT) else str(sp.parent),
+                      "name": it.get("name"), "org": it.get("org"), "close": it.get("close"), "budget": it.get("budget")})
+    kids = [{"dir": str(mp.parent.relative_to(config.ROOT)) if mp.parent.is_relative_to(config.ROOT) else str(mp.parent), **_load_json(mp, {})}
+            for mp in sorted(Path(exports_dir).glob("kids/*/meta.json"))]
+    _write(out_dir / "packages.json", {"date": today, "items": pk, "proposals": props, "kids": kids, "queue": _load_json(Path(exports_dir) / "production_queue.json", [])})
 
     # ---------------- M1-4 급상승 (최근 14일, 배수 3배↑)
     surging = [v for v in vids if v["age_days"] is not None and v["age_days"] <= 14 and (v["multiple"] or 0) >= 3
