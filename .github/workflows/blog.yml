@@ -1,0 +1,53 @@
+name: blog-studio
+# 웹 ✍️ 블로그 스튜디오 → 미리 채운 Issue(사진 첨부 가능) → Gemini 로 글 생성 → exports/blog/ 에 저장 → Issue 에 결과 링크
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+concurrency:
+  group: blog
+  cancel-in-progress: false
+jobs:
+  write:
+    if: github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-blog')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.11" }
+      - name: 글 생성
+        id: gen
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          NUMBER: ${{ github.event.issue.number }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TZ: Asia/Seoul
+        run: |
+          set +e
+          python -m radar blog --number "$NUMBER" | tee out.txt
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          grep '^OUT=' out.txt | sed 's/^OUT=/out=/' >> "$GITHUB_OUTPUT"
+      - name: 저장 + 알림
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          OUT: ${{ steps.gen.outputs.out }}
+          CODE: ${{ steps.gen.outputs.code }}
+        run: |
+          if [ "$CODE" = "5" ]; then
+            gh issue comment "$NUMBER" --body "⚠️ GEMINI_API_KEY 가 없어 글을 만들지 못했습니다. 저장소 Settings → Secrets → Actions 에 GEMINI_API_KEY 를 등록한 뒤 이 Issue 를 닫고 다시 요청하세요."
+            exit 0
+          fi
+          if [ "$CODE" != "0" ] || [ -z "$OUT" ]; then gh issue comment "$NUMBER" --body "❌ 글 생성 실패 — Actions 로그 확인"; exit 1; fi
+          git config user.name "ccs-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add exports/blog && git commit -qm "blog: #$NUMBER"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done
+          B="https://github.com/${{ github.repository }}/blob/main/$OUT"
+          gh issue close "$NUMBER" --comment "✅ 글 완성
+          - 워드프레스용 HTML: $B/wordpress.html (Raw 버튼 → 전체 복사 → 워드프레스 '코드 편집기'에 붙여넣기)
+          - 네이버용 텍스트: $B/naver.txt ([사진 n] 자리에 사진 올리기)
+          - 제목·태그: $B/meta.json
+          - ✅ 발행 전 검수: $B/review.md ('직접 경험 한 줄' 2곳 채우기 필수)"

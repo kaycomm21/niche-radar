@@ -131,7 +131,7 @@ export function RankPage() {
               <div className="small">구독 <b>{n(r.subs)}</b> · 30일 {r.sg === null ? "–" : `${r.sg >= 0 ? "+" : ""}${n(r.sg)} (${pct(r.sgr)})`} · 평균조회 {n(r.avg)} · 30일 업로드 {r.up30}</div>
               {r.top && <div className="small">🔥 최고 히트: <a href={`https://www.youtube.com/watch?v=${r.top.id}`} target="_blank" rel="noreferrer">{r.top.t}</a> ({r.top.mx?.toFixed(1)}×)</div>}
               <div className="row-actions">
-                {r.top && <a className="btn small primary" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: r.top.id, title: r.top.t, channel: r.t, group: r.g ?? "", recipe: r.top.rc[0] }, r.top.t)}>▶ 히트 큐로</a>}
+                {r.top && <a className="btn small cue" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: r.top.id, title: r.top.t, channel: r.t, group: r.g ?? "", recipe: r.top.rc[0] }, r.top.t)}>▶ 히트 큐로</a>}
                 <a className="btn small" href={`#/compare?add=${r.id}`}>비교에 담기</a><ExcludeChannel id={r.id} title={r.t ?? r.id} /></div>
             </div>
             <span className={`grade g-${r.gr ?? "na"}`} title={`${r.gs ?? "–"}점`}>{r.gr ?? "–"}</span>
@@ -374,7 +374,45 @@ export function AboutPage() {
 }
 
 // ------------------------------------------------------------------ M1-5 주제 트렌드
+type GItem = { kw: string; traffic: string | null; pub: string | null; news: { title: string; url: string; source: string }[];
+  plan: { group: string | null; titles: string[]; hook: string; outline: string[]; life: string; blog_angle?: string; risk?: string; by: string } };
 export function TrendPage() {
+  const [src, setSrc] = useState<"yt" | "google">("google");
+  return (<>
+    <div className="filters" style={{ marginTop: 14 }}><Seg value={src} onChange={setSrc} options={[["google", "🔎 구글 급상승 검색어 → 기획안"], ["yt", "▶ 유튜브 차트 키워드"]]} /></div>
+    {src === "google" ? <GoogleTrends /> : <YtTrends />}
+  </>);
+}
+function GoogleTrends() {
+  const [d, e] = useData<{ date: string; items: GItem[] }>("gtrends.json");
+  if (e) return <div className="empty">구글 트렌드 데이터가 아직 없습니다 — 다음 자동 수집(매일 06:17) 후 표시됩니다.</div>;
+  if (!d) return <Loading />;
+  return (
+    <section>
+      <h2>🔎 구글 급상승 검색어 (한국) <span className="muted small">{d.date}</span></h2>
+      <p className="small muted">출처: Google Trends 공식 RSS · 기획안은 {d.items[0]?.plan.by ?? "-"} (Gemini 키가 있으면 AI 기획). 이슈성 주제는 48시간 안에 만들 때만 가치가 있습니다.</p>
+      {d.items.map((it) => (
+        <article key={it.kw} className="vcard">
+          <div className="vcard-top"><span className="badge">🔥</span><div className="vcard-meta">
+            <b className="vtitle">{it.kw}</b><div className="small muted">검색 {it.traffic ?? "-"} · → {it.plan.group ?? "내 채널 매핑 없음"} · {it.plan.life}</div>
+            <ul className="small reasons-plain">{it.news.map((nw) => <li key={nw.url}><a href={nw.url} target="_blank" rel="noreferrer">{nw.title}</a> <span className="muted">{nw.source}</span></li>)}</ul></div></div>
+          <details className="small"><summary>📝 콘텐츠 기획안 보기</summary>
+            <p><b>제목 후보</b></p><ol>{it.plan.titles.map((t) => <li key={t}>{t}</li>)}</ol>
+            <p><b>첫 3초</b> {it.plan.hook}</p>
+            <p><b>구성</b></p><ol>{it.plan.outline.map((t) => <li key={t}>{t}</li>)}</ol>
+            {it.plan.blog_angle && <p><b>블로그 각도</b> {it.plan.blog_angle}</p>}
+            {it.plan.risk && <p className="warn">⚠️ {it.plan.risk}</p>}
+          </details>
+          <div className="row-actions">
+            <a className="btn small cue" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: `gt:${it.kw}`, title: `구글트렌드 기획: ${it.kw}`, channel: "구글 트렌드", group: it.plan.group ?? "", recipe: "R2" }, `구글트렌드 기획: ${it.kw}`)}>🎬 Cue</a>
+            <a className="btn small" href={`#/blog?kw=${encodeURIComponent(it.kw)}`}>✍️ 블로그 글로</a>
+          </div>
+        </article>
+      ))}
+    </section>
+  );
+}
+function YtTrends() {
   const [d, e] = useData<Trends>("trends.json");
   const [mode, setMode] = useState<"rising" | "frequent">("rising");
   if (!d) return <Loading err={e} />;
@@ -395,7 +433,7 @@ export function TrendPage() {
               <div className="part"><span className="part-bar wide"><span style={{ width: `${(k.n / max) * 100}%` }} /></span></div>
               <ul className="small reasons-plain">{k.examples.map((x) => <li key={x.id}><a href={`https://www.youtube.com/watch?v=${x.id}`} target="_blank" rel="noreferrer">{x.t}</a></li>)}</ul>
               <div className="row-actions">
-                <a className="btn small primary" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: `kw:${k.kw}`, title: `키워드 기획: ${k.kw}`, channel: "키워드", group: "", recipe: "R2" }, `키워드 기획: ${k.kw}`)}>▶ 기획 큐로</a>
+                <a className="btn small cue" target="_blank" rel="noreferrer" href={issueUrl("queue", { id: `kw:${k.kw}`, title: `키워드 기획: ${k.kw}`, channel: "키워드", group: "", recipe: "R2" }, `키워드 기획: ${k.kw}`)}>▶ 기획 큐로</a>
                 <a className="btn small" target="_blank" rel="noreferrer" href={`https://www.youtube.com/results?search_query=${encodeURIComponent(k.kw)}`}>유튜브에서 보기</a>
               </div>
             </div>
@@ -526,6 +564,49 @@ export function CalcPage({ id }: { id: string }) {
         <div className="kpi"><span>목표 {won(target)}/월에 필요한 일 조회</span><b>{n(need[0])}~{n(need[1])}</b><small>RPM 상한~하한 기준</small></div>
       </div>
       <p className="small muted">⚠️ 광고 수익만 계산합니다(PPL·멤버십·슈퍼챗 제외). 실제 RPM은 시청자 국가·시즌·영상 길이에 따라 크게 달라집니다.</p>
+    </section>
+  );
+}
+
+// ------------------------------------------------------------------ ✍️ 블로그 스튜디오
+export function BlogStudio() {
+  const init = new URLSearchParams(location.hash.split("?")[1] ?? "");
+  const [mode, setMode] = useState<"keyword" | "rewrite">("keyword");
+  const [kw, setKw] = useState(init.get("kw") ?? "");
+  const [draft, setDraft] = useState("");
+  const [yt, setYt] = useState("");
+  const [ch, setCh] = useState(() => { try { return localStorage.getItem("ccs.channel") ?? ""; } catch { return ""; } });
+  const [len, setLen] = useState(2500);
+  const [tone, setTone] = useState("친근한 전문가");
+  const [wp, setWp] = useState(true);
+  const [nv, setNv] = useState(true);
+  useEffect(() => { try { localStorage.setItem("ccs.channel", ch); } catch { /* 무시 */ } }, [ch]);
+  const cfg = { action: "blog", mode, keyword: kw, youtube: yt || null, channel_url: ch || null, length: len, tone, platforms: [wp && "wordpress", nv && "naver"].filter(Boolean) };
+  const body = ["<!-- radar-blog: 아래 JSON 블록은 수정하지 마세요 -->", "```json", JSON.stringify(cfg), "```", "", "## 초안", draft.slice(0, 5000), "",
+    "<!-- 📷 사진: 이 줄 아래에 사진 파일을 끌어다 놓으세요 (순서대로 섹션에 배치됩니다) -->", ""].join("\n");
+  const url = `https://github.com/kaycomm21/niche-radar/issues/new?${new URLSearchParams({ title: `[블로그] ${mode === "keyword" ? kw : (draft.slice(0, 30) || "초안 다듬기")}`, body }).toString()}`;
+  const ok = mode === "keyword" ? kw.trim().length > 0 : draft.trim().length > 30;
+  return (
+    <section>
+      <h2>✍️ 블로그 스튜디오 <span className="muted small">워드프레스 · 네이버 투트랙</span></h2>
+      <div className="filters"><Seg value={mode} onChange={setMode} options={[["keyword", "🔑 키워드로 글쓰기"], ["rewrite", "📝 막 쓴 초안 → 블로그 글"]]} /></div>
+      <div className="panel calc-grid">
+        <label>{mode === "keyword" ? "핵심 키워드" : "참고 키워드(선택)"}<input value={kw} onChange={(e) => setKw(e.target.value)} placeholder="예: 금리 인상 대출 갈아타기" /></label>
+        <label>분량<select value={len} onChange={(e) => setLen(Number(e.target.value))}><option value={1500}>짧게 (1,500자)</option><option value={2500}>보통 (2,500자)</option><option value={4000}>길게 (4,000자)</option></select></label>
+        <label style={{ gridColumn: "1 / -1" }}>{mode === "rewrite" ? "막 쓴 초안 (두서없이 써도 됩니다 — 내 경험이 그대로 살아납니다)" : "메모 (선택: 꼭 넣을 내용·경험)"}
+          <textarea rows={8} value={draft} onChange={(e) => setDraft(e.target.value)} placeholder="생각나는 대로 적으세요" /></label>
+        <label>톤<select value={tone} onChange={(e) => setTone(e.target.value)}>{["친근한 전문가", "차분한 정보형", "현장 경험담", "리뷰형"].map((t) => <option key={t}>{t}</option>)}</select></label>
+        <label>마지막에 넣을 내 유튜브 영상 주소<input value={yt} onChange={(e) => setYt(e.target.value)} placeholder="https://youtu.be/..." /></label>
+        <label>내 채널 주소 (구독 버튼용, 저장됨)<input value={ch} onChange={(e) => setCh(e.target.value)} placeholder="https://www.youtube.com/@내채널" /></label>
+        <label style={{ flexDirection: "row", gap: 12, alignItems: "center" }}><span><input type="checkbox" checked={wp} onChange={(e) => setWp(e.target.checked)} /> 워드프레스</span><span><input type="checkbox" checked={nv} onChange={(e) => setNv(e.target.checked)} /> 네이버</span></label>
+      </div>
+      <a className={`btn cue wide ${ok ? "" : "disabled"}`} href={ok ? url : undefined} target="_blank" rel="noreferrer">✍️ 글 만들기 요청</a>
+      <div className="panel small">
+        <b>📷 사진 넣는 법</b> — 열린 GitHub 화면의 본문 맨 아래에 사진 파일을 <b>끌어다 놓기</b> → 오른쪽 아래 초록 <b>Create</b>. 사진은 순서대로 각 소제목 아래에 자동 배치되고, 사진 설명(alt)도 자동으로 붙습니다.<br />
+        <b>⏱ 결과</b> — 1~2분 뒤 그 Issue에 링크가 달립니다: 워드프레스용 HTML · 네이버용 텍스트([사진 n] 위치 표시) · 제목/태그 · 검수표.<br />
+        <b>✅ 발행 원칙</b> — 주 2~3편. 글 속 <code>[✍️ 직접 경험 한 줄]</code> 2곳은 반드시 직접 채우세요 (구글·네이버 모두 경험 없는 AI 글을 낮게 평가).<br />
+        <b>🔑 필요</b> — GitHub Secret <code>GEMINI_API_KEY</code> (없으면 Issue에 안내가 달립니다).
+      </div>
     </section>
   );
 }

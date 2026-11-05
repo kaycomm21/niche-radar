@@ -175,6 +175,24 @@ def cmd_add_channel(a) -> int:
     return 0 if r.get("ok") else 4
 
 
+def cmd_gtrends(a) -> int:
+    from .gtrends import run
+    run(config.WEB_DATA_DIR / "gtrends.json", a.date or date.today().isoformat())
+    return 0
+
+
+def cmd_blog(a) -> int:
+    from .blog import run
+    from .llm import NoKey
+    try:
+        d = run(os.environ.get("ISSUE_BODY", ""), a.number)
+    except NoKey:
+        print("NOKEY")
+        return 5
+    print(f"OUT={d.relative_to(config.ROOT)}")
+    return 0
+
+
 def cmd_calibrate(a) -> int:
     from .calibrate import report
     today = a.date or date.today().isoformat()
@@ -271,6 +289,8 @@ def main(argv=None) -> int:
     s = sub.add_parser("oauth-init"); s.add_argument("--name", required=True); s.set_defaults(f=lambda a: (__import__("radar.mychannel", fromlist=["x"]).oauth_init(a.name), 0)[1])
     s = sub.add_parser("mychannel"); s.add_argument("--days", type=int, default=28); s.set_defaults(f=lambda a: (print(json.dumps([{k: o[k] for k in ("channel", "views", "revenue", "rpm", "median_video_views")} for o in __import__("radar.mychannel", fromlist=["x"]).run(a.days)], ensure_ascii=False)), 0)[1])
     s = sub.add_parser("add-channel"); s.add_argument("--q", required=True); s.add_argument("--group"); s.add_argument("--out"); s.add_argument("--fixture", action="store_true"); s.set_defaults(f=cmd_add_channel)
+    s = sub.add_parser("gtrends"); s.add_argument("--date"); s.set_defaults(f=cmd_gtrends)
+    s = sub.add_parser("blog"); s.add_argument("--number", default=""); s.set_defaults(f=cmd_blog)
     s = sub.add_parser("calibrate"); s.add_argument("--date"); s.add_argument("--out", default=None); s.set_defaults(f=cmd_calibrate)
     s = sub.add_parser("enrich"); s.add_argument("--date"); s.set_defaults(f=cmd_enrich)
     s = sub.add_parser("weekly"); s.add_argument("--out", default="weekly.md"); s.set_defaults(f=cmd_weekly)

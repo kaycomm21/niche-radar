@@ -32,10 +32,10 @@ export function Verdict({ v }: { v: VCard }) {
   const [acted, setActed] = useState<string | undefined>(() => readActed()[v.id]);
   const payload = { id: v.id, title: v.t, channel: v.ct ?? v.c, group: v.g ?? "", recipe: v.rc[0] };
   const go = (a: Action) => () => { writeActed(v.id, ACTION_LABEL[a]); setActed(ACTION_LABEL[a]); };
-  if (acted) return <div className="acted">✔ {acted} 판정 보냄 · 다음 갱신 때 반영</div>;
+  if (acted) return <div className="acted">✔ {acted} 판정 — GitHub 화면 오른쪽 아래 초록 <b>Create</b> 버튼을 눌러야 기록됩니다</div>;
   return (
     <div className="verdict">
-      <a className="btn primary" href={issueUrl("queue", payload, v.t)} target="_blank" rel="noreferrer" onClick={go("queue")}>▶ 생산 큐로</a>
+      <a className="btn cue" href={issueUrl("queue", payload, v.t)} target="_blank" rel="noreferrer" onClick={go("queue")} title="생산 큐에 넣기 → 대본 패키지로 제작">🎬 Cue</a>
       <a className="btn" href={issueUrl("hold", payload, v.t)} target="_blank" rel="noreferrer" onClick={go("hold")}>보류</a>
       <a className="btn ghost" href={issueUrl("drop", payload, v.t)} target="_blank" rel="noreferrer" onClick={go("drop")}>폐기</a>
     </div>
