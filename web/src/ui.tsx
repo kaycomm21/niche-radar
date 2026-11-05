@@ -83,7 +83,7 @@ export function ScoreBreakdown({ sc }: { sc: VCard["sc"] }) {
             <div key={k} className="part" title={`${name} ${val ?? "미산정"}/${max}`}>
               <span className="part-name">{name}</span>
               <span className="part-bar"><span style={{ width: val === null ? 0 : `${(val / max) * 100}%` }} /></span>
-              <span className="part-val">{val === null ? "키 필요" : val}</span>
+              <span className="part-val">{val === null ? "AI 대기" : val}</span>
             </div>
           );
         })}

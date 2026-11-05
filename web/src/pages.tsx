@@ -24,7 +24,7 @@ export function Home() {
       {s?.mode === "fixture" && <div className="banner">🧪 fixture(가짜 데이터) 모드입니다. 실제 수집이 돌면 자동으로 바뀝니다.</div>}
       <section>
         <h2>🎯 오늘의 생산 큐 후보 <span className="muted small">{q.date}</span></h2>
-        <p className="small muted">점수 상위 3건 (서로 다른 채널 그룹 우선). ▶ 생산 큐로 = Phase 2 생산 패키지 입력. 7일 무응답 시 자동 보관.</p>
+        <p className="small muted">점수 상위 3건 (서로 다른 채널 그룹 우선). 🎬 Cue → GitHub 초록 Create → 1~2분 뒤 📦 생산 패키지 자동 생성. 7일 무응답 시 자동 보관. 'AI 대기' = 적합도 채점 전(매일 06:17 채점).</p>
         {q.top3.length === 0 && <div className="empty">오늘은 기준을 넘는 후보가 없습니다.</div>}
         {q.top3.map((v, i) => <VideoCard key={v.id} v={v} detail rankBadge={<span className="badge">{i + 1}</span>} />)}
       </section>
@@ -505,7 +505,7 @@ export function HomeBoard() {
     <>
       <div className="hero">
         <h2>오늘 유튜브에서 무엇이 터졌나 <span className="muted small">{d.date}</span></h2>
-        <p className="small muted">국내 인기 차트 + 추적 채널 {""}기준. 마음에 드는 소재는 🎯 생산 큐로 보내면 대본 패키지로 만들어집니다.</p>
+        <p className="small muted">국내 인기 차트 + 추적 채널 {""}기준. 마음에 드는 소재는 🎬 Cue 하면 대본 패키지로 자동 생성됩니다.</p>
         {q && q.top3.length > 0 && <div className="row-actions"><a className="btn primary" href="#/queue">🎯 오늘의 생산 큐 후보 {q.top3.length}건 보기</a></div>}
       </div>
       <div className="board three">

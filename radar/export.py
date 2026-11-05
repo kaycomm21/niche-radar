@@ -133,7 +133,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
 
     feats: dict[str, dict] = {}
     for cid, ch in chans.items():
-        if not ch["active"]:
+        if not ch["active"] or (ch.get("title") or "").endswith(" - Topic"):   # 자동생성 음원 채널은 분석 대상 아님
             continue
         h = hist.get(cid, [])
         last = h[-1] if h else None

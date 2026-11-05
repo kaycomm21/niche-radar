@@ -130,7 +130,8 @@ def collect_charts(con, yt, today: str, stats: dict) -> None:
                 stats["chart_rows"] += 1
                 cid = it["snippet"]["channelId"]
                 exists = con.execute("SELECT 1 FROM channels WHERE channel_id=?", (cid,)).fetchone()
-                if not exists and universe < config.UNIVERSE_CAP:
+                ct = it["snippet"].get("channelTitle") or ""
+                if not exists and universe < config.UNIVERSE_CAP and not ct.endswith(" - Topic"):   # 자동생성 음원 채널 제외
                     con.execute("""INSERT INTO channels(channel_id, title, "group", source, added_at, active)
                                    VALUES (?,?,?,?,?,1)""",
                                 (cid, it["snippet"].get("channelTitle"), assign_group(it["snippet"].get("title", "")), "chart", today))
