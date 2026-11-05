@@ -1,0 +1,182 @@
+{
+ "title": "금리 인상 초읽기, 대출 있는 사람과 예금 있는 사람이 지금 해야 할 일",
+ "channel": "경제적자유구역",
+ "est_total_s": 501,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "후킹",
+   "start_hint_s": 0.0,
+   "duration_s": 19.2,
+   "broll_ko": "은행 창구 번호표",
+   "prompt_en": "은행 창구 번호표 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "이 영상은 투자 권유가 아닙니다"
+   ],
+   "narration_excerpt": "\"이제 판이 바뀌었다.\" 요즘 경제 뉴스에서 이런 말이 자주 들립니다. 한국은행이 이번 달 금리를 올릴 거라는 전망이 우세해졌기 때문이죠. 금리"
+  },
+  {
+   "shot": 2,
+   "section": "후킹",
+   "start_hint_s": 19.2,
+   "duration_s": 19.2,
+   "broll_ko": "대출 상환 고지서 클로즈업",
+   "prompt_en": "대출 상환 고지서 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": [
+    "이 영상은 투자 권유가 아닙니다"
+   ],
+   "narration_excerpt": "\"이제 판이 바뀌었다.\" 요즘 경제 뉴스에서 이런 말이 자주 들립니다. 한국은행이 이번 달 금리를 올릴 거라는 전망이 우세해졌기 때문이죠. 금리"
+  },
+  {
+   "shot": 3,
+   "section": "지금 금리는 어디쯤 와 있나",
+   "start_hint_s": 50.0,
+   "duration_s": 27.5,
+   "broll_ko": "한국은행 외경 일러스트",
+   "prompt_en": "한국은행 외경 일러스트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "먼저 상황부터 정리하겠습니다. 한국은행은 올해 7월과 8월에 연달아 기준금리를 올렸고, 10월 22일에는 연 3.00%로 한 번 쉬어 갔습니다."
+  },
+  {
+   "shot": 4,
+   "section": "지금 금리는 어디쯤 와 있나",
+   "start_hint_s": 77.5,
+   "duration_s": 27.5,
+   "broll_ko": "그래프가 계단처럼 오르는 애니메이션",
+   "prompt_en": "그래프가 계단처럼 오르는 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "먼저 상황부터 정리하겠습니다. 한국은행은 올해 7월과 8월에 연달아 기준금리를 올렸고, 10월 22일에는 연 3.00%로 한 번 쉬어 갔습니다."
+  },
+  {
+   "shot": 5,
+   "section": "왜 지금 다시 올리려 할까",
+   "start_hint_s": 120.0,
+   "duration_s": 20.3,
+   "broll_ko": "장바구니",
+   "prompt_en": "장바구니 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이유는 크게 두 가지로 정리됩니다. 첫째, 물가입니다. 10월 소비자물가 상승률은 2.8%로 조금 낮아졌지만, 변동이 큰 품목을 뺀 근원물가는 "
+  },
+  {
+   "shot": 6,
+   "section": "왜 지금 다시 올리려 할까",
+   "start_hint_s": 140.3,
+   "duration_s": 20.3,
+   "broll_ko": "물가 표지판",
+   "prompt_en": "물가 표지판 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이유는 크게 두 가지로 정리됩니다. 첫째, 물가입니다. 10월 소비자물가 상승률은 2.8%로 조금 낮아졌지만, 변동이 큰 품목을 뺀 근원물가는 "
+  },
+  {
+   "shot": 7,
+   "section": "대출 있는 사람: 이번 달에 꼭 확인할 3가지",
+   "start_hint_s": 180.0,
+   "duration_s": 45.7,
+   "broll_ko": "대출 계약서",
+   "prompt_en": "대출 계약서 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "먼저 대출이 있는 분들입니다. 세 가지만 확인하세요. 하나, 내 대출이 변동금리인지 고정금리인지. 변동금리라면 기준금리가 오를 때 내 이자도 따"
+  },
+  {
+   "shot": 8,
+   "section": "대출 있는 사람: 이번 달에 꼭 확인할 3가지",
+   "start_hint_s": 225.7,
+   "duration_s": 45.7,
+   "broll_ko": "계산기",
+   "prompt_en": "계산기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "먼저 대출이 있는 분들입니다. 세 가지만 확인하세요. 하나, 내 대출이 변동금리인지 고정금리인지. 변동금리라면 기준금리가 오를 때 내 이자도 따"
+  },
+  {
+   "shot": 9,
+   "section": "예금 있는 사람: 지금이 기회일 수도, 함정일 수도",
+   "start_hint_s": 300.0,
+   "duration_s": 33.1,
+   "broll_ko": "저금통",
+   "prompt_en": "저금통 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이번엔 예금이 있는 분들입니다. 금리가 오르면 예금과 적금 금리도 대체로 따라 오릅니다. 그래서 두 가지 선택지가 생기죠. 첫째, 지금 바로 묶"
+  },
+  {
+   "shot": 10,
+   "section": "예금 있는 사람: 지금이 기회일 수도, 함정일 수도",
+   "start_hint_s": 333.1,
+   "duration_s": 33.1,
+   "broll_ko": "은행 앱 예금 상품 화면은 흐릿하게",
+   "prompt_en": "은행 앱 예금 상품 화면은 흐릿하게 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이번엔 예금이 있는 분들입니다. 금리가 오르면 예금과 적금 금리도 대체로 따라 오릅니다. 그래서 두 가지 선택지가 생기죠. 첫째, 지금 바로 묶"
+  },
+  {
+   "shot": 11,
+   "section": "투자하는 사람: 금리가 오르면 무엇이 흔들리나",
+   "start_hint_s": 380.0,
+   "duration_s": 24.6,
+   "broll_ko": "증권 전광판",
+   "prompt_en": "증권 전광판 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "주식이나 부동산에 투자하는 분들도 있을 겁니다. 금리가 오르면 일반적으로 돈을 빌리는 비용이 올라가고, 안전한 예금의 매력도 커집니다. 그래서 "
+  },
+  {
+   "shot": 12,
+   "section": "투자하는 사람: 금리가 오르면 무엇이 흔들리나",
+   "start_hint_s": 404.6,
+   "duration_s": 24.6,
+   "broll_ko": "시소 그래픽",
+   "prompt_en": "시소 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "주식이나 부동산에 투자하는 분들도 있을 겁니다. 금리가 오르면 일반적으로 돈을 빌리는 비용이 올라가고, 안전한 예금의 매력도 커집니다. 그래서 "
+  },
+  {
+   "shot": 13,
+   "section": "금리 인상기에 사람들이 가장 많이 하는 실수 3가지",
+   "start_hint_s": 410.0,
+   "duration_s": 51.6,
+   "broll_ko": "엑스 표시 세 개",
+   "prompt_en": "엑스 표시 세 개 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "금리가 오를 때 많은 분들이 비슷한 실수를 합니다. 세 가지만 피하셔도 충분합니다. 실수 하나, 뉴스 제목만 보고 급하게 움직이기. \"금리 인상"
+  },
+  {
+   "shot": 14,
+   "section": "금리 인상기에 사람들이 가장 많이 하는 실수 3가지",
+   "start_hint_s": 461.6,
+   "duration_s": 51.6,
+   "broll_ko": "고민하는 사람의 뒷모습",
+   "prompt_en": "고민하는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "금리가 오를 때 많은 분들이 비슷한 실수를 합니다. 세 가지만 피하셔도 충분합니다. 실수 하나, 뉴스 제목만 보고 급하게 움직이기. \"금리 인상"
+  },
+  {
+   "shot": 15,
+   "section": "오늘의 체크리스트",
+   "start_hint_s": 440.0,
+   "duration_s": 20.6,
+   "broll_ko": "체크리스트 화면",
+   "prompt_en": "체크리스트 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "정리하겠습니다. 이번 달에 할 일입니다. 대출이 있다면, 변동인지 고정인지, 다음 금리 변경일이 언제인지, 그리고 0.25%포인트가 오르면 한 "
+  },
+  {
+   "shot": 16,
+   "section": "오늘의 체크리스트",
+   "start_hint_s": 460.6,
+   "duration_s": 20.6,
+   "broll_ko": "하나씩 체크",
+   "prompt_en": "하나씩 체크 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "정리하겠습니다. 이번 달에 할 일입니다. 대출이 있다면, 변동인지 고정인지, 다음 금리 변경일이 언제인지, 그리고 0.25%포인트가 오르면 한 "
+  },
+  {
+   "shot": 17,
+   "section": "마무리",
+   "start_hint_s": 490.0,
+   "duration_s": 16.2,
+   "broll_ko": "abstract background matching the topic",
+   "prompt_en": "abstract background matching the topic — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "11월 26일 금통위 결과가 나오면, 실제로 무엇이 바뀌었는지 다시 정리해 드리겠습니다. 이 영상은 투자 권유가 아니며, 투자 판단과 책임은 본"
+  }
+ ]
+}
