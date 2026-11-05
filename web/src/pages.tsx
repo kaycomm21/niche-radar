@@ -753,7 +753,7 @@ export function CockpitPage() {
         <div className="kpi"><span>{month} 누적 수익</span><b>{won(total)}</b><small>목표의 {Math.round((total / goal) * 100)}%</small></div>
         <div className="kpi"><span>남은 금액</span><b>{won(Math.max(0, goal - total))}</b><small>이번 달</small></div>
       </div>
-      <div className="part" style={{ margin: "10px 0" }}><span className="part-bar wide"><span style={{ width: `${Math.min(100, (total / goal) * 100)}%`, background: "#ff2d87" }} /></span></div>
+      <div className="part" style={{ margin: "10px 0" }}><span className="part-bar wide"><span style={{ width: `${Math.min(100, (total / goal) * 100)}%`, background: "var(--cue)" }} /></span></div>
       <h3>✅ 오늘의 3가지 (매출에 가까운 순)</h3>
       <ol>{actions.slice(0, 3).map((a) => <li key={a.t} style={{ margin: "8px 0" }}><a href={a.href}><b>{a.t}</b></a><div className="small muted">{a.why}</div></li>)}</ol>
       <h3>💵 이번 달 수입 입력 <span className="muted small">(이 기기에만 저장)</span></h3>

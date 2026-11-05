@@ -1,28 +1,13 @@
 :root {
-  color-scheme: light;
-  --bg: #fcfcfb; --card: #ffffff; --line: #e6e5e0; --text: #0b0b0b; --text2: #52514e; --muted: #6f6e69;
-  --accent: #2a78d6; --accent-ink: #ffffff; --hot: #c43a39; --warm: #b86e00; --warnbg: #fff4dc;
-  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --seq: #2a78d6;
-  --grid: #e6e5e0; --chip: #f1f0ec;
-  --g-S: #6250d6; --g-A: #2a78d6; --g-B: #1baf7a; --g-C: #8a8983; --g-D: #b5b4ae;
-}
-@media (prefers-color-scheme: dark) {
-  :root:where(:not([data-theme="light"])) {
-    color-scheme: dark;
-    --bg: #1a1a19; --card: #232322; --line: #353533; --text: #f0efec; --text2: #c3c2b7; --muted: #9b9a93;
-    --accent: #3987e5; --hot: #e66767; --warm: #e0a030; --warnbg: #3a3020;
-    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --seq: #5598e7;
-    --grid: #353533; --chip: #2d2d2b;
-    --g-S: #9085e9; --g-A: #3987e5; --g-B: #199e70; --g-C: #8a8983; --g-D: #5b5a56;
-  }
-}
-:root[data-theme="dark"] {
+  /* 🎨 Gruvbox Material (dark) — bg #141617 · fg #D4BE98 · accent #E78A4E */
   color-scheme: dark;
-  --bg: #1a1a19; --card: #232322; --line: #353533; --text: #f0efec; --text2: #c3c2b7; --muted: #9b9a93;
-  --accent: #3987e5; --hot: #e66767; --warm: #e0a030; --warnbg: #3a3020;
-  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --seq: #5598e7;
-  --grid: #353533; --chip: #2d2d2b;
-  --g-S: #9085e9; --g-A: #3987e5; --g-B: #199e70; --g-C: #8a8983; --g-D: #5b5a56;
+  --bg: #141617; --card: #1d2021; --card2: #232627; --line: #32302f; --text: #d4be98; --text2: #bfab88; --muted: #928374;
+  --accent: #e78a4e; --accent-ink: #141617; --hot: #ea6962; --warm: #d8a657; --warnbg: #2a2520;
+  --s1: #7daea3; --s2: #e78a4e; --s3: #a9b665; --s4: #d8a657; --seq: #e78a4e;
+  --grid: #32302f; --chip: #282828;
+  --g-S: #d3869b; --g-A: #7daea3; --g-B: #a9b665; --g-C: #7c6f64; --g-D: #504945;
+  --cue: #ff2d87; --cue-hover: #e0006e;
+  --mono: "JetBrains Mono", "D2Coding", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: var(--bg); color: var(--text); }
@@ -164,8 +149,8 @@ main { max-width: 1100px; padding-bottom: 40px; }
 .calc-grid label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--text2); }
 .big { font-size: 26px; font-weight: 800; }
 
-.btn.cue { background: #ff2d87; border-color: #ff2d87; color: #fff; font-weight: 800; letter-spacing: .3px; }
-.btn.cue:hover { background: #e0006e; }
+.btn.cue { background: var(--cue); border-color: var(--cue); color: #fff; font-weight: 800; letter-spacing: .3px; }
+.btn.cue:hover { background: var(--cue-hover); border-color: var(--cue-hover); }
 .btn.disabled { opacity: .4; pointer-events: none; }
 .brand-sub { display: block; font-size: 10px; font-weight: 400; color: var(--muted); letter-spacing: .5px; }
 textarea { border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); padding: 8px; font: inherit; width: 100%; }
@@ -173,3 +158,34 @@ textarea { border-radius: 8px; border: 1px solid var(--line); background: var(--
 .chip-btn { border: 1px solid var(--line); cursor: pointer; font: inherit; font-size: 12px; }
 .chip-btn.on { background: var(--accent); color: #fff; border-color: var(--accent); }
 .chips { margin: 6px 0; }
+
+/* ---- Gruvbox 마감: 표면 계층·포커스·숫자 글꼴 ---- */
+.side { background: #181a1b; }
+.top { background: rgb(20 22 23 / .92); backdrop-filter: blur(6px); }
+.panel, .vcard, .kpi, .chart, .hero { background: var(--card); border-color: var(--line); }
+.hero { background: linear-gradient(135deg, #1d2021 0%, #2a2520 100%); border-color: #3c3836; }
+.side nav a:hover { background: var(--chip); color: var(--text); }
+.side nav a.on { background: #2a2520; color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.brand { color: var(--accent); font-family: var(--mono); letter-spacing: .5px; }
+.btn { background: var(--card2); border-color: #3c3836; color: var(--text); }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { color: var(--accent-ink); }
+.seg button { background: var(--card2); }
+.seg button.on { color: var(--accent-ink); }
+.chip-btn.on { color: var(--accent-ink); }
+select, input, textarea { background: #1b1d1e; border-color: #3c3836; color: var(--text); }
+input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.kpi b, .big, .score-head b, .badge, .grade, .val { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+td, .stats b { font-variant-numeric: tabular-nums; }
+.grade { color: #141617; }
+.g-C, .g-D, .g-na { color: var(--text); }
+code { font-family: var(--mono); color: var(--warm); background: #1b1d1e; padding: 1px 5px; border-radius: 4px; }
+a { color: var(--s1); }
+a.vtitle, .mini .tx a { color: var(--text); }
+.chip { background: var(--chip); color: var(--text2); }
+.chip-ai, .chip-fire { color: var(--hot); } .chip-money { color: var(--warm); } .chip-issue { color: var(--s1); }
+.banner { background: var(--warnbg); border: 1px solid #4a3f30; color: var(--warm); }
+.part-bar { background: #282828; }
+.tip, .est-pop, .suggest { background: #1d2021; border-color: #3c3836; color: var(--text); }
+::selection { background: rgb(231 138 78 / .35); }
+::-webkit-scrollbar { width: 10px; height: 10px; } ::-webkit-scrollbar-thumb { background: #3c3836; border-radius: 6px; } ::-webkit-scrollbar-track { background: #141617; }
