@@ -1,0 +1,318 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 637,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "인트로: 보이지 않는 균열, 당신의 노후를 위협하다",
+   "start_hint_s": 0.0,
+   "duration_s": 14.9,
+   "broll_ko": "햇살이 비치는 거실에서 평화롭게 신문을 보는 노년 부부의 뒷모습",
+   "prompt_en": "햇살이 비치는 거실에서 평화롭게 신문을 보는 노년 부부의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴 후의 삶을 꿈꾸며 열심히 자산을 모으고 있습니다. 하지만 오랜 시간 공들여 쌓아 올린 노후 계획에 예상치 못한 '균열'이 생겨"
+  },
+  {
+   "shot": 2,
+   "section": "인트로: 보이지 않는 균열, 당신의 노후를 위협하다",
+   "start_hint_s": 14.9,
+   "duration_s": 14.9,
+   "broll_ko": "금고 문이 살짝 열려 있고",
+   "prompt_en": "금고 문이 살짝 열려 있고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴 후의 삶을 꿈꾸며 열심히 자산을 모으고 있습니다. 하지만 오랜 시간 공들여 쌓아 올린 노후 계획에 예상치 못한 '균열'이 생겨"
+  },
+  {
+   "shot": 3,
+   "section": "인트로: 보이지 않는 균열, 당신의 노후를 위협하다",
+   "start_hint_s": 29.8,
+   "duration_s": 14.9,
+   "broll_ko": "그 틈으로 돈이 새어 나가는 듯한 연출",
+   "prompt_en": "그 틈으로 돈이 새어 나가는 듯한 연출 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴 후의 삶을 꿈꾸며 열심히 자산을 모으고 있습니다. 하지만 오랜 시간 공들여 쌓아 올린 노후 계획에 예상치 못한 '균열'이 생겨"
+  },
+  {
+   "shot": 4,
+   "section": "인트로: 보이지 않는 균열, 당신의 노후를 위협하다",
+   "start_hint_s": 44.7,
+   "duration_s": 14.9,
+   "broll_ko": "복잡한 재무제표 차트 위로 금이 가는 효과",
+   "prompt_en": "복잡한 재무제표 차트 위로 금이 가는 효과 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴 후의 삶을 꿈꾸며 열심히 자산을 모으고 있습니다. 하지만 오랜 시간 공들여 쌓아 올린 노후 계획에 예상치 못한 '균열'이 생겨"
+  },
+  {
+   "shot": 5,
+   "section": "첫 번째 균열: 조용한 도둑, 인플레이션",
+   "start_hint_s": 59.0,
+   "duration_s": 18.0,
+   "broll_ko": "마트에서 물건 가격표가 계속 오르는 모습 (숫자만 빠르게 변동)",
+   "prompt_en": "마트에서 물건 가격표가 계속 오르는 모습 (숫자만 빠르게 변동) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 자금을 위협하는 가장 흔하고 강력한 균열 중 하나는 바로 '인플레이션'입니다. 인플레이션은 물가 상승을 의미하며, 이는 곧 화폐 가치의 하"
+  },
+  {
+   "shot": 6,
+   "section": "첫 번째 균열: 조용한 도둑, 인플레이션",
+   "start_hint_s": 77.0,
+   "duration_s": 18.0,
+   "broll_ko": "달력 페이지가 빠르게 넘어가는 영상",
+   "prompt_en": "달력 페이지가 빠르게 넘어가는 영상 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 자금을 위협하는 가장 흔하고 강력한 균열 중 하나는 바로 '인플레이션'입니다. 인플레이션은 물가 상승을 의미하며, 이는 곧 화폐 가치의 하"
+  },
+  {
+   "shot": 7,
+   "section": "첫 번째 균열: 조용한 도둑, 인플레이션",
+   "start_hint_s": 95.1,
+   "duration_s": 18.0,
+   "broll_ko": "저금통에 동전이 채워지고 있지만",
+   "prompt_en": "저금통에 동전이 채워지고 있지만 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 자금을 위협하는 가장 흔하고 강력한 균열 중 하나는 바로 '인플레이션'입니다. 인플레이션은 물가 상승을 의미하며, 이는 곧 화폐 가치의 하"
+  },
+  {
+   "shot": 8,
+   "section": "첫 번째 균열: 조용한 도둑, 인플레이션",
+   "start_hint_s": 113.1,
+   "duration_s": 18.0,
+   "broll_ko": "그 옆으로 돈이 증발하는 듯한 효과",
+   "prompt_en": "그 옆으로 돈이 증발하는 듯한 효과 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 자금을 위협하는 가장 흔하고 강력한 균열 중 하나는 바로 '인플레이션'입니다. 인플레이션은 물가 상승을 의미하며, 이는 곧 화폐 가치의 하"
+  },
+  {
+   "shot": 9,
+   "section": "두 번째 균열: 예측 불가능한 의료비 폭탄",
+   "start_hint_s": 131.0,
+   "duration_s": 23.6,
+   "broll_ko": "병원 진료비 영수증이 쌓여가는 모습",
+   "prompt_en": "병원 진료비 영수증이 쌓여가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 균열은 바로 '예측 불가능한 의료비'입니다. 나이가 들수록 건강에 대한 걱정은 커지고, 병원 방문 횟수도 늘어나기 마련입니다. 국민건강"
+  },
+  {
+   "shot": 10,
+   "section": "두 번째 균열: 예측 불가능한 의료비 폭탄",
+   "start_hint_s": 154.6,
+   "duration_s": 23.6,
+   "broll_ko": "엑스레이 사진이나 MRI 화면",
+   "prompt_en": "엑스레이 사진이나 MRI 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 균열은 바로 '예측 불가능한 의료비'입니다. 나이가 들수록 건강에 대한 걱정은 커지고, 병원 방문 횟수도 늘어나기 마련입니다. 국민건강"
+  },
+  {
+   "shot": 11,
+   "section": "두 번째 균열: 예측 불가능한 의료비 폭탄",
+   "start_hint_s": 178.2,
+   "duration_s": 23.6,
+   "broll_ko": "건강 관련 데이터 차트가 가파르게 상승하는 그래프",
+   "prompt_en": "건강 관련 데이터 차트가 가파르게 상승하는 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 균열은 바로 '예측 불가능한 의료비'입니다. 나이가 들수록 건강에 대한 걱정은 커지고, 병원 방문 횟수도 늘어나기 마련입니다. 국민건강"
+  },
+  {
+   "shot": 12,
+   "section": "세 번째 균열: 길어진 수명, 늘어난 비용 (장수 리스크)",
+   "start_hint_s": 201.0,
+   "duration_s": 24.8,
+   "broll_ko": "지팡이를 짚고 여유롭게 산책하는 노년의 모습 (오래 사는 행복한 모습)",
+   "prompt_en": "지팡이를 짚고 여유롭게 산책하는 노년의 모습 (오래 사는 행복한 모습) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "장수하는 것은 축복이지만, 재정적으로는 또 다른 균열을 만들 수 있습니다. 바로 '장수 리스크'입니다. 의학의 발달로 평균 수명이 계속 늘어나면"
+  },
+  {
+   "shot": 13,
+   "section": "세 번째 균열: 길어진 수명, 늘어난 비용 (장수 리스크)",
+   "start_hint_s": 225.8,
+   "duration_s": 24.8,
+   "broll_ko": "길게 늘어진 도로 위에 자동차 헤드라이트가 멀리까지 비추는 장면",
+   "prompt_en": "길게 늘어진 도로 위에 자동차 헤드라이트가 멀리까지 비추는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "장수하는 것은 축복이지만, 재정적으로는 또 다른 균열을 만들 수 있습니다. 바로 '장수 리스크'입니다. 의학의 발달로 평균 수명이 계속 늘어나면"
+  },
+  {
+   "shot": 14,
+   "section": "세 번째 균열: 길어진 수명, 늘어난 비용 (장수 리스크)",
+   "start_hint_s": 250.7,
+   "duration_s": 24.8,
+   "broll_ko": "모래시계의 모래가 천천히 떨어지는 모습 (시간의 흐름)",
+   "prompt_en": "모래시계의 모래가 천천히 떨어지는 모습 (시간의 흐름) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "장수하는 것은 축복이지만, 재정적으로는 또 다른 균열을 만들 수 있습니다. 바로 '장수 리스크'입니다. 의학의 발달로 평균 수명이 계속 늘어나면"
+  },
+  {
+   "shot": 15,
+   "section": "네 번째 균열: 은퇴 후에도 따라오는 세금의 그림자",
+   "start_hint_s": 275.0,
+   "duration_s": 13.9,
+   "broll_ko": "세금 계산서",
+   "prompt_en": "세금 계산서 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴하면 소득이 없어 세금 걱정에서 자유로울 것이라고 생각합니다. 하지만 이는 큰 오해입니다. 은퇴 후에도 우리는 다양한 세금의 균"
+  },
+  {
+   "shot": 16,
+   "section": "네 번째 균열: 은퇴 후에도 따라오는 세금의 그림자",
+   "start_hint_s": 288.9,
+   "duration_s": 13.9,
+   "broll_ko": "청구서 등이 쌓여있는 책상",
+   "prompt_en": "청구서 등이 쌓여있는 책상 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴하면 소득이 없어 세금 걱정에서 자유로울 것이라고 생각합니다. 하지만 이는 큰 오해입니다. 은퇴 후에도 우리는 다양한 세금의 균"
+  },
+  {
+   "shot": 17,
+   "section": "네 번째 균열: 은퇴 후에도 따라오는 세금의 그림자",
+   "start_hint_s": 302.9,
+   "duration_s": 13.9,
+   "broll_ko": "돋보기로 복잡한 세금 관련 문서를 들여다보는 모습",
+   "prompt_en": "돋보기로 복잡한 세금 관련 문서를 들여다보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴하면 소득이 없어 세금 걱정에서 자유로울 것이라고 생각합니다. 하지만 이는 큰 오해입니다. 은퇴 후에도 우리는 다양한 세금의 균"
+  },
+  {
+   "shot": 18,
+   "section": "네 번째 균열: 은퇴 후에도 따라오는 세금의 그림자",
+   "start_hint_s": 316.8,
+   "duration_s": 13.9,
+   "broll_ko": "저금통에 돈을 넣으려는데",
+   "prompt_en": "저금통에 돈을 넣으려는데 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴하면 소득이 없어 세금 걱정에서 자유로울 것이라고 생각합니다. 하지만 이는 큰 오해입니다. 은퇴 후에도 우리는 다양한 세금의 균"
+  },
+  {
+   "shot": 19,
+   "section": "네 번째 균열: 은퇴 후에도 따라오는 세금의 그림자",
+   "start_hint_s": 330.7,
+   "duration_s": 13.9,
+   "broll_ko": "저금통 아래 틈으로 돈이 빠져나가는 연출",
+   "prompt_en": "저금통 아래 틈으로 돈이 빠져나가는 연출 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 은퇴하면 소득이 없어 세금 걱정에서 자유로울 것이라고 생각합니다. 하지만 이는 큰 오해입니다. 은퇴 후에도 우리는 다양한 세금의 균"
+  },
+  {
+   "shot": 20,
+   "section": "다섯 번째 균열: 예상치 못한 생활비와 지출 통제 실패",
+   "start_hint_s": 344.0,
+   "duration_s": 24.0,
+   "broll_ko": "카드 영수증이 계속 출력되는 모습",
+   "prompt_en": "카드 영수증이 계속 출력되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 균열은 바로 '생활비 지출 통제 실패'입니다. 은퇴하면 돈을 아껴 쓸 것이라고 다짐하지만, 막상 은퇴 후에는 예상치 못한 지출이 늘어나거"
+  },
+  {
+   "shot": 21,
+   "section": "다섯 번째 균열: 예상치 못한 생활비와 지출 통제 실패",
+   "start_hint_s": 368.0,
+   "duration_s": 24.0,
+   "broll_ko": "비싼 레스토랑에서 즐겁게 식사하는 모습 (과도한 소비)",
+   "prompt_en": "비싼 레스토랑에서 즐겁게 식사하는 모습 (과도한 소비) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 균열은 바로 '생활비 지출 통제 실패'입니다. 은퇴하면 돈을 아껴 쓸 것이라고 다짐하지만, 막상 은퇴 후에는 예상치 못한 지출이 늘어나거"
+  },
+  {
+   "shot": 22,
+   "section": "다섯 번째 균열: 예상치 못한 생활비와 지출 통제 실패",
+   "start_hint_s": 392.0,
+   "duration_s": 24.0,
+   "broll_ko": "핸드폰으로 쇼핑 앱을 보고 있는 손 (충동구매)",
+   "prompt_en": "핸드폰으로 쇼핑 앱을 보고 있는 손 (충동구매) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막 균열은 바로 '생활비 지출 통제 실패'입니다. 은퇴하면 돈을 아껴 쓸 것이라고 다짐하지만, 막상 은퇴 후에는 예상치 못한 지출이 늘어나거"
+  },
+  {
+   "shot": 23,
+   "section": "내 노후 계획, 균열은 없는가? 자가 점검 체크리스트",
+   "start_hint_s": 416.0,
+   "duration_s": 24.3,
+   "broll_ko": "체크리스트 양식에 펜으로 체크하는 손",
+   "prompt_en": "체크리스트 양식에 펜으로 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 당신의 노후 계획에는 어떤 균열이 숨어 있을까요? 지금부터 몇 가지 질문을 통해 스스로 점검해볼 시간입니다. 첫째, 당신의 은퇴 자금은"
+  },
+  {
+   "shot": 24,
+   "section": "내 노후 계획, 균열은 없는가? 자가 점검 체크리스트",
+   "start_hint_s": 440.3,
+   "duration_s": 24.3,
+   "broll_ko": "복잡한 퍼즐 조각들이 맞춰지는 모습",
+   "prompt_en": "복잡한 퍼즐 조각들이 맞춰지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 당신의 노후 계획에는 어떤 균열이 숨어 있을까요? 지금부터 몇 가지 질문을 통해 스스로 점검해볼 시간입니다. 첫째, 당신의 은퇴 자금은"
+  },
+  {
+   "shot": 25,
+   "section": "내 노후 계획, 균열은 없는가? 자가 점검 체크리스트",
+   "start_hint_s": 464.6,
+   "duration_s": 24.3,
+   "broll_ko": "계산기를 두드리며 재무 계획을 세우는 모습",
+   "prompt_en": "계산기를 두드리며 재무 계획을 세우는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 당신의 노후 계획에는 어떤 균열이 숨어 있을까요? 지금부터 몇 가지 질문을 통해 스스로 점검해볼 시간입니다. 첫째, 당신의 은퇴 자금은"
+  },
+  {
+   "shot": 26,
+   "section": "균열을 막고 노후를 든든하게: 실질적인 대비책",
+   "start_hint_s": 488.0,
+   "duration_s": 30.2,
+   "broll_ko": "튼튼한 벽돌을 쌓아 올리는 모습",
+   "prompt_en": "튼튼한 벽돌을 쌓아 올리는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이러한 균열들을 막고 든든한 노후를 준비하기 위해서는 어떤 대비책이 필요할까요? 첫째, '자산 배분'을 통해 인플레이션을 헤지해야 합니다. 주식"
+  },
+  {
+   "shot": 27,
+   "section": "균열을 막고 노후를 든든하게: 실질적인 대비책",
+   "start_hint_s": 518.2,
+   "duration_s": 30.2,
+   "broll_ko": "다양한 종류의 금융 상품 아이콘들이 모여있는 화면",
+   "prompt_en": "다양한 종류의 금융 상품 아이콘들이 모여있는 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이러한 균열들을 막고 든든한 노후를 준비하기 위해서는 어떤 대비책이 필요할까요? 첫째, '자산 배분'을 통해 인플레이션을 헤지해야 합니다. 주식"
+  },
+  {
+   "shot": 28,
+   "section": "균열을 막고 노후를 든든하게: 실질적인 대비책",
+   "start_hint_s": 548.5,
+   "duration_s": 30.2,
+   "broll_ko": "노트북 화면에 '재무 계획'이라는 글자와 그래프",
+   "prompt_en": "노트북 화면에 '재무 계획'이라는 글자와 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이러한 균열들을 막고 든든한 노후를 준비하기 위해서는 어떤 대비책이 필요할까요? 첫째, '자산 배분'을 통해 인플레이션을 헤지해야 합니다. 주식"
+  },
+  {
+   "shot": 29,
+   "section": "마무리: 지금 당장 당신의 노후를 점검하세요",
+   "start_hint_s": 578.0,
+   "duration_s": 18.3,
+   "broll_ko": "컴퓨터 화면에 '경제적자유구역' 채널 로고와 구독 버튼",
+   "prompt_en": "컴퓨터 화면에 '경제적자유구역' 채널 로고와 구독 버튼 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 계획은 한 번 세우면 끝나는 것이 아닙니다. 끊임없이 변화하는 경제 상황과 개인의 삶에 맞춰 주기적으로 점검하고 보강해야 합니다. 오늘 우"
+  },
+  {
+   "shot": 30,
+   "section": "마무리: 지금 당장 당신의 노후를 점검하세요",
+   "start_hint_s": 596.3,
+   "duration_s": 18.3,
+   "broll_ko": "손으로 꼼꼼하게 다이어리에 계획을 적는 모습",
+   "prompt_en": "손으로 꼼꼼하게 다이어리에 계획을 적는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 계획은 한 번 세우면 끝나는 것이 아닙니다. 끊임없이 변화하는 경제 상황과 개인의 삶에 맞춰 주기적으로 점검하고 보강해야 합니다. 오늘 우"
+  },
+  {
+   "shot": 31,
+   "section": "마무리: 지금 당장 당신의 노후를 점검하세요",
+   "start_hint_s": 614.6,
+   "duration_s": 18.3,
+   "broll_ko": "탁 트인 바다를 배경으로 여유롭게 걸어가는 노년 부부의 모습",
+   "prompt_en": "탁 트인 바다를 배경으로 여유롭게 걸어가는 노년 부부의 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 계획은 한 번 세우면 끝나는 것이 아닙니다. 끊임없이 변화하는 경제 상황과 개인의 삶에 맞춰 주기적으로 점검하고 보강해야 합니다. 오늘 우"
+  }
+ ]
+}

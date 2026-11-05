@@ -1,0 +1,298 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 459,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "프롤로그: 당근마켓, 중고거래 그 이상의 가치",
+   "start_hint_s": 0.0,
+   "duration_s": 14.0,
+   "broll_ko": "스마트폰 화면에 당근마켓 앱이 켜져 있고",
+   "prompt_en": "스마트폰 화면에 당근마켓 앱이 켜져 있고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적자유구역입니다. 우리는 늘 은퇴 후의 삶이나 현재의 직장 생활을 보완할 추가 수입을 고민합니다. 많은 분들이 당근마켓을 '중고"
+  },
+  {
+   "shot": 2,
+   "section": "프롤로그: 당근마켓, 중고거래 그 이상의 가치",
+   "start_hint_s": 14.0,
+   "duration_s": 14.0,
+   "broll_ko": "다양한 중고 물품 목록이 빠르게 스크롤되는 모습",
+   "prompt_en": "다양한 중고 물품 목록이 빠르게 스크롤되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적자유구역입니다. 우리는 늘 은퇴 후의 삶이나 현재의 직장 생활을 보완할 추가 수입을 고민합니다. 많은 분들이 당근마켓을 '중고"
+  },
+  {
+   "shot": 3,
+   "section": "프롤로그: 당근마켓, 중고거래 그 이상의 가치",
+   "start_hint_s": 27.9,
+   "duration_s": 14.0,
+   "broll_ko": "손이 당근마켓 검색창에 '구합니다'를 입력하는 모습",
+   "prompt_en": "손이 당근마켓 검색창에 '구합니다'를 입력하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적자유구역입니다. 우리는 늘 은퇴 후의 삶이나 현재의 직장 생활을 보완할 추가 수입을 고민합니다. 많은 분들이 당근마켓을 '중고"
+  },
+  {
+   "shot": 4,
+   "section": "프롤로그: 당근마켓, 중고거래 그 이상의 가치",
+   "start_hint_s": 41.9,
+   "duration_s": 14.0,
+   "broll_ko": "동네 지도 위에 당근마켓 아이콘들이 흩뿌려져 있는 그래픽",
+   "prompt_en": "동네 지도 위에 당근마켓 아이콘들이 흩뿌려져 있는 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적자유구역입니다. 우리는 늘 은퇴 후의 삶이나 현재의 직장 생활을 보완할 추가 수입을 고민합니다. 많은 분들이 당근마켓을 '중고"
+  },
+  {
+   "shot": 5,
+   "section": "우리 동네에서 통하는 '이것'의 정체: 숨겨진 재능과 서비스",
+   "start_hint_s": 55.0,
+   "duration_s": 10.7,
+   "broll_ko": "노트북 화면에 '재능 판매'",
+   "prompt_en": "노트북 화면에 '재능 판매' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 당근마켓에서 중고 물품 외에 무엇을 팔 수 있을까요? 바로 '여러분의 재능과 서비스'입니다. 예를 들어, 컴퓨터 활용에 능숙하시다면 어르신"
+  },
+  {
+   "shot": 6,
+   "section": "우리 동네에서 통하는 '이것'의 정체: 숨겨진 재능과 서비스",
+   "start_hint_s": 65.7,
+   "duration_s": 10.7,
+   "broll_ko": "'서비스 판매' 키워드가 검색되는 모습",
+   "prompt_en": "'서비스 판매' 키워드가 검색되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 당근마켓에서 중고 물품 외에 무엇을 팔 수 있을까요? 바로 '여러분의 재능과 서비스'입니다. 예를 들어, 컴퓨터 활용에 능숙하시다면 어르신"
+  },
+  {
+   "shot": 7,
+   "section": "우리 동네에서 통하는 '이것'의 정체: 숨겨진 재능과 서비스",
+   "start_hint_s": 76.4,
+   "duration_s": 10.7,
+   "broll_ko": "손으로 뜨개질을 하거나",
+   "prompt_en": "손으로 뜨개질을 하거나 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 당근마켓에서 중고 물품 외에 무엇을 팔 수 있을까요? 바로 '여러분의 재능과 서비스'입니다. 예를 들어, 컴퓨터 활용에 능숙하시다면 어르신"
+  },
+  {
+   "shot": 8,
+   "section": "우리 동네에서 통하는 '이것'의 정체: 숨겨진 재능과 서비스",
+   "start_hint_s": 87.1,
+   "duration_s": 10.7,
+   "broll_ko": "간단한 목공예품을 만드는 모습 (얼굴 없이 손만)",
+   "prompt_en": "간단한 목공예품을 만드는 모습 (얼굴 없이 손만) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 당근마켓에서 중고 물품 외에 무엇을 팔 수 있을까요? 바로 '여러분의 재능과 서비스'입니다. 예를 들어, 컴퓨터 활용에 능숙하시다면 어르신"
+  },
+  {
+   "shot": 9,
+   "section": "우리 동네에서 통하는 '이것'의 정체: 숨겨진 재능과 서비스",
+   "start_hint_s": 97.8,
+   "duration_s": 10.7,
+   "broll_ko": "누군가에게 컴퓨터 사용법을 차분히 설명해주는 듯한 장면 (뒷모습 또는 손만)",
+   "prompt_en": "누군가에게 컴퓨터 사용법을 차분히 설명해주는 듯한 장면 (뒷모습 또는 손만) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그럼 당근마켓에서 중고 물품 외에 무엇을 팔 수 있을까요? 바로 '여러분의 재능과 서비스'입니다. 예를 들어, 컴퓨터 활용에 능숙하시다면 어르신"
+  },
+  {
+   "shot": 10,
+   "section": "잠재 고객 발굴법: 동네의 수요를 읽는 눈",
+   "start_hint_s": 108.0,
+   "duration_s": 14.5,
+   "broll_ko": "당근마켓 '동네생활' 게시판을 스크롤하며 사람들의 질문이나 요청 글을 확인하는 모습",
+   "prompt_en": "당근마켓 '동네생활' 게시판을 스크롤하며 사람들의 질문이나 요청 글을 확인하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "어떤 재능이나 서비스를 팔아야 할지 막막하다면, 먼저 우리 동네의 '수요'를 파악하는 것이 중요합니다. 당근마켓의 '동네생활' 게시판을 유심히 "
+  },
+  {
+   "shot": 11,
+   "section": "잠재 고객 발굴법: 동네의 수요를 읽는 눈",
+   "start_hint_s": 122.5,
+   "duration_s": 14.5,
+   "broll_ko": "카페나 공원에서 사람들이 대화하는 모습을 멀리서 촬영 (얼굴 비노출)",
+   "prompt_en": "카페나 공원에서 사람들이 대화하는 모습을 멀리서 촬영 (얼굴 비노출) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "어떤 재능이나 서비스를 팔아야 할지 막막하다면, 먼저 우리 동네의 '수요'를 파악하는 것이 중요합니다. 당근마켓의 '동네생활' 게시판을 유심히 "
+  },
+  {
+   "shot": 12,
+   "section": "잠재 고객 발굴법: 동네의 수요를 읽는 눈",
+   "start_hint_s": 137.0,
+   "duration_s": 14.5,
+   "broll_ko": "노트에 '동네 주민 불편 사항'",
+   "prompt_en": "노트에 '동네 주민 불편 사항' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "어떤 재능이나 서비스를 팔아야 할지 막막하다면, 먼저 우리 동네의 '수요'를 파악하는 것이 중요합니다. 당근마켓의 '동네생활' 게시판을 유심히 "
+  },
+  {
+   "shot": 13,
+   "section": "잠재 고객 발굴법: 동네의 수요를 읽는 눈",
+   "start_hint_s": 151.5,
+   "duration_s": 14.5,
+   "broll_ko": "'필요한 서비스' 등을 적는 손",
+   "prompt_en": "'필요한 서비스' 등을 적는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "어떤 재능이나 서비스를 팔아야 할지 막막하다면, 먼저 우리 동네의 '수요'를 파악하는 것이 중요합니다. 당근마켓의 '동네생활' 게시판을 유심히 "
+  },
+  {
+   "shot": 14,
+   "section": "가격 책정 및 매력적인 홍보 전략",
+   "start_hint_s": 166.0,
+   "duration_s": 15.5,
+   "broll_ko": "깔끔하게 정리된 서비스 소개 글이 보이는 당근마켓 게시글 화면",
+   "prompt_en": "깔끔하게 정리된 서비스 소개 글이 보이는 당근마켓 게시글 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "서비스나 재능을 판매할 때 가장 중요한 것 중 하나는 '적절한 가격 책정'입니다. 너무 싸게 책정하면 여러분의 가치를 스스로 낮추는 것이고, 너"
+  },
+  {
+   "shot": 15,
+   "section": "가격 책정 및 매력적인 홍보 전략",
+   "start_hint_s": 181.5,
+   "duration_s": 15.5,
+   "broll_ko": "손으로 계산기를 두드리며 시급",
+   "prompt_en": "손으로 계산기를 두드리며 시급 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "서비스나 재능을 판매할 때 가장 중요한 것 중 하나는 '적절한 가격 책정'입니다. 너무 싸게 책정하면 여러분의 가치를 스스로 낮추는 것이고, 너"
+  },
+  {
+   "shot": 16,
+   "section": "가격 책정 및 매력적인 홍보 전략",
+   "start_hint_s": 196.9,
+   "duration_s": 15.5,
+   "broll_ko": "재료비 등을 계산하는 모습",
+   "prompt_en": "재료비 등을 계산하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "서비스나 재능을 판매할 때 가장 중요한 것 중 하나는 '적절한 가격 책정'입니다. 너무 싸게 책정하면 여러분의 가치를 스스로 낮추는 것이고, 너"
+  },
+  {
+   "shot": 17,
+   "section": "가격 책정 및 매력적인 홍보 전략",
+   "start_hint_s": 212.4,
+   "duration_s": 15.5,
+   "broll_ko": "정성껏 찍은 수공예품 사진들이 화면에 번갈아 나타나는 모습",
+   "prompt_en": "정성껏 찍은 수공예품 사진들이 화면에 번갈아 나타나는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "서비스나 재능을 판매할 때 가장 중요한 것 중 하나는 '적절한 가격 책정'입니다. 너무 싸게 책정하면 여러분의 가치를 스스로 낮추는 것이고, 너"
+  },
+  {
+   "shot": 18,
+   "section": "세금 및 법률 문제, 미리 알아두기",
+   "start_hint_s": 227.0,
+   "duration_s": 16.7,
+   "broll_ko": "세무 관련 서류나 책자가 쌓여있는 책상",
+   "prompt_en": "세무 관련 서류나 책자가 쌓여있는 책상 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인 간의 소규모 거래로 시작하더라도, 수익이 꾸준히 발생하고 규모가 커진다면 세금 문제에 직면할 수 있습니다. 사업자 등록 여부, 종합소득세 "
+  },
+  {
+   "shot": 19,
+   "section": "세금 및 법률 문제, 미리 알아두기",
+   "start_hint_s": 243.7,
+   "duration_s": 16.7,
+   "broll_ko": "컴퓨터 화면에 국세청 웹사이트가 켜져 있는 모습",
+   "prompt_en": "컴퓨터 화면에 국세청 웹사이트가 켜져 있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인 간의 소규모 거래로 시작하더라도, 수익이 꾸준히 발생하고 규모가 커진다면 세금 문제에 직면할 수 있습니다. 사업자 등록 여부, 종합소득세 "
+  },
+  {
+   "shot": 20,
+   "section": "세금 및 법률 문제, 미리 알아두기",
+   "start_hint_s": 260.5,
+   "duration_s": 16.7,
+   "broll_ko": "도장과 계약서가 놓여있는 모습",
+   "prompt_en": "도장과 계약서가 놓여있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인 간의 소규모 거래로 시작하더라도, 수익이 꾸준히 발생하고 규모가 커진다면 세금 문제에 직면할 수 있습니다. 사업자 등록 여부, 종합소득세 "
+  },
+  {
+   "shot": 21,
+   "section": "기대 수익과 리스크 관리: 현실적인 접근",
+   "start_hint_s": 277.0,
+   "duration_s": 20.5,
+   "broll_ko": "그래프가 완만하게 상승하는 모습 (급등하는 그래프가 아님)",
+   "prompt_en": "그래프가 완만하게 상승하는 모습 (급등하는 그래프가 아님) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "원본 영상에서 월 6천만원이라는 놀라운 수익을 이야기했지만, 이는 매우 예외적인 경우입니다. 우리 채널의 목표는 4060세대가 안정적이고 지속 "
+  },
+  {
+   "shot": 22,
+   "section": "기대 수익과 리스크 관리: 현실적인 접근",
+   "start_hint_s": 297.5,
+   "duration_s": 20.5,
+   "broll_ko": "노트에 '기대 수익: 30만원~50만원'이라고 적힌 모습",
+   "prompt_en": "노트에 '기대 수익: 30만원~50만원'이라고 적힌 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "원본 영상에서 월 6천만원이라는 놀라운 수익을 이야기했지만, 이는 매우 예외적인 경우입니다. 우리 채널의 목표는 4060세대가 안정적이고 지속 "
+  },
+  {
+   "shot": 23,
+   "section": "기대 수익과 리스크 관리: 현실적인 접근",
+   "start_hint_s": 318.1,
+   "duration_s": 20.5,
+   "broll_ko": "다양한 위험 요소를 표시하는 체크리스트 그래픽",
+   "prompt_en": "다양한 위험 요소를 표시하는 체크리스트 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "원본 영상에서 월 6천만원이라는 놀라운 수익을 이야기했지만, 이는 매우 예외적인 경우입니다. 우리 채널의 목표는 4060세대가 안정적이고 지속 "
+  },
+  {
+   "shot": 24,
+   "section": "지금 바로 시작하는 체크리스트",
+   "start_hint_s": 338.0,
+   "duration_s": 23.5,
+   "broll_ko": "종이와 펜으로 체크리스트를 작성하는 손",
+   "prompt_en": "종이와 펜으로 체크리스트를 작성하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 당근마켓 부업을 시작하기 위한 구체적인 체크리스트입니다. 1.  나의 재능 목록 만들기: 내가 잘하는 것, 좋아하는 것, 남들에게 도"
+  },
+  {
+   "shot": 25,
+   "section": "지금 바로 시작하는 체크리스트",
+   "start_hint_s": 361.5,
+   "duration_s": 23.5,
+   "broll_ko": "스마트폰으로 당근마켓 앱을 실행하고 게시글 작성 화면이 보이는 모습",
+   "prompt_en": "스마트폰으로 당근마켓 앱을 실행하고 게시글 작성 화면이 보이는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 당근마켓 부업을 시작하기 위한 구체적인 체크리스트입니다. 1.  나의 재능 목록 만들기: 내가 잘하는 것, 좋아하는 것, 남들에게 도"
+  },
+  {
+   "shot": 26,
+   "section": "지금 바로 시작하는 체크리스트",
+   "start_hint_s": 385.0,
+   "duration_s": 23.5,
+   "broll_ko": "커피 한 잔과 함께 편안하게 노트북을 보는 모습",
+   "prompt_en": "커피 한 잔과 함께 편안하게 노트북을 보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 당근마켓 부업을 시작하기 위한 구체적인 체크리스트입니다. 1.  나의 재능 목록 만들기: 내가 잘하는 것, 좋아하는 것, 남들에게 도"
+  },
+  {
+   "shot": 27,
+   "section": "에필로그: 돈 이상의 가치, 은퇴 후의 활력",
+   "start_hint_s": 412.0,
+   "duration_s": 15.8,
+   "broll_ko": "햇살 가득한 창가에서 책을 읽거나 차를 마시는 모습 (뒷모습)",
+   "prompt_en": "햇살 가득한 창가에서 책을 읽거나 차를 마시는 모습 (뒷모습) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근마켓 부업은 단순히 돈을 버는 행위를 넘어섭니다. 은퇴 후에도 사회와 연결되고, 나의 가치를 증명하며, 이웃들과 소통하는 즐거움을 선사합니다"
+  },
+  {
+   "shot": 28,
+   "section": "에필로그: 돈 이상의 가치, 은퇴 후의 활력",
+   "start_hint_s": 427.8,
+   "duration_s": 15.8,
+   "broll_ko": "공원에서 여유롭게 산책하는 노년 부부의 뒷모습",
+   "prompt_en": "공원에서 여유롭게 산책하는 노년 부부의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근마켓 부업은 단순히 돈을 버는 행위를 넘어섭니다. 은퇴 후에도 사회와 연결되고, 나의 가치를 증명하며, 이웃들과 소통하는 즐거움을 선사합니다"
+  },
+  {
+   "shot": 29,
+   "section": "에필로그: 돈 이상의 가치, 은퇴 후의 활력",
+   "start_hint_s": 443.6,
+   "duration_s": 15.8,
+   "broll_ko": "손으로 정성껏 키운 화분을 돌보는 모습",
+   "prompt_en": "손으로 정성껏 키운 화분을 돌보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "당근마켓 부업은 단순히 돈을 버는 행위를 넘어섭니다. 은퇴 후에도 사회와 연결되고, 나의 가치를 증명하며, 이웃들과 소통하는 즐거움을 선사합니다"
+  }
+ ]
+}
