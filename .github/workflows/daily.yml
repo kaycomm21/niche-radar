@@ -60,7 +60,7 @@ jobs:
         run: |
           case "$MODE" in
             fixture) RADAR_DB=data/fixture.db python -m radar demo --days 30 ;;
-            export)  python -m radar export --date "$(date +%F)" ;;
+            export)  python -m radar export --date "$(date +%F)" && python -m radar enrich ;;   # enrich: API 쿼터 0, Gemini만 사용
             *)       python -m radar daily && python -m radar enrich ;;   # enrich: Gemini·Brave 키가 있을 때만 동작
           esac
           python -m radar gtrends || true      # 구글 트렌드 RSS (+ Gemini 키 있으면 AI 기획안)
