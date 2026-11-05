@@ -1,0 +1,318 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 424,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "프롤로그: 한국인이 놓치는 글로벌 부업 트렌드",
+   "start_hint_s": 0.0,
+   "duration_s": 17.2,
+   "broll_ko": "세계 지도 위에 디지털 연결망이 빛나는 그래픽",
+   "prompt_en": "세계 지도 위에 디지털 연결망이 빛나는 그래픽 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 혹시, 전 세계적으로 폭발적인 성장 중이지만 유독 한국에서만 잠재력이 덜 알려진 시장이 있다는 것을 아시나요? 4050대 직장인이나 은"
+  },
+  {
+   "shot": 2,
+   "section": "프롤로그: 한국인이 놓치는 글로벌 부업 트렌드",
+   "start_hint_s": 17.2,
+   "duration_s": 17.2,
+   "broll_ko": "다양한 인종의 사람들이 노트북을 보며 집중하는 모습 (스톡 이미지)",
+   "prompt_en": "다양한 인종의 사람들이 노트북을 보며 집중하는 모습 (스톡 이미지) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 혹시, 전 세계적으로 폭발적인 성장 중이지만 유독 한국에서만 잠재력이 덜 알려진 시장이 있다는 것을 아시나요? 4050대 직장인이나 은"
+  },
+  {
+   "shot": 3,
+   "section": "프롤로그: 한국인이 놓치는 글로벌 부업 트렌드",
+   "start_hint_s": 34.4,
+   "duration_s": 17.2,
+   "broll_ko": "글로벌 디지털 시장 성장률을 보여주는 깔끔한 그래프",
+   "prompt_en": "글로벌 디지털 시장 성장률을 보여주는 깔끔한 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 혹시, 전 세계적으로 폭발적인 성장 중이지만 유독 한국에서만 잠재력이 덜 알려진 시장이 있다는 것을 아시나요? 4050대 직장인이나 은"
+  },
+  {
+   "shot": 4,
+   "section": "해외에서 각광받는 '디지털 자산'이란?",
+   "start_hint_s": 51.0,
+   "duration_s": 10.3,
+   "broll_ko": "전자책",
+   "prompt_en": "전자책 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "해외에서 주목하는 '디지털 자산'이란 무엇일까요? 단순히 암호화폐만을 의미하는 것이 아닙니다. 여러분의 지식, 기술, 창의성을 담아 디지털 형태"
+  },
+  {
+   "shot": 5,
+   "section": "해외에서 각광받는 '디지털 자산'이란?",
+   "start_hint_s": 61.3,
+   "duration_s": 10.3,
+   "broll_ko": "템플릿",
+   "prompt_en": "템플릿 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "해외에서 주목하는 '디지털 자산'이란 무엇일까요? 단순히 암호화폐만을 의미하는 것이 아닙니다. 여러분의 지식, 기술, 창의성을 담아 디지털 형태"
+  },
+  {
+   "shot": 6,
+   "section": "해외에서 각광받는 '디지털 자산'이란?",
+   "start_hint_s": 71.7,
+   "duration_s": 10.3,
+   "broll_ko": "온라인 강의 모듈 등 디지털 상품 아이콘",
+   "prompt_en": "온라인 강의 모듈 등 디지털 상품 아이콘 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "해외에서 주목하는 '디지털 자산'이란 무엇일까요? 단순히 암호화폐만을 의미하는 것이 아닙니다. 여러분의 지식, 기술, 창의성을 담아 디지털 형태"
+  },
+  {
+   "shot": 7,
+   "section": "해외에서 각광받는 '디지털 자산'이란?",
+   "start_hint_s": 82.0,
+   "duration_s": 10.3,
+   "broll_ko": "노트북 앞에서 집중해서 타이핑하는 사람의 옆모습",
+   "prompt_en": "노트북 앞에서 집중해서 타이핑하는 사람의 옆모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "해외에서 주목하는 '디지털 자산'이란 무엇일까요? 단순히 암호화폐만을 의미하는 것이 아닙니다. 여러분의 지식, 기술, 창의성을 담아 디지털 형태"
+  },
+  {
+   "shot": 8,
+   "section": "해외에서 각광받는 '디지털 자산'이란?",
+   "start_hint_s": 92.3,
+   "duration_s": 10.3,
+   "broll_ko": "디지털 상품 제작 및 판매 과정을 단순화한 플로우차트",
+   "prompt_en": "디지털 상품 제작 및 판매 과정을 단순화한 플로우차트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "해외에서 주목하는 '디지털 자산'이란 무엇일까요? 단순히 암호화폐만을 의미하는 것이 아닙니다. 여러분의 지식, 기술, 창의성을 담아 디지털 형태"
+  },
+  {
+   "shot": 9,
+   "section": "첫 번째 기회: '지식 상품화'로 글로벌 시장 공략하기",
+   "start_hint_s": 102.0,
+   "duration_s": 11.7,
+   "broll_ko": "노트북과 펜",
+   "prompt_en": "노트북과 펜 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "첫 번째 기회는 '지식 상품화'입니다. 직장에서 쌓은 전문 지식, 취미 노하우, 인생 경험까지, 이 모든 것이 해외 시장에서는 가치 있는 상품이"
+  },
+  {
+   "shot": 10,
+   "section": "첫 번째 기회: '지식 상품화'로 글로벌 시장 공략하기",
+   "start_hint_s": 113.7,
+   "duration_s": 11.7,
+   "broll_ko": "종이로 아이디어를 정리하는 모습",
+   "prompt_en": "종이로 아이디어를 정리하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "첫 번째 기회는 '지식 상품화'입니다. 직장에서 쌓은 전문 지식, 취미 노하우, 인생 경험까지, 이 모든 것이 해외 시장에서는 가치 있는 상품이"
+  },
+  {
+   "shot": 11,
+   "section": "첫 번째 기회: '지식 상품화'로 글로벌 시장 공략하기",
+   "start_hint_s": 125.3,
+   "duration_s": 11.7,
+   "broll_ko": "온라인 강의 플랫폼 (유데미",
+   "prompt_en": "온라인 강의 플랫폼 (유데미 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "첫 번째 기회는 '지식 상품화'입니다. 직장에서 쌓은 전문 지식, 취미 노하우, 인생 경험까지, 이 모든 것이 해외 시장에서는 가치 있는 상품이"
+  },
+  {
+   "shot": 12,
+   "section": "첫 번째 기회: '지식 상품화'로 글로벌 시장 공략하기",
+   "start_hint_s": 137.0,
+   "duration_s": 11.7,
+   "broll_ko": "클래스101 등)의 일반적인 인터페이스 화면",
+   "prompt_en": "클래스101 등)의 일반적인 인터페이스 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "첫 번째 기회는 '지식 상품화'입니다. 직장에서 쌓은 전문 지식, 취미 노하우, 인생 경험까지, 이 모든 것이 해외 시장에서는 가치 있는 상품이"
+  },
+  {
+   "shot": 13,
+   "section": "첫 번째 기회: '지식 상품화'로 글로벌 시장 공략하기",
+   "start_hint_s": 148.7,
+   "duration_s": 11.7,
+   "broll_ko": "전문적인 디자인의 전자책 표지 이미지",
+   "prompt_en": "전문적인 디자인의 전자책 표지 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "첫 번째 기회는 '지식 상품화'입니다. 직장에서 쌓은 전문 지식, 취미 노하우, 인생 경험까지, 이 모든 것이 해외 시장에서는 가치 있는 상품이"
+  },
+  {
+   "shot": 14,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 160.0,
+   "duration_s": 9.3,
+   "broll_ko": "다양한 디자인 템플릿 (PPT",
+   "prompt_en": "다양한 디자인 템플릿 (PPT — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 15,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 169.3,
+   "duration_s": 9.3,
+   "broll_ko": "소셜 미디어",
+   "prompt_en": "소셜 미디어 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 16,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 178.7,
+   "duration_s": 9.3,
+   "broll_ko": "이력서 등)이 화면에 배열된 모습",
+   "prompt_en": "이력서 등)이 화면에 배열된 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 17,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 188.0,
+   "duration_s": 9.3,
+   "broll_ko": "마우스로 디자인 요소를 드래그 앤 드롭하는 손",
+   "prompt_en": "마우스로 디자인 요소를 드래그 앤 드롭하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 18,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 197.3,
+   "duration_s": 9.3,
+   "broll_ko": "해외 디지털 마켓플레이스 (Etsy",
+   "prompt_en": "해외 디지털 마켓플레이스 (Etsy — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 19,
+   "section": "두 번째 기회: '디자인 템플릿'으로 시간 절약형 수익 창출",
+   "start_hint_s": 206.7,
+   "duration_s": 9.3,
+   "broll_ko": "Creative Market 등)를 탐색하는 모습",
+   "prompt_en": "Creative Market 등)를 탐색하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 기회는 '디자인 템플릿' 판매입니다. 파워포인트, 엑셀, 간단한 디자인 툴 사용에 익숙하다면, 고품질 템플릿을 만들어 판매할 수 있습니"
+  },
+  {
+   "shot": 20,
+   "section": "세 번째 기회: 'AI 활용' 콘텐츠로 진입 장벽 낮추기",
+   "start_hint_s": 216.0,
+   "duration_s": 15.4,
+   "broll_ko": "추상적인 인공지능 신경망 또는 데이터 흐름 시각화",
+   "prompt_en": "추상적인 인공지능 신경망 또는 데이터 흐름 시각화 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "세 번째는 'AI'를 활용하여 디지털 자산 제작의 진입 장벽을 낮추는 방법입니다. AI는 이제 콘텐츠 제작을 도울 강력한 도구입니다. 전자책 목"
+  },
+  {
+   "shot": 21,
+   "section": "세 번째 기회: 'AI 활용' 콘텐츠로 진입 장벽 낮추기",
+   "start_hint_s": 231.4,
+   "duration_s": 15.4,
+   "broll_ko": "AI 텍스트 생성 도구 (ChatGPT 등) 인터페이스를 사용하는 손",
+   "prompt_en": "AI 텍스트 생성 도구 (ChatGPT 등) 인터페이스를 사용하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "세 번째는 'AI'를 활용하여 디지털 자산 제작의 진입 장벽을 낮추는 방법입니다. AI는 이제 콘텐츠 제작을 도울 강력한 도구입니다. 전자책 목"
+  },
+  {
+   "shot": 22,
+   "section": "세 번째 기회: 'AI 활용' 콘텐츠로 진입 장벽 낮추기",
+   "start_hint_s": 246.8,
+   "duration_s": 15.4,
+   "broll_ko": "AI가 생성한 이미지나 간단한 그래픽이 화면에 나타나는 모습",
+   "prompt_en": "AI가 생성한 이미지나 간단한 그래픽이 화면에 나타나는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "세 번째는 'AI'를 활용하여 디지털 자산 제작의 진입 장벽을 낮추는 방법입니다. AI는 이제 콘텐츠 제작을 도울 강력한 도구입니다. 전자책 목"
+  },
+  {
+   "shot": 23,
+   "section": "성공을 위한 체크리스트: 4060 맞춤 전략",
+   "start_hint_s": 262.0,
+   "duration_s": 16.8,
+   "broll_ko": "체크리스트 항목에 펜으로 체크하는 손",
+   "prompt_en": "체크리스트 항목에 펜으로 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 자산 부업 성공을 위한 4060세대 맞춤 체크리스트입니다. 첫째, '강점 분석'. 여러분의 전문성, 취미, 경험 중 무엇이 상품화될지 정"
+  },
+  {
+   "shot": 24,
+   "section": "성공을 위한 체크리스트: 4060 맞춤 전략",
+   "start_hint_s": 278.8,
+   "duration_s": 16.8,
+   "broll_ko": "포스트잇과 펜으로 아이디어를 브레인스토밍하는 모습",
+   "prompt_en": "포스트잇과 펜으로 아이디어를 브레인스토밍하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 자산 부업 성공을 위한 4060세대 맞춤 체크리스트입니다. 첫째, '강점 분석'. 여러분의 전문성, 취미, 경험 중 무엇이 상품화될지 정"
+  },
+  {
+   "shot": 25,
+   "section": "성공을 위한 체크리스트: 4060 맞춤 전략",
+   "start_hint_s": 295.6,
+   "duration_s": 16.8,
+   "broll_ko": "컴퓨터 화면에서 특정 정보를 돋보기로 확대하여 조사하는 모습",
+   "prompt_en": "컴퓨터 화면에서 특정 정보를 돋보기로 확대하여 조사하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 자산 부업 성공을 위한 4060세대 맞춤 체크리스트입니다. 첫째, '강점 분석'. 여러분의 전문성, 취미, 경험 중 무엇이 상품화될지 정"
+  },
+  {
+   "shot": 26,
+   "section": "실패를 줄이는 현실적인 접근법",
+   "start_hint_s": 312.0,
+   "duration_s": 17.9,
+   "broll_ko": "차분하고 사려 깊은 표정으로 먼 곳을 응시하는 사람의 옆모습",
+   "prompt_en": "차분하고 사려 깊은 표정으로 먼 곳을 응시하는 사람의 옆모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "모든 부업처럼 디지털 자산 판매도 단숨에 큰 수익을 안겨주진 않습니다. 실패를 줄이고 꾸준히 성장하기 위한 현실적인 접근법이 필요합니다. 첫째,"
+  },
+  {
+   "shot": 27,
+   "section": "실패를 줄이는 현실적인 접근법",
+   "start_hint_s": 329.9,
+   "duration_s": 17.9,
+   "broll_ko": "작은 씨앗에서 싹이 트고 자라나는 식물의 성장 과정 (타임랩스)",
+   "prompt_en": "작은 씨앗에서 싹이 트고 자라나는 식물의 성장 과정 (타임랩스) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "모든 부업처럼 디지털 자산 판매도 단숨에 큰 수익을 안겨주진 않습니다. 실패를 줄이고 꾸준히 성장하기 위한 현실적인 접근법이 필요합니다. 첫째,"
+  },
+  {
+   "shot": 28,
+   "section": "실패를 줄이는 현실적인 접근법",
+   "start_hint_s": 347.9,
+   "duration_s": 17.9,
+   "broll_ko": "컴퓨터 화면에서 작은 수정사항들을 꾸준히 개선하는 모습",
+   "prompt_en": "컴퓨터 화면에서 작은 수정사항들을 꾸준히 개선하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "모든 부업처럼 디지털 자산 판매도 단숨에 큰 수익을 안겨주진 않습니다. 실패를 줄이고 꾸준히 성장하기 위한 현실적인 접근법이 필요합니다. 첫째,"
+  },
+  {
+   "shot": 29,
+   "section": "마무리: 지금 시작해야 할 이유",
+   "start_hint_s": 365.0,
+   "duration_s": 18.6,
+   "broll_ko": "자신감 있는 표정으로 노트북 화면을 바라보는 사람",
+   "prompt_en": "자신감 있는 표정으로 노트북 화면을 바라보는 사람 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분은 전 세계 4060세대가 주목하는 새로운 부업 기회를 알게 되셨습니다. 여러분의 지식과 경험은 결코 낡은 것이 아닙니다. 오히려 디"
+  },
+  {
+   "shot": 30,
+   "section": "마무리: 지금 시작해야 할 이유",
+   "start_hint_s": 383.6,
+   "duration_s": 18.6,
+   "broll_ko": "깔끔하고 평화로운 분위기의 재택근무 공간 (홈 오피스)",
+   "prompt_en": "깔끔하고 평화로운 분위기의 재택근무 공간 (홈 오피스) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분은 전 세계 4060세대가 주목하는 새로운 부업 기회를 알게 되셨습니다. 여러분의 지식과 경험은 결코 낡은 것이 아닙니다. 오히려 디"
+  },
+  {
+   "shot": 31,
+   "section": "마무리: 지금 시작해야 할 이유",
+   "start_hint_s": 402.2,
+   "duration_s": 18.6,
+   "broll_ko": "꾸준한 노력을 의미하는 달력의 체크 표시 또는 표시된 날짜들",
+   "prompt_en": "꾸준한 노력을 의미하는 달력의 체크 표시 또는 표시된 날짜들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분은 전 세계 4060세대가 주목하는 새로운 부업 기회를 알게 되셨습니다. 여러분의 지식과 경험은 결코 낡은 것이 아닙니다. 오히려 디"
+  }
+ ]
+}

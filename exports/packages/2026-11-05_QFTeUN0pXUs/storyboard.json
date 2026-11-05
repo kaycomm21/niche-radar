@@ -1,0 +1,258 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 437,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "도입 - 저금리 시대의 고금리 미끼",
+   "start_hint_s": 0.0,
+   "duration_s": 16.9,
+   "broll_ko": "통장 표지 클로즈업",
+   "prompt_en": "통장 표지 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 같은 저금리 시대, 은행의 연 5% 넘는 예적금 특판 소식은 달콤한 유혹입니다. '이게 정말 가능한가? 숨겨진 조건은 없을까?' 의구심을 "
+  },
+  {
+   "shot": 2,
+   "section": "도입 - 저금리 시대의 고금리 미끼",
+   "start_hint_s": 16.9,
+   "duration_s": 16.9,
+   "broll_ko": "은행 앱 화면 (잔고는 비어있음)",
+   "prompt_en": "은행 앱 화면 (잔고는 비어있음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 같은 저금리 시대, 은행의 연 5% 넘는 예적금 특판 소식은 달콤한 유혹입니다. '이게 정말 가능한가? 숨겨진 조건은 없을까?' 의구심을 "
+  },
+  {
+   "shot": 3,
+   "section": "도입 - 저금리 시대의 고금리 미끼",
+   "start_hint_s": 33.8,
+   "duration_s": 16.9,
+   "broll_ko": "금리 그래프가 하향세를 보이는 애니메이션",
+   "prompt_en": "금리 그래프가 하향세를 보이는 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "요즘 같은 저금리 시대, 은행의 연 5% 넘는 예적금 특판 소식은 달콤한 유혹입니다. '이게 정말 가능한가? 숨겨진 조건은 없을까?' 의구심을 "
+  },
+  {
+   "shot": 4,
+   "section": "은행이 고금리를 제시하는 표면적 이유",
+   "start_hint_s": 50.0,
+   "duration_s": 17.2,
+   "broll_ko": "은행 지점 외관 (로고 없이 깔끔한 건물)",
+   "prompt_en": "은행 지점 외관 (로고 없이 깔끔한 건물) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행이 고금리 특판을 내세우는 표면적 이유는 '고객 유치'와 '시장 점유율 확대'입니다. 금융 시장은 경쟁이 치열하고, 고객 한 명 확보가 은행"
+  },
+  {
+   "shot": 5,
+   "section": "은행이 고금리를 제시하는 표면적 이유",
+   "start_hint_s": 67.2,
+   "duration_s": 17.2,
+   "broll_ko": "은행 창구에 줄 서 있는 사람들의 뒷모습",
+   "prompt_en": "은행 창구에 줄 서 있는 사람들의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행이 고금리 특판을 내세우는 표면적 이유는 '고객 유치'와 '시장 점유율 확대'입니다. 금융 시장은 경쟁이 치열하고, 고객 한 명 확보가 은행"
+  },
+  {
+   "shot": 6,
+   "section": "은행이 고금리를 제시하는 표면적 이유",
+   "start_hint_s": 84.4,
+   "duration_s": 17.2,
+   "broll_ko": "깔끔한 디자인의 '신규 고객 환영' 문구 광고판",
+   "prompt_en": "깔끔한 디자인의 '신규 고객 환영' 문구 광고판 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행이 고금리 특판을 내세우는 표면적 이유는 '고객 유치'와 '시장 점유율 확대'입니다. 금융 시장은 경쟁이 치열하고, 고객 한 명 확보가 은행"
+  },
+  {
+   "shot": 7,
+   "section": "은행의 진짜 속마음 ①: 자금 조달과 안정성",
+   "start_hint_s": 101.0,
+   "duration_s": 13.9,
+   "broll_ko": "건물 외벽에 '자금'",
+   "prompt_en": "건물 외벽에 '자금' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단순히 고객 수 늘리는 것만이 은행 목표는 아닙니다. 더 깊은 속마음은 '안정적인 자금 조달'이죠. 은행은 예금을 받아 대출해주며 수익을 냅니다"
+  },
+  {
+   "shot": 8,
+   "section": "은행의 진짜 속마음 ①: 자금 조달과 안정성",
+   "start_hint_s": 114.9,
+   "duration_s": 13.9,
+   "broll_ko": "'안정' 키워드가 강조된 추상적인 이미지",
+   "prompt_en": "'안정' 키워드가 강조된 추상적인 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단순히 고객 수 늘리는 것만이 은행 목표는 아닙니다. 더 깊은 속마음은 '안정적인 자금 조달'이죠. 은행은 예금을 받아 대출해주며 수익을 냅니다"
+  },
+  {
+   "shot": 9,
+   "section": "은행의 진짜 속마음 ①: 자금 조달과 안정성",
+   "start_hint_s": 128.7,
+   "duration_s": 13.9,
+   "broll_ko": "사람이 없는 은행 내부 전경",
+   "prompt_en": "사람이 없는 은행 내부 전경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단순히 고객 수 늘리는 것만이 은행 목표는 아닙니다. 더 깊은 속마음은 '안정적인 자금 조달'이죠. 은행은 예금을 받아 대출해주며 수익을 냅니다"
+  },
+  {
+   "shot": 10,
+   "section": "은행의 진짜 속마음 ①: 자금 조달과 안정성",
+   "start_hint_s": 142.6,
+   "duration_s": 13.9,
+   "broll_ko": "회의실에서 테이블에 놓인 서류와 펜",
+   "prompt_en": "회의실에서 테이블에 놓인 서류와 펜 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단순히 고객 수 늘리는 것만이 은행 목표는 아닙니다. 더 깊은 속마음은 '안정적인 자금 조달'이죠. 은행은 예금을 받아 대출해주며 수익을 냅니다"
+  },
+  {
+   "shot": 11,
+   "section": "은행의 진짜 속마음 ②: 데이터 확보와 교차 판매",
+   "start_hint_s": 156.0,
+   "duration_s": 18.3,
+   "broll_ko": "추상적인 데이터 시각화 그래프 (정보 흐름 표현)",
+   "prompt_en": "추상적인 데이터 시각화 그래프 (정보 흐름 표현) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행의 또 다른 목표는 '고객 데이터 확보'와 '교차 판매'입니다. 고객이 계좌를 개설하면, 은행은 소득, 소비 패턴, 금융 상품 가입 이력 등"
+  },
+  {
+   "shot": 12,
+   "section": "은행의 진짜 속마음 ②: 데이터 확보와 교차 판매",
+   "start_hint_s": 174.3,
+   "duration_s": 18.3,
+   "broll_ko": "사람 손이 태블릿 화면을 터치하며 정보를 입력하는 장면",
+   "prompt_en": "사람 손이 태블릿 화면을 터치하며 정보를 입력하는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행의 또 다른 목표는 '고객 데이터 확보'와 '교차 판매'입니다. 고객이 계좌를 개설하면, 은행은 소득, 소비 패턴, 금융 상품 가입 이력 등"
+  },
+  {
+   "shot": 13,
+   "section": "은행의 진짜 속마음 ②: 데이터 확보와 교차 판매",
+   "start_hint_s": 192.6,
+   "duration_s": 18.3,
+   "broll_ko": "깔끔하게 정리된 서류 더미와 돋보기",
+   "prompt_en": "깔끔하게 정리된 서류 더미와 돋보기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은행의 또 다른 목표는 '고객 데이터 확보'와 '교차 판매'입니다. 고객이 계좌를 개설하면, 은행은 소득, 소비 패턴, 금융 상품 가입 이력 등"
+  },
+  {
+   "shot": 14,
+   "section": "고금리 특판의 숨겨진 조건들 (함정)",
+   "start_hint_s": 210.0,
+   "duration_s": 17.6,
+   "broll_ko": "금융 상품 약관의 작은 글씨가 확대되어 보이는 화면 (내용은 모자이크 처리)",
+   "prompt_en": "금융 상품 약관의 작은 글씨가 확대되어 보이는 화면 (내용은 모자이크 처리) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 고금리 특판의 '함정'입니다. 많은 상품에는 '우대금리 조건'이 붙습니다. '급여 이체', '카드 사용 실적', '자동이체 건수', '특정"
+  },
+  {
+   "shot": 15,
+   "section": "고금리 특판의 숨겨진 조건들 (함정)",
+   "start_hint_s": 227.6,
+   "duration_s": 17.6,
+   "broll_ko": "달력에 특정 날짜가 동그라미 쳐져 있는 모습",
+   "prompt_en": "달력에 특정 날짜가 동그라미 쳐져 있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 고금리 특판의 '함정'입니다. 많은 상품에는 '우대금리 조건'이 붙습니다. '급여 이체', '카드 사용 실적', '자동이체 건수', '특정"
+  },
+  {
+   "shot": 16,
+   "section": "고금리 특판의 숨겨진 조건들 (함정)",
+   "start_hint_s": 245.3,
+   "duration_s": 17.6,
+   "broll_ko": "계산기 화면에 작은 숫자들이 빠르게 지나가는 모습",
+   "prompt_en": "계산기 화면에 작은 숫자들이 빠르게 지나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 고금리 특판의 '함정'입니다. 많은 상품에는 '우대금리 조건'이 붙습니다. '급여 이체', '카드 사용 실적', '자동이체 건수', '특정"
+  },
+  {
+   "shot": 17,
+   "section": "현명한 고금리 특판 활용법 (체크리스트)",
+   "start_hint_s": 262.0,
+   "duration_s": 19.3,
+   "broll_ko": "손으로 체크리스트 항목을 확인하는 모습",
+   "prompt_en": "손으로 체크리스트 항목을 확인하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 은행 전략을 어떻게 현명하게 활용할까요? 다음 체크리스트로 고금리 특판을 평가해보세요. 1.  우대금리 조건 상세 확인: 불필요한 지출"
+  },
+  {
+   "shot": 18,
+   "section": "현명한 고금리 특판 활용법 (체크리스트)",
+   "start_hint_s": 281.3,
+   "duration_s": 19.3,
+   "broll_ko": "스마트폰으로 여러 금융 상품의 금리를 비교하는 화면",
+   "prompt_en": "스마트폰으로 여러 금융 상품의 금리를 비교하는 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 은행 전략을 어떻게 현명하게 활용할까요? 다음 체크리스트로 고금리 특판을 평가해보세요. 1.  우대금리 조건 상세 확인: 불필요한 지출"
+  },
+  {
+   "shot": 19,
+   "section": "현명한 고금리 특판 활용법 (체크리스트)",
+   "start_hint_s": 300.7,
+   "duration_s": 19.3,
+   "broll_ko": "엑셀 시트에 숫자들이 입력되는 모습",
+   "prompt_en": "엑셀 시트에 숫자들이 입력되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 은행 전략을 어떻게 현명하게 활용할까요? 다음 체크리스트로 고금리 특판을 평가해보세요. 1.  우대금리 조건 상세 확인: 불필요한 지출"
+  },
+  {
+   "shot": 20,
+   "section": "고금리 특판, 결국 누구에게 이득인가?",
+   "start_hint_s": 323.0,
+   "duration_s": 18.4,
+   "broll_ko": "천칭 저울이 균형을 맞추는 모습",
+   "prompt_en": "천칭 저울이 균형을 맞추는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결론적으로 고금리 특판은 은행과 고객 모두에게 이득이 될 수 있지만, '조건이 충족되었을 때만' 해당됩니다. 은행은 고객 유치, 자금 조달, 데"
+  },
+  {
+   "shot": 21,
+   "section": "고금리 특판, 결국 누구에게 이득인가?",
+   "start_hint_s": 341.4,
+   "duration_s": 18.4,
+   "broll_ko": "동전이 차곡차곡 쌓이는 모습",
+   "prompt_en": "동전이 차곡차곡 쌓이는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결론적으로 고금리 특판은 은행과 고객 모두에게 이득이 될 수 있지만, '조건이 충족되었을 때만' 해당됩니다. 은행은 고객 유치, 자금 조달, 데"
+  },
+  {
+   "shot": 22,
+   "section": "고금리 특판, 결국 누구에게 이득인가?",
+   "start_hint_s": 359.7,
+   "duration_s": 18.4,
+   "broll_ko": "손이 돈을 세는 모습",
+   "prompt_en": "손이 돈을 세는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결론적으로 고금리 특판은 은행과 고객 모두에게 이득이 될 수 있지만, '조건이 충족되었을 때만' 해당됩니다. 은행은 고객 유치, 자금 조달, 데"
+  },
+  {
+   "shot": 23,
+   "section": "결론 - 현명한 금융 생활의 자세",
+   "start_hint_s": 378.0,
+   "duration_s": 19.4,
+   "broll_ko": "차분한 분위기의 서재 책상 위 커피잔과 책",
+   "prompt_en": "차분한 분위기의 서재 책상 위 커피잔과 책 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 저금리 시대에 은행이 고금리 특판을 내놓는 진짜 이유와 숨겨진 전략을 살펴보았습니다. 금융 상품은 겉으로 보이는 숫자만이 전부가 아"
+  },
+  {
+   "shot": 24,
+   "section": "결론 - 현명한 금융 생활의 자세",
+   "start_hint_s": 397.4,
+   "duration_s": 19.4,
+   "broll_ko": "창밖으로 보이는 평화로운 풍경",
+   "prompt_en": "창밖으로 보이는 평화로운 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 저금리 시대에 은행이 고금리 특판을 내놓는 진짜 이유와 숨겨진 전략을 살펴보았습니다. 금융 상품은 겉으로 보이는 숫자만이 전부가 아"
+  },
+  {
+   "shot": 25,
+   "section": "결론 - 현명한 금융 생활의 자세",
+   "start_hint_s": 416.8,
+   "duration_s": 19.4,
+   "broll_ko": "손이 노트에 무언가를 기록하는 모습",
+   "prompt_en": "손이 노트에 무언가를 기록하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 저금리 시대에 은행이 고금리 특판을 내놓는 진짜 이유와 숨겨진 전략을 살펴보았습니다. 금융 상품은 겉으로 보이는 숫자만이 전부가 아"
+  }
+ ]
+}
