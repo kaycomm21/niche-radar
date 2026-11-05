@@ -14,10 +14,6 @@ permissions:
   issues: write
   actions: write
 
-concurrency:
-  group: daily-radar
-  cancel-in-progress: false
-
 env:
   TZ: Asia/Seoul
   RADAR_DATA_DIR: data
@@ -28,6 +24,9 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || (github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-analyze'))
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:            # 잡 단위: 조건이 거짓이면 대기열에 들어가지 않음
+      group: daily-radar
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

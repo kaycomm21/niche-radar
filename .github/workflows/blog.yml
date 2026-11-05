@@ -45,7 +45,7 @@ jobs:
           fi
           if [ "$CODE" != "0" ] || [ -z "$OUT" ]; then gh issue comment "$NUMBER" --body "❌ 글 생성 실패 — Actions 로그 확인"; exit 1; fi
           git config user.name "ccs-bot"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add exports/blog exports/kids 2>/dev/null; git commit -qm "studio: #$NUMBER"
+          git add -A exports/ && git commit -qm "studio: #$NUMBER"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && break; sleep 3; done
           B="https://github.com/${{ github.repository }}/blob/main/$OUT"
           if echo "$OUT" | grep -q kids; then gh issue close "$NUMBER" --comment "✅ 부자아이 세트 완성: $B (picturebook.md 그림책 12장면 · worksheet.html 인쇄용 활동지 · answers_and_guide.md · shorts.md)"; exit 0; fi
