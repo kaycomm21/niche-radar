@@ -23,6 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
+      - run: pip install -q google-auth requests
       - name: 미기록 판정 Issue 전부 기록
         env:
           GH_TOKEN: ${{ github.token }}
@@ -73,10 +74,11 @@ jobs:
       - name: 🎬 Cue → 생산 패키지 자동 생성 (Gemini 키가 있을 때)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           GH_TOKEN: ${{ github.token }}
           TZ: Asia/Seoul
         run: |
-          if [ -z "$GEMINI_API_KEY" ]; then echo "키 없음 — 자동 패키지 건너뜀"; else
+          if [ -z "$GEMINI_API_KEY$GCP_SA_KEY" ]; then echo "키 없음 — 자동 패키지 건너뜀"; else
             mkdir -p data && (git fetch -q --depth=1 origin data && git show origin/data:radar.db.gz | gunzip > data/radar.db) || true
             RADAR_DB=data/radar.db python -m radar autopackage --max 5 | tee pkg.txt
             if [ -n "$(git status --porcelain exports/packages)" ]; then

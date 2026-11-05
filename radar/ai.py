@@ -79,11 +79,10 @@ JSON 만 출력: {{"group": "채널명 또는 null", "fit": 0~20 정수, "angle"
 
 
 def gemini_fit(con, today: str, videos: list[dict]) -> int:
-    key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not key:
+    from .llm import available, gemini_json
+    if not available():
         return 0
     model = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={urllib.parse.quote(key)}"
     bibles = "\n".join(f"- {k}: {v}" for k, v in load_bibles().items())
     done = 0
     for v in videos:
@@ -95,19 +94,14 @@ def gemini_fit(con, today: str, videos: list[dict]) -> int:
                                    tags=", ".join(json.loads(v.get("tags") or "[]")[:10]), dur=v.get("duration_s") or 0,
                                    fmt="쇼츠" if v.get("is_short") else "롱폼")
         _log(con, today, "gemini")
-        from .llm import throttle
-        throttle()
         try:
-            r = _post(url, {"contents": [{"parts": [{"text": prompt}]}],
-                            "generationConfig": {"responseMimeType": "application/json", "temperature": 0.2}})
-            text = r["candidates"][0]["content"]["parts"][0]["text"]
-            d = json.loads(text)
+            d = gemini_json(prompt, temperature=0.2)
             d["fit"] = max(0, min(20, int(d.get("fit", 0))))
             if d.get("group") not in load_bibles():
                 d["group"] = None
         except Exception as e:  # noqa: BLE001
             print(f"  gemini 실패 {v['video_id']}: {e}")
-            if "HTTP 4" in str(e):     # 인증·결제·쿼터 오류는 반복 호출해도 같음 → 즉시 중단
+            if "HTTP 4" in str(e):     # 인증·결제·쿼터 오류는 반복해도 같음 → 즉시 중단
                 break
             continue
         con.execute("INSERT OR REPLACE INTO ai_teardown(video_id, model, created_at, json) VALUES (?,?,?,?)",

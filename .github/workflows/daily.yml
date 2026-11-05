@@ -38,6 +38,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
+      - run: pip install -q google-auth requests
       - uses: actions/setup-node@v4
         with: { node-version: "22", cache: npm, cache-dependency-path: web/package-lock.json }
 
@@ -54,6 +55,7 @@ jobs:
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           MODE: ${{ inputs.mode || 'auto' }}
           SEARCH_Q: ${{ inputs.search_q }}
@@ -109,9 +111,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           python -m radar package --date "$(date +%F)"
-          if [ -n "$GEMINI_API_KEY" ]; then python -m radar autopackage --max 3 || true; fi   # 패키지 없는 큐 항목 자동 생성
+          if [ -n "$GEMINI_API_KEY$GCP_SA_KEY" ]; then python -m radar autopackage --max 3 || true; fi   # 패키지 없는 큐 항목 자동 생성
           if [ -n "$(git status --porcelain exports/)" ]; then
             git config user.name "niche-radar-bot"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

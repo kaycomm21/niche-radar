@@ -1,1 +1,2 @@
 pytest>=8
+google-auth>=2

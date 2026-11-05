@@ -92,7 +92,7 @@ def run(out_path, today: str) -> int:
     except Exception as e:  # noqa: BLE001
         print(f"구글 트렌드 수집 실패: {e}")
         return 0
-    data = {"date": today, "source": RSS, "items": build(items, bool(os.environ.get("GEMINI_API_KEY")))}
+    data = {"date": today, "source": RSS, "items": build(items, __import__("radar.llm", fromlist=["x"]).available())}
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     print(f"구글 트렌드 {len(items)}건")

@@ -220,7 +220,7 @@ def cmd_autopackage(a) -> int:
 
 def cmd_localize(a) -> int:
     from .autopkg import localize
-    if not os.environ.get("GEMINI_API_KEY"):
+    if not __import__("radar.llm", fromlist=["x"]).available():
         print("한국화 기획: 키 없음 — 건너뜀")
         return 0
     today = a.date or date.today().isoformat()
@@ -258,7 +258,7 @@ def cmd_enrich(a) -> int:
     n_g = ai.gemini_fit(con, today, rows)
     top = [(c["id"], ai.search_query(c["t"])) for c in (q["top3"] + q["pending"])[:10]]
     n_b = len(ai.brave_buzz(con, today, top))
-    print(f"gemini {n_g}건 · brave {n_b}건" + ("" if os.environ.get("GEMINI_API_KEY") or os.environ.get("BRAVE_API_KEY") else " (키 없음 — 건너뜀)"))
+    print(f"gemini {n_g}건 · brave {n_b}건" + ("" if __import__("radar.llm", fromlist=["x"]).available() or os.environ.get("BRAVE_API_KEY") else " (키 없음 — 건너뜀)"))
     if n_g or n_b:
         export.build(con, today, last_run=json.loads((config.WEB_DATA_DIR / "summary.json").read_text(encoding="utf-8")).get("last_run"))
     return 0
