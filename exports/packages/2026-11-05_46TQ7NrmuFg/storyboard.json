@@ -1,0 +1,298 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 522,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "인트로: 똑같은 연금, 다른 미래",
+   "start_hint_s": 0.0,
+   "duration_s": 20.0,
+   "broll_ko": "서류 더미 위 돋보기",
+   "prompt_en": "서류 더미 위 돋보기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 노후 준비의 핵심으로 연금을 꼽습니다. 국민연금, 퇴직연금, 개인연금. 이름은 모두 '연금'으로 비슷해 보이지만, 그 속을 들여다보"
+  },
+  {
+   "shot": 2,
+   "section": "인트로: 똑같은 연금, 다른 미래",
+   "start_hint_s": 20.0,
+   "duration_s": 20.0,
+   "broll_ko": "컴퓨터 화면에 연금 관련 그래프",
+   "prompt_en": "컴퓨터 화면에 연금 관련 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 노후 준비의 핵심으로 연금을 꼽습니다. 국민연금, 퇴직연금, 개인연금. 이름은 모두 '연금'으로 비슷해 보이지만, 그 속을 들여다보"
+  },
+  {
+   "shot": 3,
+   "section": "인트로: 똑같은 연금, 다른 미래",
+   "start_hint_s": 40.0,
+   "duration_s": 20.0,
+   "broll_ko": "고민하는 듯한 중년 남녀의 뒷모습",
+   "prompt_en": "고민하는 듯한 중년 남녀의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 분들이 노후 준비의 핵심으로 연금을 꼽습니다. 국민연금, 퇴직연금, 개인연금. 이름은 모두 '연금'으로 비슷해 보이지만, 그 속을 들여다보"
+  },
+  {
+   "shot": 4,
+   "section": "3층 연금탑의 오해와 진실",
+   "start_hint_s": 60.0,
+   "duration_s": 14.9,
+   "broll_ko": "3층으로 쌓인 블록 모형",
+   "prompt_en": "3층으로 쌓인 블록 모형 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리나라의 연금 제도는 흔히 '3층 연금탑'으로 불립니다. 1층은 국가가 운영하는 국민연금, 2층은 직장에서 가입하는 퇴직연금, 그리고 3층은 "
+  },
+  {
+   "shot": 5,
+   "section": "3층 연금탑의 오해와 진실",
+   "start_hint_s": 74.9,
+   "duration_s": 14.9,
+   "broll_ko": "국민연금 로고(추상적)",
+   "prompt_en": "국민연금 로고(추상적) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리나라의 연금 제도는 흔히 '3층 연금탑'으로 불립니다. 1층은 국가가 운영하는 국민연금, 2층은 직장에서 가입하는 퇴직연금, 그리고 3층은 "
+  },
+  {
+   "shot": 6,
+   "section": "3층 연금탑의 오해와 진실",
+   "start_hint_s": 89.8,
+   "duration_s": 14.9,
+   "broll_ko": "회사 로고(추상적)",
+   "prompt_en": "회사 로고(추상적) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리나라의 연금 제도는 흔히 '3층 연금탑'으로 불립니다. 1층은 국가가 운영하는 국민연금, 2층은 직장에서 가입하는 퇴직연금, 그리고 3층은 "
+  },
+  {
+   "shot": 7,
+   "section": "3층 연금탑의 오해와 진실",
+   "start_hint_s": 104.7,
+   "duration_s": 14.9,
+   "broll_ko": "개인 통장 이미지",
+   "prompt_en": "개인 통장 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리나라의 연금 제도는 흔히 '3층 연금탑'으로 불립니다. 1층은 국가가 운영하는 국민연금, 2층은 직장에서 가입하는 퇴직연금, 그리고 3층은 "
+  },
+  {
+   "shot": 8,
+   "section": "퇴직연금, DC vs DB: 당신의 선택은?",
+   "start_hint_s": 119.0,
+   "duration_s": 23.0,
+   "broll_ko": "저울 그림 (DC/DB)",
+   "prompt_en": "저울 그림 (DC/DB) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인이라면 누구나 가입하는 퇴직연금. 그런데 여러분의 퇴직연금은 혹시 '확정급여형(DB)'인가요, 아니면 '확정기여형(DC)'인가요? 이 두 "
+  },
+  {
+   "shot": 9,
+   "section": "퇴직연금, DC vs DB: 당신의 선택은?",
+   "start_hint_s": 142.0,
+   "duration_s": 23.0,
+   "broll_ko": "톱니바퀴 돌아가는 애니메이션",
+   "prompt_en": "톱니바퀴 돌아가는 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인이라면 누구나 가입하는 퇴직연금. 그런데 여러분의 퇴직연금은 혹시 '확정급여형(DB)'인가요, 아니면 '확정기여형(DC)'인가요? 이 두 "
+  },
+  {
+   "shot": 10,
+   "section": "퇴직연금, DC vs DB: 당신의 선택은?",
+   "start_hint_s": 164.9,
+   "duration_s": 23.0,
+   "broll_ko": "투자 상품 리스트 화면",
+   "prompt_en": "투자 상품 리스트 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인이라면 누구나 가입하는 퇴직연금. 그런데 여러분의 퇴직연금은 혹시 '확정급여형(DB)'인가요, 아니면 '확정기여형(DC)'인가요? 이 두 "
+  },
+  {
+   "shot": 11,
+   "section": "IRP: 만능 통장일까, 함정일까?",
+   "start_hint_s": 187.0,
+   "duration_s": 22.4,
+   "broll_ko": "다채로운 금융 상품 아이콘",
+   "prompt_en": "다채로운 금융 상품 아이콘 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인형 퇴직연금, 즉 IRP는 많은 분들이 절세 혜택 때문에 가입하는 대표적인 연금 상품입니다. 퇴직금도 IRP로 수령할 수 있고, 세액공제 혜"
+  },
+  {
+   "shot": 12,
+   "section": "IRP: 만능 통장일까, 함정일까?",
+   "start_hint_s": 209.4,
+   "duration_s": 22.4,
+   "broll_ko": "세금 계산기",
+   "prompt_en": "세금 계산기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인형 퇴직연금, 즉 IRP는 많은 분들이 절세 혜택 때문에 가입하는 대표적인 연금 상품입니다. 퇴직금도 IRP로 수령할 수 있고, 세액공제 혜"
+  },
+  {
+   "shot": 13,
+   "section": "IRP: 만능 통장일까, 함정일까?",
+   "start_hint_s": 231.7,
+   "duration_s": 22.4,
+   "broll_ko": "통장과 자물쇠 이미지",
+   "prompt_en": "통장과 자물쇠 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인형 퇴직연금, 즉 IRP는 많은 분들이 절세 혜택 때문에 가입하는 대표적인 연금 상품입니다. 퇴직금도 IRP로 수령할 수 있고, 세액공제 혜"
+  },
+  {
+   "shot": 14,
+   "section": "수익률 10배 차이의 비밀: 운용 방식과 수수료",
+   "start_hint_s": 254.0,
+   "duration_s": 20.4,
+   "broll_ko": "주식 차트",
+   "prompt_en": "주식 차트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 핵심입니다. 왜 어떤 연금은 10배 이상 더 많은 수익을 가져다줄까요? 그 비밀은 바로 '운용 방식'과 '수수료'에 있습니다. 특히 DC형"
+  },
+  {
+   "shot": 15,
+   "section": "수익률 10배 차이의 비밀: 운용 방식과 수수료",
+   "start_hint_s": 274.4,
+   "duration_s": 20.4,
+   "broll_ko": "펀드 운용 보고서",
+   "prompt_en": "펀드 운용 보고서 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 핵심입니다. 왜 어떤 연금은 10배 이상 더 많은 수익을 가져다줄까요? 그 비밀은 바로 '운용 방식'과 '수수료'에 있습니다. 특히 DC형"
+  },
+  {
+   "shot": 16,
+   "section": "수익률 10배 차이의 비밀: 운용 방식과 수수료",
+   "start_hint_s": 294.7,
+   "duration_s": 20.4,
+   "broll_ko": "작은 글씨로 된 약관 클로즈업",
+   "prompt_en": "작은 글씨로 된 약관 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 핵심입니다. 왜 어떤 연금은 10배 이상 더 많은 수익을 가져다줄까요? 그 비밀은 바로 '운용 방식'과 '수수료'에 있습니다. 특히 DC형"
+  },
+  {
+   "shot": 17,
+   "section": "수익률 10배 차이의 비밀: 운용 방식과 수수료",
+   "start_hint_s": 315.1,
+   "duration_s": 20.4,
+   "broll_ko": "돈이 빠져나가는 애니메이션",
+   "prompt_en": "돈이 빠져나가는 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 핵심입니다. 왜 어떤 연금은 10배 이상 더 많은 수익을 가져다줄까요? 그 비밀은 바로 '운용 방식'과 '수수료'에 있습니다. 특히 DC형"
+  },
+  {
+   "shot": 18,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 335.0,
+   "duration_s": 10.7,
+   "broll_ko": "퍼즐 조각 맞추기",
+   "prompt_en": "퍼즐 조각 맞추기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 19,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 345.7,
+   "duration_s": 10.7,
+   "broll_ko": "다양한 투자 상품 아이콘 (주식",
+   "prompt_en": "다양한 투자 상품 아이콘 (주식 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 20,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 356.5,
+   "duration_s": 10.7,
+   "broll_ko": "채권",
+   "prompt_en": "채권 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 21,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 367.2,
+   "duration_s": 10.7,
+   "broll_ko": "부동산",
+   "prompt_en": "부동산 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 22,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 377.9,
+   "duration_s": 10.7,
+   "broll_ko": "금 등)",
+   "prompt_en": "금 등) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 23,
+   "section": "나에게 맞는 연금 포트폴리오 만들기",
+   "start_hint_s": 388.6,
+   "duration_s": 10.7,
+   "broll_ko": "연령대별 투자 비중 그래프",
+   "prompt_en": "연령대별 투자 비중 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 나에게 맞는 최적의 연금 포트폴리오는 어떻게 만들까요? 정답은 '나이와 투자 성향'에 따라 달라집니다. 40대 초반이라면 아직 은퇴까지"
+  },
+  {
+   "shot": 24,
+   "section": "지금 당장 확인해야 할 '내 연금 체크리스트'",
+   "start_hint_s": 399.0,
+   "duration_s": 21.6,
+   "broll_ko": "체크리스트 화면",
+   "prompt_en": "체크리스트 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 여러분의 연금을 점검할 시간입니다. 지금 바로 이 세 가지를 확인해 보세요. 첫째, 나의 퇴직연금 유형(DB형/DC형)은 무엇인가? "
+  },
+  {
+   "shot": 25,
+   "section": "지금 당장 확인해야 할 '내 연금 체크리스트'",
+   "start_hint_s": 420.6,
+   "duration_s": 21.6,
+   "broll_ko": "펜으로 체크하는 손",
+   "prompt_en": "펜으로 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 여러분의 연금을 점검할 시간입니다. 지금 바로 이 세 가지를 확인해 보세요. 첫째, 나의 퇴직연금 유형(DB형/DC형)은 무엇인가? "
+  },
+  {
+   "shot": 26,
+   "section": "지금 당장 확인해야 할 '내 연금 체크리스트'",
+   "start_hint_s": 442.2,
+   "duration_s": 21.6,
+   "broll_ko": "스마트폰으로 금융 앱 확인하는 모습",
+   "prompt_en": "스마트폰으로 금융 앱 확인하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자, 이제 여러분의 연금을 점검할 시간입니다. 지금 바로 이 세 가지를 확인해 보세요. 첫째, 나의 퇴직연금 유형(DB형/DC형)은 무엇인가? "
+  },
+  {
+   "shot": 27,
+   "section": "마무리: 작은 관심이 만드는 큰 차이",
+   "start_hint_s": 463.0,
+   "duration_s": 18.4,
+   "broll_ko": "해가 지는 바다 풍경",
+   "prompt_en": "해가 지는 바다 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 겉으로는 비슷해 보이지만, 실제로는 엄청난 차이를 만들어내는 연금 상품들의 비밀을 파헤쳐 보았습니다. 이 모든 정보가 복잡하게 느껴"
+  },
+  {
+   "shot": 28,
+   "section": "마무리: 작은 관심이 만드는 큰 차이",
+   "start_hint_s": 481.4,
+   "duration_s": 18.4,
+   "broll_ko": "편안하게 휴식하는 노부부의 뒷모습",
+   "prompt_en": "편안하게 휴식하는 노부부의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 겉으로는 비슷해 보이지만, 실제로는 엄청난 차이를 만들어내는 연금 상품들의 비밀을 파헤쳐 보았습니다. 이 모든 정보가 복잡하게 느껴"
+  },
+  {
+   "shot": 29,
+   "section": "마무리: 작은 관심이 만드는 큰 차이",
+   "start_hint_s": 499.8,
+   "duration_s": 18.4,
+   "broll_ko": "시간이 흐르는 시계 애니메이션",
+   "prompt_en": "시간이 흐르는 시계 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 겉으로는 비슷해 보이지만, 실제로는 엄청난 차이를 만들어내는 연금 상품들의 비밀을 파헤쳐 보았습니다. 이 모든 정보가 복잡하게 느껴"
+  }
+ ]
+}

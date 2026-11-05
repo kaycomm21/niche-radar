@@ -1,0 +1,348 @@
+{
+ "title": "",
+ "channel": "히스토리X",
+ "est_total_s": 487,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "보이지 않는 전쟁의 서막: AI 인프라의 그림자",
+   "start_hint_s": 0.0,
+   "duration_s": 13.5,
+   "broll_ko": "어두운 데이터센터 내부",
+   "prompt_en": "어두운 데이터센터 내부 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 이 순간, 인류는 눈에 보이지 않는 거대한 전쟁의 한복판에 서 있습니다. 총성 없는 전장의 이름은 '인프라'입니다. 최근 일론 머스크와 구"
+  },
+  {
+   "shot": 2,
+   "section": "보이지 않는 전쟁의 서막: AI 인프라의 그림자",
+   "start_hint_s": 13.5,
+   "duration_s": 13.5,
+   "broll_ko": "수많은 서버 랙들이 빛을 내며 작동하는 모습.",
+   "prompt_en": "수많은 서버 랙들이 빛을 내며 작동하는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 이 순간, 인류는 눈에 보이지 않는 거대한 전쟁의 한복판에 서 있습니다. 총성 없는 전장의 이름은 '인프라'입니다. 최근 일론 머스크와 구"
+  },
+  {
+   "shot": 3,
+   "section": "보이지 않는 전쟁의 서막: AI 인프라의 그림자",
+   "start_hint_s": 27.1,
+   "duration_s": 13.5,
+   "broll_ko": "복잡하게 얽힌 광섬유 케이블 다발이 터널을 통과하는 모습.",
+   "prompt_en": "복잡하게 얽힌 광섬유 케이블 다발이 터널을 통과하는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 이 순간, 인류는 눈에 보이지 않는 거대한 전쟁의 한복판에 서 있습니다. 총성 없는 전장의 이름은 '인프라'입니다. 최근 일론 머스크와 구"
+  },
+  {
+   "shot": 4,
+   "section": "보이지 않는 전쟁의 서막: AI 인프라의 그림자",
+   "start_hint_s": 40.6,
+   "duration_s": 13.5,
+   "broll_ko": "컴퓨터 칩의 미세한 회로 패턴이 확대되어 보이는 모습.",
+   "prompt_en": "컴퓨터 칩의 미세한 회로 패턴이 확대되어 보이는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 이 순간, 인류는 눈에 보이지 않는 거대한 전쟁의 한복판에 서 있습니다. 총성 없는 전장의 이름은 '인프라'입니다. 최근 일론 머스크와 구"
+  },
+  {
+   "shot": 5,
+   "section": "로마의 도로, 실크로드: 고대 세계의 신경망",
+   "start_hint_s": 54.0,
+   "duration_s": 16.8,
+   "broll_ko": "잘 정비된 로마 도로의 유적 위로 말과 마차가 지나가는 상상도.",
+   "prompt_en": "잘 정비된 로마 도로의 유적 위로 말과 마차가 지나가는 상상도. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "인프라 전쟁의 역사는 인류 문명 시작과 함께합니다. 고대 로마 제국은 방대한 영토 통치를 위해 경이로운 도로망을 건설했습니다. 이 도로는 군단의"
+  },
+  {
+   "shot": 6,
+   "section": "로마의 도로, 실크로드: 고대 세계의 신경망",
+   "start_hint_s": 70.8,
+   "duration_s": 16.8,
+   "broll_ko": "낙타 행렬이 사막을 가로질러 오가는 실크로드 무역 장면 상상도.",
+   "prompt_en": "낙타 행렬이 사막을 가로질러 오가는 실크로드 무역 장면 상상도. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "인프라 전쟁의 역사는 인류 문명 시작과 함께합니다. 고대 로마 제국은 방대한 영토 통치를 위해 경이로운 도로망을 건설했습니다. 이 도로는 군단의"
+  },
+  {
+   "shot": 7,
+   "section": "로마의 도로, 실크로드: 고대 세계의 신경망",
+   "start_hint_s": 87.6,
+   "duration_s": 16.8,
+   "broll_ko": "고대 지도 위에 주요 교역로와 도시들이 연결되는 애니메이션.",
+   "prompt_en": "고대 지도 위에 주요 교역로와 도시들이 연결되는 애니메이션. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "인프라 전쟁의 역사는 인류 문명 시작과 함께합니다. 고대 로마 제국은 방대한 영토 통치를 위해 경이로운 도로망을 건설했습니다. 이 도로는 군단의"
+  },
+  {
+   "shot": 8,
+   "section": "산업혁명의 동맥: 운하와 철도",
+   "start_hint_s": 104.0,
+   "duration_s": 11.8,
+   "broll_ko": "증기기관차가 검은 연기를 뿜으며 광활한 대지를 가로지르는 모습.",
+   "prompt_en": "증기기관차가 검은 연기를 뿜으며 광활한 대지를 가로지르는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "18세기 후반, 산업혁명과 함께 새로운 인프라, 운하와 철도가 등장합니다. 영국을 필두로 건설된 운하는 원자재와 공산품을 대량 운송하는 혁신이었"
+  },
+  {
+   "shot": 9,
+   "section": "산업혁명의 동맥: 운하와 철도",
+   "start_hint_s": 115.8,
+   "duration_s": 11.8,
+   "broll_ko": "산업혁명 시기",
+   "prompt_en": "산업혁명 시기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "18세기 후반, 산업혁명과 함께 새로운 인프라, 운하와 철도가 등장합니다. 영국을 필두로 건설된 운하는 원자재와 공산품을 대량 운송하는 혁신이었"
+  },
+  {
+   "shot": 10,
+   "section": "산업혁명의 동맥: 운하와 철도",
+   "start_hint_s": 127.5,
+   "duration_s": 11.8,
+   "broll_ko": "수많은 배들이 오가는 운하의 모습.",
+   "prompt_en": "수많은 배들이 오가는 운하의 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "18세기 후반, 산업혁명과 함께 새로운 인프라, 운하와 철도가 등장합니다. 영국을 필두로 건설된 운하는 원자재와 공산품을 대량 운송하는 혁신이었"
+  },
+  {
+   "shot": 11,
+   "section": "산업혁명의 동맥: 운하와 철도",
+   "start_hint_s": 139.3,
+   "duration_s": 11.8,
+   "broll_ko": "물류 창고에 쌓인 수많은 상품과 분주하게 움직이는 노동자들.",
+   "prompt_en": "물류 창고에 쌓인 수많은 상품과 분주하게 움직이는 노동자들. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "18세기 후반, 산업혁명과 함께 새로운 인프라, 운하와 철도가 등장합니다. 영국을 필두로 건설된 운하는 원자재와 공산품을 대량 운송하는 혁신이었"
+  },
+  {
+   "shot": 12,
+   "section": "정보 시대의 혈관: 전신과 해저 케이블",
+   "start_hint_s": 151.0,
+   "duration_s": 17.8,
+   "broll_ko": "모스 부호를 치는 전신 기사가 전보를 보내는 모습.",
+   "prompt_en": "모스 부호를 치는 전신 기사가 전보를 보내는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 사뮤엘 모스의 전신 발명은 정보 전달의 혁명을 가져왔습니다. 수십 일 걸리던 소식이 몇 시간 만에 전달되며 세계는 급격히 '연결"
+  },
+  {
+   "shot": 13,
+   "section": "정보 시대의 혈관: 전신과 해저 케이블",
+   "start_hint_s": 168.8,
+   "duration_s": 17.8,
+   "broll_ko": "해저 케이블 부설선이 바다 위에서 케이블을 설치하는 모습.",
+   "prompt_en": "해저 케이블 부설선이 바다 위에서 케이블을 설치하는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 사뮤엘 모스의 전신 발명은 정보 전달의 혁명을 가져왔습니다. 수십 일 걸리던 소식이 몇 시간 만에 전달되며 세계는 급격히 '연결"
+  },
+  {
+   "shot": 14,
+   "section": "정보 시대의 혈관: 전신과 해저 케이블",
+   "start_hint_s": 186.6,
+   "duration_s": 17.8,
+   "broll_ko": "지구본 위에 대륙 간 해저 케이블 망이 복잡하게 연결되는 애니메이션.",
+   "prompt_en": "지구본 위에 대륙 간 해저 케이블 망이 복잡하게 연결되는 애니메이션. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 사뮤엘 모스의 전신 발명은 정보 전달의 혁명을 가져왔습니다. 수십 일 걸리던 소식이 몇 시간 만에 전달되며 세계는 급격히 '연결"
+  },
+  {
+   "shot": 15,
+   "section": "21세기 새로운 기반: 데이터, 컴퓨팅, 에너지",
+   "start_hint_s": 204.0,
+   "duration_s": 18.4,
+   "broll_ko": "슈퍼컴퓨터 내부의 복잡한 회로와 냉각 장치.",
+   "prompt_en": "슈퍼컴퓨터 내부의 복잡한 회로와 냉각 장치. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 인류는 AI 시대라는 거대한 전환점에 서 있습니다. 이 시대의 새로운 '기반'은 '데이터', '고성능 컴퓨팅 자원', 그리고 이를 구동할 "
+  },
+  {
+   "shot": 16,
+   "section": "21세기 새로운 기반: 데이터, 컴퓨팅, 에너지",
+   "start_hint_s": 222.4,
+   "duration_s": 18.4,
+   "broll_ko": "수많은 서버 랙들이 줄지어 있는 거대한 데이터센터 전경.",
+   "prompt_en": "수많은 서버 랙들이 줄지어 있는 거대한 데이터센터 전경. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 인류는 AI 시대라는 거대한 전환점에 서 있습니다. 이 시대의 새로운 '기반'은 '데이터', '고성능 컴퓨팅 자원', 그리고 이를 구동할 "
+  },
+  {
+   "shot": 17,
+   "section": "21세기 새로운 기반: 데이터, 컴퓨팅, 에너지",
+   "start_hint_s": 240.7,
+   "duration_s": 18.4,
+   "broll_ko": "풍력 터빈과 태양광 패널이 대규모로 설치된 재생에너지 발전소.",
+   "prompt_en": "풍력 터빈과 태양광 패널이 대규모로 설치된 재생에너지 발전소. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금 인류는 AI 시대라는 거대한 전환점에 서 있습니다. 이 시대의 새로운 '기반'은 '데이터', '고성능 컴퓨팅 자원', 그리고 이를 구동할 "
+  },
+  {
+   "shot": 18,
+   "section": "AI 인프라 전쟁의 지정학적 의미",
+   "start_hint_s": 259.0,
+   "duration_s": 13.7,
+   "broll_ko": "전 세계 지도를 배경으로 주요 데이터센터 위치가 점멸하는 애니메이션.",
+   "prompt_en": "전 세계 지도를 배경으로 주요 데이터센터 위치가 점멸하는 애니메이션. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라 전쟁은 기업을 넘어 국가 간 지정학적 경쟁으로 확대됩니다. 데이터 확보, 고성능 AI 칩 생산, 전력망 구축 능력은 이제 국가 안보"
+  },
+  {
+   "shot": 19,
+   "section": "AI 인프라 전쟁의 지정학적 의미",
+   "start_hint_s": 272.7,
+   "duration_s": 13.7,
+   "broll_ko": "반도체 칩 생산 공장의 내부",
+   "prompt_en": "반도체 칩 생산 공장의 내부 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라 전쟁은 기업을 넘어 국가 간 지정학적 경쟁으로 확대됩니다. 데이터 확보, 고성능 AI 칩 생산, 전력망 구축 능력은 이제 국가 안보"
+  },
+  {
+   "shot": 20,
+   "section": "AI 인프라 전쟁의 지정학적 의미",
+   "start_hint_s": 286.4,
+   "duration_s": 13.7,
+   "broll_ko": "깨끗하고 정교한 생산 라인.",
+   "prompt_en": "깨끗하고 정교한 생산 라인. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라 전쟁은 기업을 넘어 국가 간 지정학적 경쟁으로 확대됩니다. 데이터 확보, 고성능 AI 칩 생산, 전력망 구축 능력은 이제 국가 안보"
+  },
+  {
+   "shot": 21,
+   "section": "AI 인프라 전쟁의 지정학적 의미",
+   "start_hint_s": 300.0,
+   "duration_s": 13.7,
+   "broll_ko": "복잡한 국제 관계를 나타내는 그래프와 데이터 시각화.",
+   "prompt_en": "복잡한 국제 관계를 나타내는 그래프와 데이터 시각화. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라 전쟁은 기업을 넘어 국가 간 지정학적 경쟁으로 확대됩니다. 데이터 확보, 고성능 AI 칩 생산, 전력망 구축 능력은 이제 국가 안보"
+  },
+  {
+   "shot": 22,
+   "section": "전력망의 중요성: 새로운 유전, 새로운 석탄",
+   "start_hint_s": 313.0,
+   "duration_s": 14.3,
+   "broll_ko": "거대한 송전탑과 복잡하게 얽힌 전력선이 도시와 연결되는 모습.",
+   "prompt_en": "거대한 송전탑과 복잡하게 얽힌 전력선이 도시와 연결되는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라의 핵심은 '전력'입니다. AI 데이터센터는 엄청난 전력을 소비하죠. 일론 머스크가 [확인 필요] 20기가와트(GW) 규모의 전력 확"
+  },
+  {
+   "shot": 23,
+   "section": "전력망의 중요성: 새로운 유전, 새로운 석탄",
+   "start_hint_s": 327.3,
+   "duration_s": 14.3,
+   "broll_ko": "발전소에서 증기가 뿜어져 나오는 모습",
+   "prompt_en": "발전소에서 증기가 뿜어져 나오는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라의 핵심은 '전력'입니다. AI 데이터센터는 엄청난 전력을 소비하죠. 일론 머스크가 [확인 필요] 20기가와트(GW) 규모의 전력 확"
+  },
+  {
+   "shot": 24,
+   "section": "전력망의 중요성: 새로운 유전, 새로운 석탄",
+   "start_hint_s": 341.6,
+   "duration_s": 14.3,
+   "broll_ko": "거대한 터빈이 회전하는 모습.",
+   "prompt_en": "거대한 터빈이 회전하는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라의 핵심은 '전력'입니다. AI 데이터센터는 엄청난 전력을 소비하죠. 일론 머스크가 [확인 필요] 20기가와트(GW) 규모의 전력 확"
+  },
+  {
+   "shot": 25,
+   "section": "전력망의 중요성: 새로운 유전, 새로운 석탄",
+   "start_hint_s": 356.0,
+   "duration_s": 14.3,
+   "broll_ko": "데이터센터 내부의 냉각 시스템과 거대한 전력 공급 장치.",
+   "prompt_en": "데이터센터 내부의 냉각 시스템과 거대한 전력 공급 장치. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 인프라의 핵심은 '전력'입니다. AI 데이터센터는 엄청난 전력을 소비하죠. 일론 머스크가 [확인 필요] 20기가와트(GW) 규모의 전력 확"
+  },
+  {
+   "shot": 26,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 370.0,
+   "duration_s": 9.2,
+   "broll_ko": "미래 도시의 모습",
+   "prompt_en": "미래 도시의 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 27,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 379.2,
+   "duration_s": 9.2,
+   "broll_ko": "고층 빌딩과 자율주행 차량",
+   "prompt_en": "고층 빌딩과 자율주행 차량 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 28,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 388.5,
+   "duration_s": 9.2,
+   "broll_ko": "드론 등이 어우러진 풍경.",
+   "prompt_en": "드론 등이 어우러진 풍경. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 29,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 397.7,
+   "duration_s": 9.2,
+   "broll_ko": "다양한 국적의 사람들이 협력하여 작업하는 미래형 연구소.",
+   "prompt_en": "다양한 국적의 사람들이 협력하여 작업하는 미래형 연구소. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 30,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 407.0,
+   "duration_s": 9.2,
+   "broll_ko": "컴퓨터 그래픽으로 구현된",
+   "prompt_en": "컴퓨터 그래픽으로 구현된 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 31,
+   "section": "인프라 전쟁의 미래: 누가 승자가 될 것인가?",
+   "start_hint_s": 416.2,
+   "duration_s": 9.2,
+   "broll_ko": "끊임없이 확장되고 변화하는 네트워크 구조.",
+   "prompt_en": "끊임없이 확장되고 변화하는 네트워크 구조. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 이 보이지 않는 AI 인프라 전쟁의 승자는 누구일까요? 단순히 많은 GPU 확보와 데이터센터 건설만으로는 부족합니다. 안정적인 전력 공"
+  },
+  {
+   "shot": 32,
+   "section": "역사의 교훈과 우리의 미래",
+   "start_hint_s": 425.0,
+   "duration_s": 19.8,
+   "broll_ko": "고대 유적과 현대 도시의 풍경이 오버랩되는 장면.",
+   "prompt_en": "고대 유적과 현대 도시의 풍경이 오버랩되는 장면. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리는 지금, 과거 로마인들이 도로에, 19세기 사람들이 철도에 열광했던 것과 같은 역사적 변곡점에 서 있습니다. AI 인프라는 단순한 기술 기"
+  },
+  {
+   "shot": 33,
+   "section": "역사의 교훈과 우리의 미래",
+   "start_hint_s": 444.8,
+   "duration_s": 19.8,
+   "broll_ko": "다양한 시대의 인프라들이 빠르게 스쳐 지나가는 몽타주.",
+   "prompt_en": "다양한 시대의 인프라들이 빠르게 스쳐 지나가는 몽타주. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리는 지금, 과거 로마인들이 도로에, 19세기 사람들이 철도에 열광했던 것과 같은 역사적 변곡점에 서 있습니다. AI 인프라는 단순한 기술 기"
+  },
+  {
+   "shot": 34,
+   "section": "역사의 교훈과 우리의 미래",
+   "start_hint_s": 464.6,
+   "duration_s": 19.8,
+   "broll_ko": "지구본 위로 빛나는 점들이 연결되며 새로운 네트워크를 형성하는 모습.",
+   "prompt_en": "지구본 위로 빛나는 점들이 연결되며 새로운 네트워크를 형성하는 모습. — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리는 지금, 과거 로마인들이 도로에, 19세기 사람들이 철도에 열광했던 것과 같은 역사적 변곡점에 서 있습니다. AI 인프라는 단순한 기술 기"
+  }
+ ]
+}

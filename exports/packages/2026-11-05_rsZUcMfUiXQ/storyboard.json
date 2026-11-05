@@ -1,0 +1,318 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 481,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "단타, 직장인의 달콤한 유혹",
+   "start_hint_s": 0.0,
+   "duration_s": 10.8,
+   "broll_ko": "퇴근 후 노트북으로 주식 차트를 살펴보는 직장인의 뒷모습 (얼굴 안 보임)",
+   "prompt_en": "퇴근 후 노트북으로 주식 차트를 살펴보는 직장인의 뒷모습 (얼굴 안 보임) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 직장인들이 퇴근 후, 혹은 점심시간 틈틈이 주식 차트를 들여다봅니다. '단타'는 짧은 시간 안에 큰 수익을 올릴 수 있다는 환상으로 우리를"
+  },
+  {
+   "shot": 2,
+   "section": "단타, 직장인의 달콤한 유혹",
+   "start_hint_s": 10.8,
+   "duration_s": 10.8,
+   "broll_ko": "스마트폰으로 주식 앱을 켜고 스크롤하는 손가락 (화면은 흐릿하게 처리)",
+   "prompt_en": "스마트폰으로 주식 앱을 켜고 스크롤하는 손가락 (화면은 흐릿하게 처리) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 직장인들이 퇴근 후, 혹은 점심시간 틈틈이 주식 차트를 들여다봅니다. '단타'는 짧은 시간 안에 큰 수익을 올릴 수 있다는 환상으로 우리를"
+  },
+  {
+   "shot": 3,
+   "section": "단타, 직장인의 달콤한 유혹",
+   "start_hint_s": 21.5,
+   "duration_s": 10.8,
+   "broll_ko": "커피 한 잔과 함께 책상에 놓인 종이 위에 '수익률'",
+   "prompt_en": "커피 한 잔과 함께 책상에 놓인 종이 위에 '수익률' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 직장인들이 퇴근 후, 혹은 점심시간 틈틈이 주식 차트를 들여다봅니다. '단타'는 짧은 시간 안에 큰 수익을 올릴 수 있다는 환상으로 우리를"
+  },
+  {
+   "shot": 4,
+   "section": "단타, 직장인의 달콤한 유혹",
+   "start_hint_s": 32.3,
+   "duration_s": 10.8,
+   "broll_ko": "'목표' 등 적힌 메모",
+   "prompt_en": "'목표' 등 적힌 메모 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 직장인들이 퇴근 후, 혹은 점심시간 틈틈이 주식 차트를 들여다봅니다. '단타'는 짧은 시간 안에 큰 수익을 올릴 수 있다는 환상으로 우리를"
+  },
+  {
+   "shot": 5,
+   "section": "직장인 단타의 현실: 시간과의 싸움",
+   "start_hint_s": 43.0,
+   "duration_s": 17.2,
+   "broll_ko": "사무실 책상 위 시계가 빠르게 돌아가는 모습",
+   "prompt_en": "사무실 책상 위 시계가 빠르게 돌아가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인의 삶은 이미 충분히 바쁩니다. 출근부터 퇴근까지, 업무에 집중해야 할 시간이 정해져 있죠. 단타 투자는 실시간으로 시장의 흐름을 읽고, "
+  },
+  {
+   "shot": 6,
+   "section": "직장인 단타의 현실: 시간과의 싸움",
+   "start_hint_s": 60.2,
+   "duration_s": 17.2,
+   "broll_ko": "회의 중 스마트폰을 몰래 쳐다보는 듯한 손의 클로즈업",
+   "prompt_en": "회의 중 스마트폰을 몰래 쳐다보는 듯한 손의 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인의 삶은 이미 충분히 바쁩니다. 출근부터 퇴근까지, 업무에 집중해야 할 시간이 정해져 있죠. 단타 투자는 실시간으로 시장의 흐름을 읽고, "
+  },
+  {
+   "shot": 7,
+   "section": "직장인 단타의 현실: 시간과의 싸움",
+   "start_hint_s": 77.3,
+   "duration_s": 17.2,
+   "broll_ko": "피곤한 표정으로 퇴근 후 컴퓨터 앞에 앉아있는 사람의 뒷모습",
+   "prompt_en": "피곤한 표정으로 퇴근 후 컴퓨터 앞에 앉아있는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "직장인의 삶은 이미 충분히 바쁩니다. 출근부터 퇴근까지, 업무에 집중해야 할 시간이 정해져 있죠. 단타 투자는 실시간으로 시장의 흐름을 읽고, "
+  },
+  {
+   "shot": 8,
+   "section": "숨겨진 비용, 수익률을 갉아먹는 주범",
+   "start_hint_s": 94.0,
+   "duration_s": 13.5,
+   "broll_ko": "계산기를 두드리는 손",
+   "prompt_en": "계산기를 두드리는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 잦은 매매를 동반합니다. 매수와 매도가 잦아질수록 수수료와 세금은 눈덩이처럼 불어납니다. 예를 들어, 100만원으로 주식을 사고팔 "
+  },
+  {
+   "shot": 9,
+   "section": "숨겨진 비용, 수익률을 갉아먹는 주범",
+   "start_hint_s": 107.5,
+   "duration_s": 13.5,
+   "broll_ko": "화면에는 마이너스(-) 숫자가 표시됨",
+   "prompt_en": "화면에는 마이너스(-) 숫자가 표시됨 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 잦은 매매를 동반합니다. 매수와 매도가 잦아질수록 수수료와 세금은 눈덩이처럼 불어납니다. 예를 들어, 100만원으로 주식을 사고팔 "
+  },
+  {
+   "shot": 10,
+   "section": "숨겨진 비용, 수익률을 갉아먹는 주범",
+   "start_hint_s": 121.1,
+   "duration_s": 13.5,
+   "broll_ko": "통장 잔고가 줄어드는 애니메이션 (혹은 그래프 하락)",
+   "prompt_en": "통장 잔고가 줄어드는 애니메이션 (혹은 그래프 하락) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 잦은 매매를 동반합니다. 매수와 매도가 잦아질수록 수수료와 세금은 눈덩이처럼 불어납니다. 예를 들어, 100만원으로 주식을 사고팔 "
+  },
+  {
+   "shot": 11,
+   "section": "숨겨진 비용, 수익률을 갉아먹는 주범",
+   "start_hint_s": 134.6,
+   "duration_s": 13.5,
+   "broll_ko": "작은 동전들이 쌓이다가 하나씩 빠져나가는 모습",
+   "prompt_en": "작은 동전들이 쌓이다가 하나씩 빠져나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 잦은 매매를 동반합니다. 매수와 매도가 잦아질수록 수수료와 세금은 눈덩이처럼 불어납니다. 예를 들어, 100만원으로 주식을 사고팔 "
+  },
+  {
+   "shot": 12,
+   "section": "감정의 롤러코스터, 심리적 피로도",
+   "start_hint_s": 148.0,
+   "duration_s": 16.2,
+   "broll_ko": "초조하게 손톱을 물어뜯는 손",
+   "prompt_en": "초조하게 손톱을 물어뜯는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 감정의 극한을 오가는 행위입니다. 몇 분 만에 수익이 생겼다가도, 다음 순간 손실로 바뀌는 것을 보면 심장이 철렁 내려앉습니다. 작"
+  },
+  {
+   "shot": 13,
+   "section": "감정의 롤러코스터, 심리적 피로도",
+   "start_hint_s": 164.2,
+   "duration_s": 16.2,
+   "broll_ko": "밤늦게까지 스마트폰 화면을 응시하는 사람 (어두운 방)",
+   "prompt_en": "밤늦게까지 스마트폰 화면을 응시하는 사람 (어두운 방) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 감정의 극한을 오가는 행위입니다. 몇 분 만에 수익이 생겼다가도, 다음 순간 손실로 바뀌는 것을 보면 심장이 철렁 내려앉습니다. 작"
+  },
+  {
+   "shot": 14,
+   "section": "감정의 롤러코스터, 심리적 피로도",
+   "start_hint_s": 180.5,
+   "duration_s": 16.2,
+   "broll_ko": "피곤한 얼굴로 침대에 누워 천장을 바라보는 모습",
+   "prompt_en": "피곤한 얼굴로 침대에 누워 천장을 바라보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타 투자는 감정의 극한을 오가는 행위입니다. 몇 분 만에 수익이 생겼다가도, 다음 순간 손실로 바뀌는 것을 보면 심장이 철렁 내려앉습니다. 작"
+  },
+  {
+   "shot": 15,
+   "section": "개인 투자자가 시장을 이기기 어려운 이유",
+   "start_hint_s": 196.0,
+   "duration_s": 17.8,
+   "broll_ko": "복잡한 주식 차트 그래프들이 빠르게 움직이는 화면",
+   "prompt_en": "복잡한 주식 차트 그래프들이 빠르게 움직이는 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시장에는 우리보다 훨씬 많은 정보와 자본, 그리고 전문적인 분석력을 가진 기관 투자자와 외국인 투자자들이 존재합니다. 이들은 고성능 컴퓨터와 인"
+  },
+  {
+   "shot": 16,
+   "section": "개인 투자자가 시장을 이기기 어려운 이유",
+   "start_hint_s": 213.8,
+   "duration_s": 17.8,
+   "broll_ko": "거대한 데이터 서버룸의 모습 (추상적이고 깨끗한 느낌)",
+   "prompt_en": "거대한 데이터 서버룸의 모습 (추상적이고 깨끗한 느낌) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시장에는 우리보다 훨씬 많은 정보와 자본, 그리고 전문적인 분석력을 가진 기관 투자자와 외국인 투자자들이 존재합니다. 이들은 고성능 컴퓨터와 인"
+  },
+  {
+   "shot": 17,
+   "section": "개인 투자자가 시장을 이기기 어려운 이유",
+   "start_hint_s": 231.5,
+   "duration_s": 17.8,
+   "broll_ko": "작은 배가 거친 파도 속에서 흔들리는 애니메이션 또는 비유적 이미지",
+   "prompt_en": "작은 배가 거친 파도 속에서 흔들리는 애니메이션 또는 비유적 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시장에는 우리보다 훨씬 많은 정보와 자본, 그리고 전문적인 분석력을 가진 기관 투자자와 외국인 투자자들이 존재합니다. 이들은 고성능 컴퓨터와 인"
+  },
+  {
+   "shot": 18,
+   "section": "단타, 정말 나에게 맞는 투자법일까? 자가진단 체크리스트",
+   "start_hint_s": 249.0,
+   "duration_s": 18.6,
+   "broll_ko": "화면에 체크리스트 항목이 하나씩 나타나고",
+   "prompt_en": "화면에 체크리스트 항목이 하나씩 나타나고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 단타는 정말 모두에게 나쁜 것일까요? 아닙니다. 극소수의 타고난 감각과 철저한 원칙, 그리고 전업으로 투자에만 몰두할 수 있는 사람들에"
+  },
+  {
+   "shot": 19,
+   "section": "단타, 정말 나에게 맞는 투자법일까? 자가진단 체크리스트",
+   "start_hint_s": 267.6,
+   "duration_s": 18.6,
+   "broll_ko": "'YES/NO'를 표시하는 손",
+   "prompt_en": "'YES/NO'를 표시하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 단타는 정말 모두에게 나쁜 것일까요? 아닙니다. 극소수의 타고난 감각과 철저한 원칙, 그리고 전업으로 투자에만 몰두할 수 있는 사람들에"
+  },
+  {
+   "shot": 20,
+   "section": "단타, 정말 나에게 맞는 투자법일까? 자가진단 체크리스트",
+   "start_hint_s": 286.3,
+   "duration_s": 18.6,
+   "broll_ko": "고민하는 듯한 사람의 옆모습 (얼굴은 가려짐)",
+   "prompt_en": "고민하는 듯한 사람의 옆모습 (얼굴은 가려짐) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 단타는 정말 모두에게 나쁜 것일까요? 아닙니다. 극소수의 타고난 감각과 철저한 원칙, 그리고 전업으로 투자에만 몰두할 수 있는 사람들에"
+  },
+  {
+   "shot": 21,
+   "section": "단타, 정말 나에게 맞는 투자법일까? 자가진단 체크리스트",
+   "start_hint_s": 304.9,
+   "duration_s": 18.6,
+   "broll_ko": "'STOP' 또는 'CAUTION' 표지판 이미지",
+   "prompt_en": "'STOP' 또는 'CAUTION' 표지판 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 단타는 정말 모두에게 나쁜 것일까요? 아닙니다. 극소수의 타고난 감각과 철저한 원칙, 그리고 전업으로 투자에만 몰두할 수 있는 사람들에"
+  },
+  {
+   "shot": 22,
+   "section": "단타 대신, 직장인을 위한 현실적인 투자 전략",
+   "start_hint_s": 323.0,
+   "duration_s": 16.8,
+   "broll_ko": "나무가 서서히 자라나는 모습 (시간의 흐름을 시각화)",
+   "prompt_en": "나무가 서서히 자라나는 모습 (시간의 흐름을 시각화) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타의 위험성을 알았다면, 이제는 현실적인 대안을 찾아야 합니다. 직장인에게 가장 적합한 투자는 '시간'을 아군으로 삼는 장기 투자입니다. 1."
+  },
+  {
+   "shot": 23,
+   "section": "단타 대신, 직장인을 위한 현실적인 투자 전략",
+   "start_hint_s": 339.8,
+   "duration_s": 16.8,
+   "broll_ko": "여러 종류의 동전/지폐/그래프가 조화롭게 배치된 모습",
+   "prompt_en": "여러 종류의 동전/지폐/그래프가 조화롭게 배치된 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타의 위험성을 알았다면, 이제는 현실적인 대안을 찾아야 합니다. 직장인에게 가장 적합한 투자는 '시간'을 아군으로 삼는 장기 투자입니다. 1."
+  },
+  {
+   "shot": 24,
+   "section": "단타 대신, 직장인을 위한 현실적인 투자 전략",
+   "start_hint_s": 356.5,
+   "duration_s": 16.8,
+   "broll_ko": "달력에 동그라미가 표시되고",
+   "prompt_en": "달력에 동그라미가 표시되고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타의 위험성을 알았다면, 이제는 현실적인 대안을 찾아야 합니다. 직장인에게 가장 적합한 투자는 '시간'을 아군으로 삼는 장기 투자입니다. 1."
+  },
+  {
+   "shot": 25,
+   "section": "단타 대신, 직장인을 위한 현실적인 투자 전략",
+   "start_hint_s": 373.3,
+   "duration_s": 16.8,
+   "broll_ko": "돈이 차곡차곡 쌓이는 그림",
+   "prompt_en": "돈이 차곡차곡 쌓이는 그림 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "단타의 위험성을 알았다면, 이제는 현실적인 대안을 찾아야 합니다. 직장인에게 가장 적합한 투자는 '시간'을 아군으로 삼는 장기 투자입니다. 1."
+  },
+  {
+   "shot": 26,
+   "section": "결국 단타를 멈춘 이유: 깨달음과 변화",
+   "start_hint_s": 390.0,
+   "duration_s": 16.9,
+   "broll_ko": "어지러웠던 책상이 깔끔하게 정리되는 모습",
+   "prompt_en": "어지러웠던 책상이 깔끔하게 정리되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "저 역시 수개월의 단타 경험을 통해 큰 깨달음을 얻었습니다. 첫째, 직장인에게 시간은 곧 돈이며, 단타는 그 시간을 너무 비효율적으로 소모한다는"
+  },
+  {
+   "shot": 27,
+   "section": "결국 단타를 멈춘 이유: 깨달음과 변화",
+   "start_hint_s": 406.9,
+   "duration_s": 16.9,
+   "broll_ko": "평온한 표정으로 창밖을 바라보는 사람의 뒷모습",
+   "prompt_en": "평온한 표정으로 창밖을 바라보는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "저 역시 수개월의 단타 경험을 통해 큰 깨달음을 얻었습니다. 첫째, 직장인에게 시간은 곧 돈이며, 단타는 그 시간을 너무 비효율적으로 소모한다는"
+  },
+  {
+   "shot": 28,
+   "section": "결국 단타를 멈춘 이유: 깨달음과 변화",
+   "start_hint_s": 423.8,
+   "duration_s": 16.9,
+   "broll_ko": "두꺼운 책(재테크 관련)을 펼쳐보는 모습",
+   "prompt_en": "두꺼운 책(재테크 관련)을 펼쳐보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "저 역시 수개월의 단타 경험을 통해 큰 깨달음을 얻었습니다. 첫째, 직장인에게 시간은 곧 돈이며, 단타는 그 시간을 너무 비효율적으로 소모한다는"
+  },
+  {
+   "shot": 29,
+   "section": "당신의 소중한 자산을 지키는 길",
+   "start_hint_s": 440.0,
+   "duration_s": 12.6,
+   "broll_ko": "아침 햇살이 창문으로 들어오는 평화로운 방",
+   "prompt_en": "아침 햇살이 창문으로 들어오는 평화로운 방 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유를 꿈꾸는 것은 모든 직장인의 바람일 것입니다. 하지만 그 길은 단타와 같은 지름길이 아니라, 꾸준함과 인내, 그리고 현명한 판단으로"
+  },
+  {
+   "shot": 30,
+   "section": "당신의 소중한 자산을 지키는 길",
+   "start_hint_s": 452.6,
+   "duration_s": 12.6,
+   "broll_ko": "푸른 초원 위를 천천히 걸어가는 사람의 뒷모습",
+   "prompt_en": "푸른 초원 위를 천천히 걸어가는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유를 꿈꾸는 것은 모든 직장인의 바람일 것입니다. 하지만 그 길은 단타와 같은 지름길이 아니라, 꾸준함과 인내, 그리고 현명한 판단으로"
+  },
+  {
+   "shot": 31,
+   "section": "당신의 소중한 자산을 지키는 길",
+   "start_hint_s": 465.2,
+   "duration_s": 12.6,
+   "broll_ko": "쌓여있는 동전과 그 위에 작은 새싹이 돋아나는 모습",
+   "prompt_en": "쌓여있는 동전과 그 위에 작은 새싹이 돋아나는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유를 꿈꾸는 것은 모든 직장인의 바람일 것입니다. 하지만 그 길은 단타와 같은 지름길이 아니라, 꾸준함과 인내, 그리고 현명한 판단으로"
+  }
+ ]
+}
