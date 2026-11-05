@@ -93,9 +93,9 @@ def gemini_fit(con, today: str, videos: list[dict]) -> int:
         prompt = FIT_PROMPT.format(bibles=bibles, title=v["title"], channel=v.get("channel_title") or "",
                                    tags=", ".join(json.loads(v.get("tags") or "[]")[:10]), dur=v.get("duration_s") or 0,
                                    fmt="쇼츠" if v.get("is_short") else "롱폼")
-        _log(con, today, "gemini")
         try:
             d = gemini_json(prompt, temperature=0.2)
+            _log(con, today, "gemini")          # 성공한 호출만 하루 상한에 계산
             d["fit"] = max(0, min(20, int(d.get("fit", 0))))
             if d.get("group") not in load_bibles():
                 d["group"] = None
