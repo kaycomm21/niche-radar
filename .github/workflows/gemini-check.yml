@@ -1,0 +1,18 @@
+name: gemini-check
+# GEMINI_API_KEY 진단: 모델 목록 조회 + 짧은 생성 1회 (키 값은 출력하지 않음)
+on: workflow_dispatch
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 진단
+        env:
+          K: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          echo "키 길이: ${#K}, 접두어: ${K:0:4}…"
+          for m in gemini-2.5-flash gemini-2.0-flash gemini-2.5-flash-lite; do
+            code=$(curl -s -o r.json -w '%{http_code}' -H 'Content-Type: application/json' \
+              "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent?key=$K" \
+              -d '{"contents":[{"parts":[{"text":"안녕이라고만 답해"}]}]}')
+            echo "== $m → HTTP $code"; python3 -c "import json;d=json.load(open('r.json'));print(json.dumps(d.get('error',{}),ensure_ascii=False)[:500] if 'error' in d else d['candidates'][0]['content']['parts'][0]['text'])"
+          done

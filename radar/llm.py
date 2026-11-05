@@ -25,5 +25,10 @@ def gemini_json(prompt: str, temperature: float = 0.6, timeout: int = 120) -> di
         with urllib.request.urlopen(req, timeout=timeout) as r:
             d = json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"Gemini HTTP {e.code}") from None
+        try:   # 구글 오류 메시지(키 미포함)를 그대로 보여 준다
+            err = json.loads(e.read().decode())["error"]
+            msg = f"{err.get('status', '')} {err.get('message', '')[:300]}"
+        except Exception:  # noqa: BLE001
+            msg = ""
+        raise RuntimeError(f"Gemini HTTP {e.code} {msg}") from None
     return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])

@@ -46,7 +46,12 @@ def _post(url: str, body: dict, headers: dict | None = None, timeout: int = 60) 
         with urllib.request.urlopen(req, timeout=timeout) as r:
             return json.loads(r.read().decode())
     except urllib.error.HTTPError as e:
-        raise RuntimeError(f"HTTP {e.code}") from None      # URL(키 포함) 노출 금지
+        try:
+            err = json.loads(e.read().decode())["error"]
+            msg = f"{err.get('status', '')} {err.get('message', '')[:300]}"
+        except Exception:  # noqa: BLE001
+            msg = ""
+        raise RuntimeError(f"HTTP {e.code} {msg}") from None      # URL(키 포함) 노출 금지
 
 
 def _get(url: str, headers: dict, timeout: int = 30) -> dict:
@@ -98,8 +103,10 @@ def gemini_fit(con, today: str, videos: list[dict]) -> int:
             d["fit"] = max(0, min(20, int(d.get("fit", 0))))
             if d.get("group") not in load_bibles():
                 d["group"] = None
-        except Exception as e:  # noqa: BLE001 — 한 건 실패로 전체를 멈추지 않음
+        except Exception as e:  # noqa: BLE001
             print(f"  gemini 실패 {v['video_id']}: {e}")
+            if "HTTP 4" in str(e):     # 인증·결제·쿼터 오류는 반복 호출해도 같음 → 즉시 중단
+                break
             continue
         con.execute("INSERT OR REPLACE INTO ai_teardown(video_id, model, created_at, json) VALUES (?,?,?,?)",
                     (v["video_id"], model, datetime.now(timezone.utc).isoformat(timespec="seconds"), json.dumps(d, ensure_ascii=False)))
