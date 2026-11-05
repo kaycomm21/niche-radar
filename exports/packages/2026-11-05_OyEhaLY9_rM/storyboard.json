@@ -1,0 +1,298 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 350,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "왜 지금 지역 기반 플랫폼 부업인가?",
+   "start_hint_s": 0.0,
+   "duration_s": 12.4,
+   "broll_ko": "스마트폰 화면에 지역 기반 서비스 앱 아이콘들이 보이는 모습 (특정 로고는 가림)",
+   "prompt_en": "스마트폰 화면에 지역 기반 서비스 앱 아이콘들이 보이는 모습 (특정 로고는 가림) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대 여러분, 은퇴 준비나 추가 수입을 찾고 계신가요? 이제 부업은 육체노동만이 아닙니다. '지역 기반 플랫폼'이 새로운 기회를 제공합니"
+  },
+  {
+   "shot": 2,
+   "section": "왜 지금 지역 기반 플랫폼 부업인가?",
+   "start_hint_s": 12.4,
+   "duration_s": 12.4,
+   "broll_ko": "분주한 도시 풍경과 한적한 동네 골목길이 교차하는 모습",
+   "prompt_en": "분주한 도시 풍경과 한적한 동네 골목길이 교차하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대 여러분, 은퇴 준비나 추가 수입을 찾고 계신가요? 이제 부업은 육체노동만이 아닙니다. '지역 기반 플랫폼'이 새로운 기회를 제공합니"
+  },
+  {
+   "shot": 3,
+   "section": "왜 지금 지역 기반 플랫폼 부업인가?",
+   "start_hint_s": 24.7,
+   "duration_s": 12.4,
+   "broll_ko": "커피를 마시며 노트북으로 무언가를 검색하는 중년 남녀의 손",
+   "prompt_en": "커피를 마시며 노트북으로 무언가를 검색하는 중년 남녀의 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대 여러분, 은퇴 준비나 추가 수입을 찾고 계신가요? 이제 부업은 육체노동만이 아닙니다. '지역 기반 플랫폼'이 새로운 기회를 제공합니"
+  },
+  {
+   "shot": 4,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 37.0,
+   "duration_s": 5.7,
+   "broll_ko": "빈 노트에 펜으로 '나의 재능'",
+   "prompt_en": "빈 노트에 펜으로 '나의 재능' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 5,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 42.7,
+   "duration_s": 5.7,
+   "broll_ko": "'할 수 있는 일' 등을 적어보는 손",
+   "prompt_en": "'할 수 있는 일' 등을 적어보는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 6,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 48.3,
+   "duration_s": 5.7,
+   "broll_ko": "뜨개질",
+   "prompt_en": "뜨개질 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 7,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 54.0,
+   "duration_s": 5.7,
+   "broll_ko": "그림 그리기",
+   "prompt_en": "그림 그리기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 8,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 59.7,
+   "duration_s": 5.7,
+   "broll_ko": "악기 연주 등 다양한 취미 활동을 하는 사람들의 손 클로즈업",
+   "prompt_en": "악기 연주 등 다양한 취미 활동을 하는 사람들의 손 클로즈업 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 9,
+   "section": "당신의 숨겨진 재능과 시간을 찾아라",
+   "start_hint_s": 65.3,
+   "duration_s": 5.7,
+   "broll_ko": "컴퓨터 화면에 엑셀 파일이나 마인드맵 프로그램으로 아이디어를 정리하는 모습",
+   "prompt_en": "컴퓨터 화면에 엑셀 파일이나 마인드맵 프로그램으로 아이디어를 정리하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 전, '자기 분석'이 필수입니다. '무엇을 잘하고 즐기는가?', '남들은 나에게 어떤 도움을 요청하는가?' 이 두 질문을 던져보세요."
+  },
+  {
+   "shot": 10,
+   "section": "지역 기반 플랫폼, 어떻게 활용할 것인가?",
+   "start_hint_s": 71.0,
+   "duration_s": 13.8,
+   "broll_ko": "스마트폰에서 지역 설정 화면을 보여주는 모습",
+   "prompt_en": "스마트폰에서 지역 설정 화면을 보여주는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지역 기반 플랫폼의 핵심은 '신뢰'입니다. 개인 간 거래이므로 신뢰를 쌓는 것이 성공의 열쇠죠. 첫째, 프로필을 성의 있게 작성해 전문성과 친근"
+  },
+  {
+   "shot": 11,
+   "section": "지역 기반 플랫폼, 어떻게 활용할 것인가?",
+   "start_hint_s": 84.8,
+   "duration_s": 13.8,
+   "broll_ko": "글쓰기 앱에서 게시글을 작성하는 손 (특정 플랫폼 UI는 가림)",
+   "prompt_en": "글쓰기 앱에서 게시글을 작성하는 손 (특정 플랫폼 UI는 가림) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지역 기반 플랫폼의 핵심은 '신뢰'입니다. 개인 간 거래이므로 신뢰를 쌓는 것이 성공의 열쇠죠. 첫째, 프로필을 성의 있게 작성해 전문성과 친근"
+  },
+  {
+   "shot": 12,
+   "section": "지역 기반 플랫폼, 어떻게 활용할 것인가?",
+   "start_hint_s": 98.6,
+   "duration_s": 13.8,
+   "broll_ko": "프로필 사진 대신 깔끔한 아이콘이나 캐릭터 이미지를 사용하는 모습",
+   "prompt_en": "프로필 사진 대신 깔끔한 아이콘이나 캐릭터 이미지를 사용하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지역 기반 플랫폼의 핵심은 '신뢰'입니다. 개인 간 거래이므로 신뢰를 쌓는 것이 성공의 열쇠죠. 첫째, 프로필을 성의 있게 작성해 전문성과 친근"
+  },
+  {
+   "shot": 13,
+   "section": "성공적인 부업 아이디어 3가지",
+   "start_hint_s": 112.0,
+   "duration_s": 11.9,
+   "broll_ko": "간단한 집안일을 돕는 손 (예: 전구 교체",
+   "prompt_en": "간단한 집안일을 돕는 손 (예: 전구 교체 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리 시청자분들이 쉽게 접근할 수 있는 부업 아이디어 세 가지입니다. 첫째, 생활 밀착형 서비스: 짐 나르기, 가구 조립, 전등 교체 등 이웃의"
+  },
+  {
+   "shot": 14,
+   "section": "성공적인 부업 아이디어 3가지",
+   "start_hint_s": 123.9,
+   "duration_s": 11.9,
+   "broll_ko": "못 박기)",
+   "prompt_en": "못 박기) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리 시청자분들이 쉽게 접근할 수 있는 부업 아이디어 세 가지입니다. 첫째, 생활 밀착형 서비스: 짐 나르기, 가구 조립, 전등 교체 등 이웃의"
+  },
+  {
+   "shot": 15,
+   "section": "성공적인 부업 아이디어 3가지",
+   "start_hint_s": 135.7,
+   "duration_s": 11.9,
+   "broll_ko": "반려동물과 산책하는 모습 (얼굴 없이)",
+   "prompt_en": "반려동물과 산책하는 모습 (얼굴 없이) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리 시청자분들이 쉽게 접근할 수 있는 부업 아이디어 세 가지입니다. 첫째, 생활 밀착형 서비스: 짐 나르기, 가구 조립, 전등 교체 등 이웃의"
+  },
+  {
+   "shot": 16,
+   "section": "성공적인 부업 아이디어 3가지",
+   "start_hint_s": 147.6,
+   "duration_s": 11.9,
+   "broll_ko": "정성스럽게 포장된 수제 먹거리가 테이블에 놓여 있는 모습",
+   "prompt_en": "정성스럽게 포장된 수제 먹거리가 테이블에 놓여 있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리 시청자분들이 쉽게 접근할 수 있는 부업 아이디어 세 가지입니다. 첫째, 생활 밀착형 서비스: 짐 나르기, 가구 조립, 전등 교체 등 이웃의"
+  },
+  {
+   "shot": 17,
+   "section": "가격 책정 노하우",
+   "start_hint_s": 161.0,
+   "duration_s": 13.5,
+   "broll_ko": "계산기를 두드리며 원가와 인건비를 계산하는 모습",
+   "prompt_en": "계산기를 두드리며 원가와 인건비를 계산하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업의 가격 책정, 고민되시죠? 너무 비싸면 고객이 없고, 너무 싸면 내 가치를 잃습니다. 합리적인 가격 책정 노하우를 알려드립니다. 먼저, 원"
+  },
+  {
+   "shot": 18,
+   "section": "가격 책정 노하우",
+   "start_hint_s": 174.5,
+   "duration_s": 13.5,
+   "broll_ko": "경쟁 업체 서비스 가격을 비교하는 스마트폰 화면",
+   "prompt_en": "경쟁 업체 서비스 가격을 비교하는 스마트폰 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업의 가격 책정, 고민되시죠? 너무 비싸면 고객이 없고, 너무 싸면 내 가치를 잃습니다. 합리적인 가격 책정 노하우를 알려드립니다. 먼저, 원"
+  },
+  {
+   "shot": 19,
+   "section": "가격 책정 노하우",
+   "start_hint_s": 187.9,
+   "duration_s": 13.5,
+   "broll_ko": "손으로 쓴 작은 안내문이나 명함에 가격이 명시된 모습",
+   "prompt_en": "손으로 쓴 작은 안내문이나 명함에 가격이 명시된 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업의 가격 책정, 고민되시죠? 너무 비싸면 고객이 없고, 너무 싸면 내 가치를 잃습니다. 합리적인 가격 책정 노하우를 알려드립니다. 먼저, 원"
+  },
+  {
+   "shot": 20,
+   "section": "효과적인 마케팅 전략",
+   "start_hint_s": 201.0,
+   "duration_s": 14.1,
+   "broll_ko": "스마트폰으로 간단한 홍보 이미지를 만드는 모습",
+   "prompt_en": "스마트폰으로 간단한 홍보 이미지를 만드는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "거창한 마케팅 없이도 효과적으로 고객을 유치할 수 있습니다. 가장 강력한 마케팅은 바로 '입소문'입니다. 만족한 고객의 추천만큼 강력한 홍보는 "
+  },
+  {
+   "shot": 21,
+   "section": "효과적인 마케팅 전략",
+   "start_hint_s": 215.1,
+   "duration_s": 14.1,
+   "broll_ko": "고객과 메시지를 주고받으며 소통하는 스마트폰 화면",
+   "prompt_en": "고객과 메시지를 주고받으며 소통하는 스마트폰 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "거창한 마케팅 없이도 효과적으로 고객을 유치할 수 있습니다. 가장 강력한 마케팅은 바로 '입소문'입니다. 만족한 고객의 추천만큼 강력한 홍보는 "
+  },
+  {
+   "shot": 22,
+   "section": "효과적인 마케팅 전략",
+   "start_hint_s": 229.2,
+   "duration_s": 14.1,
+   "broll_ko": "작은 선물이나 감사 메시지 카드를 준비하는 손",
+   "prompt_en": "작은 선물이나 감사 메시지 카드를 준비하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "거창한 마케팅 없이도 효과적으로 고객을 유치할 수 있습니다. 가장 강력한 마케팅은 바로 '입소문'입니다. 만족한 고객의 추천만큼 강력한 홍보는 "
+  },
+  {
+   "shot": 23,
+   "section": "지속 가능한 성장을 위한 관리 팁",
+   "start_hint_s": 243.0,
+   "duration_s": 12.8,
+   "broll_ko": "달력에 스케줄을 꼼꼼히 기록하는 손",
+   "prompt_en": "달력에 스케줄을 꼼꼼히 기록하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업은 단거리 경주가 아닌 마라톤입니다. 지속 가능한 성장을 위해 체계적인 관리가 필수입니다. 첫째, 시간 관리입니다. 본업과 부업의 균형을 맞"
+  },
+  {
+   "shot": 24,
+   "section": "지속 가능한 성장을 위한 관리 팁",
+   "start_hint_s": 255.8,
+   "duration_s": 12.8,
+   "broll_ko": "깔끔하게 정리된 작업 공간 (작은 공구함",
+   "prompt_en": "깔끔하게 정리된 작업 공간 (작은 공구함 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업은 단거리 경주가 아닌 마라톤입니다. 지속 가능한 성장을 위해 체계적인 관리가 필수입니다. 첫째, 시간 관리입니다. 본업과 부업의 균형을 맞"
+  },
+  {
+   "shot": 25,
+   "section": "지속 가능한 성장을 위한 관리 팁",
+   "start_hint_s": 268.6,
+   "duration_s": 12.8,
+   "broll_ko": "재료 등)",
+   "prompt_en": "재료 등) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업은 단거리 경주가 아닌 마라톤입니다. 지속 가능한 성장을 위해 체계적인 관리가 필수입니다. 첫째, 시간 관리입니다. 본업과 부업의 균형을 맞"
+  },
+  {
+   "shot": 26,
+   "section": "지속 가능한 성장을 위한 관리 팁",
+   "start_hint_s": 281.5,
+   "duration_s": 12.8,
+   "broll_ko": "고객과의 메시지 기록을 확인하는 스마트폰 화면",
+   "prompt_en": "고객과의 메시지 기록을 확인하는 스마트폰 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업은 단거리 경주가 아닌 마라톤입니다. 지속 가능한 성장을 위해 체계적인 관리가 필수입니다. 첫째, 시간 관리입니다. 본업과 부업의 균형을 맞"
+  },
+  {
+   "shot": 27,
+   "section": "주의할 점과 세금 문제",
+   "start_hint_s": 296.0,
+   "duration_s": 18.7,
+   "broll_ko": "확대된 세금 관련 서류 (개인 정보는 가림)",
+   "prompt_en": "확대된 세금 관련 서류 (개인 정보는 가림) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 시 주의할 점들이 있습니다. 특히 법적 문제나 세금은 미리 확인하세요. 첫째, 소득 신고 및 사업자등록 여부입니다. 부업 수입도 일정"
+  },
+  {
+   "shot": 28,
+   "section": "주의할 점과 세금 문제",
+   "start_hint_s": 314.7,
+   "duration_s": 18.7,
+   "broll_ko": "계약서 또는 약관을 읽는 모습 (중요 부분에 밑줄)",
+   "prompt_en": "계약서 또는 약관을 읽는 모습 (중요 부분에 밑줄) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 시 주의할 점들이 있습니다. 특히 법적 문제나 세금은 미리 확인하세요. 첫째, 소득 신고 및 사업자등록 여부입니다. 부업 수입도 일정"
+  },
+  {
+   "shot": 29,
+   "section": "주의할 점과 세금 문제",
+   "start_hint_s": 333.5,
+   "duration_s": 18.7,
+   "broll_ko": "신분증이나 사업자등록증 관련 이미지를 흐리게 보여주는 모습",
+   "prompt_en": "신분증이나 사업자등록증 관련 이미지를 흐리게 보여주는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부업 시작 시 주의할 점들이 있습니다. 특히 법적 문제나 세금은 미리 확인하세요. 첫째, 소득 신고 및 사업자등록 여부입니다. 부업 수입도 일정"
+  }
+ ]
+}

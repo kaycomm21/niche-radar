@@ -1,0 +1,368 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 556,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "인트로 - 비행기 비밀 침실과 '돈'의 연결고리",
+   "start_hint_s": 0.0,
+   "duration_s": 17.6,
+   "broll_ko": "구름 위를 나는 비행기 외부 전경 (평화로운 느낌)",
+   "prompt_en": "구름 위를 나는 비행기 외부 전경 (평화로운 느낌) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 비행기 안에 승무원들만 아는 비밀 공간, 즉 '숨겨진 침실'이 있다는 사실을 알고 계셨나요? 겉으로는 평범한 비행기지만, 그 안에는 승"
+  },
+  {
+   "shot": 2,
+   "section": "인트로 - 비행기 비밀 침실과 '돈'의 연결고리",
+   "start_hint_s": 17.6,
+   "duration_s": 17.6,
+   "broll_ko": "비행기 내부 복도",
+   "prompt_en": "비행기 내부 복도 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 비행기 안에 승무원들만 아는 비밀 공간, 즉 '숨겨진 침실'이 있다는 사실을 알고 계셨나요? 겉으로는 평범한 비행기지만, 그 안에는 승"
+  },
+  {
+   "shot": 3,
+   "section": "인트로 - 비행기 비밀 침실과 '돈'의 연결고리",
+   "start_hint_s": 35.2,
+   "duration_s": 17.6,
+   "broll_ko": "승객들이 모르는 곳에 숨겨진 문 (상상력을 자극하는 연출)",
+   "prompt_en": "승객들이 모르는 곳에 숨겨진 문 (상상력을 자극하는 연출) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 비행기 안에 승무원들만 아는 비밀 공간, 즉 '숨겨진 침실'이 있다는 사실을 알고 계셨나요? 겉으로는 평범한 비행기지만, 그 안에는 승"
+  },
+  {
+   "shot": 4,
+   "section": "인트로 - 비행기 비밀 침실과 '돈'의 연결고리",
+   "start_hint_s": 52.8,
+   "duration_s": 17.6,
+   "broll_ko": "조용한 서재나 금고 문이 열리는 듯한 연출 (메타포)",
+   "prompt_en": "조용한 서재나 금고 문이 열리는 듯한 연출 (메타포) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 비행기 안에 승무원들만 아는 비밀 공간, 즉 '숨겨진 침실'이 있다는 사실을 알고 계셨나요? 겉으로는 평범한 비행기지만, 그 안에는 승"
+  },
+  {
+   "shot": 5,
+   "section": "첫 번째 비밀 공간: '집'이 주는 예상치 못한 기회",
+   "start_hint_s": 70.0,
+   "duration_s": 14.3,
+   "broll_ko": "평화로운 주택가 전경",
+   "prompt_en": "평화로운 주택가 전경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 먼저 살펴볼 '숨겨진 돈의 공간'은 바로 여러분의 '집'입니다. 집은 단순히 거주하는 공간을 넘어, 잠재적인 경제적 가치를 품고 있는 중요"
+  },
+  {
+   "shot": 6,
+   "section": "첫 번째 비밀 공간: '집'이 주는 예상치 못한 기회",
+   "start_hint_s": 84.3,
+   "duration_s": 14.3,
+   "broll_ko": "햇살이 비치는 거실 창문",
+   "prompt_en": "햇살이 비치는 거실 창문 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 먼저 살펴볼 '숨겨진 돈의 공간'은 바로 여러분의 '집'입니다. 집은 단순히 거주하는 공간을 넘어, 잠재적인 경제적 가치를 품고 있는 중요"
+  },
+  {
+   "shot": 7,
+   "section": "첫 번째 비밀 공간: '집'이 주는 예상치 못한 기회",
+   "start_hint_s": 98.6,
+   "duration_s": 14.3,
+   "broll_ko": "깔끔하게 정돈된 빈 방",
+   "prompt_en": "깔끔하게 정돈된 빈 방 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 먼저 살펴볼 '숨겨진 돈의 공간'은 바로 여러분의 '집'입니다. 집은 단순히 거주하는 공간을 넘어, 잠재적인 경제적 가치를 품고 있는 중요"
+  },
+  {
+   "shot": 8,
+   "section": "첫 번째 비밀 공간: '집'이 주는 예상치 못한 기회",
+   "start_hint_s": 112.9,
+   "duration_s": 14.3,
+   "broll_ko": "게스트룸으로 활용 가능한 모습",
+   "prompt_en": "게스트룸으로 활용 가능한 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 먼저 살펴볼 '숨겨진 돈의 공간'은 바로 여러분의 '집'입니다. 집은 단순히 거주하는 공간을 넘어, 잠재적인 경제적 가치를 품고 있는 중요"
+  },
+  {
+   "shot": 9,
+   "section": "첫 번째 비밀 공간: '집'이 주는 예상치 못한 기회",
+   "start_hint_s": 127.2,
+   "duration_s": 14.3,
+   "broll_ko": "주택연금 관련 서류나 안내 책자를 들여다보는 손 (얼굴 없음)",
+   "prompt_en": "주택연금 관련 서류나 안내 책자를 들여다보는 손 (얼굴 없음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 먼저 살펴볼 '숨겨진 돈의 공간'은 바로 여러분의 '집'입니다. 집은 단순히 거주하는 공간을 넘어, 잠재적인 경제적 가치를 품고 있는 중요"
+  },
+  {
+   "shot": 10,
+   "section": "두 번째 비밀 공간: '자동차'의 숨겨진 가치",
+   "start_hint_s": 141.0,
+   "duration_s": 13.0,
+   "broll_ko": "잘 세차된 자동차가 주차장에 서 있는 모습",
+   "prompt_en": "잘 세차된 자동차가 주차장에 서 있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음은 우리의 발이 되어주는 '자동차'입니다. 출퇴근 외에는 대부분 주차장에 서 있는 시간이 길지 않으신가요? 이 유휴 시간을 활용해 추가 수입"
+  },
+  {
+   "shot": 11,
+   "section": "두 번째 비밀 공간: '자동차'의 숨겨진 가치",
+   "start_hint_s": 154.0,
+   "duration_s": 13.0,
+   "broll_ko": "카셰어링 앱 화면",
+   "prompt_en": "카셰어링 앱 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음은 우리의 발이 되어주는 '자동차'입니다. 출퇴근 외에는 대부분 주차장에 서 있는 시간이 길지 않으신가요? 이 유휴 시간을 활용해 추가 수입"
+  },
+  {
+   "shot": 12,
+   "section": "두 번째 비밀 공간: '자동차'의 숨겨진 가치",
+   "start_hint_s": 167.0,
+   "duration_s": 13.0,
+   "broll_ko": "차량 예약 목록 (로고 없이)",
+   "prompt_en": "차량 예약 목록 (로고 없이) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음은 우리의 발이 되어주는 '자동차'입니다. 출퇴근 외에는 대부분 주차장에 서 있는 시간이 길지 않으신가요? 이 유휴 시간을 활용해 추가 수입"
+  },
+  {
+   "shot": 13,
+   "section": "두 번째 비밀 공간: '자동차'의 숨겨진 가치",
+   "start_hint_s": 179.9,
+   "duration_s": 13.0,
+   "broll_ko": "배달 앱을 통해 음식을 픽업하는 모습 (얼굴 없음",
+   "prompt_en": "배달 앱을 통해 음식을 픽업하는 모습 (얼굴 없음 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음은 우리의 발이 되어주는 '자동차'입니다. 출퇴근 외에는 대부분 주차장에 서 있는 시간이 길지 않으신가요? 이 유휴 시간을 활용해 추가 수입"
+  },
+  {
+   "shot": 14,
+   "section": "두 번째 비밀 공간: '자동차'의 숨겨진 가치",
+   "start_hint_s": 192.9,
+   "duration_s": 13.0,
+   "broll_ko": "손만)",
+   "prompt_en": "손만) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "다음은 우리의 발이 되어주는 '자동차'입니다. 출퇴근 외에는 대부분 주차장에 서 있는 시간이 길지 않으신가요? 이 유휴 시간을 활용해 추가 수입"
+  },
+  {
+   "shot": 15,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 205.0,
+   "duration_s": 12.2,
+   "broll_ko": "노트북 앞에서 집중하는 사람의 손",
+   "prompt_en": "노트북 앞에서 집중하는 사람의 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 16,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 217.2,
+   "duration_s": 12.2,
+   "broll_ko": "키보드 타이핑",
+   "prompt_en": "키보드 타이핑 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 17,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 229.4,
+   "duration_s": 12.2,
+   "broll_ko": "온라인 강의 플랫폼 화면",
+   "prompt_en": "온라인 강의 플랫폼 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 18,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 241.5,
+   "duration_s": 12.2,
+   "broll_ko": "다양한 강좌 목록 (로고 없음)",
+   "prompt_en": "다양한 강좌 목록 (로고 없음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 19,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 253.7,
+   "duration_s": 12.2,
+   "broll_ko": "자신이 만든 작품 (수공예품",
+   "prompt_en": "자신이 만든 작품 (수공예품 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 20,
+   "section": "세 번째 비밀 공간: '나'에게 숨겨진 재능과 지식",
+   "start_hint_s": 265.9,
+   "duration_s": 12.2,
+   "broll_ko": "그림 등)을 촬영하는 모습",
+   "prompt_en": "그림 등)을 촬영하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 가진 가장 소중한 '숨겨진 돈의 공간'은 바로 '나 자신'입니다. 오랫동안 쌓아온 직무 경험, 취미로 갈고닦은 기술, 혹은 특정 분야에 "
+  },
+  {
+   "shot": 21,
+   "section": "네 번째 비밀 공간: '시간'을 돈으로 바꾸는 마법",
+   "start_hint_s": 278.0,
+   "duration_s": 21.6,
+   "broll_ko": "벽시계가 천천히 움직이는 모습",
+   "prompt_en": "벽시계가 천천히 움직이는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시간은 누구에게나 공평하게 주어지는 자산이지만, 어떻게 활용하느냐에 따라 그 가치는 천차만별입니다. 특히, 자투리 시간을 활용하여 '숨겨진 돈의"
+  },
+  {
+   "shot": 22,
+   "section": "네 번째 비밀 공간: '시간'을 돈으로 바꾸는 마법",
+   "start_hint_s": 299.6,
+   "duration_s": 21.6,
+   "broll_ko": "스마트폰으로 설문조사에 참여하는 손",
+   "prompt_en": "스마트폰으로 설문조사에 참여하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시간은 누구에게나 공평하게 주어지는 자산이지만, 어떻게 활용하느냐에 따라 그 가치는 천차만별입니다. 특히, 자투리 시간을 활용하여 '숨겨진 돈의"
+  },
+  {
+   "shot": 23,
+   "section": "네 번째 비밀 공간: '시간'을 돈으로 바꾸는 마법",
+   "start_hint_s": 321.3,
+   "duration_s": 21.6,
+   "broll_ko": "작은 부업 아이템(예: 수공예품 재료)을 정리하는 모습",
+   "prompt_en": "작은 부업 아이템(예: 수공예품 재료)을 정리하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "시간은 누구에게나 공평하게 주어지는 자산이지만, 어떻게 활용하느냐에 따라 그 가치는 천차만별입니다. 특히, 자투리 시간을 활용하여 '숨겨진 돈의"
+  },
+  {
+   "shot": 24,
+   "section": "다섯 번째 비밀 공간: 놓치기 쉬운 '세금 혜택'과 '정부 지원금'",
+   "start_hint_s": 342.0,
+   "duration_s": 18.8,
+   "broll_ko": "정부 기관 웹사이트 화면 (로고 없음",
+   "prompt_en": "정부 기관 웹사이트 화면 (로고 없음 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 많은 분들이 간과하기 쉬운 '숨겨진 돈의 공간'은 바로 '세금 혜택'과 '정부 지원금'입니다. 우리나라는 다양한 소득 공제, 세액 "
+  },
+  {
+   "shot": 25,
+   "section": "다섯 번째 비밀 공간: 놓치기 쉬운 '세금 혜택'과 '정부 지원금'",
+   "start_hint_s": 360.8,
+   "duration_s": 18.8,
+   "broll_ko": "일반적인 정보 페이지)",
+   "prompt_en": "일반적인 정보 페이지) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 많은 분들이 간과하기 쉬운 '숨겨진 돈의 공간'은 바로 '세금 혜택'과 '정부 지원금'입니다. 우리나라는 다양한 소득 공제, 세액 "
+  },
+  {
+   "shot": 26,
+   "section": "다섯 번째 비밀 공간: 놓치기 쉬운 '세금 혜택'과 '정부 지원금'",
+   "start_hint_s": 379.5,
+   "duration_s": 18.8,
+   "broll_ko": "세금 관련 서류나 공고문을 읽는 모습",
+   "prompt_en": "세금 관련 서류나 공고문을 읽는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 많은 분들이 간과하기 쉬운 '숨겨진 돈의 공간'은 바로 '세금 혜택'과 '정부 지원금'입니다. 우리나라는 다양한 소득 공제, 세액 "
+  },
+  {
+   "shot": 27,
+   "section": "다섯 번째 비밀 공간: 놓치기 쉬운 '세금 혜택'과 '정부 지원금'",
+   "start_hint_s": 398.3,
+   "duration_s": 18.8,
+   "broll_ko": "체크리스트에 항목을 체크하는 손",
+   "prompt_en": "체크리스트에 항목을 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "마지막으로, 많은 분들이 간과하기 쉬운 '숨겨진 돈의 공간'은 바로 '세금 혜택'과 '정부 지원금'입니다. 우리나라는 다양한 소득 공제, 세액 "
+  },
+  {
+   "shot": 28,
+   "section": "나만의 '숨겨진 돈' 공간을 찾는 체크리스트",
+   "start_hint_s": 417.0,
+   "duration_s": 16.3,
+   "broll_ko": "노트나 태블릿에 '체크리스트'를 작성하는 손",
+   "prompt_en": "노트나 태블릿에 '체크리스트'를 작성하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금까지 다양한 '숨겨진 돈의 공간'을 살펴보았습니다. 이제 여러분이 직접 자신만의 공간을 찾을 수 있도록 몇 가지 체크리스트를 제안합니다. 1"
+  },
+  {
+   "shot": 29,
+   "section": "나만의 '숨겨진 돈' 공간을 찾는 체크리스트",
+   "start_hint_s": 433.3,
+   "duration_s": 16.3,
+   "broll_ko": "화면에 나타나는 간단한 마인드맵 또는 브레인스토밍 이미지",
+   "prompt_en": "화면에 나타나는 간단한 마인드맵 또는 브레인스토밍 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금까지 다양한 '숨겨진 돈의 공간'을 살펴보았습니다. 이제 여러분이 직접 자신만의 공간을 찾을 수 있도록 몇 가지 체크리스트를 제안합니다. 1"
+  },
+  {
+   "shot": 30,
+   "section": "나만의 '숨겨진 돈' 공간을 찾는 체크리스트",
+   "start_hint_s": 449.7,
+   "duration_s": 16.3,
+   "broll_ko": "미래를 계획하는 듯한",
+   "prompt_en": "미래를 계획하는 듯한 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금까지 다양한 '숨겨진 돈의 공간'을 살펴보았습니다. 이제 여러분이 직접 자신만의 공간을 찾을 수 있도록 몇 가지 체크리스트를 제안합니다. 1"
+  },
+  {
+   "shot": 31,
+   "section": "나만의 '숨겨진 돈' 공간을 찾는 체크리스트",
+   "start_hint_s": 466.0,
+   "duration_s": 16.3,
+   "broll_ko": "희망찬 분위기의 풍경 (예: 해돋이",
+   "prompt_en": "희망찬 분위기의 풍경 (예: 해돋이 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금까지 다양한 '숨겨진 돈의 공간'을 살펴보았습니다. 이제 여러분이 직접 자신만의 공간을 찾을 수 있도록 몇 가지 체크리스트를 제안합니다. 1"
+  },
+  {
+   "shot": 32,
+   "section": "나만의 '숨겨진 돈' 공간을 찾는 체크리스트",
+   "start_hint_s": 482.3,
+   "duration_s": 16.3,
+   "broll_ko": "넓은 들판)",
+   "prompt_en": "넓은 들판) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "지금까지 다양한 '숨겨진 돈의 공간'을 살펴보았습니다. 이제 여러분이 직접 자신만의 공간을 찾을 수 있도록 몇 가지 체크리스트를 제안합니다. 1"
+  },
+  {
+   "shot": 33,
+   "section": "마무리 - 발견의 기쁨과 꾸준함의 가치",
+   "start_hint_s": 501.0,
+   "duration_s": 13.7,
+   "broll_ko": "잔잔한 호수에 비치는 햇살",
+   "prompt_en": "잔잔한 호수에 비치는 햇살 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행기의 비밀 침실처럼, 우리 주변에도 아직 발견되지 않은 경제적 잠재력이 무궁무진합니다. 이 영상에서 제시된 아이디어들은 단지 시작점일 뿐입니"
+  },
+  {
+   "shot": 34,
+   "section": "마무리 - 발견의 기쁨과 꾸준함의 가치",
+   "start_hint_s": 514.7,
+   "duration_s": 13.7,
+   "broll_ko": "평온하고 여유로운 분위기",
+   "prompt_en": "평온하고 여유로운 분위기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행기의 비밀 침실처럼, 우리 주변에도 아직 발견되지 않은 경제적 잠재력이 무궁무진합니다. 이 영상에서 제시된 아이디어들은 단지 시작점일 뿐입니"
+  },
+  {
+   "shot": 35,
+   "section": "마무리 - 발견의 기쁨과 꾸준함의 가치",
+   "start_hint_s": 528.4,
+   "duration_s": 13.7,
+   "broll_ko": "돈을 세는 듯한 손 (지폐가 아닌 동전이나 작은 단위의 돈)",
+   "prompt_en": "돈을 세는 듯한 손 (지폐가 아닌 동전이나 작은 단위의 돈) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행기의 비밀 침실처럼, 우리 주변에도 아직 발견되지 않은 경제적 잠재력이 무궁무진합니다. 이 영상에서 제시된 아이디어들은 단지 시작점일 뿐입니"
+  },
+  {
+   "shot": 36,
+   "section": "마무리 - 발견의 기쁨과 꾸준함의 가치",
+   "start_hint_s": 542.0,
+   "duration_s": 13.7,
+   "broll_ko": "'경제적 자유'라는 글자가 적힌 노트 (정갈한 글씨체)",
+   "prompt_en": "'경제적 자유'라는 글자가 적힌 노트 (정갈한 글씨체) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행기의 비밀 침실처럼, 우리 주변에도 아직 발견되지 않은 경제적 잠재력이 무궁무진합니다. 이 영상에서 제시된 아이디어들은 단지 시작점일 뿐입니"
+  }
+ ]
+}

@@ -1,0 +1,248 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 418,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "자동화 재테크, 왜 지금 주목해야 할까요?",
+   "start_hint_s": 0.0,
+   "duration_s": 17.3,
+   "broll_ko": "컴퓨터 화면에 주식 차트가 빠르게 스크롤되는 모습 (특정 종목명은 가려진 채)",
+   "prompt_en": "컴퓨터 화면에 주식 차트가 빠르게 스크롤되는 모습 (특정 종목명은 가려진 채) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "바쁜 일상 속에서 내 자산을 불리는 일은 쉽지 않습니다. 그래서 많은 분이 '자동화 재테크'에 관심을 가지죠. 내가 신경 쓰지 않아도 시스템이 "
+  },
+  {
+   "shot": 2,
+   "section": "자동화 재테크, 왜 지금 주목해야 할까요?",
+   "start_hint_s": 17.3,
+   "duration_s": 17.3,
+   "broll_ko": "바쁜 직장인이 출근길 지하철에서 스마트폰으로 금융 앱을 짧게 확인하는 모습",
+   "prompt_en": "바쁜 직장인이 출근길 지하철에서 스마트폰으로 금융 앱을 짧게 확인하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "바쁜 일상 속에서 내 자산을 불리는 일은 쉽지 않습니다. 그래서 많은 분이 '자동화 재테크'에 관심을 가지죠. 내가 신경 쓰지 않아도 시스템이 "
+  },
+  {
+   "shot": 3,
+   "section": "자동화 재테크, 왜 지금 주목해야 할까요?",
+   "start_hint_s": 34.5,
+   "duration_s": 17.3,
+   "broll_ko": "시계 초침이 빠르게 돌아가는 모습",
+   "prompt_en": "시계 초침이 빠르게 돌아가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "바쁜 일상 속에서 내 자산을 불리는 일은 쉽지 않습니다. 그래서 많은 분이 '자동화 재테크'에 관심을 가지죠. 내가 신경 쓰지 않아도 시스템이 "
+  },
+  {
+   "shot": 4,
+   "section": "첫 번째 선택지: 간편함의 유혹, '플랫폼 위임형' 자동화",
+   "start_hint_s": 51.0,
+   "duration_s": 13.0,
+   "broll_ko": "깔끔하고 직관적인 모바일 금융 앱 화면 (로고나 특정 정보는 블러 처리)",
+   "prompt_en": "깔끔하고 직관적인 모바일 금융 앱 화면 (로고나 특정 정보는 블러 처리) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 흔한 자동화 재테크는 '플랫폼 위임형'입니다. 로보 어드바이저나 간편 투자 앱이 대표적이죠. 몇 가지 질문에 답하면 플랫폼이 알아서 포트폴"
+  },
+  {
+   "shot": 5,
+   "section": "첫 번째 선택지: 간편함의 유혹, '플랫폼 위임형' 자동화",
+   "start_hint_s": 64.0,
+   "duration_s": 13.0,
+   "broll_ko": "로보 어드바이저 서비스 웹사이트의 '포트폴리오 추천' 화면",
+   "prompt_en": "로보 어드바이저 서비스 웹사이트의 '포트폴리오 추천' 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 흔한 자동화 재테크는 '플랫폼 위임형'입니다. 로보 어드바이저나 간편 투자 앱이 대표적이죠. 몇 가지 질문에 답하면 플랫폼이 알아서 포트폴"
+  },
+  {
+   "shot": 6,
+   "section": "첫 번째 선택지: 간편함의 유혹, '플랫폼 위임형' 자동화",
+   "start_hint_s": 77.1,
+   "duration_s": 13.0,
+   "broll_ko": "잔잔한 호수에 작은 배가 떠 있는 평화로운 풍경",
+   "prompt_en": "잔잔한 호수에 작은 배가 떠 있는 평화로운 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "가장 흔한 자동화 재테크는 '플랫폼 위임형'입니다. 로보 어드바이저나 간편 투자 앱이 대표적이죠. 몇 가지 질문에 답하면 플랫폼이 알아서 포트폴"
+  },
+  {
+   "shot": 7,
+   "section": "'플랫폼 위임형'의 그림자: 놓치고 있는 것은 없을까?",
+   "start_hint_s": 90.0,
+   "duration_s": 14.6,
+   "broll_ko": "복잡한 이용 약관이나 작은 글씨가 가득한 서류 이미지",
+   "prompt_en": "복잡한 이용 약관이나 작은 글씨가 가득한 서류 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '플랫폼 위임형'에도 그림자는 있습니다. 첫째, '수수료'입니다. 플랫폼은 자산 관리 대가로 수수료를 부과하며, 이는 장기적으로 수익률을"
+  },
+  {
+   "shot": 8,
+   "section": "'플랫폼 위임형'의 그림자: 놓치고 있는 것은 없을까?",
+   "start_hint_s": 104.6,
+   "duration_s": 14.6,
+   "broll_ko": "움직이는 톱니바퀴들이 서로 맞물려 돌아가는 모습",
+   "prompt_en": "움직이는 톱니바퀴들이 서로 맞물려 돌아가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '플랫폼 위임형'에도 그림자는 있습니다. 첫째, '수수료'입니다. 플랫폼은 자산 관리 대가로 수수료를 부과하며, 이는 장기적으로 수익률을"
+  },
+  {
+   "shot": 9,
+   "section": "'플랫폼 위임형'의 그림자: 놓치고 있는 것은 없을까?",
+   "start_hint_s": 119.2,
+   "duration_s": 14.6,
+   "broll_ko": "창밖을 응시하며 깊은 생각에 잠긴 사람의 뒷모습",
+   "prompt_en": "창밖을 응시하며 깊은 생각에 잠긴 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '플랫폼 위임형'에도 그림자는 있습니다. 첫째, '수수료'입니다. 플랫폼은 자산 관리 대가로 수수료를 부과하며, 이는 장기적으로 수익률을"
+  },
+  {
+   "shot": 10,
+   "section": "두 번째 선택지: 나만의 설계, '직접 제어형' 자동화",
+   "start_hint_s": 133.0,
+   "duration_s": 15.1,
+   "broll_ko": "엑셀 스프레드시트에 복잡한 수식과 그래프가 채워지는 모습",
+   "prompt_en": "엑셀 스프레드시트에 복잡한 수식과 그래프가 채워지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 방식은 '직접 제어형' 자동화입니다. 내가 직접 조종간을 잡고 항로를 설계하는 것과 같죠. 증권사 시스템, 개인 개발 로직, 엑셀 활용"
+  },
+  {
+   "shot": 11,
+   "section": "두 번째 선택지: 나만의 설계, '직접 제어형' 자동화",
+   "start_hint_s": 148.1,
+   "duration_s": 15.1,
+   "broll_ko": "여러 개의 모니터로 주식 시장 정보를 분석하는 듯한 장면 (얼굴은 보이지 않게)",
+   "prompt_en": "여러 개의 모니터로 주식 시장 정보를 분석하는 듯한 장면 (얼굴은 보이지 않게) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 방식은 '직접 제어형' 자동화입니다. 내가 직접 조종간을 잡고 항로를 설계하는 것과 같죠. 증권사 시스템, 개인 개발 로직, 엑셀 활용"
+  },
+  {
+   "shot": 12,
+   "section": "두 번째 선택지: 나만의 설계, '직접 제어형' 자동화",
+   "start_hint_s": 163.2,
+   "duration_s": 15.1,
+   "broll_ko": "레고 블록을 조립하여 복잡한 구조물을 만드는 손",
+   "prompt_en": "레고 블록을 조립하여 복잡한 구조물을 만드는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 번째 방식은 '직접 제어형' 자동화입니다. 내가 직접 조종간을 잡고 항로를 설계하는 것과 같죠. 증권사 시스템, 개인 개발 로직, 엑셀 활용"
+  },
+  {
+   "shot": 13,
+   "section": "'직접 제어형'의 현실적 난관: 누구에게나 쉬운 길은 아니다",
+   "start_hint_s": 178.0,
+   "duration_s": 15.4,
+   "broll_ko": "수많은 책과 복잡한 다이어그램이 펼쳐진 책상",
+   "prompt_en": "수많은 책과 복잡한 다이어그램이 펼쳐진 책상 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '직접 제어형'은 높은 진입 장벽을 가집니다. 첫째, '시간과 노력'이 많이 필요합니다. 전략 수립, 시스템 구축, 검증 및 개선에 상당"
+  },
+  {
+   "shot": 14,
+   "section": "'직접 제어형'의 현실적 난관: 누구에게나 쉬운 길은 아니다",
+   "start_hint_s": 193.4,
+   "duration_s": 15.4,
+   "broll_ko": "컴퓨터 화면에 오류 메시지가 뜨거나 복잡한 코드가 보이는 장면",
+   "prompt_en": "컴퓨터 화면에 오류 메시지가 뜨거나 복잡한 코드가 보이는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '직접 제어형'은 높은 진입 장벽을 가집니다. 첫째, '시간과 노력'이 많이 필요합니다. 전략 수립, 시스템 구축, 검증 및 개선에 상당"
+  },
+  {
+   "shot": 15,
+   "section": "'직접 제어형'의 현실적 난관: 누구에게나 쉬운 길은 아니다",
+   "start_hint_s": 208.8,
+   "duration_s": 15.4,
+   "broll_ko": "길고 험난한 산길을 홀로 걷는 사람의 뒷모습",
+   "prompt_en": "길고 험난한 산길을 홀로 걷는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "하지만 '직접 제어형'은 높은 진입 장벽을 가집니다. 첫째, '시간과 노력'이 많이 필요합니다. 전략 수립, 시스템 구축, 검증 및 개선에 상당"
+  },
+  {
+   "shot": 16,
+   "section": "나에게 맞는 자동화 방식은? 체크리스트로 알아보자",
+   "start_hint_s": 224.0,
+   "duration_s": 34.3,
+   "broll_ko": "체크리스트가 인쇄된 종이에 펜으로 체크하는 손",
+   "prompt_en": "체크리스트가 인쇄된 종이에 펜으로 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 여러분에게 더 적합한 자동화 방식은 무엇일까요? 다음 체크리스트를 통해 스스로 점검해보세요. [체크리스트] 1.  투자 경험과 지식: "
+  },
+  {
+   "shot": 17,
+   "section": "나에게 맞는 자동화 방식은? 체크리스트로 알아보자",
+   "start_hint_s": 258.3,
+   "duration_s": 34.3,
+   "broll_ko": "저울이 균형을 맞추는 모습",
+   "prompt_en": "저울이 균형을 맞추는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 여러분에게 더 적합한 자동화 방식은 무엇일까요? 다음 체크리스트를 통해 스스로 점검해보세요. [체크리스트] 1.  투자 경험과 지식: "
+  },
+  {
+   "shot": 18,
+   "section": "나에게 맞는 자동화 방식은? 체크리스트로 알아보자",
+   "start_hint_s": 292.6,
+   "duration_s": 34.3,
+   "broll_ko": "자신감 있는 표정으로 앞을 바라보는 사람 (얼굴은 클로즈업되지 않음)",
+   "prompt_en": "자신감 있는 표정으로 앞을 바라보는 사람 (얼굴은 클로즈업되지 않음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 여러분에게 더 적합한 자동화 방식은 무엇일까요? 다음 체크리스트를 통해 스스로 점검해보세요. [체크리스트] 1.  투자 경험과 지식: "
+  },
+  {
+   "shot": 19,
+   "section": "현명한 투자자의 선택: 하이브리드 전략과 주의할 점",
+   "start_hint_s": 332.0,
+   "duration_s": 14.2,
+   "broll_ko": "두 개의 길이 하나로 합쳐지는 도로 표지판",
+   "prompt_en": "두 개의 길이 하나로 합쳐지는 도로 표지판 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 방식을 섞어 쓰는 '하이브리드 전략'도 가능합니다. 핵심 자산은 플랫폼에 맡기고, 여유 자금은 직접 설계하는 식이죠. 중요한 건 어떤 방식을"
+  },
+  {
+   "shot": 20,
+   "section": "현명한 투자자의 선택: 하이브리드 전략과 주의할 점",
+   "start_hint_s": 346.2,
+   "duration_s": 14.2,
+   "broll_ko": "돋보기로 작은 글씨를 자세히 살펴보는 모습",
+   "prompt_en": "돋보기로 작은 글씨를 자세히 살펴보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 방식을 섞어 쓰는 '하이브리드 전략'도 가능합니다. 핵심 자산은 플랫폼에 맡기고, 여유 자금은 직접 설계하는 식이죠. 중요한 건 어떤 방식을"
+  },
+  {
+   "shot": 21,
+   "section": "현명한 투자자의 선택: 하이브리드 전략과 주의할 점",
+   "start_hint_s": 360.4,
+   "duration_s": 14.2,
+   "broll_ko": "여러 개의 자물쇠가 채워진 안전 금고",
+   "prompt_en": "여러 개의 자물쇠가 채워진 안전 금고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "두 방식을 섞어 쓰는 '하이브리드 전략'도 가능합니다. 핵심 자산은 플랫폼에 맡기고, 여유 자금은 직접 설계하는 식이죠. 중요한 건 어떤 방식을"
+  },
+  {
+   "shot": 22,
+   "section": "결론: 당신의 재테크, 당신의 주도권",
+   "start_hint_s": 374.0,
+   "duration_s": 15.5,
+   "broll_ko": "넓은 바다를 향해 배가 나아가는 모습",
+   "prompt_en": "넓은 바다를 향해 배가 나아가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자동화 재테크는 매력적이지만, 편리함 뒤에는 비용과 책임이 따릅니다. 광고에 현혹되기보다, 오늘 알아본 두 방식의 장단점을 이해하고 여러분의 목"
+  },
+  {
+   "shot": 23,
+   "section": "결론: 당신의 재테크, 당신의 주도권",
+   "start_hint_s": 389.5,
+   "duration_s": 15.5,
+   "broll_ko": "성장하는 나무의 싹",
+   "prompt_en": "성장하는 나무의 싹 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자동화 재테크는 매력적이지만, 편리함 뒤에는 비용과 책임이 따릅니다. 광고에 현혹되기보다, 오늘 알아본 두 방식의 장단점을 이해하고 여러분의 목"
+  },
+  {
+   "shot": 24,
+   "section": "결론: 당신의 재테크, 당신의 주도권",
+   "start_hint_s": 405.0,
+   "duration_s": 15.5,
+   "broll_ko": "미래를 내다보는 듯한 차분하고 자신감 있는 표정 (얼굴은 보이지 않음)",
+   "prompt_en": "미래를 내다보는 듯한 차분하고 자신감 있는 표정 (얼굴은 보이지 않음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자동화 재테크는 매력적이지만, 편리함 뒤에는 비용과 책임이 따릅니다. 광고에 현혹되기보다, 오늘 알아본 두 방식의 장단점을 이해하고 여러분의 목"
+  }
+ ]
+}
