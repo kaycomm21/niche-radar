@@ -9,7 +9,7 @@ from datetime import date
 from pathlib import Path
 
 from . import config
-from .llm import gemini_json
+from .llm import ai_json
 
 AGES = {"3-5": "만 3~5세(유아): 문장 짧게, 의성어·반복, 숫자는 5 이하", "6-7": "만 6~7세(예비 초등): 10 이하 숫자, 선택과 기다림",
         "8-10": "초등 저학년: 용돈·저축·필요와 욕구", "11-13": "초등 고학년: 이자·예산·광고 읽기·투자 기초"}
@@ -26,7 +26,7 @@ def run(body: str, number: str, out_root: Path | None = None) -> Path:
     m = re.search(r"```json\s*(\{.*?\})\s*```", body, re.S)
     cfg = json.loads(m.group(1)) if m else {}
     age = cfg.get("age", "3-5")
-    k = gemini_json(PROMPT.format(concept=cfg.get("concept", "저축"), age_desc=AGES.get(age, AGES["3-5"])), temperature=0.8)
+    k = ai_json(PROMPT.format(concept=cfg.get("concept", "저축"), age_desc=AGES.get(age, AGES["3-5"])), temperature=0.8, quality=True)
     slug = re.sub(r"[^\w-]", "", cfg.get("concept", "kids"))[:20] or "kids"
     d = (out_root or config.EXPORTS_DIR / "kids") / f"{date.today().isoformat()}_{slug}_{age}"
     d.mkdir(parents=True, exist_ok=True)

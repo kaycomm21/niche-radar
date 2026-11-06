@@ -8,18 +8,34 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: { python-version: "3.11" }
-      - run: pip install -q google-auth requests
+      - run: pip install -q google-auth requests "anthropic[vertex]>=1.7,<2"
       - name: Vertex AI (GCP 크레딧) 진단
         env:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
         run: |
           if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY 없음 — 건너뜀"; exit 0; fi
           GEMINI_API_KEY= python -c "from radar.llm import gemini_json; print('Vertex OK →', gemini_json('JSON으로 {\"ok\": true} 만 답해'))" || true
+      - name: Claude Opus (Vertex Model Garden) 진단
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          if [ -z "$GCP_SA_KEY" ]; then echo "GCP_SA_KEY 없음 — 건너뜀"; exit 0; fi
+          python - <<'EOF' || true
+          import os
+          from radar.llm import claude_json
+          for region in ("global", "us-east5"):
+              os.environ["CLAUDE_REGION"] = region
+              try:
+                  print(f"Claude OK ({region}) →", claude_json('JSON으로 {"ok": true} 만 답해', timeout=120))
+                  break
+              except Exception as e:
+                  print(f"Claude 실패 ({region}): {type(e).__name__} {getattr(e, 'status_code', '')} {str(e)[:300]}")
+          EOF
       - name: AI Studio 키 진단
         env:
           K: ${{ secrets.GEMINI_API_KEY }}
         run: |
-          echo "키 길이: ${#K}, 접두어: ${K:0:4}…"
+          echo "키 길이: ${#K}"
           for m in gemini-2.5-flash gemini-2.0-flash gemini-2.5-flash-lite; do
             code=$(curl -s -o r.json -w '%{http_code}' -H 'Content-Type: application/json' \
               "https://generativelanguage.googleapis.com/v1beta/models/$m:generateContent?key=$K" \

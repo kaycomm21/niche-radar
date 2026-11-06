@@ -33,7 +33,7 @@ def test_blog_issue_parse_render(tmp_path, monkeypatch):
     post = {"title": "T", "slug": "rate-up", "intro": "I", "tags": ["a b", "c"],
             "sections": [{"h2": "S1", "paragraphs": ["p"], "image_hint": "h1"}, {"h2": "S2", "paragraphs": ["q"]}],
             "checklist": ["x"], "faq": [{"q": "q", "a": "a"}], "outro": "O", "fact_checks": ["f"]}
-    monkeypatch.setattr(blog, "gemini_json", lambda *a, **k: post)
+    monkeypatch.setattr(blog, "ai_json", lambda *a, **k: dict(post))
     d = blog.run(BODY, "9", out_root=tmp_path)
     wp = (d / "wordpress.html").read_text(encoding="utf-8")
     assert wp.count("<figure>") == 2 and "youtube.com/embed/abcdefghijk" in wp and "sub_confirmation=1" in wp

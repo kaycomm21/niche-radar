@@ -174,13 +174,13 @@ JSON만: {{"one_line":"제안 한 줄 컨셉","situation":["과업 이해 포인
 
 
 def proposal(item: dict, out_root: Path | None = None) -> Path:
-    from .llm import available, gemini_json
+    from .llm import ai_json, available
     projects = load_projects()
     matches = [k for k in projects if k in (item.get("name") or "")] or list(projects)[:3]   # 공개 저장소 → 키워드만
     if available():
-        p = gemini_json(PROPOSAL_PROMPT.format(name=item.get("name"), org=item.get("org"), demand=item.get("demand"), budget=item.get("budget"),
-                                               method=item.get("method"), close=item.get("close"), matches="; ".join(matches)), temperature=0.7)
-        by = "Gemini"
+        p = ai_json(PROPOSAL_PROMPT.format(name=item.get("name"), org=item.get("org"), demand=item.get("demand"), budget=item.get("budget"),
+                                               method=item.get("method"), close=item.get("close"), matches="; ".join(matches)), temperature=0.7, quality=True)
+        by = p.pop("_model", "Gemini")
     else:
         p = {"one_line": f"{item.get('name')} — [컨셉 미정: AI 키 연결 후 자동 생성]", "situation": ["[과업지시서 확인] 행사 목적", "대상·규모", "장소·동선", "예산 구조", "평가 기준"],
              "concepts": [], "toc": ["Ⅰ. 제안 개요", "Ⅱ. 과업 이해 및 분석", "Ⅲ. 기본 컨셉", "Ⅳ. 세부 프로그램", "Ⅴ. 무대·연출 계획", "Ⅵ. 운영·안전 계획", "Ⅶ. 홍보 계획", "Ⅷ. 추진 일정", "Ⅸ. 예산 계획", "Ⅹ. 수행 조직 및 실적"],

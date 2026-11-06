@@ -11,7 +11,7 @@ from datetime import date
 from pathlib import Path
 
 from . import config
-from .llm import gemini_json
+from .llm import ai_json
 
 IMG = re.compile(r"!\[[^\]]*\]\((https?://[^)\s]+)\)|<img[^>]+src=\"(https?://[^\"]+)\"")
 YT = re.compile(r"(?:v=|youtu\.be/|shorts/|embed/)([\w-]{11})")
@@ -140,7 +140,8 @@ def review_md(post: dict, cfg: dict) -> str:
 
 def run(body: str, number: str, out_root: Path | None = None) -> Path:
     cfg = parse_issue(body)
-    post = gemini_json(make_prompt(cfg), temperature=0.8)
+    post = ai_json(make_prompt(cfg), temperature=0.8, quality=True)
+    post.pop("_model", None)
     wp, nv = render(post, cfg)
     slug = re.sub(r"[^a-z0-9-]", "", (post.get("slug") or "post").lower())[:50] or "post"
     d = (out_root or config.EXPORTS_DIR / "blog") / f"{date.today().isoformat()}_{slug}"

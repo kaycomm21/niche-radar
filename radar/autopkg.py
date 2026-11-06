@@ -10,7 +10,7 @@ from pathlib import Path
 
 from . import config
 from .ai import load_bibles
-from .llm import gemini_json
+from .llm import ai_json, gemini_json
 
 RECIPES = {"R1": "포맷 이식: 원본의 제목·전개 공식을 다른 주제에", "R2": "주제 이식: 같은 주제를 내 채널 포맷으로",
            "R3": "각도 반전: 반론·심화·후속", "R4": "시리즈화", "R5": "롱폼↔쇼츠", "R6": "해외→한국 로컬라이즈"}
@@ -48,8 +48,8 @@ def make_package(item: dict, video: dict | None, out_root: Path | None = None) -
     group = item.get("group") or "경제적자유구역"
     bibles = load_bibles()
     src = {"title": item.get("title"), "channel": item.get("channel"), "tags": ", ".join(json.loads((video or {}).get("tags") or "[]")[:10])}
-    pkg = gemini_json(PKG_PROMPT.format(group=group, recipe=RECIPES.get(item.get("recipe") or "R2", "R2"), bible=bibles.get(group, ""),
-                                        title=src["title"], channel=src["channel"], tags=src["tags"]), temperature=0.7)
+    pkg = ai_json(PKG_PROMPT.format(group=group, recipe=RECIPES.get(item.get("recipe") or "R2", "R2"), bible=bibles.get(group, ""),
+                                        title=src["title"], channel=src["channel"], tags=src["tags"]), temperature=0.7, quality=True)  # 대본 = 품질 우선 → Claude Opus
     slug = re.sub(r"[^\w-]", "", str(item["id"]))[:20]
     d = (out_root or config.EXPORTS_DIR / "packages") / f"{date.today().isoformat()}_{slug}"
     d.mkdir(parents=True, exist_ok=True)

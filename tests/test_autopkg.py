@@ -12,7 +12,7 @@ def test_autopackage_writes_full_package(tmp_env, monkeypatch):
     q = [{"id": "vid1", "title": "원본", "channel": "C", "group": "경제적자유구역", "recipe": "R2"}]
     (config.EXPORTS_DIR).mkdir(parents=True, exist_ok=True)
     (config.EXPORTS_DIR / "production_queue.json").write_text(json.dumps(q), encoding="utf-8")
-    monkeypatch.setattr(autopkg, "gemini_json", lambda *a, **k: PKG)
+    monkeypatch.setattr(autopkg, "ai_json", lambda *a, **k: dict(PKG))
     assert cli.main(["autopackage"]) == 0
     d = next((config.EXPORTS_DIR / "packages").iterdir())
     for f in ("script.md", "storyboard.json", "meta.json", "shorts.md", "factcheck.md", "titles.md", "source.json"):
