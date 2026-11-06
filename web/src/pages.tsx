@@ -26,11 +26,11 @@ export function Home() {
         <h2>🎯 오늘의 생산 큐 후보 <span className="muted small">{q.date}</span></h2>
         <p className="small muted">점수 상위 3건 (서로 다른 채널 그룹 우선). 🎬 Cue → GitHub 초록 Create → 1~2분 뒤 📦 생산 패키지 자동 생성. 7일 무응답 시 자동 보관. 'AI 대기' = 적합도 채점 전(매일 06:17 채점).</p>
         {q.top3.length === 0 && <div className="empty">오늘은 기준을 넘는 후보가 없습니다.</div>}
-        {q.top3.map((v, i) => <VideoCard key={v.id} v={v} detail rankBadge={<span className="badge">{i + 1}</span>} />)}
+        {q.top3.map((v, i) => <VideoCard key={v.id} v={v} detail bench={v.g ? q.bench?.[v.g] : undefined} rankBadge={<span className="badge">{i + 1}</span>} />)}
       </section>
       <section>
         <h2>🗂 판정 대기 카드 <span className="muted small">{q.pending.length}건</span></h2>
-        {q.pending.map((v) => <VideoCard key={v.id} v={v} extra={<details className="small"><summary>점수 근거</summary><VideoCardScore v={v} /></details>} />)}
+        {q.pending.map((v) => <VideoCard key={v.id} v={v} bench={v.g ? q.bench?.[v.g] : undefined} extra={<details className="small"><summary>점수 근거</summary><VideoCardScore v={v} /></details>} />)}
       </section>
       <section>
         <button type="button" className="btn ghost" onClick={() => setShowArch(!showArch)}>📦 자동 보관 {q.archived.length}건 {showArch ? "접기" : "보기"}</button>

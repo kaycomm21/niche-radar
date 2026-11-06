@@ -26,6 +26,32 @@ POLITICS_KW = ["정치", "대통령", "국회", "여당", "야당", "판결", "�
 FACE_KW = ["브이로그", "vlog", "먹방", "인터뷰", "직접 해봤", "리뷰", "언박싱", "현장", "몰카", "챌린지"]
 FACELESS_KW = ["playlist", "플레이리스트", "bgm", "오디오북", "명언", "몰아보기", "역사", "정리", "요약", "이유", "lofi", "모음"]
 ISSUE_CATS = {"25", "17", "24"}
+
+
+def decision_badges(v: dict, ref_views: float | None, card_first: str | None, today: str) -> dict:
+    """판정 카드용 즉시 결정 배지(2026-11-06 업그레이드 2-3). 모두 추정·참고치.
+    subs_tier: small_hit(구독 10만 미만 + 배수 3 이상) / small / mid(10만~50만) / big(50만 이상) / None
+    est_ep_rev: 내 채널이 같은 주제로 1편 만들 때 광고수익 하한~상한(원) = 기준 조회 × RPM ÷ 1000.
+    기준 조회는 보수적으로 '그룹 롱폼 조회 중앙값' → 없으면 원 채널 중앙값 → 2만."""
+    from datetime import date as _d
+    subs, views = v.get("subs"), v.get("views")
+    tier = None
+    if subs is not None:
+        tier = ("small_hit" if (v.get("multiple") or 0) >= 3 else "small") if subs < 100_000 else "mid" if subs < 500_000 else "big"
+    ratio = round(views / subs, 1) if subs and views else None
+    eng = round(((v.get("likes") or 0) + (v.get("comments") or 0)) / views, 4) if views else None
+    ref = ref_views or v.get("channel_median") or 20_000
+    rev = [int(round(ref * v["rpm_lo"] / 1000, -3)), int(round(ref * v["rpm_hi"] / 1000, -3))] if v.get("rpm_lo") is not None else None
+    issue = "issue" in (v.get("labels") or [])   # 📣 이슈 라벨만 (카테고리만으로는 노이즈)
+    age = v.get("age_days")
+    golden = max(0, 48 - age * 24) if issue and age is not None else None
+    archive = None
+    if card_first:
+        try:
+            archive = max(0, 7 - (_d.fromisoformat(today) - _d.fromisoformat(card_first)).days)
+        except ValueError:
+            archive = None
+    return {"tier": tier, "ratio": ratio, "eng": eng, "rev": rev, "ref": round(ref), "golden_h": golden, "archive_d": archive}
 EVERGREEN_CATS = {"27", "28", "26", "10", "22"}
 
 

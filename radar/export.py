@@ -124,7 +124,9 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                 "v24": v["views_24h"], "rk": v["chart_rank"], "lb": v["labels"], "g": v["group"],
                 "sc": v["score"], "rc": list(v["recipe"]), "rpm": [round(v["rpm_lo"]), round(v["rpm_hi"])],
                 "src": v["source"], "ai": v.get("ai"), "lang": v["lang"],
-                "cc": (chans.get(v["channel_id"]) or {}).get("country")}
+                "cc": (chans.get(v["channel_id"]) or {}).get("country"),
+                "subs": v.get("subs"),
+                "dec": M.decision_badges(v, (gbench.get(v["group"]) or {}).get("views"), cards_state.get(v["video_id"]), today)}
 
     # ---------------- 채널 단위
     hist: dict[str, list] = defaultdict(list)
@@ -186,6 +188,18 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
             v["score"]["total"] = round(min(v["score"]["max"], v["score"]["total"] + 5), 1)
             v["score"]["reasons"].append("구독 10만 미만 채널의 대박 = 재현 가능성 ↑ (+5)")
 
+    # 📊 내 채널 그룹별 기준치(롱폼, 조회 중앙값·참여율 중앙값·길이 중앙값) — 판정 카드 1초 비교용
+    gbench: dict[str, dict] = {}
+    by_group: dict[str, list] = defaultdict(list)
+    for v in vids:
+        if v["group"] and not v["is_short"] and v["views"]:
+            by_group[v["group"]].append(v)
+    for g, vs in by_group.items():
+        if len(vs) >= 5:
+            gbench[g] = {"n": len(vs), "views": round(M._median([x["views"] for x in vs])),
+                         "eng": round(M._median([((x["likes"] or 0) + (x["comments"] or 0)) / x["views"] for x in vs]), 4),
+                         "dur": round(M._median([x["duration_s"] or 0 for x in vs]))}
+
     # ---------------- 판정 카드 / 생산 큐 (§A)
     verdicts = _load_json(exports_dir / "verdicts.json", {})
     cards_state_path = Path(config.DB_PATH).parent / "cards_state.json"   # 판정 카드 최초 노출일 (data 브랜치에 보관)
@@ -226,7 +240,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         shutil.rmtree(out_dir / "channels")
     _write(out_dir / "queue.json", {"date": today, "top3": [vcard(v) for v in top3], "pending": [vcard(v) for v in rest],
                                     "archived": archived_cards, "decided": len(verdicts),
-                                    "card_age": {v["video_id"]: cards_state.get(v["video_id"]) for v in top3 + rest}})
+                                    "card_age": {v["video_id"]: cards_state.get(v["video_id"]) for v in top3 + rest},
+                                    "bench": gbench})
 
     # ---------------- M1-1 인기 차트 (순위 변동)
     prev = {(r["category_id"], r["format"], r["video_id"]): r["rank"]

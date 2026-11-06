@@ -10,9 +10,13 @@ export type VCard = {
   rpm: [number, number]; src: string | null;
   ai?: { angle?: string; reason?: string; buzz_24h?: number } | null;
   lang?: string; cc?: string | null;
+  subs?: number | null; dec?: Decision;
 };
+export type Decision = { tier: "small_hit" | "small" | "mid" | "big" | null; ratio: number | null; eng: number | null;
+  rev: [number, number] | null; ref: number; golden_h: number | null; archive_d: number | null };
+export type Bench = { n: number; views: number; eng: number; dur: number };
 export type ChartItem = VCard & { rank: number; delta: number | null };
-export type Queue = { date: string; top3: VCard[]; pending: VCard[]; archived: VCard[]; decided: number; card_age: Record<string, string> };
+export type Queue = { date: string; top3: VCard[]; pending: VCard[]; archived: VCard[]; decided: number; card_age: Record<string, string>; bench?: Record<string, Bench> };
 export type Charts = { date: string; categories: Record<string, string>; charts: Record<string, { long: ChartItem[]; short: ChartItem[] }> };
 export type VStats = { n: number; avg_views: number; like_rate: number | null; comment_rate: number | null };
 export type RankRow = {

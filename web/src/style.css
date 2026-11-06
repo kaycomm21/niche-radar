@@ -189,3 +189,6 @@ a.vtitle, .mini .tx a { color: var(--text); }
 .tip, .est-pop, .suggest { background: #2f302a; border-color: #49483e; color: var(--text); }
 ::selection { background: rgb(249 38 114 / .35); }
 ::-webkit-scrollbar { width: 10px; height: 10px; } ::-webkit-scrollbar-thumb { background: #49483e; border-radius: 6px; } ::-webkit-scrollbar-track { background: #272822; }
+
+/* 결정 배지 (2026-11-06) */
+.chip.hot { color: var(--hot); font-weight: 600; } .chip.warm { color: var(--warm); } .chip.muted { opacity: .6; }

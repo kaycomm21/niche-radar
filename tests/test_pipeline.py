@@ -19,6 +19,9 @@ def test_fixture_pipeline_end_to_end(tmp_env):
     q = json.loads((web / "queue.json").read_text(encoding="utf-8"))
     assert 1 <= len(q["top3"]) <= 3
     assert all(c["lb"] and not c["sc"]["excluded"] for c in q["top3"])
+    assert all("dec" in c and "subs" in c for c in q["top3"] + q["pending"])   # 결정 배지(업그레이드 2-3)
+    assert any(c["subs"] is not None for c in q["top3"])                      # subs 채운 뒤 배지 계산
+    assert isinstance(q.get("bench"), dict)
     charts = json.loads((web / "charts.json").read_text(encoding="utf-8"))
     assert charts["charts"]["0"]["long"] or charts["charts"]["0"]["short"]
     some = next((web / "channels").glob("*.json"))

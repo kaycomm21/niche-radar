@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
-import type { VCard } from "./api";
-import { dur, LABELS, n, RECIPES } from "./fmt";
+import type { Bench, VCard } from "./api";
+import { dur, LABELS, n, RECIPES, won } from "./fmt";
 
 // 저장소 이름을 바꿔도(예: ccs) 자동으로 따라가도록 Pages 주소에서 추출
 export const REPO = `kaycomm21/${(typeof location !== "undefined" && location.hostname.endsWith("github.io") && location.pathname.split("/")[1]) || "niche-radar"}`;
@@ -93,7 +93,37 @@ export function ScoreBreakdown({ sc }: { sc: VCard["sc"] }) {
   );
 }
 
-export function VideoCard({ v, rankBadge, detail = false, extra }: { v: VCard; rankBadge?: ReactNode; detail?: boolean; extra?: ReactNode }) {
+const TIER: Record<string, string> = { small: "소형", mid: "중형", big: "대형" };
+
+/** 판정 카드 즉시 결정 배지 — 채널 체급·1편 기대수익·골든타임·보관 D-Day (2026-11-06) */
+export function DecisionBadges({ v, bench }: { v: VCard; bench?: Bench }) {
+  const d = v.dec;
+  if (!d) return null;
+  const pct = (x: number | null | undefined) => (x == null ? "-" : (x * 100).toFixed(1) + "%");
+  return (
+    <>
+      <div className="chips small">
+        {d.tier === "small_hit"
+          ? <span className="chip hot">🌱 소형채널 대박 · 구독 {n(v.subs)}{d.ratio != null && <> · 조회÷구독 {d.ratio}×</>}</span>
+          : d.tier && <span className="chip">{TIER[d.tier]} 채널 · 구독 {n(v.subs)}</span>}
+        {d.golden_h != null && <span className={`chip ${d.golden_h > 0 ? "warm" : "muted"}`}>⏳ 이슈 골든타임 {d.golden_h > 0 ? `${d.golden_h}시간 남음` : "지남"}</span>}
+        {d.archive_d != null && <span className={`chip ${d.archive_d <= 2 ? "warm" : ""}`}>🗃 자동보관 D-{d.archive_d}</span>}
+      </div>
+      {d.rev && <div className="small">💰 내 채널 1편 기대수익 <b>{won(d.rev[0])}~{won(d.rev[1])}</b>{" "}
+        <Est formula={`기준 조회 ${n(d.ref)}회(그룹 롱폼 조회 중앙값, 없으면 원 채널 중앙값) × 예상 RPM ${n(v.rpm[0])}~${n(v.rpm[1])}원 ÷ 1000. 보장 아님`} /></div>}
+      {bench && v.v && (
+        <details className="small"><summary>📊 {v.g} 그룹 기준치와 1초 비교</summary>
+          <table className="small"><thead><tr><th></th><th>이 영상</th><th>그룹 중앙값({bench.n}편)</th><th>배율</th></tr></thead><tbody>
+            <tr><td>조회</td><td>{n(v.v)}</td><td>{n(bench.views)}</td><td>{(v.v / bench.views).toFixed(1)}×</td></tr>
+            <tr><td>참여율</td><td>{pct(d.eng)}</td><td>{pct(bench.eng)}</td><td>{d.eng != null && bench.eng ? (d.eng / bench.eng).toFixed(1) + "×" : "-"}</td></tr>
+            <tr><td>길이</td><td>{dur(v.dur)}</td><td>{dur(bench.dur)}</td><td>-</td></tr>
+          </tbody></table>
+        </details>)}
+    </>
+  );
+}
+
+export function VideoCard({ v, rankBadge, detail = false, extra, bench }: { v: VCard; rankBadge?: ReactNode; detail?: boolean; extra?: ReactNode; bench?: Bench }) {
   return (
     <article className="vcard">
       <div className="vcard-top">
@@ -111,6 +141,7 @@ export function VideoCard({ v, rankBadge, detail = false, extra }: { v: VCard; r
             {v.rk !== null && <> · 차트 {v.rk}위</>}
           </div>
           <div className="chips"><Labels lb={v.lb} />{v.g && <span className="chip chip-group">→ {v.g}</span>}</div>
+          <DecisionBadges v={v} bench={v.g ? bench : undefined} />
         </div>
       </div>
       {detail && (
