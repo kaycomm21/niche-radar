@@ -1,7 +1,7 @@
 # ⓒ CCS (Creative Craft Studio) 인수인계서 v1.0 — 2026-11-05
 
 > 다음 세션(클라우드 CC·로컬 CC·AG)이 이 문서 하나로 이어서 개발·유지보수할 수 있도록 정리.
-> 저장소 `kaycomm21/niche-radar` (공개) · 사이트 https://kaycomm21.github.io/niche-radar/ · 사용자: 김영근 PD (코딩 배경 없음, 한국어 보고)
+> 저장소 `kaycomm21/niche-radar` (공개) · 사이트 https://kaycomm21.github.io/niche-radar/ · 사용자: PD (코딩 배경 없음, 한국어 보고)
 
 ## 1. 한눈에 보기
 | 항목 | 값 |
@@ -20,6 +20,7 @@
 | `GEMINI_API_KEY` | ⚠️ 선불 크레딧 소진(HTTP 402) — 예비 | AI Studio 경로 (GCP_SA_KEY 없을 때만) |
 | `DATA_GO_KR_KEY` | ❌ 미등록 | 🏛 입찰레이더 실데이터 (없으면 예시 4건) |
 | `BRAVE_API_KEY` | ❌ 미등록(선택) | 📣 외부 언급 |
+| `MY_PROJECTS_YAML` | ⚠️ 등록 필요 (11/6 파일에서 이전) | 입찰 적합도 실적 매칭·제안서. 공개 화면엔 키워드만 표시 |
 
 ## 3. 메뉴 ↔ 코드 ↔ 데이터
 | 메뉴 | 웹 (web/src/pages.tsx) | 백엔드 (radar/) | 출력 |
@@ -33,7 +34,7 @@
 | 🌍 해외 레퍼런스 | OverseasPage | collect_foreign_charts, autopkg.localize | overseas.json (+data/localize.json) |
 | 📈 트렌드 | TrendPage | trends.py, gtrends.py | trends.json, gtrends.json |
 | ✍️ 글공방 | BlogStudio | blog.py + blog.yml | exports/blog/* |
-| 🏛 입찰레이더 | BidsPage | bids.py (+config/my_projects.yaml) | bids.json, exports/proposals/* |
+| 🏛 입찰레이더 | BidsPage | bids.py (+Secret MY_PROJECTS_YAML, 예시: config/my_projects.example.yaml) | bids.json, exports/proposals/* |
 | 🐷 부자아이 공방 | KidsPage | kids.py + blog.yml | exports/kids/* |
 | 💰 수익 계산기 | CalcPage | config/rpm_kr.yaml | — |
 
@@ -66,7 +67,7 @@
 | 6 | 블로그판 레이더(네이버 검색광고 키워드도구·데이터랩·서치콘솔) / 워드프레스 예약 발행 | 키 필요 |
 | 7 | 저장소 이름 `ccs` 변경 시: 웹은 자동 추종, 문서·워크플로의 하드코딩 `kaycomm21/niche-radar` (docs, verdict 코멘트 링크) 일괄 치환 | 옛 Pages 주소 끊김 |
 | 8 | 월천 관제탑 데이터는 브라우저 localStorage → 기기 간 공유 필요 시 Firebase(copper-guide) 이전 | — |
-| 9 | 쌍둥이 성장노트 웹앱: 기획서 `cc-cloud-credit` 저장소 `06_쌍둥이발달앱/` (브랜치 claude/sleepy-maxwell-u92t03) §8 블록으로 새 세션 시작 | 별도 프로젝트 |
+| 9 | 가족용 앱은 별도 비공개 프로젝트에서 진행 (이 공개 저장소에 가족·아이 정보 기록 금지) | 별도 프로젝트 |
 
 ## 7. 알려진 한계·주의
 - 남의 채널 과거 데이터는 API 가 주지 않음 → 11/4부터 누적 (일별 표·예측은 7일 이후 의미).

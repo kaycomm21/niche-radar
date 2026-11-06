@@ -269,7 +269,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     # ---------------- M1-4 급상승 (최근 14일, 배수 3배↑)
     surging = [v for v in vids if v["age_days"] is not None and v["age_days"] <= 14 and (v["multiple"] or 0) >= 3
                and (v["views"] or 0) >= M.MIN_VIEWS]
-    surging.sort(key=lambda v: (v["multiple"], v["views_24h"] or 0), reverse=True)
+    surging.sort(key=lambda v: (M.surge_rank(v["multiple"], v["views"]), v["views_24h"] or 0), reverse=True)
     _write(out_dir / "surging.json", {"date": today, "items": [vcard(v) for v in surging[:300]]})
 
     # ---------------- M1-2 채널 순위
@@ -387,7 +387,8 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
     _write(out_dir / "home.json", {
         "date": today,
         "chart_long": [vcard(vmap[r[0]]) for r in con.execute("SELECT video_id FROM chart_daily WHERE date=? AND category_id='0' AND format='long' ORDER BY rank LIMIT 10", (today,)) if r[0] in vmap],
-        "chart_short": [vcard(vmap[r[0]]) for r in con.execute("SELECT video_id FROM chart_daily WHERE date=? AND format='short' ORDER BY rank LIMIT 10", (today,)) if r[0] in vmap],
+        # 쇼츠는 '전체(0)' 차트가 없어 카테고리별 차트를 합침 → 같은 영상이 여러 카테고리 1위로 중복되므로 영상당 1번(최고 순위)만
+        "chart_short": [vcard(vmap[r[0]]) for r in con.execute("SELECT video_id, MIN(rank) rk FROM chart_daily WHERE date=? AND format='short' GROUP BY video_id ORDER BY rk, video_id LIMIT 10", (today,)) if r[0] in vmap],
         "subs_rise": rise[:20],
         "views_rise": [{"id": c, "t": chans[c]["title"], "th": chans[c]["thumb"], "subs": feats[c]["subs"], "gain": d1(c, 2)} for c in vrise if d1(c, 2)],
         "top24": [vcard(v) for v in top24],

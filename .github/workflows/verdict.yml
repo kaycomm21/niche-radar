@@ -15,6 +15,9 @@ concurrency:
   group: verdict
   cancel-in-progress: false
 
+env:
+  MY_PROJECTS_YAML: ${{ secrets.MY_PROJECTS_YAML }}   # 입찰 실적표 (공개 저장소라 Secret)
+
 jobs:
   record:
     if: github.event_name == 'workflow_dispatch' || (github.event.issue.user.login == github.repository_owner && contains(github.event.issue.body, 'radar-verdict'))

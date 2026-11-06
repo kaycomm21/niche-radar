@@ -91,6 +91,12 @@ def run(out_path, today: str) -> int:
         items = parse(fetch())
     except Exception as e:  # noqa: BLE001
         print(f"구글 트렌드 수집 실패: {e}")
+        from . import config
+        keep = config.DB_PATH.parent / "gtrends.json"      # 실패해도 화면이 404 가 되지 않게 지난 결과 재사용
+        if keep.exists():
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(keep.read_text(encoding="utf-8"), encoding="utf-8")
+            print("  → 지난 구글 트렌드 결과로 대체")
         return 0
     data = {"date": today, "source": RSS, "items": build(items, __import__("radar.llm", fromlist=["x"]).available())}
     out_path.parent.mkdir(parents=True, exist_ok=True)

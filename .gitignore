@@ -6,3 +6,4 @@ web/node_modules/
 web/dist/
 web/public/data/
 exports/search_*.json
+config/my_projects.yaml

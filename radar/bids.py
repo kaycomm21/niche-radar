@@ -25,8 +25,17 @@ STRONG = "축제|페스티벌|개막|폐막|불꽃|체전|체육대회|공연|�
 
 
 def load_projects() -> dict[str, str]:
+    """수행 실적표. 공개 저장소이므로 파일은 커밋하지 않고 Secret MY_PROJECTS_YAML(같은 형식) 로 받는다.
+    순서: env MY_PROJECTS_YAML → config/my_projects.yaml(로컬 전용, .gitignore) → config/my_projects.example.yaml."""
     out = {}
-    for line in (config.ROOT / "config" / "my_projects.yaml").read_text(encoding="utf-8").splitlines():
+    text = os.environ.get("MY_PROJECTS_YAML", "").strip()
+    if not text:
+        for name in ("my_projects.yaml", "my_projects.example.yaml"):
+            f = config.ROOT / "config" / name
+            if f.exists():
+                text = f.read_text(encoding="utf-8")
+                break
+    for line in text.splitlines():
         m = re.match(r'^\s*"([^"]+)"\s*:\s*"(.+)"\s*$', line)
         if m:
             out[m.group(1)] = m.group(2)
@@ -104,10 +113,10 @@ def score(it: dict, today: date, projects: dict[str, str]) -> dict:
     if "협상" in method:
         why.append("협상에 의한 계약 = 제안서 평가 (기획력 승부)")
     parts["topic"] = 20 if re.search(STRONG, name) else (10 if re.search("행사|박람회|대행|연출|문화", name) else 0)
-    hits = [v for k, v in projects.items() if k in name]
+    hits = [k for k in projects if k in name]          # 공개 화면엔 키워드만 (실적 상세는 비공개)
     parts["experience"] = 10 if hits else 0
     if hits:
-        why.append("유사 실적: " + hits[0])
+        why.append(f"유사 실적 키워드: {hits[0]}")
     dleft = (close.date() - today).days if close else None
     parts["deadline"] = -50 if dleft is not None and dleft < 0 else (10 if dleft is None or dleft >= 10 else 5 if dleft >= 5 else -10)
     total = max(0, min(100, sum(parts.values())))
@@ -167,7 +176,7 @@ JSON만: {{"one_line":"제안 한 줄 컨셉","situation":["과업 이해 포인
 def proposal(item: dict, out_root: Path | None = None) -> Path:
     from .llm import available, gemini_json
     projects = load_projects()
-    matches = [v for k, v in projects.items() if k in (item.get("name") or "")] or list(projects.values())[:3]
+    matches = [k for k in projects if k in (item.get("name") or "")] or list(projects)[:3]   # 공개 저장소 → 키워드만
     if available():
         p = gemini_json(PROPOSAL_PROMPT.format(name=item.get("name"), org=item.get("org"), demand=item.get("demand"), budget=item.get("budget"),
                                                method=item.get("method"), close=item.get("close"), matches="; ".join(matches)), temperature=0.7)
@@ -186,7 +195,7 @@ def proposal(item: dict, out_root: Path | None = None) -> Path:
          "## 제안서 목차", *[f"{i+1}. {x}" for i, x in enumerate(p.get("toc", []))], "", "## 주요 프로그램", *[f"- {x}" for x in p.get("program", [])], "",
          "## 예산 배분(비율)", "| 항목 | 비율 |", "|---|---|", *[f"| {b.get('item')} | {b.get('ratio')} |" for b in p.get("budget_split", [])], "",
          "## 추진 일정", *[f"- {x}" for x in p.get("schedule", [])], "", "## 리스크·대응", *[f"- {x}" for x in p.get("risks", [])], "",
-         "## 과업지시서·질의에서 확인할 것", *[f"- [ ] {x}" for x in p.get("questions", [])], "", "## 유사 실적 (자동 매칭)", *[f"- {m}" for m in matches]]
+         "## 과업지시서·질의에서 확인할 것", *[f"- [ ] {x}" for x in p.get("questions", [])], "", "## 유사 실적 (자동 매칭 · 상세 내용은 비공개 실적표 참고)", *[f"- {m}" for m in matches]]
     (d / "proposal.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     (d / "source.json").write_text(json.dumps(item, ensure_ascii=False, indent=1), encoding="utf-8")
     return d

@@ -19,6 +19,7 @@ FORMULAS = {
 
 LONG_MIN_S = 480
 MIN_VIEWS = 10_000          # 터짐 판정 최소 조회수 (작은 수의 배수 잡음 제거)
+MIN_MEDIAN = 1_000          # 채널 평소 조회(중앙값)가 이보다 작으면 배수 계산 안 함 (예: 중앙값 68회 → 55,717배 같은 잡음)
 REUSE_KW = ["하이라이트", "명장면", "직캠", "full ver", "풀영상", "reaction", "리액션", "반응 모음", "몰래카메라 모음", "모음집", "클립 모음"]
 RISK_KW = ["무조건", "100%", "반드시 오른다", "폭등 확정", "완치", "사기꾼", "범죄자", "탄핵", "구속"]
 POLITICS_KW = ["정치", "대통령", "국회", "여당", "야당", "판결", "검찰", "민주당", "국민의힘"]
@@ -34,9 +35,15 @@ def median(xs) -> float | None:
 
 
 def outlier_multiple(views: int | None, med: float | None) -> float | None:
-    if views is None or not med or med <= 0:
+    if views is None or not med or med < MIN_MEDIAN:
         return None
     return views / med
+
+
+def surge_rank(multiple: float | None, views: int | None) -> float:
+    """급상승 정렬값 = 배수 × log10(조회수). 작은 채널의 큰 배수보다 '많이 본 + 평소 대비 큰' 영상을 위로."""
+    import math
+    return (multiple or 0) * math.log10(max(10, views or 0))
 
 
 def percentile_rank(values: list[float], x: float) -> float:

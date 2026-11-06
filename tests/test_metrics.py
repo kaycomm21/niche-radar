@@ -6,7 +6,9 @@ from radar import metrics as M
 def test_median_and_outlier():
     assert M.median([1, 3, None, 2]) == 2
     assert M.median([]) is None
-    assert M.outlier_multiple(300, 100) == 3
+    assert M.outlier_multiple(3000, 1000) == 3
+    assert M.outlier_multiple(3_816_649, 68.5) is None      # 평소 조회 1,000 미만 채널 → 배수 잡음 제외
+    assert M.surge_rank(20, 1_000_000) > M.surge_rank(20, 20_000)
     assert M.outlier_multiple(300, 0) is None
 
 

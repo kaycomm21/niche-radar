@@ -626,13 +626,18 @@ export function OverseasPage() {
   if (e) return <div className="empty">해외 차트는 다음 자동 수집(매일 06:17) 후 표시됩니다.</div>;
   if (!d) return <Loading />;
   const ch = d.charts[key] ?? Object.values(d.charts)[0];
-  const list = (ch?.[fmt] ?? []).filter((v) => !isKorean(v));
+  // 음악(10)은 한국화 재생산이 불가 → 제외. AI 적합 0점도 제외. 적합도 높은 순 → 기획안 없는 것은 원래 순위대로 뒤에.
+  const all = (ch?.[fmt] ?? []).filter((v) => !isKorean(v));
+  const fitOf = (v: VCard) => d.plans[v.id]?.fit ?? -1;
+  const list = all.filter((v) => v.cat !== "10" && fitOf(v) !== 0).sort((a, b) => fitOf(b) - fitOf(a));
+  const hidden = all.length - list.length;
   return (
     <section>
       <h2>🌍 해외 레퍼런스 → 한국화 <span className="muted small">{d.date}</span></h2>
       <p className="small muted">해외에서 지금 터진 영상을 한국 맥락으로 재기획(R6). 원본 번역·짜깁기는 재사용 콘텐츠 정책 위반 — 주제와 공식만 차용합니다. 🤖 한국화 기획안은 Gemini 키가 있으면 상위 영상에 자동 생성.</p>
       <div className="chips">{Object.entries(d.charts).map(([k, v]) => <button key={k} type="button" className={`chip chip-btn ${key === k ? "on" : ""}`} onClick={() => setKey(k)}>{v.name}</button>)}</div>
       <div className="filters"><Seg value={fmt} onChange={setFmt} options={[["long", "롱폼"], ["short", "쇼츠"]]} /></div>
+      {hidden > 0 && <p className="small muted">음악·적합도 0점 {hidden}건은 숨김 (한국화 재생산 불가) · 적합도 높은 순</p>}
       {list.map((v, i) => {
         const pl = d.plans[v.id];
         return (
@@ -706,7 +711,7 @@ export function BidsPage() {
       {list.map((b) => (
         <article key={b.no} className="vcard">
           <div className="vcard-top"><span className={`grade ${b.score >= 70 ? "g-A" : b.score >= 50 ? "g-B" : "g-C"}`}>{b.score}</span>
-            <div className="vcard-meta"><a className="vtitle" href={b.url} target="_blank" rel="noreferrer">{b.name}</a>
+            <div className="vcard-meta">{d.mode === "fixture" && <span className="chip">🧪 예시 · 실제 공고 아님</span>} <a className="vtitle" href={b.url} target="_blank" rel="noreferrer">{b.name}</a>
               <div className="small muted">{b.org}{b.demand && b.demand !== b.org ? ` · 수요 ${b.demand}` : ""} · {b.method || "계약방식 미상"}</div>
               <div className="small">예산 <b>{b.budget ? won(b.budget) : "-"}</b> · 마감 <b className={b.dleft !== null && b.dleft <= 5 ? "hot" : ""}>{b.close?.slice(0, 16) ?? "-"} (D-{b.dleft ?? "?"})</b></div>
               <div className="chips">{b.why.map((w) => <span key={w} className="chip">{w}</span>)}</div></div></div>
@@ -724,7 +729,7 @@ export function BidsPage() {
 // ------------------------------------------------------------------ 🎯 월천 관제탑
 const STREAMS = ["유튜브 광고", "블로그(애드센스·애드포스트)", "행사 기획·연출(입찰·프리)", "크몽·숨고", "PPL·협찬", "교재·출판", "기타"];
 export function CockpitPage() {
-  const [bids] = useData<{ items: Bid[] }>("bids.json");
+  const [bids] = useData<{ mode?: string; items: Bid[] }>("bids.json");
   const [q] = useData<Queue>("queue.json");
   const [pk] = useData<{ items: Pkg[] }>("packages.json");
   const month = new Date().toISOString().slice(0, 7);
@@ -739,7 +744,8 @@ export function CockpitPage() {
   const monthsLeft = Math.max(0, (end.getFullYear() - new Date().getFullYear()) * 12 + end.getMonth() - new Date().getMonth());
   const steps = (() => { try { return JSON.parse(localStorage.getItem("ccs.steps") || "{}"); } catch { return {}; } })();
   const actions: { t: string; href: string; why: string }[] = [];
-  const hot = bids?.items.find((b) => b.score >= 60 && (b.dleft ?? 99) <= 14);
+  // 예시(fixture) 공고는 실제 공고로 착각할 수 있어 '오늘의 3가지'에 올리지 않는다
+  const hot = bids?.mode === "fixture" ? undefined : bids?.items.find((b) => b.score >= 60 && (b.dleft ?? 99) <= 14);
   if (hot) actions.push({ t: `입찰 제안서 착수: ${hot.name}`, href: "#/bids", why: `적합도 ${hot.score} · 마감 D-${hot.dleft}` });
   const next = pk?.items.slice().reverse().find((p) => (steps[p.dir] ?? 0) < 7);
   if (next) actions.push({ t: `패키지 다음 단계: ${next.title}`, href: "#/packages", why: `진행 ${(steps[next.dir] ?? 0)}/7 단계` });
@@ -748,7 +754,7 @@ export function CockpitPage() {
   if (days >= 3) actions.push({ t: "블로그 1편 발행 (주 2~3편 원칙)", href: "#/blog", why: lastBlog ? `마지막 발행 ${days}일 전` : "발행 기록 없음" });
   return (
     <section>
-      <h2>🎯 월천 관제탑 <span className="muted small">월 1,000만 원 · 육아휴직 종료까지 {monthsLeft}개월</span></h2>
+      <h2>🎯 월천 관제탑 <span className="muted small">월 1,000만 원 · 목표 기한까지 {monthsLeft}개월</span></h2>
       <div className="kpis">
         <div className="kpi"><span>{month} 누적 수익</span><b>{won(total)}</b><small>목표의 {Math.round((total / goal) * 100)}%</small></div>
         <div className="kpi"><span>남은 금액</span><b>{won(Math.max(0, goal - total))}</b><small>이번 달</small></div>
@@ -785,7 +791,7 @@ export function KidsPage() {
         <label>연령<select value={age} onChange={(e) => setAge(e.target.value)}><option value="3-5">만 3~5세</option><option value="6-7">만 6~7세</option><option value="8-10">초등 저학년</option><option value="11-13">초등 고학년</option></select></label>
       </div>
       <a className="btn cue wide" href={url} target="_blank" rel="noreferrer">🐷 세트 만들기 요청</a>
-      <p className="small muted">GitHub 화면에서 초록 Create → 1~2분 뒤 결과 링크. 그림책 12장면(삽화 지시 포함) · 인쇄용 활동지 HTML · 정답·부모 가이드 · 쇼츠 대본. 단우·도하와 먼저 읽어보고 반응을 기록해 다음 버전에 반영하세요.</p>
+      <p className="small muted">GitHub 화면에서 초록 Create → 1~2분 뒤 결과 링크. 그림책 12장면(삽화 지시 포함) · 인쇄용 활동지 HTML · 정답·부모 가이드 · 쇼츠 대본. 아이와 먼저 읽어보고 반응을 기록해 다음 버전에 반영하세요.</p>
       {pk?.kids && pk.kids.length > 0 && <><h3>📚 만든 세트</h3><ul>{pk.kids.map((k) => <li key={k.dir}><a href={`https://github.com/${REPO}/tree/main/${k.dir}`} target="_blank" rel="noreferrer">{k.title}</a> <span className="muted small">{k.age}세 · {k.concept}</span></li>)}</ul></>}
     </section>
   );

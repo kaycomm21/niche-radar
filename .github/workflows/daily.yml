@@ -26,6 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
+  MY_PROJECTS_YAML: ${{ secrets.MY_PROJECTS_YAML }}   # 입찰 실적표 (공개 저장소라 Secret)
   TZ: Asia/Seoul
   RADAR_DATA_DIR: data
   RADAR_DB: data/radar.db
@@ -33,7 +34,7 @@ env:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60   # 11/6 예약 실행이 AI 채점 60건+패키지로 30분 초과 → 취소됨
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
