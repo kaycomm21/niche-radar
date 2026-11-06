@@ -101,7 +101,7 @@ def claude_json(prompt: str, timeout: int = 600) -> dict:
     info = json.loads(sa)
     cred = service_account.Credentials.from_service_account_info(info, scopes=["https://www.googleapis.com/auth/cloud-platform"])
     client = AnthropicVertex(project_id=info["project_id"], region=os.environ.get("CLAUDE_REGION", "global"),
-                             credentials=cred, timeout=timeout, max_retries=2)
+                             credentials=cred, timeout=timeout, max_retries=1)
     with client.messages.stream(
         model=os.environ.get("CLAUDE_MODEL", "claude-opus-5-5"),
         max_tokens=32000,
@@ -117,7 +117,7 @@ def claude_json(prompt: str, timeout: int = 600) -> dict:
 
 
 def ai_json(prompt: str, temperature: float = 0.6, quality: bool = False, timeout: int = 120) -> dict:
-    """quality=True 면 Claude Opus 우선, 안 되면 Gemini. 반환 dict 에 _model 키로 실제 사용 모델 기록."""
+    """quality=True 면 Claude Opus 우선, 한 번이라도 실패하면 이번 실행은 Gemini. 반환 dict 에 _model 키로 실제 사용 모델 기록."""
     if quality and not _claude_down[0] and os.environ.get("CLAUDE_DISABLE") != "1" and os.environ.get("GCP_SA_KEY", "").strip():
         try:
             d = claude_json(prompt)
@@ -125,8 +125,7 @@ def ai_json(prompt: str, temperature: float = 0.6, quality: bool = False, timeou
             return d
         except Exception as e:  # noqa: BLE001 — 어떤 실패든 Gemini 로 대체 (파이프라인 중단 금지)
             code = getattr(e, "status_code", None)
-            if code and 400 <= int(code) < 500 and int(code) != 429:
-                _claude_down[0] = True
+            _claude_down[0] = True      # 미설정·쿼터 0(429)·거절 등 → 이번 실행은 Gemini 로만 (재시도 시간 낭비 방지)
             print(f"  Claude 실패 → Gemini 대체: {type(e).__name__} {code or ''} {str(e)[:200]}")
     d = gemini_json(prompt, temperature=temperature, timeout=timeout)
     d["_model"] = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
