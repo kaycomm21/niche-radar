@@ -58,8 +58,8 @@ def gemini_json(prompt: str, temperature: float = 0.6, timeout: int = 120) -> di
         url = f"https://{region}-aiplatform.googleapis.com/v1/projects/{project}/locations/{region}/publishers/google/models/{model}:generateContent"
         headers = {"Content-Type": "application/json", "Authorization": f"Bearer {token}"}
     elif key:
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={urllib.parse.quote(key)}"
-        headers = {"Content-Type": "application/json"}
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
+        headers = {"Content-Type": "application/json", "x-goog-api-key": key}
     else:
         raise NoKey("GCP_SA_KEY / GEMINI_API_KEY 없음")
     req = urllib.request.Request(url, data=json.dumps(body).encode(), headers=headers)
@@ -74,7 +74,35 @@ def gemini_json(prompt: str, temperature: float = 0.6, timeout: int = 120) -> di
         except Exception:  # noqa: BLE001
             msg = ""
         raise RuntimeError(f"Gemini HTTP {e.code} {msg}") from None
-    return json.loads(d["candidates"][0]["content"]["parts"][0]["text"])
+    if not isinstance(d, dict):
+        raise RuntimeError(f"Gemini 비정상 응답: {d!r}")
+    candidates = d.get("candidates") or []
+    if not candidates:
+        feedback = d.get("promptFeedback") or {}
+        block = (feedback.get("blockReason") if isinstance(feedback, dict) else None) or "응답 없음"
+        raise RuntimeError(f"Gemini 응답 없음 (사유: {block})")
+    first = candidates[0]
+    parts = (first.get("content") or {}).get("parts") if isinstance(first, dict) else None
+    if not parts or not isinstance(parts, list) or not isinstance(parts[0], dict) or "text" not in parts[0]:
+        reason = (first.get("finishReason") if isinstance(first, dict) else None) or "내용 없음"
+        raise RuntimeError(f"Gemini 생성 차단/내용 없음 (사유: {reason})")
+    raw = (parts[0].get("text") or "").strip()
+    if raw.startswith("```"):
+        lines = raw.splitlines()
+        if len(lines) > 1:
+            if lines[0].startswith("```"):
+                lines = lines[1:]
+            if lines and lines[-1].strip().startswith("```"):
+                lines = lines[:-1]
+            raw = "\n".join(lines).strip()
+        else:
+            raw = raw.strip("`").strip()
+            if raw.lower().startswith("json"):
+                raw = raw[4:].strip()
+    try:
+        return json.loads(raw)
+    except Exception as e:
+        raise RuntimeError(f"Gemini JSON 파싱 실패: {e}") from None
 
 
 _claude_down = [False]          # 한 번 4xx(미설정·권한·결제)면 이번 실행 동안은 다시 시도하지 않음

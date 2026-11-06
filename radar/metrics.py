@@ -51,8 +51,13 @@ def percentile_rank(values: list[float], x: float) -> float:
     vs = [v for v in values if v is not None]
     if not vs:
         return 0.5
-    below = sum(1 for v in vs if v < x)
-    equal = sum(1 for v in vs if v == x)
+    below = 0
+    equal = 0
+    for v in vs:
+        if math.isclose(v, x, rel_tol=1e-7, abs_tol=1e-9):
+            equal += 1
+        elif v < x:
+            below += 1
     return (below + 0.5 * equal) / len(vs)
 
 

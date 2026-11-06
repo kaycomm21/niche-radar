@@ -74,9 +74,13 @@ def upsert_video(con, item: dict, today: str) -> str:
          views, likes, comments, today))
     # 일별 스냅샷은 업로드 30일 이내 영상만 (24시간 증가·이슈화 판정용). DB 크기를 git에 올릴 수 있는 수준으로 유지
     pub = (sn.get("publishedAt") or "")[:10]
-    if pub and (date.fromisoformat(today) - date.fromisoformat(pub)).days <= 30:
-        con.execute("INSERT OR REPLACE INTO video_daily(video_id, date, views, likes, comments) VALUES (?,?,?,?,?)",
-                    (vid, today, views, likes, comments))
+    if pub:
+        try:
+            if 0 <= (date.fromisoformat(today) - date.fromisoformat(pub)).days <= 30:
+                con.execute("INSERT OR REPLACE INTO video_daily(video_id, date, views, likes, comments) VALUES (?,?,?,?,?)",
+                            (vid, today, views, likes, comments))
+        except ValueError:
+            pass
     return vid
 
 
@@ -129,14 +133,19 @@ def collect_charts(con, yt, today: str, stats: dict) -> None:
                             (today, cat, fmt, rank[fmt], vid))
                 stats["chart_rows"] += 1
                 cid = it["snippet"]["channelId"]
-                exists = con.execute("SELECT 1 FROM channels WHERE channel_id=?", (cid,)).fetchone()
+                row = con.execute("SELECT active, source FROM channels WHERE channel_id=?", (cid,)).fetchone()
                 ct = it["snippet"].get("channelTitle") or ""
-                if not exists and universe < config.UNIVERSE_CAP and not ct.endswith(" - Topic"):   # 자동생성 음원 채널 제외
-                    con.execute("""INSERT INTO channels(channel_id, title, "group", source, added_at, active)
-                                   VALUES (?,?,?,?,?,1)""",
-                                (cid, it["snippet"].get("channelTitle"), assign_group(it["snippet"].get("title", "")), "chart", today))
-                    universe += 1
-                    stats["new_chart_channels"] += 1
+                if not ct.endswith(" - Topic") and universe < config.UNIVERSE_CAP:
+                    if row is None:
+                        con.execute("""INSERT INTO channels(channel_id, title, "group", source, added_at, active)
+                                       VALUES (?,?,?,?,?,1)""",
+                                    (cid, it["snippet"].get("channelTitle"), assign_group(it["snippet"].get("title", "")), "chart", today))
+                        universe += 1
+                        stats["new_chart_channels"] += 1
+                    elif row[0] == 0 and row[1] != "excluded":
+                        con.execute("UPDATE channels SET active=1, last_stats_at=NULL WHERE channel_id=?", (cid,))
+                        universe += 1
+                        stats["new_chart_channels"] += 1
             if not token:
                 break
 
@@ -251,7 +260,8 @@ def prune(con, today: str) -> dict:
     # 차트 채널 중 최근 30일 업로드 없음 → 비활성 (기획서 M1-3: 30일 무활동 자동 제외)
     out["inactive_channels"] = con.execute(
         """UPDATE channels SET active=0 WHERE source='chart' AND active=1 AND added_at < ?
-           AND channel_id NOT IN (SELECT channel_id FROM videos WHERE published_at >= ?)""", (stale_cut, stale_cut)).rowcount
+           AND last_videos_at IS NOT NULL AND last_videos_at >= ?
+           AND channel_id NOT IN (SELECT channel_id FROM videos WHERE published_at >= ?)""", (stale_cut, stale_cut, stale_cut)).rowcount
     return out
 
 

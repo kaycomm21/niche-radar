@@ -42,6 +42,7 @@ CREATE TABLE IF NOT EXISTS quota_log (
 );
 CREATE INDEX IF NOT EXISTS idx_videos_channel ON videos(channel_id, published_at);
 CREATE INDEX IF NOT EXISTS idx_chart_video ON chart_daily(video_id);
+CREATE INDEX IF NOT EXISTS idx_video_daily_date ON video_daily(date);
 """
 
 

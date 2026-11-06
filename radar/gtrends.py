@@ -49,7 +49,7 @@ TEMPLATES = {
 
 def rule_plan(item: dict) -> dict:
     g = assign_group(item["kw"] + " " + " ".join(n["title"] for n in item["news"]))
-    titles = [x.format(kw=item["kw"]) for x in TEMPLATES.get(g, TEMPLATES[None])]
+    titles = [x.replace("{kw}", item["kw"]) for x in TEMPLATES.get(g, TEMPLATES[None])]
     return {"group": g, "titles": titles, "hook": f"지금 '{item['kw']}'를 검색한 사람이 수만 명입니다. 뉴스만 봐서는 모르는 핵심을 정리합니다.",
             "outline": ["무슨 일인가 (사실만, 출처 표기)", "왜 지금 화제인가", "내 삶·지갑과의 연결고리", "오해와 사실", "한 줄 정리 + 다음 편 예고"],
             "life": "이슈(48시간 내 생산할 때만 가치)", "by": "규칙 기반"}

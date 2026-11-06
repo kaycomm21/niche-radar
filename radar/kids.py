@@ -24,7 +24,10 @@ JSON만: {{"title":"책 제목","one_line":"핵심 메시지","scenes":[{{"no":1
 
 def run(body: str, number: str, out_root: Path | None = None) -> Path:
     m = re.search(r"```json\s*(\{.*?\})\s*```", body, re.S)
-    cfg = json.loads(m.group(1)) if m else {}
+    try:
+        cfg = json.loads(m.group(1)) if m else {}
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Issue 본문의 json 블록 문법 오류({e.lineno}줄 {e.colno}칸) — 쉼표·따옴표를 확인하세요") from None
     age = cfg.get("age", "3-5")
     k = ai_json(PROMPT.format(concept=cfg.get("concept", "저축"), age_desc=AGES.get(age, AGES["3-5"])), temperature=0.8, quality=True)
     slug = re.sub(r"[^\w-]", "", cfg.get("concept", "kids"))[:20] or "kids"
@@ -41,6 +44,6 @@ def run(body: str, number: str, out_root: Path | None = None) -> Path:
 <h1>🐷 {e(k['title'])}</h1><p>이름: ________ 날짜: ________</p><ol>{rows}</ol><button onclick="print()">인쇄하기</button></html>""", encoding="utf-8")
     (d / "answers_and_guide.md").write_text("\n".join(["# 정답·부모 가이드", "## 정답/예시", *[f"- {w['q']} → {w.get('answer', '')}" for w in k.get("worksheet", [])],
                                                       "## 부모 가이드", *[f"- {x}" for x in k.get("parent_guide", [])]]), encoding="utf-8")
-    (d / "shorts.md").write_text("\n".join(["# 쇼츠 (부자아이 채널)", *[f"## {s['title']}\n{s['text']}\n" for s in k.get("shorts", [])], "", "태그: " + ", ".join(k.get("keywords", []))]), encoding="utf-8")
+    (d / "shorts.md").write_text("\n".join(["# 쇼츠 (부자아이 채널)", *[f"## {s.get('title', '쇼츠')}\n{s.get('text', '')}\n" for s in k.get("shorts", [])], "", "태그: " + ", ".join(k.get("keywords", []))]), encoding="utf-8")
     (d / "meta.json").write_text(json.dumps({"title": k["title"], "concept": cfg.get("concept"), "age": age, "issue": number}, ensure_ascii=False), encoding="utf-8")
     return d

@@ -94,7 +94,7 @@ def summarize(name: str, totals: dict, videos: list[dict]) -> dict:
     views = totals.get("views") or 0
     rev = totals.get("estimatedRevenue")
     rpm = round(rev / views * 1000, 1) if rev and views else None
-    med = sorted(v.get("views", 0) for v in videos)
+    med = sorted((v.get("views") or 0) for v in videos)
     median = med[len(med) // 2] if med else None
     return {"channel": name, "views": views, "revenue": rev, "rpm": rpm, "median_video_views": median,
             "avg_view_pct": totals.get("averageViewPercentage"), "videos": videos}
@@ -115,7 +115,7 @@ def run(days: int = 28, out_dir: Path | None = None) -> list[dict]:
     out_dir = out_dir or (config.EXPORTS_DIR / "mychannel")
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / f"{date.today().isoformat()}.json").write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
-    measured = [f'"{o["channel"]}": [{o["rpm"]}, {o["rpm"]}]   # {start}~{end} 실측' for o in out if o["rpm"]]
+    measured = [f'"{o["channel"]}": [{o["rpm"]}, {o["rpm"]}]   # {start}~{end} 실측' for o in out if o.get("rpm") is not None]
     if measured:
         (config.ROOT / "config" / "rpm_measured.yaml").write_text(
             "# M4 실측 RPM (원/1,000회) — python -m radar mychannel 이 자동 생성. 내 채널 그룹 영상의 RPM 가정치를 대체한다.\n" + "\n".join(measured) + "\n", encoding="utf-8")

@@ -101,7 +101,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         v["chart_within_7d"] = v["video_id"] in chart_7d and (v["age_days"] is not None and v["age_days"] <= 7)
         if v["video_id"] in inc24:
             v["views_24h"], v["comments_24h_growth"] = inc24[v["video_id"]]
-            v["views_24h_pct"] = M.percentile_rank(inc_values, v["views_24h"])
+            v["views_24h_pct"] = M.percentile_rank(inc_values, v["views_24h"]) if len(inc_values) >= 5 else None
         else:
             v["views_24h"] = v["comments_24h_growth"] = v["views_24h_pct"] = None
         v["subs"] = None
@@ -142,9 +142,9 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
         window = [x for x in h if x[0] >= (t - timedelta(days=30)).isoformat()]
         days_hist = len(h)
         growth = sub_gain = view_gain = None
-        if len(window) >= 7 and window[0][1] and subs is not None:
+        if len(window) >= 7 and window[0][1] is not None and subs is not None:   # 구독자 0명 시작 채널도 증가량은 잡는다
             sub_gain = subs - window[0][1]
-            growth = sub_gain / window[0][1]
+            growth = sub_gain / window[0][1] if window[0][1] > 0 else None    # 0명 기준 배율은 무한대라 비교 불가
             view_gain = (window[-1][2] or 0) - (window[0][2] or 0)
         v30 = [v for v in vs if v["age_days"] is not None and v["age_days"] <= 30]
         views30_uploads = sum(v["views"] or 0 for v in v30)
@@ -334,7 +334,7 @@ def build(con, today: str, out_dir: Path | None = None, exports_dir: Path | None
                 k = datetime.fromisoformat(v["published_at"].replace("Z", "+00:00")).astimezone(KST)
                 heat[k.weekday()][k.hour] += 1
         titles = [v["title"] or "" for v in vs]
-        fmt = {"n": len(vs), "short_ratio": (sum(v["is_short"] for v in vs) / len(vs)) if vs else None,
+        fmt = {"n": len(vs), "short_ratio": (sum(v["is_short"] or 0 for v in vs) / len(vs)) if vs else None,
                "avg_dur": (sum(v["duration_s"] or 0 for v in vs if not v["is_short"]) / max(1, sum(1 for v in vs if not v["is_short"]))),
                "title_len": (sum(len(x) for x in titles) / len(titles)) if titles else None,
                "title_num": (sum(any(c.isdigit() for c in x) for x in titles) / len(titles)) if titles else None,

@@ -39,7 +39,7 @@ def resolve(yt, q: str, quota: Quota) -> str | None:
     if quota.calls_today("search.list") >= config.SEARCH_DAILY_CAP:
         raise RuntimeError("오늘 이름 검색(search.list) 상한 도달 — URL·@핸들로 요청하세요")
     items = yt.search_channel(val)
-    return items[0]["snippet"]["channelId"] if items else None
+    return items[0].get("snippet", {}).get("channelId") if items else None
 
 
 def add_and_collect(con, yt, quota: Quota, q: str, today: str, group: str | None = None) -> dict:

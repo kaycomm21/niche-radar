@@ -16,6 +16,8 @@ def load_seed(path: Path = SEED_PATH) -> tuple[dict[str, dict], list[dict]]:
     ok: dict[str, dict] = {}
     excluded: list[dict] = []
     for group, items in data.items():
+        if not isinstance(items, list):
+            continue
         for it in items:
             m = CID.search(it.get("url") or "")
             if not m:

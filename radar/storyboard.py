@@ -16,7 +16,7 @@ STYLE = "cinematic b-roll, 16:9, soft natural light, no text, no logos, no recog
 
 
 def parse(md: str) -> dict:
-    title = re.search(r"^# ⓒ 대본 \d+ — (.+)$", md, re.M)
+    title = re.search(r"^# ⓒ 대본 (?:AUTO|\d+) — (.+)$", md, re.M)
     channel = re.search(r"채널:\s*([^·\n]+)", md)
     body = md.split("\n---\n", 2)[1] if "\n---\n" in md else md
     secs, cur = [], None
@@ -68,7 +68,7 @@ def meta(doc: dict, titles: list[str], tags: list[str], disclaimer: str | None) 
     hook = " ".join(doc["sections"][0]["narration"][:3]) if doc["sections"] else ""
     desc = "\n".join([hook, "", "⏱ 목차", *chapters, "", *( [disclaimer] if disclaimer else [] ),
                       "", "#" + " #".join(t.replace(" ", "") for t in tags[:3])])
-    return {"title": titles[0], "title_alternatives": titles[1:], "description": desc, "tags": tags[:15], "chapters": chapters,
+    return {"title": titles[0] if titles else "제목 미정", "title_alternatives": titles[1:] if len(titles) > 1 else [], "description": desc, "tags": tags[:15], "chapters": chapters,
             "category_id": "27", "default_language": "ko", "privacy": "private", "made_for_kids": False}
 
 

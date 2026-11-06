@@ -31,7 +31,11 @@ def compute(con, today: str, top: int = 20) -> dict:
                               WHERE c.date BETWEEN ? AND ?""", (a, b)).fetchall()
         cnt, ex = Counter(), {}
         for vid, title, tags in rows:
-            for k in tokens(title, json.loads(tags or "[]")):
+            try:
+                tag_list = json.loads(tags or "[]")
+            except ValueError:
+                tag_list = []
+            for k in tokens(title, tag_list if isinstance(tag_list, list) else []):
                 cnt[k] += 1
                 ex.setdefault(k, []).append({"id": vid, "t": title})
         return cnt, ex

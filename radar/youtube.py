@@ -91,11 +91,16 @@ class RealYouTube:
 
     def videos_many(self, id_batches: list[list[str]], workers: int = 8) -> list[dict]:
         from concurrent.futures import ThreadPoolExecutor
+        id_batches = [b for b in id_batches if b]
+        if not id_batches:
+            return []
         for _ in id_batches:
             self.quota.spend("videos.list")
+
+        def one(b: list[str]) -> list[dict]:   # 오류는 삼키지 않는다(쿼터 초과가 '0건'으로 숨는 것 방지)
+            return self._fetch("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(b), "maxResults": 50}).get("items", [])
         with ThreadPoolExecutor(workers) as ex:
-            res = ex.map(lambda b: self._fetch("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(b), "maxResults": 50}).get("items", []), id_batches)
-            return [it for items in res for it in items]
+            return [it for items in ex.map(one, id_batches) for it in items]
 
     def videos(self, ids: list[str]) -> list[dict]:
         d = self._get("videos.list", {"part": "snippet,statistics,contentDetails", "id": ",".join(ids), "maxResults": 50})

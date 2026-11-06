@@ -19,7 +19,10 @@ YT = re.compile(r"(?:v=|youtu\.be/|shorts/|embed/)([\w-]{11})")
 
 def parse_issue(body: str) -> dict:
     m = re.search(r"```json\s*(\{.*?\})\s*```", body, re.S)
-    cfg = json.loads(m.group(1)) if m else {}
+    try:
+        cfg = json.loads(m.group(1)) if m else {}
+    except json.JSONDecodeError as e:
+        raise ValueError(f"Issue 본문의 json 블록 문법 오류({e.lineno}줄 {e.colno}칸) — 쉼표·따옴표를 확인하세요") from None
     draft = ""
     dm = re.search(r"##\s*초안\s*\n(.*)", body, re.S)
     if dm:
@@ -114,8 +117,10 @@ def render(post: dict, cfg: dict) -> tuple[str, str]:
         H.append("<h2>오늘 바로 해볼 것</h2><ul>" + "".join(f"<li>{e(x)}</li>" for x in post["checklist"]) + "</ul>")
         T += ["■ 오늘 바로 해볼 것"] + [f"✔ {x}" for x in post["checklist"]] + [""]
     if post.get("faq"):
-        H.append("<h2>자주 묻는 질문</h2>" + "".join(f"<h3>Q. {e(f['q'])}</h3><p>{e(f['a'])}</p>" for f in post["faq"]))
-        T += ["■ 자주 묻는 질문"] + [f"Q. {f['q']}\nA. {f['a']}" for f in post["faq"]] + [""]
+        faqs = [f for f in post["faq"] if isinstance(f, dict) and (f.get("q") or "").strip() and (f.get("a") or "").strip()]
+        if faqs:
+            H.append("<h2>자주 묻는 질문</h2>" + "".join(f"<h3>Q. {e(f.get('q', ''))}</h3><p>{e(f.get('a', ''))}</p>" for f in faqs))
+            T += ["■ 자주 묻는 질문"] + [f"Q. {f.get('q', '')}\nA. {f.get('a', '')}" for f in faqs] + [""]
     H.append(f"<p>{e(post.get('outro', ''))}</p>")
     T.append(post.get("outro", ""))
     yh, yt = youtube_block(cfg.get("youtube"), cfg.get("channel_url"))

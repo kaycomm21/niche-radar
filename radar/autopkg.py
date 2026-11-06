@@ -30,10 +30,12 @@ JSON만:
 
 
 def _script_md(pkg: dict, group: str, src: dict) -> str:
-    L = [f"# ⓒ 대본 AUTO — {pkg['titles'][0]}", f"> 채널: {group} · 자동 생성(Gemini) · 근거: {src.get('title')} ({src.get('channel')})",
+    titles = pkg.get("titles")
+    title = (titles[0] if isinstance(titles, list) and titles else None) or src.get("title") or "제목 미정"
+    L = [f"# ⓒ 대본 AUTO — {title}", f"> 채널: {group} · 자동 생성(Gemini) · 근거: {src.get('title')} ({src.get('channel')})",
          "> 상태: **AI 초안 — factcheck.md 의 [확인 필요] 처리 전 사용 금지**", "", "---", ""]
     t = 0
-    for s in pkg["sections"]:
+    for s in pkg.get("sections") or []:
         L.append(f"## [{t // 60}:{t % 60:02d}] {s['name']}")
         if s.get("broll"):
             L.append(f"(B롤: {', '.join(s['broll'])})")
@@ -51,6 +53,8 @@ def make_package(item: dict, video: dict | None, out_root: Path | None = None) -
     pkg = ai_json(PKG_PROMPT.format(group=group, recipe=RECIPES.get(item.get("recipe") or "R2", "R2"), bible=bibles.get(group, ""),
                                         title=src["title"], channel=src["channel"], tags=src["tags"]), temperature=0.7, quality=True)  # 대본 = 품질 우선 → Claude Opus
     slug = re.sub(r"[^\w-]", "", str(item["id"]))[:20]
+    if not pkg.get("titles") or not pkg.get("sections"):   # AI 응답 불량이면 빈 패키지를 만들지 않는다
+        raise ValueError("AI 응답에 titles/sections 없음 — 다시 실행하세요")
     d = (out_root or config.EXPORTS_DIR / "packages") / f"{date.today().isoformat()}_{slug}"
     d.mkdir(parents=True, exist_ok=True)
     (d / "script.md").write_text(_script_md(pkg, group, src), encoding="utf-8")
@@ -83,5 +87,5 @@ def localize(con, today: str, top: int = 12) -> dict:
             out[vid] = gemini_json(LOC_PROMPT.format(bibles=bibles, title=title, channel=(ch[0] if ch else ""), views=views), temperature=0.6)
         except Exception as e:  # noqa: BLE001
             print(f"  한국화 기획 실패 {vid}: {e}")
-            break
+            break   # 한도·과금 오류 시 나머지 호출 낭비 방지(CC 판정: PA 제안 기각)
     return out
