@@ -1,0 +1,358 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 596,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "이륙 준비: 은퇴 고도 1만 미터의 꿈",
+   "start_hint_s": 0.0,
+   "duration_s": 14.6,
+   "broll_ko": "창밖으로 구름이 펼쳐진 비행기 내부",
+   "prompt_en": "창밖으로 구름이 펼쳐진 비행기 내부 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 지금, 경제적 자유라는 목적지를 향한 고도 1만 미터 상공을 비행하고 계십니다. 오랜 직장 생활로 쌓아 올린 자산, 은퇴 후의 여유로운"
+  },
+  {
+   "shot": 2,
+   "section": "이륙 준비: 은퇴 고도 1만 미터의 꿈",
+   "start_hint_s": 14.6,
+   "duration_s": 14.6,
+   "broll_ko": "평온한 모습",
+   "prompt_en": "평온한 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 지금, 경제적 자유라는 목적지를 향한 고도 1만 미터 상공을 비행하고 계십니다. 오랜 직장 생활로 쌓아 올린 자산, 은퇴 후의 여유로운"
+  },
+  {
+   "shot": 3,
+   "section": "이륙 준비: 은퇴 고도 1만 미터의 꿈",
+   "start_hint_s": 29.2,
+   "duration_s": 14.6,
+   "broll_ko": "연필로 차분하게 재무 계획표를 작성하는 손",
+   "prompt_en": "연필로 차분하게 재무 계획표를 작성하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 지금, 경제적 자유라는 목적지를 향한 고도 1만 미터 상공을 비행하고 계십니다. 오랜 직장 생활로 쌓아 올린 자산, 은퇴 후의 여유로운"
+  },
+  {
+   "shot": 4,
+   "section": "이륙 준비: 은퇴 고도 1만 미터의 꿈",
+   "start_hint_s": 43.8,
+   "duration_s": 14.6,
+   "broll_ko": "높은 산봉우리를 배경으로 떠오르는 해",
+   "prompt_en": "높은 산봉우리를 배경으로 떠오르는 해 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "여러분은 지금, 경제적 자유라는 목적지를 향한 고도 1만 미터 상공을 비행하고 계십니다. 오랜 직장 생활로 쌓아 올린 자산, 은퇴 후의 여유로운"
+  },
+  {
+   "shot": 5,
+   "section": "고도 상승의 유혹: 과도한 기대와 위험 신호",
+   "start_hint_s": 58.0,
+   "duration_s": 11.5,
+   "broll_ko": "급격히 치솟는 주식 그래프 (가상의 그래프",
+   "prompt_en": "급격히 치솟는 주식 그래프 (가상의 그래프 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리는 종종 '고도 상승'의 유혹에 빠집니다. 단기간 고수익을 약속하는 상품이나 검증되지 않은 정보에 현혹되어 과도한 위험"
+  },
+  {
+   "shot": 6,
+   "section": "고도 상승의 유혹: 과도한 기대와 위험 신호",
+   "start_hint_s": 69.5,
+   "duration_s": 11.5,
+   "broll_ko": "특정 종목 아님)",
+   "prompt_en": "특정 종목 아님) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리는 종종 '고도 상승'의 유혹에 빠집니다. 단기간 고수익을 약속하는 상품이나 검증되지 않은 정보에 현혹되어 과도한 위험"
+  },
+  {
+   "shot": 7,
+   "section": "고도 상승의 유혹: 과도한 기대와 위험 신호",
+   "start_hint_s": 81.1,
+   "duration_s": 11.5,
+   "broll_ko": "카지노 룰렛이 빠르게 돌아가는 장면 (직접적인 도박 장면 아님",
+   "prompt_en": "카지노 룰렛이 빠르게 돌아가는 장면 (직접적인 도박 장면 아님 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리는 종종 '고도 상승'의 유혹에 빠집니다. 단기간 고수익을 약속하는 상품이나 검증되지 않은 정보에 현혹되어 과도한 위험"
+  },
+  {
+   "shot": 8,
+   "section": "고도 상승의 유혹: 과도한 기대와 위험 신호",
+   "start_hint_s": 92.6,
+   "duration_s": 11.5,
+   "broll_ko": "'위험' 상징)",
+   "prompt_en": "'위험' 상징) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리는 종종 '고도 상승'의 유혹에 빠집니다. 단기간 고수익을 약속하는 상품이나 검증되지 않은 정보에 현혹되어 과도한 위험"
+  },
+  {
+   "shot": 9,
+   "section": "고도 상승의 유혹: 과도한 기대와 위험 신호",
+   "start_hint_s": 104.1,
+   "duration_s": 11.5,
+   "broll_ko": "수많은 정보가 뒤섞인 복잡한 차트 화면",
+   "prompt_en": "수많은 정보가 뒤섞인 복잡한 차트 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리는 종종 '고도 상승'의 유혹에 빠집니다. 단기간 고수익을 약속하는 상품이나 검증되지 않은 정보에 현혹되어 과도한 위험"
+  },
+  {
+   "shot": 10,
+   "section": "난기류 경고: 은퇴 후 찾아올 수 있는 위기들",
+   "start_hint_s": 115.0,
+   "duration_s": 13.5,
+   "broll_ko": "구름 속에서 흔들리는 비행기 날개 (CG 또는 스톡 영상)",
+   "prompt_en": "구름 속에서 흔들리는 비행기 날개 (CG 또는 스톡 영상) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "아무리 철저히 준비된 비행이라도, 예상치 못한 난기류는 언제든 찾아올 수 있습니다. 은퇴 후 자산을 위협하는 '난기류'는 무엇일까요? 첫째, '"
+  },
+  {
+   "shot": 11,
+   "section": "난기류 경고: 은퇴 후 찾아올 수 있는 위기들",
+   "start_hint_s": 128.5,
+   "duration_s": 13.5,
+   "broll_ko": "신문 헤드라인에 '경제 위기'",
+   "prompt_en": "신문 헤드라인에 '경제 위기' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "아무리 철저히 준비된 비행이라도, 예상치 못한 난기류는 언제든 찾아올 수 있습니다. 은퇴 후 자산을 위협하는 '난기류'는 무엇일까요? 첫째, '"
+  },
+  {
+   "shot": 12,
+   "section": "난기류 경고: 은퇴 후 찾아올 수 있는 위기들",
+   "start_hint_s": 142.1,
+   "duration_s": 13.5,
+   "broll_ko": "'고물가' 등의 단어가 스쳐 지나감",
+   "prompt_en": "'고물가' 등의 단어가 스쳐 지나감 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "아무리 철저히 준비된 비행이라도, 예상치 못한 난기류는 언제든 찾아올 수 있습니다. 은퇴 후 자산을 위협하는 '난기류'는 무엇일까요? 첫째, '"
+  },
+  {
+   "shot": 13,
+   "section": "난기류 경고: 은퇴 후 찾아올 수 있는 위기들",
+   "start_hint_s": 155.6,
+   "duration_s": 13.5,
+   "broll_ko": "병원 복도",
+   "prompt_en": "병원 복도 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "아무리 철저히 준비된 비행이라도, 예상치 못한 난기류는 언제든 찾아올 수 있습니다. 은퇴 후 자산을 위협하는 '난기류'는 무엇일까요? 첫째, '"
+  },
+  {
+   "shot": 14,
+   "section": "난기류 경고: 은퇴 후 찾아올 수 있는 위기들",
+   "start_hint_s": 169.1,
+   "duration_s": 13.5,
+   "broll_ko": "대기실의 차분한 모습",
+   "prompt_en": "대기실의 차분한 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "아무리 철저히 준비된 비행이라도, 예상치 못한 난기류는 언제든 찾아올 수 있습니다. 은퇴 후 자산을 위협하는 '난기류'는 무엇일까요? 첫째, '"
+  },
+  {
+   "shot": 15,
+   "section": "비상 매뉴얼 1단계: 비상 자금 확보와 부채 관리",
+   "start_hint_s": 182.0,
+   "duration_s": 21.1,
+   "broll_ko": "안정적인 저축 계좌 잔고가 표시된 스마트폰 화면 (가상의 앱)",
+   "prompt_en": "안정적인 저축 계좌 잔고가 표시된 스마트폰 화면 (가상의 앱) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비상 상황 대비 첫 단계는 '비상 자금' 확보입니다. 비행기에 여분 연료가 필요하듯, 우리에게도 최소 [확인 필요: 6개월에서 1년치] 생활비가"
+  },
+  {
+   "shot": 16,
+   "section": "비상 매뉴얼 1단계: 비상 자금 확보와 부채 관리",
+   "start_hint_s": 203.1,
+   "duration_s": 21.1,
+   "broll_ko": "부채 상환 계획표를 꼼꼼히 확인하는 손",
+   "prompt_en": "부채 상환 계획표를 꼼꼼히 확인하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비상 상황 대비 첫 단계는 '비상 자금' 확보입니다. 비행기에 여분 연료가 필요하듯, 우리에게도 최소 [확인 필요: 6개월에서 1년치] 생활비가"
+  },
+  {
+   "shot": 17,
+   "section": "비상 매뉴얼 1단계: 비상 자금 확보와 부채 관리",
+   "start_hint_s": 224.2,
+   "duration_s": 21.1,
+   "broll_ko": "차분하게 가계부를 정리하는 모습",
+   "prompt_en": "차분하게 가계부를 정리하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비상 상황 대비 첫 단계는 '비상 자금' 확보입니다. 비행기에 여분 연료가 필요하듯, 우리에게도 최소 [확인 필요: 6개월에서 1년치] 생활비가"
+  },
+  {
+   "shot": 18,
+   "section": "비상 매뉴얼 2단계: 자산 배분과 분산 투자의 원칙",
+   "start_hint_s": 245.0,
+   "duration_s": 13.8,
+   "broll_ko": "다양한 자산군(주식",
+   "prompt_en": "다양한 자산군(주식 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행 중 난기류에 한쪽 날개에만 하중이 실리면 위험하듯, 자산 또한 한곳에 집중되면 위험합니다. 이것이 바로 '자산 배분'과 '분산 투자'의 중"
+  },
+  {
+   "shot": 19,
+   "section": "비상 매뉴얼 2단계: 자산 배분과 분산 투자의 원칙",
+   "start_hint_s": 258.8,
+   "duration_s": 13.8,
+   "broll_ko": "채권",
+   "prompt_en": "채권 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행 중 난기류에 한쪽 날개에만 하중이 실리면 위험하듯, 자산 또한 한곳에 집중되면 위험합니다. 이것이 바로 '자산 배분'과 '분산 투자'의 중"
+  },
+  {
+   "shot": 20,
+   "section": "비상 매뉴얼 2단계: 자산 배분과 분산 투자의 원칙",
+   "start_hint_s": 272.6,
+   "duration_s": 13.8,
+   "broll_ko": "부동산 등)을 나타내는 파이 차트",
+   "prompt_en": "부동산 등)을 나타내는 파이 차트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행 중 난기류에 한쪽 날개에만 하중이 실리면 위험하듯, 자산 또한 한곳에 집중되면 위험합니다. 이것이 바로 '자산 배분'과 '분산 투자'의 중"
+  },
+  {
+   "shot": 21,
+   "section": "비상 매뉴얼 2단계: 자산 배분과 분산 투자의 원칙",
+   "start_hint_s": 286.3,
+   "duration_s": 13.8,
+   "broll_ko": "여러 개의 서로 다른 종류의 씨앗을 심는 모습",
+   "prompt_en": "여러 개의 서로 다른 종류의 씨앗을 심는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행 중 난기류에 한쪽 날개에만 하중이 실리면 위험하듯, 자산 또한 한곳에 집중되면 위험합니다. 이것이 바로 '자산 배분'과 '분산 투자'의 중"
+  },
+  {
+   "shot": 22,
+   "section": "비상 매뉴얼 2단계: 자산 배분과 분산 투자의 원칙",
+   "start_hint_s": 300.1,
+   "duration_s": 13.8,
+   "broll_ko": "다양한 국가의 통화가 나열된 이미지",
+   "prompt_en": "다양한 국가의 통화가 나열된 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "비행 중 난기류에 한쪽 날개에만 하중이 실리면 위험하듯, 자산 또한 한곳에 집중되면 위험합니다. 이것이 바로 '자산 배분'과 '분산 투자'의 중"
+  },
+  {
+   "shot": 23,
+   "section": "비상 매뉴얼 3단계: 인출 전략과 현금 흐름 관리",
+   "start_hint_s": 313.0,
+   "duration_s": 23.0,
+   "broll_ko": "매월 일정한 금액이 통장에서 빠져나가는 가상의 자동 이체 화면",
+   "prompt_en": "매월 일정한 금액이 통장에서 빠져나가는 가상의 자동 이체 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후에는 소득이 없으므로, 자산을 '인출'하여 생활비를 충당해야 합니다. 이때 가장 중요한 것이 '안정적인 인출 전략'과 '현금 흐름 관리'"
+  },
+  {
+   "shot": 24,
+   "section": "비상 매뉴얼 3단계: 인출 전략과 현금 흐름 관리",
+   "start_hint_s": 336.0,
+   "duration_s": 23.0,
+   "broll_ko": "은퇴 후 여유롭게 커피를 마시며 책을 읽는 사람의 뒷모습",
+   "prompt_en": "은퇴 후 여유롭게 커피를 마시며 책을 읽는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후에는 소득이 없으므로, 자산을 '인출'하여 생활비를 충당해야 합니다. 이때 가장 중요한 것이 '안정적인 인출 전략'과 '현금 흐름 관리'"
+  },
+  {
+   "shot": 25,
+   "section": "비상 매뉴얼 3단계: 인출 전략과 현금 흐름 관리",
+   "start_hint_s": 359.1,
+   "duration_s": 23.0,
+   "broll_ko": "예산표를 확인하며 지출을 조절하는 모습",
+   "prompt_en": "예산표를 확인하며 지출을 조절하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후에는 소득이 없으므로, 자산을 '인출'하여 생활비를 충당해야 합니다. 이때 가장 중요한 것이 '안정적인 인출 전략'과 '현금 흐름 관리'"
+  },
+  {
+   "shot": 26,
+   "section": "비상 매뉴얼 4단계: 건강 관리와 평생 학습",
+   "start_hint_s": 382.0,
+   "duration_s": 24.7,
+   "broll_ko": "공원에서 조깅하거나 스트레칭하는 노년층의 뒷모습",
+   "prompt_en": "공원에서 조깅하거나 스트레칭하는 노년층의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리의 '건강'은 비행기의 튼튼한 동체와 같습니다. 아무리 많은 자산을 모았더라도 건강을 잃으면 의미가 퇴색될 수밖에 없습"
+  },
+  {
+   "shot": 27,
+   "section": "비상 매뉴얼 4단계: 건강 관리와 평생 학습",
+   "start_hint_s": 406.7,
+   "duration_s": 24.7,
+   "broll_ko": "도서관에서 책을 읽거나 온라인 강의를 듣는 모습",
+   "prompt_en": "도서관에서 책을 읽거나 온라인 강의를 듣는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리의 '건강'은 비행기의 튼튼한 동체와 같습니다. 아무리 많은 자산을 모았더라도 건강을 잃으면 의미가 퇴색될 수밖에 없습"
+  },
+  {
+   "shot": 28,
+   "section": "비상 매뉴얼 4단계: 건강 관리와 평생 학습",
+   "start_hint_s": 431.5,
+   "duration_s": 24.7,
+   "broll_ko": "친구들과 함께 취미 활동을 즐기는 모습",
+   "prompt_en": "친구들과 함께 취미 활동을 즐기는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제적 자유 비행에서 우리의 '건강'은 비행기의 튼튼한 동체와 같습니다. 아무리 많은 자산을 모았더라도 건강을 잃으면 의미가 퇴색될 수밖에 없습"
+  },
+  {
+   "shot": 29,
+   "section": "안정적인 착륙: 장기적인 관점과 평온한 마음가짐",
+   "start_hint_s": 456.0,
+   "duration_s": 23.2,
+   "broll_ko": "활주로에 부드럽게 착륙하는 비행기의 모습",
+   "prompt_en": "활주로에 부드럽게 착륙하는 비행기의 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결국 모든 비행의 궁극적인 목표는 '안정적인 착륙'입니다. 은퇴 후의 삶은 단거리 경주가 아닌 장거리 마라톤과 같습니다. 단기적인 시장 변동에 "
+  },
+  {
+   "shot": 30,
+   "section": "안정적인 착륙: 장기적인 관점과 평온한 마음가짐",
+   "start_hint_s": 479.2,
+   "duration_s": 23.2,
+   "broll_ko": "잔잔한 호수에 비치는 노을",
+   "prompt_en": "잔잔한 호수에 비치는 노을 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결국 모든 비행의 궁극적인 목표는 '안정적인 착륙'입니다. 은퇴 후의 삶은 단거리 경주가 아닌 장거리 마라톤과 같습니다. 단기적인 시장 변동에 "
+  },
+  {
+   "shot": 31,
+   "section": "안정적인 착륙: 장기적인 관점과 평온한 마음가짐",
+   "start_hint_s": 502.3,
+   "duration_s": 23.2,
+   "broll_ko": "편안하게 휴식을 취하는 노부부의 모습",
+   "prompt_en": "편안하게 휴식을 취하는 노부부의 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "결국 모든 비행의 궁극적인 목표는 '안정적인 착륙'입니다. 은퇴 후의 삶은 단거리 경주가 아닌 장거리 마라톤과 같습니다. 단기적인 시장 변동에 "
+  },
+  {
+   "shot": 32,
+   "section": "다음 비행을 위한 준비: 지속 가능한 경제적 자유",
+   "start_hint_s": 525.0,
+   "duration_s": 16.8,
+   "broll_ko": "창밖으로 보이는 아름다운 풍경",
+   "prompt_en": "창밖으로 보이는 아름다운 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 경제적 자유를 향한 고도 비행 중 발생할 수 있는 위기에 대비하는 '비상 매뉴얼'을 살펴보았습니다. 비상 자금 확보, 부채 관리, "
+  },
+  {
+   "shot": 33,
+   "section": "다음 비행을 위한 준비: 지속 가능한 경제적 자유",
+   "start_hint_s": 541.8,
+   "duration_s": 16.8,
+   "broll_ko": "목적지에 도착한 듯한 평온함",
+   "prompt_en": "목적지에 도착한 듯한 평온함 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 경제적 자유를 향한 고도 비행 중 발생할 수 있는 위기에 대비하는 '비상 매뉴얼'을 살펴보았습니다. 비상 자금 확보, 부채 관리, "
+  },
+  {
+   "shot": 34,
+   "section": "다음 비행을 위한 준비: 지속 가능한 경제적 자유",
+   "start_hint_s": 558.5,
+   "duration_s": 16.8,
+   "broll_ko": "여권과 비행기 티켓을 들고 다음 여행을 준비하는 모습",
+   "prompt_en": "여권과 비행기 티켓을 들고 다음 여행을 준비하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 경제적 자유를 향한 고도 비행 중 발생할 수 있는 위기에 대비하는 '비상 매뉴얼'을 살펴보았습니다. 비상 자금 확보, 부채 관리, "
+  },
+  {
+   "shot": 35,
+   "section": "다음 비행을 위한 준비: 지속 가능한 경제적 자유",
+   "start_hint_s": 575.3,
+   "duration_s": 16.8,
+   "broll_ko": "'경제적 자유'라고 적힌 표지판이 보이는 길",
+   "prompt_en": "'경제적 자유'라고 적힌 표지판이 보이는 길 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 경제적 자유를 향한 고도 비행 중 발생할 수 있는 위기에 대비하는 '비상 매뉴얼'을 살펴보았습니다. 비상 자금 확보, 부채 관리, "
+  }
+ ]
+}

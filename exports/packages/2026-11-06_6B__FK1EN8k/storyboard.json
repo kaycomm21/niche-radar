@@ -1,0 +1,428 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 786,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "도입: 알리발 '가성비'의 유혹, 정말 경제적 자유로 가는 길일까?",
+   "start_hint_s": 0.0,
+   "duration_s": 21.3,
+   "broll_ko": "스마트폰 화면에 알리익스프레스 앱이 켜져 있고",
+   "prompt_en": "스마트폰 화면에 알리익스프레스 앱이 켜져 있고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적 자유를 향해 함께 나아가는 경제적자유구역입니다. 최근 알리익스프레스, 테무 같은 해외 직구 플랫폼이 엄청난 인기를 끌고 있습"
+  },
+  {
+   "shot": 2,
+   "section": "도입: 알리발 '가성비'의 유혹, 정말 경제적 자유로 가는 길일까?",
+   "start_hint_s": 21.3,
+   "duration_s": 21.3,
+   "broll_ko": "수많은 저렴한 제품들이 빠르게 스크롤되는 모습",
+   "prompt_en": "수많은 저렴한 제품들이 빠르게 스크롤되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적 자유를 향해 함께 나아가는 경제적자유구역입니다. 최근 알리익스프레스, 테무 같은 해외 직구 플랫폼이 엄청난 인기를 끌고 있습"
+  },
+  {
+   "shot": 3,
+   "section": "도입: 알리발 '가성비'의 유혹, 정말 경제적 자유로 가는 길일까?",
+   "start_hint_s": 42.5,
+   "duration_s": 21.3,
+   "broll_ko": "텅 빈 지갑과 그 옆에 쌓여있는 택배 상자들 (로고 없음)",
+   "prompt_en": "텅 빈 지갑과 그 옆에 쌓여있는 택배 상자들 (로고 없음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적 자유를 향해 함께 나아가는 경제적자유구역입니다. 최근 알리익스프레스, 테무 같은 해외 직구 플랫폼이 엄청난 인기를 끌고 있습"
+  },
+  {
+   "shot": 4,
+   "section": "도입: 알리발 '가성비'의 유혹, 정말 경제적 자유로 가는 길일까?",
+   "start_hint_s": 63.8,
+   "duration_s": 21.3,
+   "broll_ko": "고민하는 표정의 중년 남녀의 실루엣",
+   "prompt_en": "고민하는 표정의 중년 남녀의 실루엣 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하세요, 경제적 자유를 향해 함께 나아가는 경제적자유구역입니다. 최근 알리익스프레스, 테무 같은 해외 직구 플랫폼이 엄청난 인기를 끌고 있습"
+  },
+  {
+   "shot": 5,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 85.0,
+   "duration_s": 15.7,
+   "broll_ko": "해외에서 국내로 이동하는 택배 상자의 움직임을 나타내는 지도 애니메이션 (지명",
+   "prompt_en": "해외에서 국내로 이동하는 택배 상자의 움직임을 나타내는 지도 애니메이션 (지명 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 6,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 100.7,
+   "duration_s": 15.7,
+   "broll_ko": "로고 없음)",
+   "prompt_en": "로고 없음) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 7,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 116.3,
+   "duration_s": 15.7,
+   "broll_ko": "영수증 화면에 배송비",
+   "prompt_en": "영수증 화면에 배송비 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 8,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 132.0,
+   "duration_s": 15.7,
+   "broll_ko": "관세 항목이 강조되어 표시되는 모습",
+   "prompt_en": "관세 항목이 강조되어 표시되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 9,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 147.7,
+   "duration_s": 15.7,
+   "broll_ko": "관세청 웹사이트 화면을 보여주며",
+   "prompt_en": "관세청 웹사이트 화면을 보여주며 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 10,
+   "section": "숨겨진 비용 1: 배송비와 관세, 예상치 못한 지출",
+   "start_hint_s": 163.3,
+   "duration_s": 15.7,
+   "broll_ko": "세금 계산법을 설명하는 듯한 연출",
+   "prompt_en": "세금 계산법을 설명하는 듯한 연출 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 쇼핑에서 가장 먼저 마주하는 숨겨진 비용은 바로 '배송비'와 '관세'입니다. 많은 제품이 '무료 배송'을 내세우지만, 이는 판매자"
+  },
+  {
+   "shot": 11,
+   "section": "숨겨진 비용 2: 시간과 노력, 그리고 스트레스 비용",
+   "start_hint_s": 179.0,
+   "duration_s": 17.8,
+   "broll_ko": "시계가 빠르게 돌아가는 모습과 함께 흐르는 시간의 시각화",
+   "prompt_en": "시계가 빠르게 돌아가는 모습과 함께 흐르는 시간의 시각화 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "눈에 보이는 돈 외에도 알리 쇼핑에는 '시간'과 '노력', 그리고 '스트레스'라는 보이지 않는 비용이 발생합니다. 알리익스프레스의 평균 배송 기"
+  },
+  {
+   "shot": 12,
+   "section": "숨겨진 비용 2: 시간과 노력, 그리고 스트레스 비용",
+   "start_hint_s": 196.8,
+   "duration_s": 17.8,
+   "broll_ko": "컴퓨터 화면에서 여러 개의 웹페이지 (리뷰",
+   "prompt_en": "컴퓨터 화면에서 여러 개의 웹페이지 (리뷰 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "눈에 보이는 돈 외에도 알리 쇼핑에는 '시간'과 '노력', 그리고 '스트레스'라는 보이지 않는 비용이 발생합니다. 알리익스프레스의 평균 배송 기"
+  },
+  {
+   "shot": 13,
+   "section": "숨겨진 비용 2: 시간과 노력, 그리고 스트레스 비용",
+   "start_hint_s": 214.6,
+   "duration_s": 17.8,
+   "broll_ko": "배송 조회",
+   "prompt_en": "배송 조회 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "눈에 보이는 돈 외에도 알리 쇼핑에는 '시간'과 '노력', 그리고 '스트레스'라는 보이지 않는 비용이 발생합니다. 알리익스프레스의 평균 배송 기"
+  },
+  {
+   "shot": 14,
+   "section": "숨겨진 비용 2: 시간과 노력, 그리고 스트레스 비용",
+   "start_hint_s": 232.5,
+   "duration_s": 17.8,
+   "broll_ko": "분쟁 제기)를 오가는 손",
+   "prompt_en": "분쟁 제기)를 오가는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "눈에 보이는 돈 외에도 알리 쇼핑에는 '시간'과 '노력', 그리고 '스트레스'라는 보이지 않는 비용이 발생합니다. 알리익스프레스의 평균 배송 기"
+  },
+  {
+   "shot": 15,
+   "section": "숨겨진 비용 2: 시간과 노력, 그리고 스트레스 비용",
+   "start_hint_s": 250.3,
+   "duration_s": 17.8,
+   "broll_ko": "한숨을 쉬거나 머리를 긁적이는 사람의 뒷모습",
+   "prompt_en": "한숨을 쉬거나 머리를 긁적이는 사람의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "눈에 보이는 돈 외에도 알리 쇼핑에는 '시간'과 '노력', 그리고 '스트레스'라는 보이지 않는 비용이 발생합니다. 알리익스프레스의 평균 배송 기"
+  },
+  {
+   "shot": 16,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 268.0,
+   "duration_s": 14.8,
+   "broll_ko": "겉보기에는 멀쩡하지만",
+   "prompt_en": "겉보기에는 멀쩡하지만 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 17,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 282.8,
+   "duration_s": 14.8,
+   "broll_ko": "쉽게 부서지거나 작동하지 않는 제품의 클로즈업 (예: 헐거운 플라스틱",
+   "prompt_en": "쉽게 부서지거나 작동하지 않는 제품의 클로즈업 (예: 헐거운 플라스틱 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 18,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 297.7,
+   "duration_s": 14.8,
+   "broll_ko": "끊어진 전선)",
+   "prompt_en": "끊어진 전선) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 19,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 312.5,
+   "duration_s": 14.8,
+   "broll_ko": "KC 인증 마크가 있는 국내 제품과 없는 해외 제품을 비교하는 모습",
+   "prompt_en": "KC 인증 마크가 있는 국내 제품과 없는 해외 제품을 비교하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 20,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 327.4,
+   "duration_s": 14.8,
+   "broll_ko": "비슷한 디자인이지만",
+   "prompt_en": "비슷한 디자인이지만 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 21,
+   "section": "품질의 함정: '싸구려'가 아닌 '가치'를 보는 눈",
+   "start_hint_s": 342.2,
+   "duration_s": 14.8,
+   "broll_ko": "확연히 다른 품질의 두 제품을 나란히 놓은 모습",
+   "prompt_en": "확연히 다른 품질의 두 제품을 나란히 놓은 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스 제품의 가장 큰 논란 중 하나는 '품질'입니다. 겉보기에는 비슷해 보이지만, 실제 사용해보면 내구성이나 안전성에서 큰 차이를 보이"
+  },
+  {
+   "shot": 22,
+   "section": "현명한 소비자를 위한 알리 활용법: 득이 되는 경우",
+   "start_hint_s": 357.0,
+   "duration_s": 16.6,
+   "broll_ko": "특정 부품이나 소모품을 찾기 위해 검색하는 모습 (예: 특정 규격의 나사",
+   "prompt_en": "특정 부품이나 소모품을 찾기 위해 검색하는 모습 (예: 특정 규격의 나사 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 알리익스프레스는 무조건 피해야 할 곳일까요? 아닙니다. 특정 상황에서는 현명한 소비를 위한 좋은 대안이 될 수 있습니다. 첫째, 국내에"
+  },
+  {
+   "shot": 23,
+   "section": "현명한 소비자를 위한 알리 활용법: 득이 되는 경우",
+   "start_hint_s": 373.6,
+   "duration_s": 16.6,
+   "broll_ko": "드론 부품)",
+   "prompt_en": "드론 부품) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 알리익스프레스는 무조건 피해야 할 곳일까요? 아닙니다. 특정 상황에서는 현명한 소비를 위한 좋은 대안이 될 수 있습니다. 첫째, 국내에"
+  },
+  {
+   "shot": 24,
+   "section": "현명한 소비자를 위한 알리 활용법: 득이 되는 경우",
+   "start_hint_s": 390.2,
+   "duration_s": 16.6,
+   "broll_ko": "취미용품 (예: DIY 공예 재료",
+   "prompt_en": "취미용품 (예: DIY 공예 재료 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 알리익스프레스는 무조건 피해야 할 곳일까요? 아닙니다. 특정 상황에서는 현명한 소비를 위한 좋은 대안이 될 수 있습니다. 첫째, 국내에"
+  },
+  {
+   "shot": 25,
+   "section": "현명한 소비자를 위한 알리 활용법: 득이 되는 경우",
+   "start_hint_s": 406.7,
+   "duration_s": 16.6,
+   "broll_ko": "낚시 용품)을 저렴하게 구매하여 만족하는 모습",
+   "prompt_en": "낚시 용품)을 저렴하게 구매하여 만족하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 알리익스프레스는 무조건 피해야 할 곳일까요? 아닙니다. 특정 상황에서는 현명한 소비를 위한 좋은 대안이 될 수 있습니다. 첫째, 국내에"
+  },
+  {
+   "shot": 26,
+   "section": "현명한 소비자를 위한 알리 활용법: 득이 되는 경우",
+   "start_hint_s": 423.3,
+   "duration_s": 16.6,
+   "broll_ko": "국내에서 구하기 어려운 독특한 디자인의 소품을 발견하고 장바구니에 담는 모습",
+   "prompt_en": "국내에서 구하기 어려운 독특한 디자인의 소품을 발견하고 장바구니에 담는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 알리익스프레스는 무조건 피해야 할 곳일까요? 아닙니다. 특정 상황에서는 현명한 소비를 위한 좋은 대안이 될 수 있습니다. 첫째, 국내에"
+  },
+  {
+   "shot": 27,
+   "section": "부업으로 연결하기: 알리 소싱, 기회인가 위험인가?",
+   "start_hint_s": 440.0,
+   "duration_s": 22.5,
+   "broll_ko": "알리익스프레스에서 제품을 찾아보고",
+   "prompt_en": "알리익스프레스에서 제품을 찾아보고 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스를 단순히 소비를 넘어 '부업'으로 연결하려는 분들도 많습니다. 특히 '알리 소싱'을 통해 국내에서 재판매하는 방식인데요. 저렴한 "
+  },
+  {
+   "shot": 28,
+   "section": "부업으로 연결하기: 알리 소싱, 기회인가 위험인가?",
+   "start_hint_s": 462.5,
+   "duration_s": 22.5,
+   "broll_ko": "국내 쇼핑몰과 가격을 비교하는 모습",
+   "prompt_en": "국내 쇼핑몰과 가격을 비교하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스를 단순히 소비를 넘어 '부업'으로 연결하려는 분들도 많습니다. 특히 '알리 소싱'을 통해 국내에서 재판매하는 방식인데요. 저렴한 "
+  },
+  {
+   "shot": 29,
+   "section": "부업으로 연결하기: 알리 소싱, 기회인가 위험인가?",
+   "start_hint_s": 485.1,
+   "duration_s": 22.5,
+   "broll_ko": "작은 사무실에서 알리에서 들여온 물건을 직접 검수하고 포장하는 모습",
+   "prompt_en": "작은 사무실에서 알리에서 들여온 물건을 직접 검수하고 포장하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스를 단순히 소비를 넘어 '부업'으로 연결하려는 분들도 많습니다. 특히 '알리 소싱'을 통해 국내에서 재판매하는 방식인데요. 저렴한 "
+  },
+  {
+   "shot": 30,
+   "section": "부업으로 연결하기: 알리 소싱, 기회인가 위험인가?",
+   "start_hint_s": 507.6,
+   "duration_s": 22.5,
+   "broll_ko": "제품 판매 후 반품이나 고객 문의에 응대하며 난감해하는 모습",
+   "prompt_en": "제품 판매 후 반품이나 고객 문의에 응대하며 난감해하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "알리익스프레스를 단순히 소비를 넘어 '부업'으로 연결하려는 분들도 많습니다. 특히 '알리 소싱'을 통해 국내에서 재판매하는 방식인데요. 저렴한 "
+  },
+  {
+   "shot": 31,
+   "section": "소비자 보호와 분쟁 해결: 알아야 할 권리",
+   "start_hint_s": 530.0,
+   "duration_s": 21.5,
+   "broll_ko": "알리익스프레스 앱 내 분쟁 해결 메뉴를 찾아 들어가는 모습",
+   "prompt_en": "알리익스프레스 앱 내 분쟁 해결 메뉴를 찾아 들어가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "만약 알리익스프레스에서 문제가 발생했다면 어떻게 해야 할까요? 국내 쇼핑몰만큼 쉽지는 않지만, 소비자로서의 권리를 알고 적극적으로 행사해야 합니"
+  },
+  {
+   "shot": 32,
+   "section": "소비자 보호와 분쟁 해결: 알아야 할 권리",
+   "start_hint_s": 551.5,
+   "duration_s": 21.5,
+   "broll_ko": "분쟁 해결 과정에서 필요한 증거 (사진",
+   "prompt_en": "분쟁 해결 과정에서 필요한 증거 (사진 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "만약 알리익스프레스에서 문제가 발생했다면 어떻게 해야 할까요? 국내 쇼핑몰만큼 쉽지는 않지만, 소비자로서의 권리를 알고 적극적으로 행사해야 합니"
+  },
+  {
+   "shot": 33,
+   "section": "소비자 보호와 분쟁 해결: 알아야 할 권리",
+   "start_hint_s": 573.1,
+   "duration_s": 21.5,
+   "broll_ko": "동영상)를 준비하는 모습",
+   "prompt_en": "동영상)를 준비하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "만약 알리익스프레스에서 문제가 발생했다면 어떻게 해야 할까요? 국내 쇼핑몰만큼 쉽지는 않지만, 소비자로서의 권리를 알고 적극적으로 행사해야 합니"
+  },
+  {
+   "shot": 34,
+   "section": "소비자 보호와 분쟁 해결: 알아야 할 권리",
+   "start_hint_s": 594.6,
+   "duration_s": 21.5,
+   "broll_ko": "소비자 보호원이나 관련 기관의 로고가 없는 웹사이트 화면을 보여주며 정보 제공",
+   "prompt_en": "소비자 보호원이나 관련 기관의 로고가 없는 웹사이트 화면을 보여주며 정보 제공 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "만약 알리익스프레스에서 문제가 발생했다면 어떻게 해야 할까요? 국내 쇼핑몰만큼 쉽지는 않지만, 소비자로서의 권리를 알고 적극적으로 행사해야 합니"
+  },
+  {
+   "shot": 35,
+   "section": "체크리스트: 알리 쇼핑 전 반드시 확인할 5가지",
+   "start_hint_s": 616.0,
+   "duration_s": 18.0,
+   "broll_ko": "체크리스트가 적힌 노트와 펜을 들고 하나씩 확인하는 손",
+   "prompt_en": "체크리스트가 적힌 노트와 펜을 들고 하나씩 확인하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 알리익스프레스에서 현명하게 쇼핑하기 위한 '5가지 체크리스트'를 알려드리겠습니다. 첫째, '판매자 평점과 후기'를 반드시 확인하세요. 평점"
+  },
+  {
+   "shot": 36,
+   "section": "체크리스트: 알리 쇼핑 전 반드시 확인할 5가지",
+   "start_hint_s": 634.0,
+   "duration_s": 18.0,
+   "broll_ko": "제품 상세 페이지에서 판매자 평점",
+   "prompt_en": "제품 상세 페이지에서 판매자 평점 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 알리익스프레스에서 현명하게 쇼핑하기 위한 '5가지 체크리스트'를 알려드리겠습니다. 첫째, '판매자 평점과 후기'를 반드시 확인하세요. 평점"
+  },
+  {
+   "shot": 37,
+   "section": "체크리스트: 알리 쇼핑 전 반드시 확인할 5가지",
+   "start_hint_s": 651.9,
+   "duration_s": 18.0,
+   "broll_ko": "후기",
+   "prompt_en": "후기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 알리익스프레스에서 현명하게 쇼핑하기 위한 '5가지 체크리스트'를 알려드리겠습니다. 첫째, '판매자 평점과 후기'를 반드시 확인하세요. 평점"
+  },
+  {
+   "shot": 38,
+   "section": "체크리스트: 알리 쇼핑 전 반드시 확인할 5가지",
+   "start_hint_s": 669.9,
+   "duration_s": 18.0,
+   "broll_ko": "배송 옵션 등을 꼼꼼히 확인하는 모습",
+   "prompt_en": "배송 옵션 등을 꼼꼼히 확인하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 알리익스프레스에서 현명하게 쇼핑하기 위한 '5가지 체크리스트'를 알려드리겠습니다. 첫째, '판매자 평점과 후기'를 반드시 확인하세요. 평점"
+  },
+  {
+   "shot": 39,
+   "section": "체크리스트: 알리 쇼핑 전 반드시 확인할 5가지",
+   "start_hint_s": 687.9,
+   "duration_s": 18.0,
+   "broll_ko": "장바구니에 담긴 여러 제품의 총액과 예상 관세를 계산하는 계산기 화면",
+   "prompt_en": "장바구니에 담긴 여러 제품의 총액과 예상 관세를 계산하는 계산기 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 알리익스프레스에서 현명하게 쇼핑하기 위한 '5가지 체크리스트'를 알려드리겠습니다. 첫째, '판매자 평점과 후기'를 반드시 확인하세요. 평점"
+  },
+  {
+   "shot": 40,
+   "section": "결론: '진정한 가성비'를 위한 현명한 선택",
+   "start_hint_s": 706.0,
+   "duration_s": 26.7,
+   "broll_ko": "지갑을 닫고 만족스러운 표정을 짓는 사람의 옆모습",
+   "prompt_en": "지갑을 닫고 만족스러운 표정을 짓는 사람의 옆모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 알리익스프레스의 겉모습 뒤에 숨겨진 진짜 비용과 위험, 그리고 현명한 활용법에 대해 깊이 있게 알아보았습니다. 단순히 가격이 싸다는"
+  },
+  {
+   "shot": 41,
+   "section": "결론: '진정한 가성비'를 위한 현명한 선택",
+   "start_hint_s": 732.7,
+   "duration_s": 26.7,
+   "broll_ko": "신중하게 쇼핑 카트를 비우거나 담는 모습",
+   "prompt_en": "신중하게 쇼핑 카트를 비우거나 담는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 알리익스프레스의 겉모습 뒤에 숨겨진 진짜 비용과 위험, 그리고 현명한 활용법에 대해 깊이 있게 알아보았습니다. 단순히 가격이 싸다는"
+  },
+  {
+   "shot": 42,
+   "section": "결론: '진정한 가성비'를 위한 현명한 선택",
+   "start_hint_s": 759.3,
+   "duration_s": 26.7,
+   "broll_ko": "저축 통장의 잔고가 늘어나는 그래프 (가상의 숫자)",
+   "prompt_en": "저축 통장의 잔고가 늘어나는 그래프 (가상의 숫자) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 알리익스프레스의 겉모습 뒤에 숨겨진 진짜 비용과 위험, 그리고 현명한 활용법에 대해 깊이 있게 알아보았습니다. 단순히 가격이 싸다는"
+  }
+ ]
+}

@@ -1,0 +1,338 @@
+{
+ "title": "",
+ "channel": "경제적자유구역",
+ "est_total_s": 437,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "도입: 당신의 노후, 연금만으로 충분할까?",
+   "start_hint_s": 0.0,
+   "duration_s": 8.7,
+   "broll_ko": "고요한 아침",
+   "prompt_en": "고요한 아침 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후 평온한 삶, 그 중심엔 연금이 있습니다. 매달 꼬박꼬박 납입하며 '노후는 걱정 없다'고 안심하시나요? 하지만 과연 그럴까요? 당신이 믿"
+  },
+  {
+   "shot": 2,
+   "section": "도입: 당신의 노후, 연금만으로 충분할까?",
+   "start_hint_s": 8.7,
+   "duration_s": 8.7,
+   "broll_ko": "커피 한 잔과 함께 신문을 읽는 중장년층의 손 (클로즈업)",
+   "prompt_en": "커피 한 잔과 함께 신문을 읽는 중장년층의 손 (클로즈업) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후 평온한 삶, 그 중심엔 연금이 있습니다. 매달 꼬박꼬박 납입하며 '노후는 걱정 없다'고 안심하시나요? 하지만 과연 그럴까요? 당신이 믿"
+  },
+  {
+   "shot": 3,
+   "section": "도입: 당신의 노후, 연금만으로 충분할까?",
+   "start_hint_s": 17.3,
+   "duration_s": 8.7,
+   "broll_ko": "책상 위에 놓인 다양한 금융 상품 안내서들 (흐릿하게)",
+   "prompt_en": "책상 위에 놓인 다양한 금융 상품 안내서들 (흐릿하게) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후 평온한 삶, 그 중심엔 연금이 있습니다. 매달 꼬박꼬박 납입하며 '노후는 걱정 없다'고 안심하시나요? 하지만 과연 그럴까요? 당신이 믿"
+  },
+  {
+   "shot": 4,
+   "section": "도입: 당신의 노후, 연금만으로 충분할까?",
+   "start_hint_s": 26.0,
+   "duration_s": 8.7,
+   "broll_ko": "복잡한 그래프와 숫자가 가득한 컴퓨터 화면 (흐릿하게",
+   "prompt_en": "복잡한 그래프와 숫자가 가득한 컴퓨터 화면 (흐릿하게 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후 평온한 삶, 그 중심엔 연금이 있습니다. 매달 꼬박꼬박 납입하며 '노후는 걱정 없다'고 안심하시나요? 하지만 과연 그럴까요? 당신이 믿"
+  },
+  {
+   "shot": 5,
+   "section": "도입: 당신의 노후, 연금만으로 충분할까?",
+   "start_hint_s": 34.6,
+   "duration_s": 8.7,
+   "broll_ko": "숫자 강조)",
+   "prompt_en": "숫자 강조) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "은퇴 후 평온한 삶, 그 중심엔 연금이 있습니다. 매달 꼬박꼬박 납입하며 '노후는 걱정 없다'고 안심하시나요? 하지만 과연 그럴까요? 당신이 믿"
+  },
+  {
+   "shot": 6,
+   "section": "수익률의 착시: 보이는 것이 전부가 아니다",
+   "start_hint_s": 43.0,
+   "duration_s": 13.2,
+   "broll_ko": "금융상품 광고에 나오는 '고수익' 문구들이 빠르게 스쳐 지나가는 장면",
+   "prompt_en": "금융상품 광고에 나오는 '고수익' 문구들이 빠르게 스쳐 지나가는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 연금 상품은 매력적인 예상 수익률을 제시합니다. 하지만 이는 세금과 수수료 제외 전의 숫자이거나, 미래를 보장하지 않는 과거일 뿐입니다. "
+  },
+  {
+   "shot": 7,
+   "section": "수익률의 착시: 보이는 것이 전부가 아니다",
+   "start_hint_s": 56.2,
+   "duration_s": 13.2,
+   "broll_ko": "계산기 화면에 복리 이자 계산 결과가 나타났다 사라지는 모습",
+   "prompt_en": "계산기 화면에 복리 이자 계산 결과가 나타났다 사라지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 연금 상품은 매력적인 예상 수익률을 제시합니다. 하지만 이는 세금과 수수료 제외 전의 숫자이거나, 미래를 보장하지 않는 과거일 뿐입니다. "
+  },
+  {
+   "shot": 8,
+   "section": "수익률의 착시: 보이는 것이 전부가 아니다",
+   "start_hint_s": 69.4,
+   "duration_s": 13.2,
+   "broll_ko": "주식 차트의 상승 곡선이 잠시 나타났다가 흐려지는 모습",
+   "prompt_en": "주식 차트의 상승 곡선이 잠시 나타났다가 흐려지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "많은 연금 상품은 매력적인 예상 수익률을 제시합니다. 하지만 이는 세금과 수수료 제외 전의 숫자이거나, 미래를 보장하지 않는 과거일 뿐입니다. "
+  },
+  {
+   "shot": 9,
+   "section": "숨겨진 비용: 조용히 당신의 자산을 갉아먹는 것들",
+   "start_hint_s": 82.0,
+   "duration_s": 15.2,
+   "broll_ko": "돋보기로 연금 계약서의 작은 글씨들을 확대해 보는 모습",
+   "prompt_en": "돋보기로 연금 계약서의 작은 글씨들을 확대해 보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "연금 상품에는 '사업비', '운용 보수', '수수료' 등 숨겨진 비용이 많습니다. 이 비용들은 매년 연금 자산에서 차감됩니다. 납입 기간이 길수"
+  },
+  {
+   "shot": 10,
+   "section": "숨겨진 비용: 조용히 당신의 자산을 갉아먹는 것들",
+   "start_hint_s": 97.2,
+   "duration_s": 15.2,
+   "broll_ko": "쌓여있는 동전이 조금씩 사라지는 애니메이션 (은유적 표현)",
+   "prompt_en": "쌓여있는 동전이 조금씩 사라지는 애니메이션 (은유적 표현) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "연금 상품에는 '사업비', '운용 보수', '수수료' 등 숨겨진 비용이 많습니다. 이 비용들은 매년 연금 자산에서 차감됩니다. 납입 기간이 길수"
+  },
+  {
+   "shot": 11,
+   "section": "숨겨진 비용: 조용히 당신의 자산을 갉아먹는 것들",
+   "start_hint_s": 112.4,
+   "duration_s": 15.2,
+   "broll_ko": "은행 창구 뒤편의 복잡한 서류 더미",
+   "prompt_en": "은행 창구 뒤편의 복잡한 서류 더미 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "연금 상품에는 '사업비', '운용 보수', '수수료' 등 숨겨진 비용이 많습니다. 이 비용들은 매년 연금 자산에서 차감됩니다. 납입 기간이 길수"
+  },
+  {
+   "shot": 12,
+   "section": "인플레이션의 그림자: 화폐 가치 하락의 위협",
+   "start_hint_s": 127.0,
+   "duration_s": 16.8,
+   "broll_ko": "옛날 지폐와 현재 지폐를 비교하며 화폐 가치 변화를 보여주는 이미지",
+   "prompt_en": "옛날 지폐와 현재 지폐를 비교하며 화폐 가치 변화를 보여주는 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 간과하기 쉬운 적은 '인플레이션'입니다. 현재 1억 원이 30년 후에도 동일한 구매력을 가질까요? 물가는 끊임없이 오르고 화폐 가치는 하"
+  },
+  {
+   "shot": 13,
+   "section": "인플레이션의 그림자: 화폐 가치 하락의 위협",
+   "start_hint_s": 143.8,
+   "duration_s": 16.8,
+   "broll_ko": "장바구니 물가가 점점 높아지는 모습 (애니메이션)",
+   "prompt_en": "장바구니 물가가 점점 높아지는 모습 (애니메이션) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 간과하기 쉬운 적은 '인플레이션'입니다. 현재 1억 원이 30년 후에도 동일한 구매력을 가질까요? 물가는 끊임없이 오르고 화폐 가치는 하"
+  },
+  {
+   "shot": 14,
+   "section": "인플레이션의 그림자: 화폐 가치 하락의 위협",
+   "start_hint_s": 160.6,
+   "duration_s": 16.8,
+   "broll_ko": "시간이 흐르면서 자산 가치를 나타내는 그래프가 서서히 낮아지는 모습",
+   "prompt_en": "시간이 흐르면서 자산 가치를 나타내는 그래프가 서서히 낮아지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "우리가 간과하기 쉬운 적은 '인플레이션'입니다. 현재 1억 원이 30년 후에도 동일한 구매력을 가질까요? 물가는 끊임없이 오르고 화폐 가치는 하"
+  },
+  {
+   "shot": 15,
+   "section": "세금 혜택, 양날의 검: 놓치기 쉬운 세금 폭탄",
+   "start_hint_s": 177.0,
+   "duration_s": 13.5,
+   "broll_ko": "세금 계산서",
+   "prompt_en": "세금 계산서 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 세액공제 혜택이라는 장점이 있습니다. 매년 연말정산 시 세금을 돌려받죠. 하지만 이 혜택만 보고 가입했다가는 은퇴 후 '세금 폭탄'을"
+  },
+  {
+   "shot": 16,
+   "section": "세금 혜택, 양날의 검: 놓치기 쉬운 세금 폭탄",
+   "start_hint_s": 190.5,
+   "duration_s": 13.5,
+   "broll_ko": "청구서 등이 쌓여있는 모습",
+   "prompt_en": "청구서 등이 쌓여있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 세액공제 혜택이라는 장점이 있습니다. 매년 연말정산 시 세금을 돌려받죠. 하지만 이 혜택만 보고 가입했다가는 은퇴 후 '세금 폭탄'을"
+  },
+  {
+   "shot": 17,
+   "section": "세금 혜택, 양날의 검: 놓치기 쉬운 세금 폭탄",
+   "start_hint_s": 203.9,
+   "duration_s": 13.5,
+   "broll_ko": "세금 관련 법률 서적들이 빽빽하게 꽂힌 서가",
+   "prompt_en": "세금 관련 법률 서적들이 빽빽하게 꽂힌 서가 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 세액공제 혜택이라는 장점이 있습니다. 매년 연말정산 시 세금을 돌려받죠. 하지만 이 혜택만 보고 가입했다가는 은퇴 후 '세금 폭탄'을"
+  },
+  {
+   "shot": 18,
+   "section": "세금 혜택, 양날의 검: 놓치기 쉬운 세금 폭탄",
+   "start_hint_s": 217.4,
+   "duration_s": 13.5,
+   "broll_ko": "복잡한 세금 관련 도표나 플로우차트",
+   "prompt_en": "복잡한 세금 관련 도표나 플로우차트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 세액공제 혜택이라는 장점이 있습니다. 매년 연말정산 시 세금을 돌려받죠. 하지만 이 혜택만 보고 가입했다가는 은퇴 후 '세금 폭탄'을"
+  },
+  {
+   "shot": 19,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 230.0,
+   "duration_s": 8.3,
+   "broll_ko": "꽁꽁 묶인 밧줄",
+   "prompt_en": "꽁꽁 묶인 밧줄 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 20,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 238.3,
+   "duration_s": 8.3,
+   "broll_ko": "혹은 굳게 잠긴 자물쇠 이미지",
+   "prompt_en": "혹은 굳게 잠긴 자물쇠 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 21,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 246.6,
+   "duration_s": 8.3,
+   "broll_ko": "시간이 지나면서 빠르게 변하는 달력 이미지",
+   "prompt_en": "시간이 지나면서 빠르게 변하는 달력 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 22,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 254.9,
+   "duration_s": 8.3,
+   "broll_ko": "이직",
+   "prompt_en": "이직 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 23,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 263.2,
+   "duration_s": 8.3,
+   "broll_ko": "결혼",
+   "prompt_en": "결혼 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 24,
+   "section": "유연성 부족: 내 삶의 변화에 대처하는 연금의 한계",
+   "start_hint_s": 271.5,
+   "duration_s": 8.3,
+   "broll_ko": "출산 등 삶의 중요한 이벤트들을 상징하는 이미지들이 빠르게 지나가는 모습",
+   "prompt_en": "출산 등 삶의 중요한 이벤트들을 상징하는 이미지들이 빠르게 지나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "개인연금은 장기 상품이므로 중도 해지 시 불이익이 큽니다. 해지 환급금이 원금보다 적을 뿐 아니라, 기존 세액공제 혜택까지 토해내야 합니다. 우"
+  },
+  {
+   "shot": 25,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 279.0,
+   "duration_s": 16.0,
+   "broll_ko": "빈 체크리스트 양식에 펜으로 하나씩 채워나가는 모습",
+   "prompt_en": "빈 체크리스트 양식에 펜으로 하나씩 채워나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 26,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 295.0,
+   "duration_s": 16.0,
+   "broll_ko": "다양한 금융 상품(주식",
+   "prompt_en": "다양한 금융 상품(주식 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 27,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 311.1,
+   "duration_s": 16.0,
+   "broll_ko": "채권",
+   "prompt_en": "채권 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 28,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 327.1,
+   "duration_s": 16.0,
+   "broll_ko": "부동산 등)을 상징하는 아이콘들이 균형 있게 배치되는 모습",
+   "prompt_en": "부동산 등)을 상징하는 아이콘들이 균형 있게 배치되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 29,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 343.1,
+   "duration_s": 16.0,
+   "broll_ko": "은퇴 후 여유롭게 취미 생활을 즐기는 중장년층의 모습 (얼굴 없이 손",
+   "prompt_en": "은퇴 후 여유롭게 취미 생활을 즐기는 중장년층의 모습 (얼굴 없이 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 30,
+   "section": "나만의 '튼튼한' 노후 자산 구축 체크리스트",
+   "start_hint_s": 359.2,
+   "duration_s": 16.0,
+   "broll_ko": "뒷모습 위주)",
+   "prompt_en": "뒷모습 위주) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "그렇다면 우리는 어떻게 '수익률 착시'와 '숨은 비용'을 극복하고 튼튼한 노후를 준비할 수 있을까요? 다음 체크리스트를 활용하여 당신만의 노후 "
+  },
+  {
+   "shot": 31,
+   "section": "결론: 현명한 선택으로 단단한 노후를",
+   "start_hint_s": 378.0,
+   "duration_s": 19.2,
+   "broll_ko": "퍼즐 조각이 맞춰지며 완전한 그림이 되는 모습",
+   "prompt_en": "퍼즐 조각이 맞춰지며 완전한 그림이 되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 개인연금의 숨겨진 면모들을 살펴보았습니다. 단순히 '연금'이라는 이름만 믿고 안심하기에는 복잡한 요소들이 많다는 것을 알 수 있었습"
+  },
+  {
+   "shot": 32,
+   "section": "결론: 현명한 선택으로 단단한 노후를",
+   "start_hint_s": 397.2,
+   "duration_s": 19.2,
+   "broll_ko": "활짝 펼쳐진 책갈피가 꽂힌 재테크 서적",
+   "prompt_en": "활짝 펼쳐진 책갈피가 꽂힌 재테크 서적 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 개인연금의 숨겨진 면모들을 살펴보았습니다. 단순히 '연금'이라는 이름만 믿고 안심하기에는 복잡한 요소들이 많다는 것을 알 수 있었습"
+  },
+  {
+   "shot": 33,
+   "section": "결론: 현명한 선택으로 단단한 노후를",
+   "start_hint_s": 416.3,
+   "duration_s": 19.2,
+   "broll_ko": "해가 지는 바다를 바라보는 중장년층의 뒷모습",
+   "prompt_en": "해가 지는 바다를 바라보는 중장년층의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 개인연금의 숨겨진 면모들을 살펴보았습니다. 단순히 '연금'이라는 이름만 믿고 안심하기에는 복잡한 요소들이 많다는 것을 알 수 있었습"
+  }
+ ]
+}
