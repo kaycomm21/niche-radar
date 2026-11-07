@@ -1,0 +1,338 @@
+{
+ "title": "미국 경기 하락? '큰손'들의 진짜 속내는 따로 있습니다",
+ "channel": "경제적자유구역",
+ "est_total_s": 323,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "서론: '경기 정점론', 과연 우리에게 어떤 의미인가?",
+   "start_hint_s": 0.0,
+   "duration_s": 7.3,
+   "broll_ko": "바쁘게 움직이는 도시 풍경 (빌딩 숲",
+   "prompt_en": "바쁘게 움직이는 도시 풍경 (빌딩 숲 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "최근 '미국 경제 정점', '긴장해야 한다'는 경고가 많습니다. 4060세대 여러분, 불안하신가요? 저희 '경제적자유구역'은 막연한 공포 대신,"
+  },
+  {
+   "shot": 2,
+   "section": "서론: '경기 정점론', 과연 우리에게 어떤 의미인가?",
+   "start_hint_s": 7.3,
+   "duration_s": 7.3,
+   "broll_ko": "도로 위 자동차)",
+   "prompt_en": "도로 위 자동차) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "최근 '미국 경제 정점', '긴장해야 한다'는 경고가 많습니다. 4060세대 여러분, 불안하신가요? 저희 '경제적자유구역'은 막연한 공포 대신,"
+  },
+  {
+   "shot": 3,
+   "section": "서론: '경기 정점론', 과연 우리에게 어떤 의미인가?",
+   "start_hint_s": 14.5,
+   "duration_s": 7.3,
+   "broll_ko": "뉴스 헤드라인이 빠르게 스쳐 지나가는 컴퓨터 화면",
+   "prompt_en": "뉴스 헤드라인이 빠르게 스쳐 지나가는 컴퓨터 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "최근 '미국 경제 정점', '긴장해야 한다'는 경고가 많습니다. 4060세대 여러분, 불안하신가요? 저희 '경제적자유구역'은 막연한 공포 대신,"
+  },
+  {
+   "shot": 4,
+   "section": "서론: '경기 정점론', 과연 우리에게 어떤 의미인가?",
+   "start_hint_s": 21.8,
+   "duration_s": 7.3,
+   "broll_ko": "고민하는 듯한 중년 남녀의 뒷모습",
+   "prompt_en": "고민하는 듯한 중년 남녀의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "최근 '미국 경제 정점', '긴장해야 한다'는 경고가 많습니다. 4060세대 여러분, 불안하신가요? 저희 '경제적자유구역'은 막연한 공포 대신,"
+  },
+  {
+   "shot": 5,
+   "section": "'큰손'들은 정말 시장을 떠나고 있는가? - 데이터의 이면",
+   "start_hint_s": 29.0,
+   "duration_s": 9.8,
+   "broll_ko": "그래프와 차트가 보이는 모니터 화면 (추세선",
+   "prompt_en": "그래프와 차트가 보이는 모니터 화면 (추세선 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'큰손들이 방향을 정했다'는 뉴스, 모든 자산을 현금화하는 것처럼 들립니다. 하지만 실제 데이터는 다릅니다. 그들은 시장을 떠나는 것이 아니라,"
+  },
+  {
+   "shot": 6,
+   "section": "'큰손'들은 정말 시장을 떠나고 있는가? - 데이터의 이면",
+   "start_hint_s": 38.8,
+   "duration_s": 9.8,
+   "broll_ko": "파이 차트 등)",
+   "prompt_en": "파이 차트 등) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'큰손들이 방향을 정했다'는 뉴스, 모든 자산을 현금화하는 것처럼 들립니다. 하지만 실제 데이터는 다릅니다. 그들은 시장을 떠나는 것이 아니라,"
+  },
+  {
+   "shot": 7,
+   "section": "'큰손'들은 정말 시장을 떠나고 있는가? - 데이터의 이면",
+   "start_hint_s": 48.5,
+   "duration_s": 9.8,
+   "broll_ko": "거대한 서버룸 내부",
+   "prompt_en": "거대한 서버룸 내부 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'큰손들이 방향을 정했다'는 뉴스, 모든 자산을 현금화하는 것처럼 들립니다. 하지만 실제 데이터는 다릅니다. 그들은 시장을 떠나는 것이 아니라,"
+  },
+  {
+   "shot": 8,
+   "section": "'큰손'들은 정말 시장을 떠나고 있는가? - 데이터의 이면",
+   "start_hint_s": 58.3,
+   "duration_s": 9.8,
+   "broll_ko": "여러 대의 모니터를 응시하는 트레이더의 뒷모습 (얼굴 안 보이게)",
+   "prompt_en": "여러 대의 모니터를 응시하는 트레이더의 뒷모습 (얼굴 안 보이게) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'큰손들이 방향을 정했다'는 뉴스, 모든 자산을 현금화하는 것처럼 들립니다. 하지만 실제 데이터는 다릅니다. 그들은 시장을 떠나는 것이 아니라,"
+  },
+  {
+   "shot": 9,
+   "section": "경기 전환기, 4060 세대가 주목해야 할 '진짜' 변화",
+   "start_hint_s": 68.0,
+   "duration_s": 8.4,
+   "broll_ko": "가족이 함께 재정 계획을 세우는 모습 (노트북",
+   "prompt_en": "가족이 함께 재정 계획을 세우는 모습 (노트북 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경기 전환기는 주식 등락을 넘어 소비, 일자리, 부동산, 금리 전반에 영향을 줍니다. 4060세대에게는 은퇴 자금 마련과 직결되기에 더욱 중요합"
+  },
+  {
+   "shot": 10,
+   "section": "경기 전환기, 4060 세대가 주목해야 할 '진짜' 변화",
+   "start_hint_s": 76.4,
+   "duration_s": 8.4,
+   "broll_ko": "서류)",
+   "prompt_en": "서류) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경기 전환기는 주식 등락을 넘어 소비, 일자리, 부동산, 금리 전반에 영향을 줍니다. 4060세대에게는 은퇴 자금 마련과 직결되기에 더욱 중요합"
+  },
+  {
+   "shot": 11,
+   "section": "경기 전환기, 4060 세대가 주목해야 할 '진짜' 변화",
+   "start_hint_s": 84.8,
+   "duration_s": 8.4,
+   "broll_ko": "은행 창구에서 상담하는 중년 부부 (뒷모습)",
+   "prompt_en": "은행 창구에서 상담하는 중년 부부 (뒷모습) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경기 전환기는 주식 등락을 넘어 소비, 일자리, 부동산, 금리 전반에 영향을 줍니다. 4060세대에게는 은퇴 자금 마련과 직결되기에 더욱 중요합"
+  },
+  {
+   "shot": 12,
+   "section": "경기 전환기, 4060 세대가 주목해야 할 '진짜' 변화",
+   "start_hint_s": 93.2,
+   "duration_s": 8.4,
+   "broll_ko": "부동산 시세표를 보는 모습",
+   "prompt_en": "부동산 시세표를 보는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경기 전환기는 주식 등락을 넘어 소비, 일자리, 부동산, 금리 전반에 영향을 줍니다. 4060세대에게는 은퇴 자금 마련과 직결되기에 더욱 중요합"
+  },
+  {
+   "shot": 13,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 101.0,
+   "duration_s": 7.4,
+   "broll_ko": "저울이 균형을 맞추는 애니메이션",
+   "prompt_en": "저울이 균형을 맞추는 애니메이션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 14,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 108.4,
+   "duration_s": 7.4,
+   "broll_ko": "다양한 자산(주식",
+   "prompt_en": "다양한 자산(주식 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 15,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 115.7,
+   "duration_s": 7.4,
+   "broll_ko": "채권",
+   "prompt_en": "채권 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 16,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 123.1,
+   "duration_s": 7.4,
+   "broll_ko": "부동산",
+   "prompt_en": "부동산 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 17,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 130.5,
+   "duration_s": 7.4,
+   "broll_ko": "금 등)을 상징하는 아이콘들이 원형 그래프에 배치되는 모습",
+   "prompt_en": "금 등)을 상징하는 아이콘들이 원형 그래프에 배치되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 18,
+   "section": "'큰손'들의 지혜: 리밸런싱과 자산 배분의 원칙",
+   "start_hint_s": 137.8,
+   "duration_s": 7.4,
+   "broll_ko": "계좌 잔고가 표시된 모바일 뱅킹 앱 화면 (가상 데이터)",
+   "prompt_en": "계좌 잔고가 표시된 모바일 뱅킹 앱 화면 (가상 데이터) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "큰손들의 움직임에서 '리밸런싱'과 '자산 배분'의 원칙을 배울 수 있습니다. 시장 상황에 따라 포트폴리오 비중을 조정해 위험을 관리하고 수익률을"
+  },
+  {
+   "shot": 19,
+   "section": "흔들리지 않는 자산을 만드는 3가지 체크리스트",
+   "start_hint_s": 145.0,
+   "duration_s": 13.7,
+   "broll_ko": "체크리스트가 적힌 수첩과 펜",
+   "prompt_en": "체크리스트가 적힌 수첩과 펜 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "막연한 불안감 속에 있을 수 없습니다. 지금 당장 점검해야 할 세 가지 체크리스트를 제안합니다. 1.  현금 흐름 및 비상 자금 확보: [확인 "
+  },
+  {
+   "shot": 20,
+   "section": "흔들리지 않는 자산을 만드는 3가지 체크리스트",
+   "start_hint_s": 158.7,
+   "duration_s": 13.7,
+   "broll_ko": "계산기",
+   "prompt_en": "계산기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "막연한 불안감 속에 있을 수 없습니다. 지금 당장 점검해야 할 세 가지 체크리스트를 제안합니다. 1.  현금 흐름 및 비상 자금 확보: [확인 "
+  },
+  {
+   "shot": 21,
+   "section": "흔들리지 않는 자산을 만드는 3가지 체크리스트",
+   "start_hint_s": 172.4,
+   "duration_s": 13.7,
+   "broll_ko": "저축 통장과 도장",
+   "prompt_en": "저축 통장과 도장 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "막연한 불안감 속에 있을 수 없습니다. 지금 당장 점검해야 할 세 가지 체크리스트를 제안합니다. 1.  현금 흐름 및 비상 자금 확보: [확인 "
+  },
+  {
+   "shot": 22,
+   "section": "흔들리지 않는 자산을 만드는 3가지 체크리스트",
+   "start_hint_s": 186.0,
+   "duration_s": 13.7,
+   "broll_ko": "안정적으로 자라는 나무",
+   "prompt_en": "안정적으로 자라는 나무 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "막연한 불안감 속에 있을 수 없습니다. 지금 당장 점검해야 할 세 가지 체크리스트를 제안합니다. 1.  현금 흐름 및 비상 자금 확보: [확인 "
+  },
+  {
+   "shot": 23,
+   "section": "불황에도 강한 나만의 '수익 파이프라인' 구축",
+   "start_hint_s": 201.0,
+   "duration_s": 8.0,
+   "broll_ko": "노트북으로 온라인 강의를 듣는 모습",
+   "prompt_en": "노트북으로 온라인 강의를 듣는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자산 관리만큼 중요한 것이 '수익'입니다. 경기 변동성이 클수록 안정적인 현금 흐름이 핵심입니다. 은퇴 전후라면 소득 공백을 메울 추가 수익 파"
+  },
+  {
+   "shot": 24,
+   "section": "불황에도 강한 나만의 '수익 파이프라인' 구축",
+   "start_hint_s": 209.0,
+   "duration_s": 8.0,
+   "broll_ko": "취미 활동(공예",
+   "prompt_en": "취미 활동(공예 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자산 관리만큼 중요한 것이 '수익'입니다. 경기 변동성이 클수록 안정적인 현금 흐름이 핵심입니다. 은퇴 전후라면 소득 공백을 메울 추가 수익 파"
+  },
+  {
+   "shot": 25,
+   "section": "불황에도 강한 나만의 '수익 파이프라인' 구축",
+   "start_hint_s": 216.9,
+   "duration_s": 8.0,
+   "broll_ko": "그림 등)으로 부수입을 창출하는 모습",
+   "prompt_en": "그림 등)으로 부수입을 창출하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자산 관리만큼 중요한 것이 '수익'입니다. 경기 변동성이 클수록 안정적인 현금 흐름이 핵심입니다. 은퇴 전후라면 소득 공백을 메울 추가 수익 파"
+  },
+  {
+   "shot": 26,
+   "section": "불황에도 강한 나만의 '수익 파이프라인' 구축",
+   "start_hint_s": 224.9,
+   "duration_s": 8.0,
+   "broll_ko": "컨설팅하는 모습",
+   "prompt_en": "컨설팅하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자산 관리만큼 중요한 것이 '수익'입니다. 경기 변동성이 클수록 안정적인 현금 흐름이 핵심입니다. 은퇴 전후라면 소득 공백을 메울 추가 수익 파"
+  },
+  {
+   "shot": 27,
+   "section": "불황에도 강한 나만의 '수익 파이프라인' 구축",
+   "start_hint_s": 232.9,
+   "duration_s": 8.0,
+   "broll_ko": "재택근무하는 모습",
+   "prompt_en": "재택근무하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "자산 관리만큼 중요한 것이 '수익'입니다. 경기 변동성이 클수록 안정적인 현금 흐름이 핵심입니다. 은퇴 전후라면 소득 공백을 메울 추가 수익 파"
+  },
+  {
+   "shot": 28,
+   "section": "위기를 기회로: 장기적 관점으로 바라보기",
+   "start_hint_s": 240.0,
+   "duration_s": 15.0,
+   "broll_ko": "숲길을 걷는 사람 (평화로운 분위기)",
+   "prompt_en": "숲길을 걷는 사람 (평화로운 분위기) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제 사이클은 자연스러운 현상입니다. 지금의 불안감도 지나갈 것입니다. 단기 시장 움직임에 일희일비하기보다 장기적 관점으로 목표를 설정하고 꾸준"
+  },
+  {
+   "shot": 29,
+   "section": "위기를 기회로: 장기적 관점으로 바라보기",
+   "start_hint_s": 255.0,
+   "duration_s": 15.0,
+   "broll_ko": "씨앗이 싹을 틔우고 자라는 타임랩스",
+   "prompt_en": "씨앗이 싹을 틔우고 자라는 타임랩스 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제 사이클은 자연스러운 현상입니다. 지금의 불안감도 지나갈 것입니다. 단기 시장 움직임에 일희일비하기보다 장기적 관점으로 목표를 설정하고 꾸준"
+  },
+  {
+   "shot": 30,
+   "section": "위기를 기회로: 장기적 관점으로 바라보기",
+   "start_hint_s": 270.1,
+   "duration_s": 15.0,
+   "broll_ko": "맑은 하늘과 구름",
+   "prompt_en": "맑은 하늘과 구름 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "경제 사이클은 자연스러운 현상입니다. 지금의 불안감도 지나갈 것입니다. 단기 시장 움직임에 일희일비하기보다 장기적 관점으로 목표를 설정하고 꾸준"
+  },
+  {
+   "shot": 31,
+   "section": "결론: 경제적 자유를 향한 당신의 현명한 선택",
+   "start_hint_s": 285.0,
+   "duration_s": 12.4,
+   "broll_ko": "책상 위 재테크 서적과 노트",
+   "prompt_en": "책상 위 재테크 서적과 노트 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 '미국 경기 정점론'과 '큰손들의 움직임'을 4060 세대 관점에서 재해석하고 구체적인 대응 전략을 살펴봤습니다. 시장 경고를 나의 재정 "
+  },
+  {
+   "shot": 32,
+   "section": "결론: 경제적 자유를 향한 당신의 현명한 선택",
+   "start_hint_s": 297.4,
+   "duration_s": 12.4,
+   "broll_ko": "차분하게 생각에 잠긴 사람의 옆모습",
+   "prompt_en": "차분하게 생각에 잠긴 사람의 옆모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 '미국 경기 정점론'과 '큰손들의 움직임'을 4060 세대 관점에서 재해석하고 구체적인 대응 전략을 살펴봤습니다. 시장 경고를 나의 재정 "
+  },
+  {
+   "shot": 33,
+   "section": "결론: 경제적 자유를 향한 당신의 현명한 선택",
+   "start_hint_s": 309.8,
+   "duration_s": 12.4,
+   "broll_ko": "태양이 떠오르는 풍경",
+   "prompt_en": "태양이 떠오르는 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 '미국 경기 정점론'과 '큰손들의 움직임'을 4060 세대 관점에서 재해석하고 구체적인 대응 전략을 살펴봤습니다. 시장 경고를 나의 재정 "
+  }
+ ]
+}

@@ -1,0 +1,368 @@
+{
+ "title": "[경제적자유구역] \"AI 시대, 일자리 지각변동\" 4060, 디지털 전환기 새로운 부의 기회 잡는 법",
+ "channel": "경제적자유구역",
+ "est_total_s": 525,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "인트로: 시대의 변화와 불안감",
+   "start_hint_s": 0.0,
+   "duration_s": 13.9,
+   "broll_ko": "복잡한 도시의 빌딩 숲",
+   "prompt_en": "복잡한 도시의 빌딩 숲 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "\"AI가 내 일자리를 뺏어갈까 봐 불안합니다.\" \"쌓아온 경력이 무용지물이 될까 두려워요.\" 4060세대의 흔한 고민입니다. 고금리가 시장 판도"
+  },
+  {
+   "shot": 2,
+   "section": "인트로: 시대의 변화와 불안감",
+   "start_hint_s": 13.9,
+   "duration_s": 13.9,
+   "broll_ko": "바쁘게 움직이는 사람들 (원거리)",
+   "prompt_en": "바쁘게 움직이는 사람들 (원거리) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "\"AI가 내 일자리를 뺏어갈까 봐 불안합니다.\" \"쌓아온 경력이 무용지물이 될까 두려워요.\" 4060세대의 흔한 고민입니다. 고금리가 시장 판도"
+  },
+  {
+   "shot": 3,
+   "section": "인트로: 시대의 변화와 불안감",
+   "start_hint_s": 27.7,
+   "duration_s": 13.9,
+   "broll_ko": "노트북 화면에 AI 관련 뉴스 기사 헤드라인이 스쳐 지나가는 모습",
+   "prompt_en": "노트북 화면에 AI 관련 뉴스 기사 헤드라인이 스쳐 지나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "\"AI가 내 일자리를 뺏어갈까 봐 불안합니다.\" \"쌓아온 경력이 무용지물이 될까 두려워요.\" 4060세대의 흔한 고민입니다. 고금리가 시장 판도"
+  },
+  {
+   "shot": 4,
+   "section": "인트로: 시대의 변화와 불안감",
+   "start_hint_s": 41.6,
+   "duration_s": 13.9,
+   "broll_ko": "40~50대 직장인이 깊은 생각에 잠겨있는 옆모습",
+   "prompt_en": "40~50대 직장인이 깊은 생각에 잠겨있는 옆모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "\"AI가 내 일자리를 뺏어갈까 봐 불안합니다.\" \"쌓아온 경력이 무용지물이 될까 두려워요.\" 4060세대의 흔한 고민입니다. 고금리가 시장 판도"
+  },
+  {
+   "shot": 5,
+   "section": "AI와 디지털 전환, 일자리의 미래",
+   "start_hint_s": 55.0,
+   "duration_s": 13.0,
+   "broll_ko": "다양한 AI 로봇들이 공장에서 정밀 작업을 하는 모습",
+   "prompt_en": "다양한 AI 로봇들이 공장에서 정밀 작업을 하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 산업 구조를 재편하고 일자리의 본질을 변화시키며, 돈 버는 방식 자체를 바꿉니다. 세계경제포럼(WEF)에 따르면 2025년"
+  },
+  {
+   "shot": 6,
+   "section": "AI와 디지털 전환, 일자리의 미래",
+   "start_hint_s": 68.0,
+   "duration_s": 13.0,
+   "broll_ko": "사무실에서 사람들이 컴퓨터와 태블릿으로 업무를 처리하는 모습",
+   "prompt_en": "사무실에서 사람들이 컴퓨터와 태블릿으로 업무를 처리하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 산업 구조를 재편하고 일자리의 본질을 변화시키며, 돈 버는 방식 자체를 바꿉니다. 세계경제포럼(WEF)에 따르면 2025년"
+  },
+  {
+   "shot": 7,
+   "section": "AI와 디지털 전환, 일자리의 미래",
+   "start_hint_s": 81.0,
+   "duration_s": 13.0,
+   "broll_ko": "데이터 시각화 그래프 (성장률",
+   "prompt_en": "데이터 시각화 그래프 (성장률 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 산업 구조를 재편하고 일자리의 본질을 변화시키며, 돈 버는 방식 자체를 바꿉니다. 세계경제포럼(WEF)에 따르면 2025년"
+  },
+  {
+   "shot": 8,
+   "section": "AI와 디지털 전환, 일자리의 미래",
+   "start_hint_s": 94.0,
+   "duration_s": 13.0,
+   "broll_ko": "자동화율 등)",
+   "prompt_en": "자동화율 등) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 산업 구조를 재편하고 일자리의 본질을 변화시키며, 돈 버는 방식 자체를 바꿉니다. 세계경제포럼(WEF)에 따르면 2025년"
+  },
+  {
+   "shot": 9,
+   "section": "4060 세대의 위기이자 기회",
+   "start_hint_s": 107.0,
+   "duration_s": 17.8,
+   "broll_ko": "다양한 연령대의 사람들이 디지털 기기를 활용하여 학습하는 모습",
+   "prompt_en": "다양한 연령대의 사람들이 디지털 기기를 활용하여 학습하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대는 오랜 경력과 노하우에도 불구하고, 급변하는 디지털 환경 적응에 어려움을 겪을 수 있습니다. 익숙한 업무 방식이 사라지고 새 기술을"
+  },
+  {
+   "shot": 10,
+   "section": "4060 세대의 위기이자 기회",
+   "start_hint_s": 124.8,
+   "duration_s": 17.8,
+   "broll_ko": "은퇴 후 여유롭게 카페에서 노트북으로 작업하는 사람",
+   "prompt_en": "은퇴 후 여유롭게 카페에서 노트북으로 작업하는 사람 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대는 오랜 경력과 노하우에도 불구하고, 급변하는 디지털 환경 적응에 어려움을 겪을 수 있습니다. 익숙한 업무 방식이 사라지고 새 기술을"
+  },
+  {
+   "shot": 11,
+   "section": "4060 세대의 위기이자 기회",
+   "start_hint_s": 142.5,
+   "duration_s": 17.8,
+   "broll_ko": "두 개의 갈림길 표지판 (위기 / 기회)",
+   "prompt_en": "두 개의 갈림길 표지판 (위기 / 기회) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "4060세대는 오랜 경력과 노하우에도 불구하고, 급변하는 디지털 환경 적응에 어려움을 겪을 수 있습니다. 익숙한 업무 방식이 사라지고 새 기술을"
+  },
+  {
+   "shot": 12,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 160.0,
+   "duration_s": 9.1,
+   "broll_ko": "스마트폰",
+   "prompt_en": "스마트폰 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 13,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 169.1,
+   "duration_s": 9.1,
+   "broll_ko": "태블릿",
+   "prompt_en": "태블릿 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 14,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 178.2,
+   "duration_s": 9.1,
+   "broll_ko": "노트북 등 다양한 디지털 기기들이 나란히 놓여있는 모습",
+   "prompt_en": "노트북 등 다양한 디지털 기기들이 나란히 놓여있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 15,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 187.4,
+   "duration_s": 9.1,
+   "broll_ko": "검색 엔진 화면에 'AI 활용법'",
+   "prompt_en": "검색 엔진 화면에 'AI 활용법' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 16,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 196.5,
+   "duration_s": 9.1,
+   "broll_ko": "'디지털 마케팅' 등 검색어가 입력되는 모습",
+   "prompt_en": "'디지털 마케팅' 등 검색어가 입력되는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 17,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 205.6,
+   "duration_s": 9.1,
+   "broll_ko": "온라인 강의 플랫폼 화면",
+   "prompt_en": "온라인 강의 플랫폼 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 18,
+   "section": "'디지털 문해력'이 새로운 자산이다",
+   "start_hint_s": 214.7,
+   "duration_s": 9.1,
+   "broll_ko": "학습자들이 강의를 듣는 모습",
+   "prompt_en": "학습자들이 강의를 듣는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI 시대에 새로운 부를 창출하고 경제적 자유를 지키기 위한 핵심은 '디지털 문해력'입니다. 이는 단순히 기기 조작 능력을 넘어, 디지털 정보를"
+  },
+  {
+   "shot": 19,
+   "section": "은퇴 후에도 일하는 '액티브 시니어' 전략",
+   "start_hint_s": 223.0,
+   "duration_s": 11.2,
+   "broll_ko": "은퇴 후에도 활발하게 사회 활동을 하는 시니어들의 모습 (강의",
+   "prompt_en": "은퇴 후에도 활발하게 사회 활동을 하는 시니어들의 모습 (강의 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "기대 수명 [확인 필요]세 시대에 은퇴는 경제 활동의 종료가 아닙니다. AI 시대의 4060세대는 '액티브 시니어'로서 은퇴 후에도 활발하게 경"
+  },
+  {
+   "shot": 20,
+   "section": "은퇴 후에도 일하는 '액티브 시니어' 전략",
+   "start_hint_s": 234.2,
+   "duration_s": 11.2,
+   "broll_ko": "컨설팅",
+   "prompt_en": "컨설팅 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "기대 수명 [확인 필요]세 시대에 은퇴는 경제 활동의 종료가 아닙니다. AI 시대의 4060세대는 '액티브 시니어'로서 은퇴 후에도 활발하게 경"
+  },
+  {
+   "shot": 21,
+   "section": "은퇴 후에도 일하는 '액티브 시니어' 전략",
+   "start_hint_s": 245.5,
+   "duration_s": 11.2,
+   "broll_ko": "소규모 사업 등)",
+   "prompt_en": "소규모 사업 등) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "기대 수명 [확인 필요]세 시대에 은퇴는 경제 활동의 종료가 아닙니다. AI 시대의 4060세대는 '액티브 시니어'로서 은퇴 후에도 활발하게 경"
+  },
+  {
+   "shot": 22,
+   "section": "은퇴 후에도 일하는 '액티브 시니어' 전략",
+   "start_hint_s": 256.7,
+   "duration_s": 11.2,
+   "broll_ko": "카페에서 노트북으로 온라인 미팅을 하는 모습",
+   "prompt_en": "카페에서 노트북으로 온라인 미팅을 하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "기대 수명 [확인 필요]세 시대에 은퇴는 경제 활동의 종료가 아닙니다. AI 시대의 4060세대는 '액티브 시니어'로서 은퇴 후에도 활발하게 경"
+  },
+  {
+   "shot": 23,
+   "section": "은퇴 후에도 일하는 '액티브 시니어' 전략",
+   "start_hint_s": 267.9,
+   "duration_s": 11.2,
+   "broll_ko": "재능 거래 플랫폼 웹사이트 화면",
+   "prompt_en": "재능 거래 플랫폼 웹사이트 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "기대 수명 [확인 필요]세 시대에 은퇴는 경제 활동의 종료가 아닙니다. AI 시대의 4060세대는 '액티브 시니어'로서 은퇴 후에도 활발하게 경"
+  },
+  {
+   "shot": 24,
+   "section": "부업·재테크, 디지털 툴 활용법",
+   "start_hint_s": 279.0,
+   "duration_s": 15.7,
+   "broll_ko": "스마트폰으로 주식 앱",
+   "prompt_en": "스마트폰으로 주식 앱 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 전환은 부업과 재테크 방식에도 혁신을 가져왔습니다. 4060세대는 디지털 툴을 적극 활용해 경제적 자유를 빠르게 달성할 수 있습니다. 첫"
+  },
+  {
+   "shot": 25,
+   "section": "부업·재테크, 디지털 툴 활용법",
+   "start_hint_s": 294.7,
+   "duration_s": 15.7,
+   "broll_ko": "은행 앱",
+   "prompt_en": "은행 앱 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 전환은 부업과 재테크 방식에도 혁신을 가져왔습니다. 4060세대는 디지털 툴을 적극 활용해 경제적 자유를 빠르게 달성할 수 있습니다. 첫"
+  },
+  {
+   "shot": 26,
+   "section": "부업·재테크, 디지털 툴 활용법",
+   "start_hint_s": 310.3,
+   "duration_s": 15.7,
+   "broll_ko": "가계부 앱 등을 사용하는 모습",
+   "prompt_en": "가계부 앱 등을 사용하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 전환은 부업과 재테크 방식에도 혁신을 가져왔습니다. 4060세대는 디지털 툴을 적극 활용해 경제적 자유를 빠르게 달성할 수 있습니다. 첫"
+  },
+  {
+   "shot": 27,
+   "section": "부업·재테크, 디지털 툴 활용법",
+   "start_hint_s": 326.0,
+   "duration_s": 15.7,
+   "broll_ko": "엑셀 시트에 재무 계획을 세우는 모습",
+   "prompt_en": "엑셀 시트에 재무 계획을 세우는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 전환은 부업과 재테크 방식에도 혁신을 가져왔습니다. 4060세대는 디지털 툴을 적극 활용해 경제적 자유를 빠르게 달성할 수 있습니다. 첫"
+  },
+  {
+   "shot": 28,
+   "section": "부업·재테크, 디지털 툴 활용법",
+   "start_hint_s": 341.7,
+   "duration_s": 15.7,
+   "broll_ko": "온라인 커뮤니티에서 정보 교환하는 모습",
+   "prompt_en": "온라인 커뮤니티에서 정보 교환하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 전환은 부업과 재테크 방식에도 혁신을 가져왔습니다. 4060세대는 디지털 툴을 적극 활용해 경제적 자유를 빠르게 달성할 수 있습니다. 첫"
+  },
+  {
+   "shot": 29,
+   "section": "체크리스트: 나만의 디지털 생존 전략 만들기",
+   "start_hint_s": 357.0,
+   "duration_s": 28.3,
+   "broll_ko": "체크리스트가 적힌 종이에 펜으로 체크하는 손",
+   "prompt_en": "체크리스트가 적힌 종이에 펜으로 체크하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분만의 디지털 생존 전략을 세울 시간입니다. 다음 체크리스트로 자신의 현재를 점검하고, 앞으로 나아갈 방향을 설정해 보세요. 1.  '"
+  },
+  {
+   "shot": 30,
+   "section": "체크리스트: 나만의 디지털 생존 전략 만들기",
+   "start_hint_s": 385.3,
+   "duration_s": 28.3,
+   "broll_ko": "계획표를 작성하는 모습",
+   "prompt_en": "계획표를 작성하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분만의 디지털 생존 전략을 세울 시간입니다. 다음 체크리스트로 자신의 현재를 점검하고, 앞으로 나아갈 방향을 설정해 보세요. 1.  '"
+  },
+  {
+   "shot": 31,
+   "section": "체크리스트: 나만의 디지털 생존 전략 만들기",
+   "start_hint_s": 413.5,
+   "duration_s": 28.3,
+   "broll_ko": "컴퓨터 화면에 '디지털 문해력 테스트'",
+   "prompt_en": "컴퓨터 화면에 '디지털 문해력 테스트' — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분만의 디지털 생존 전략을 세울 시간입니다. 다음 체크리스트로 자신의 현재를 점검하고, 앞으로 나아갈 방향을 설정해 보세요. 1.  '"
+  },
+  {
+   "shot": 32,
+   "section": "체크리스트: 나만의 디지털 생존 전략 만들기",
+   "start_hint_s": 441.8,
+   "duration_s": 28.3,
+   "broll_ko": "'온라인 강의' 등 검색 결과가 보이는 모습",
+   "prompt_en": "'온라인 강의' 등 검색 결과가 보이는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 여러분만의 디지털 생존 전략을 세울 시간입니다. 다음 체크리스트로 자신의 현재를 점검하고, 앞으로 나아갈 방향을 설정해 보세요. 1.  '"
+  },
+  {
+   "shot": 33,
+   "section": "결론: 변화를 주도하는 삶",
+   "start_hint_s": 474.0,
+   "duration_s": 13.2,
+   "broll_ko": "넓은 자연 풍경",
+   "prompt_en": "넓은 자연 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 거스를 수 없는 시대의 흐름입니다. 이 변화를 두려워하기보다, 적극적으로 배우고 활용하는 자세가 중요합니다. 4060세대가"
+  },
+  {
+   "shot": 34,
+   "section": "결론: 변화를 주도하는 삶",
+   "start_hint_s": 487.2,
+   "duration_s": 13.2,
+   "broll_ko": "해돋이 또는 해넘이 (희망적인 분위기)",
+   "prompt_en": "해돋이 또는 해넘이 (희망적인 분위기) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 거스를 수 없는 시대의 흐름입니다. 이 변화를 두려워하기보다, 적극적으로 배우고 활용하는 자세가 중요합니다. 4060세대가"
+  },
+  {
+   "shot": 35,
+   "section": "결론: 변화를 주도하는 삶",
+   "start_hint_s": 500.4,
+   "duration_s": 13.2,
+   "broll_ko": "한 사람이 노트북을 들고 여유롭게 미소 짓는 모습 (얼굴 안 나옴)",
+   "prompt_en": "한 사람이 노트북을 들고 여유롭게 미소 짓는 모습 (얼굴 안 나옴) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 거스를 수 없는 시대의 흐름입니다. 이 변화를 두려워하기보다, 적극적으로 배우고 활용하는 자세가 중요합니다. 4060세대가"
+  },
+  {
+   "shot": 36,
+   "section": "결론: 변화를 주도하는 삶",
+   "start_hint_s": 513.5,
+   "duration_s": 13.2,
+   "broll_ko": "경제적자유구역 채널 로고와 함께 엔딩 크레딧",
+   "prompt_en": "경제적자유구역 채널 로고와 함께 엔딩 크레딧 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "AI와 디지털 전환은 거스를 수 없는 시대의 흐름입니다. 이 변화를 두려워하기보다, 적극적으로 배우고 활용하는 자세가 중요합니다. 4060세대가"
+  }
+ ]
+}

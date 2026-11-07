@@ -1,0 +1,248 @@
+{
+ "title": "역사의 덫: 위태로운 환상이 터질 때",
+ "channel": "히스토리X",
+ "est_total_s": 432,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "프롤로그: 역사의 거품",
+   "start_hint_s": 0.0,
+   "duration_s": 18.5,
+   "broll_ko": "구름 사이로 빠르게 움직이는 일출/일몰 타임랩스",
+   "prompt_en": "구름 사이로 빠르게 움직이는 일출/일몰 타임랩스 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사는 반복된다는 말이 있습니다. 하지만 역사는 단순히 반복되는 것을 넘어, 때로는 거대한 거품처럼 부풀어 오르다 한순간에 터져버리기도 합니다."
+  },
+  {
+   "shot": 2,
+   "section": "프롤로그: 역사의 거품",
+   "start_hint_s": 18.5,
+   "duration_s": 18.5,
+   "broll_ko": "모래시계가 빠르게 떨어지는 모습",
+   "prompt_en": "모래시계가 빠르게 떨어지는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사는 반복된다는 말이 있습니다. 하지만 역사는 단순히 반복되는 것을 넘어, 때로는 거대한 거품처럼 부풀어 오르다 한순간에 터져버리기도 합니다."
+  },
+  {
+   "shot": 3,
+   "section": "프롤로그: 역사의 거품",
+   "start_hint_s": 37.0,
+   "duration_s": 18.5,
+   "broll_ko": "거대한 유리구슬이 깨지는 슬로우모션",
+   "prompt_en": "거대한 유리구슬이 깨지는 슬로우모션 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사는 반복된다는 말이 있습니다. 하지만 역사는 단순히 반복되는 것을 넘어, 때로는 거대한 거품처럼 부풀어 오르다 한순간에 터져버리기도 합니다."
+  },
+  {
+   "shot": 4,
+   "section": "고요한 아침의 나라, 균열의 시작",
+   "start_hint_s": 55.0,
+   "duration_s": 18.1,
+   "broll_ko": "조선 시대 궁궐의 고즈넉한 전경",
+   "prompt_en": "조선 시대 궁궐의 고즈넉한 전경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 조선은 여전히 '고요한 아침의 나라'라는 이름처럼, 외부 세계와 단절된 채 자신만의 질서를 유지하고 있었습니다. 수백 년간 이어"
+  },
+  {
+   "shot": 5,
+   "section": "고요한 아침의 나라, 균열의 시작",
+   "start_hint_s": 73.1,
+   "duration_s": 18.1,
+   "broll_ko": "서양 범선이 어둡게 보이는 동해 바다를 항해하는 모습",
+   "prompt_en": "서양 범선이 어둡게 보이는 동해 바다를 항해하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 조선은 여전히 '고요한 아침의 나라'라는 이름처럼, 외부 세계와 단절된 채 자신만의 질서를 유지하고 있었습니다. 수백 년간 이어"
+  },
+  {
+   "shot": 6,
+   "section": "고요한 아침의 나라, 균열의 시작",
+   "start_hint_s": 91.2,
+   "duration_s": 18.1,
+   "broll_ko": "조선 시대 지도에 그려진 미지의 땅",
+   "prompt_en": "조선 시대 지도에 그려진 미지의 땅 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "19세기 중반, 조선은 여전히 '고요한 아침의 나라'라는 이름처럼, 외부 세계와 단절된 채 자신만의 질서를 유지하고 있었습니다. 수백 년간 이어"
+  },
+  {
+   "shot": 7,
+   "section": "위태로운 개혁의 불꽃",
+   "start_hint_s": 109.0,
+   "duration_s": 18.5,
+   "broll_ko": "흥선대원군의 초상화가 흐릿하게 나타났다가 사라짐",
+   "prompt_en": "흥선대원군의 초상화가 흐릿하게 나타났다가 사라짐 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쇄국의 문을 굳게 닫고 내부 개혁에 몰두했던 흥선대원군의 시대. 그는 세도정치를 타파하고 민생을 안정시키는 듯 보였습니다. 그러나 경복궁 중건과"
+  },
+  {
+   "shot": 8,
+   "section": "위태로운 개혁의 불꽃",
+   "start_hint_s": 127.5,
+   "duration_s": 18.5,
+   "broll_ko": "근대식 무기로 훈련하는 조선 군인들",
+   "prompt_en": "근대식 무기로 훈련하는 조선 군인들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쇄국의 문을 굳게 닫고 내부 개혁에 몰두했던 흥선대원군의 시대. 그는 세도정치를 타파하고 민생을 안정시키는 듯 보였습니다. 그러나 경복궁 중건과"
+  },
+  {
+   "shot": 9,
+   "section": "위태로운 개혁의 불꽃",
+   "start_hint_s": 146.1,
+   "duration_s": 18.5,
+   "broll_ko": "경복궁 재건 현장의 노동자들",
+   "prompt_en": "경복궁 재건 현장의 노동자들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "쇄국의 문을 굳게 닫고 내부 개혁에 몰두했던 흥선대원군의 시대. 그는 세도정치를 타파하고 민생을 안정시키는 듯 보였습니다. 그러나 경복궁 중건과"
+  },
+  {
+   "shot": 10,
+   "section": "흔들리는 근대화의 꿈, 내부의 파열",
+   "start_hint_s": 164.0,
+   "duration_s": 18.2,
+   "broll_ko": "갑신정변 당시의 긴박한 삽화 또는 상상도",
+   "prompt_en": "갑신정변 당시의 긴박한 삽화 또는 상상도 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "문호를 개방한 후, 조선 내부에서는 급진 개화파와 온건 개화파, 수구 세력 간의 갈등이 극에 달했습니다. 1884년 갑신정변은 일본의 힘을 빌려"
+  },
+  {
+   "shot": 11,
+   "section": "흔들리는 근대화의 꿈, 내부의 파열",
+   "start_hint_s": 182.2,
+   "duration_s": 18.2,
+   "broll_ko": "동학농민운동 당시의 농민군 행렬",
+   "prompt_en": "동학농민운동 당시의 농민군 행렬 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "문호를 개방한 후, 조선 내부에서는 급진 개화파와 온건 개화파, 수구 세력 간의 갈등이 극에 달했습니다. 1884년 갑신정변은 일본의 힘을 빌려"
+  },
+  {
+   "shot": 12,
+   "section": "흔들리는 근대화의 꿈, 내부의 파열",
+   "start_hint_s": 200.4,
+   "duration_s": 18.2,
+   "broll_ko": "청나라와 일본 군대가 조선 땅에 주둔하는 모습",
+   "prompt_en": "청나라와 일본 군대가 조선 땅에 주둔하는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "문호를 개방한 후, 조선 내부에서는 급진 개화파와 온건 개화파, 수구 세력 간의 갈등이 극에 달했습니다. 1884년 갑신정변은 일본의 힘을 빌려"
+  },
+  {
+   "shot": 13,
+   "section": "제국주의의 그림자, 운명의 덫",
+   "start_hint_s": 218.0,
+   "duration_s": 16.6,
+   "broll_ko": "청일전쟁 당시의 치열한 전투 장면",
+   "prompt_en": "청일전쟁 당시의 치열한 전투 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선을 둘러싼 열강들의 각축전은 마침내 1894년 청일전쟁과 1904년 러일전쟁으로 폭발했습니다. 이 두 전쟁은 조선의 의지와는 상관없이 조선 "
+  },
+  {
+   "shot": 14,
+   "section": "제국주의의 그림자, 운명의 덫",
+   "start_hint_s": 234.6,
+   "duration_s": 16.6,
+   "broll_ko": "러일전쟁 당시의 전함들",
+   "prompt_en": "러일전쟁 당시의 전함들 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선을 둘러싼 열강들의 각축전은 마침내 1894년 청일전쟁과 1904년 러일전쟁으로 폭발했습니다. 이 두 전쟁은 조선의 의지와는 상관없이 조선 "
+  },
+  {
+   "shot": 15,
+   "section": "제국주의의 그림자, 운명의 덫",
+   "start_hint_s": 251.2,
+   "duration_s": 16.6,
+   "broll_ko": "조선 왕실 인물들이 불안한 표정으로 국제 회의에 참석하는 상상도",
+   "prompt_en": "조선 왕실 인물들이 불안한 표정으로 국제 회의에 참석하는 상상도 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선을 둘러싼 열강들의 각축전은 마침내 1894년 청일전쟁과 1904년 러일전쟁으로 폭발했습니다. 이 두 전쟁은 조선의 의지와는 상관없이 조선 "
+  },
+  {
+   "shot": 16,
+   "section": "터져버린 거품, 비극의 시작",
+   "start_hint_s": 267.0,
+   "duration_s": 18.4,
+   "broll_ko": "을사늑약 체결 당시의 비통한 분위기",
+   "prompt_en": "을사늑약 체결 당시의 비통한 분위기 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "1905년, 일본은 을사늑약을 강제로 체결하며 조선의 외교권을 박탈했습니다. 이는 조선이라는 독립 국가의 존재 자체가 부정당하는 순간이었습니다."
+  },
+  {
+   "shot": 17,
+   "section": "터져버린 거품, 비극의 시작",
+   "start_hint_s": 285.4,
+   "duration_s": 18.4,
+   "broll_ko": "한일합방 조약문이 서서히 불타오르는 효과",
+   "prompt_en": "한일합방 조약문이 서서히 불타오르는 효과 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "1905년, 일본은 을사늑약을 강제로 체결하며 조선의 외교권을 박탈했습니다. 이는 조선이라는 독립 국가의 존재 자체가 부정당하는 순간이었습니다."
+  },
+  {
+   "shot": 18,
+   "section": "터져버린 거품, 비극의 시작",
+   "start_hint_s": 303.8,
+   "duration_s": 18.4,
+   "broll_ko": "암울한 분위기의 일제강점기 거리 풍경",
+   "prompt_en": "암울한 분위기의 일제강점기 거리 풍경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "1905년, 일본은 을사늑약을 강제로 체결하며 조선의 외교권을 박탈했습니다. 이는 조선이라는 독립 국가의 존재 자체가 부정당하는 순간이었습니다."
+  },
+  {
+   "shot": 19,
+   "section": "역사의 교훈: 거품은 언제나 존재한다",
+   "start_hint_s": 322.0,
+   "duration_s": 16.8,
+   "broll_ko": "폐허가 된 궁궐터에 홀로 서 있는 나무",
+   "prompt_en": "폐허가 된 궁궐터에 홀로 서 있는 나무 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선 말기의 역사는 우리에게 무엇을 가르쳐줄까요? 그것은 바로 '거품'은 경제에만 존재하는 것이 아니라는 사실입니다. 국가의 안보, 사회의 안정"
+  },
+  {
+   "shot": 20,
+   "section": "역사의 교훈: 거품은 언제나 존재한다",
+   "start_hint_s": 338.8,
+   "duration_s": 16.8,
+   "broll_ko": "역사책 페이지가 빠르게 넘어가는 모습",
+   "prompt_en": "역사책 페이지가 빠르게 넘어가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선 말기의 역사는 우리에게 무엇을 가르쳐줄까요? 그것은 바로 '거품'은 경제에만 존재하는 것이 아니라는 사실입니다. 국가의 안보, 사회의 안정"
+  },
+  {
+   "shot": 21,
+   "section": "역사의 교훈: 거품은 언제나 존재한다",
+   "start_hint_s": 355.7,
+   "duration_s": 16.8,
+   "broll_ko": "오늘날의 서울 풍경과 과거의 사진이 교차 편집",
+   "prompt_en": "오늘날의 서울 풍경과 과거의 사진이 교차 편집 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "조선 말기의 역사는 우리에게 무엇을 가르쳐줄까요? 그것은 바로 '거품'은 경제에만 존재하는 것이 아니라는 사실입니다. 국가의 안보, 사회의 안정"
+  },
+  {
+   "shot": 22,
+   "section": "에필로그: 깨어있는 자만이 살아남는다",
+   "start_hint_s": 372.0,
+   "duration_s": 18.8,
+   "broll_ko": "안개가 서서히 걷히며 새로운 도시의 모습이 드러남",
+   "prompt_en": "안개가 서서히 걷히며 새로운 도시의 모습이 드러남 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사의 거품은 끊임없이 우리 주변에 존재합니다. 기술 혁명의 과도한 기대, 사회적 갈등의 심화, 국제 정세의 급변 속에서 우리는 또 다른 거품의"
+  },
+  {
+   "shot": 23,
+   "section": "에필로그: 깨어있는 자만이 살아남는다",
+   "start_hint_s": 390.8,
+   "duration_s": 18.8,
+   "broll_ko": "힘찬 파도가 바위를 치는 모습",
+   "prompt_en": "힘찬 파도가 바위를 치는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사의 거품은 끊임없이 우리 주변에 존재합니다. 기술 혁명의 과도한 기대, 사회적 갈등의 심화, 국제 정세의 급변 속에서 우리는 또 다른 거품의"
+  },
+  {
+   "shot": 24,
+   "section": "에필로그: 깨어있는 자만이 살아남는다",
+   "start_hint_s": 409.6,
+   "duration_s": 18.8,
+   "broll_ko": "어둠 속에서 한 줄기 빛이 비추는 길",
+   "prompt_en": "어둠 속에서 한 줄기 빛이 비추는 길 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "역사의 거품은 끊임없이 우리 주변에 존재합니다. 기술 혁명의 과도한 기대, 사회적 갈등의 심화, 국제 정세의 급변 속에서 우리는 또 다른 거품의"
+  }
+ ]
+}
