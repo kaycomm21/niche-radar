@@ -1,0 +1,258 @@
+{
+ "title": "주식만으론 부족한 시대: 4060을 위한 '월급 외' 파이프라인 구축 전략",
+ "channel": "경제적자유구역",
+ "est_total_s": 663,
+ "note": "prompt_en 의 한국어 B롤 묘사는 Flow/Veo 입력 전 영어로 다듬을 것. 얼굴·로고·실존 인물 금지.",
+ "shots": [
+  {
+   "shot": 1,
+   "section": "인트로: 변화의 파도, 당신의 자산은 안전한가?",
+   "start_hint_s": 0.0,
+   "duration_s": 27.1,
+   "broll_ko": "잔잔한 호수에 작은 돌멩이가 던져져 파동이 일어나는 모습",
+   "prompt_en": "잔잔한 호수에 작은 돌멩이가 던져져 파동이 일어나는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하십니까? '경제적자유구역'입니다. 우리는 지금 전례 없는 경제적 격변의 시대를 살고 있습니다. 몇 년 전까지만 해도 투자 시장의 주류였던 "
+  },
+  {
+   "shot": 2,
+   "section": "인트로: 변화의 파도, 당신의 자산은 안전한가?",
+   "start_hint_s": 27.1,
+   "duration_s": 27.1,
+   "broll_ko": "빠르게 지나가는 도시 풍경 (타임랩스)",
+   "prompt_en": "빠르게 지나가는 도시 풍경 (타임랩스) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하십니까? '경제적자유구역'입니다. 우리는 지금 전례 없는 경제적 격변의 시대를 살고 있습니다. 몇 년 전까지만 해도 투자 시장의 주류였던 "
+  },
+  {
+   "shot": 3,
+   "section": "인트로: 변화의 파도, 당신의 자산은 안전한가?",
+   "start_hint_s": 54.2,
+   "duration_s": 27.1,
+   "broll_ko": "손목시계를 들여다보는 중년 남성의 뒷모습",
+   "prompt_en": "손목시계를 들여다보는 중년 남성의 뒷모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "안녕하십니까? '경제적자유구역'입니다. 우리는 지금 전례 없는 경제적 격변의 시대를 살고 있습니다. 몇 년 전까지만 해도 투자 시장의 주류였던 "
+  },
+  {
+   "shot": 4,
+   "section": "왜 '주식만'으론 부족해졌나: 고금리·고물가 시대의 그림자",
+   "start_hint_s": 81.0,
+   "duration_s": 30.7,
+   "broll_ko": "급등락하는 주식 차트 그래프 (모니터 화면)",
+   "prompt_en": "급등락하는 주식 차트 그래프 (모니터 화면) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "과거에는 주식 투자를 통해 단기간에 높은 수익을 올리는 것이 가능했습니다. 하지만 지난 [확인 필요]년간의 데이터를 보면, 금리 인상과 글로벌 "
+  },
+  {
+   "shot": 5,
+   "section": "왜 '주식만'으론 부족해졌나: 고금리·고물가 시대의 그림자",
+   "start_hint_s": 111.7,
+   "duration_s": 30.7,
+   "broll_ko": "텅 빈 지갑과 꽉 찬 장바구니가 대비되는 이미지",
+   "prompt_en": "텅 빈 지갑과 꽉 찬 장바구니가 대비되는 이미지 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "과거에는 주식 투자를 통해 단기간에 높은 수익을 올리는 것이 가능했습니다. 하지만 지난 [확인 필요]년간의 데이터를 보면, 금리 인상과 글로벌 "
+  },
+  {
+   "shot": 6,
+   "section": "왜 '주식만'으론 부족해졌나: 고금리·고물가 시대의 그림자",
+   "start_hint_s": 142.3,
+   "duration_s": 30.7,
+   "broll_ko": "은행 금고 문이 닫히는 모습 (상징적)",
+   "prompt_en": "은행 금고 문이 닫히는 모습 (상징적) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "과거에는 주식 투자를 통해 단기간에 높은 수익을 올리는 것이 가능했습니다. 하지만 지난 [확인 필요]년간의 데이터를 보면, 금리 인상과 글로벌 "
+  },
+  {
+   "shot": 7,
+   "section": "돈이 일하게 하는 진짜 의미: 파이프라인 자산의 본질",
+   "start_hint_s": 173.0,
+   "duration_s": 23.9,
+   "broll_ko": "수도꼭지에서 물이 끊임없이 흘러나오는 모습",
+   "prompt_en": "수도꼭지에서 물이 끊임없이 흘러나오는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'돈이 일하게 한다'는 말은 많은 분들이 들어보셨을 겁니다. 하지만 그 진짜 의미는 단순히 주식이나 부동산에 투자하여 시세 차익을 얻는 것을 넘"
+  },
+  {
+   "shot": 8,
+   "section": "돈이 일하게 하는 진짜 의미: 파이프라인 자산의 본질",
+   "start_hint_s": 196.9,
+   "duration_s": 23.9,
+   "broll_ko": "톱니바퀴들이 맞물려 돌아가는 기계 장치",
+   "prompt_en": "톱니바퀴들이 맞물려 돌아가는 기계 장치 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'돈이 일하게 한다'는 말은 많은 분들이 들어보셨을 겁니다. 하지만 그 진짜 의미는 단순히 주식이나 부동산에 투자하여 시세 차익을 얻는 것을 넘"
+  },
+  {
+   "shot": 9,
+   "section": "돈이 일하게 하는 진짜 의미: 파이프라인 자산의 본질",
+   "start_hint_s": 220.8,
+   "duration_s": 23.9,
+   "broll_ko": "밭에 씨앗을 심고 물을 주는 손 (시간이 지나 작물이 자라는 모습)",
+   "prompt_en": "밭에 씨앗을 심고 물을 주는 손 (시간이 지나 작물이 자라는 모습) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "'돈이 일하게 한다'는 말은 많은 분들이 들어보셨을 겁니다. 하지만 그 진짜 의미는 단순히 주식이나 부동산에 투자하여 시세 차익을 얻는 것을 넘"
+  },
+  {
+   "shot": 10,
+   "section": "첫 번째 파이프라인: 현금 흐름을 만드는 부동산 전략",
+   "start_hint_s": 244.0,
+   "duration_s": 27.2,
+   "broll_ko": "깔끔하게 정돈된 아파트 단지의 전경",
+   "prompt_en": "깔끔하게 정돈된 아파트 단지의 전경 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부동산은 전통적으로 강력한 파이프라인 자산 중 하나입니다. 하지만 단순히 시세 차익만을 노리는 '갭 투자'나 '묻지마 투자'는 지양해야 합니다."
+  },
+  {
+   "shot": 11,
+   "section": "첫 번째 파이프라인: 현금 흐름을 만드는 부동산 전략",
+   "start_hint_s": 271.2,
+   "duration_s": 27.2,
+   "broll_ko": "상가 건물 1층에 임차인들의 간판이 보이는 모습",
+   "prompt_en": "상가 건물 1층에 임차인들의 간판이 보이는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부동산은 전통적으로 강력한 파이프라인 자산 중 하나입니다. 하지만 단순히 시세 차익만을 노리는 '갭 투자'나 '묻지마 투자'는 지양해야 합니다."
+  },
+  {
+   "shot": 12,
+   "section": "첫 번째 파이프라인: 현금 흐름을 만드는 부동산 전략",
+   "start_hint_s": 298.4,
+   "duration_s": 27.2,
+   "broll_ko": "REITs 관련 기사가 보이는 태블릿 화면",
+   "prompt_en": "REITs 관련 기사가 보이는 태블릿 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "부동산은 전통적으로 강력한 파이프라인 자산 중 하나입니다. 하지만 단순히 시세 차익만을 노리는 '갭 투자'나 '묻지마 투자'는 지양해야 합니다."
+  },
+  {
+   "shot": 13,
+   "section": "두 번째 파이프라인: 디지털 시대의 부업과 지식 재산",
+   "start_hint_s": 325.0,
+   "duration_s": 25.5,
+   "broll_ko": "노트북으로 글을 쓰거나 영상 편집을 하는 손",
+   "prompt_en": "노트북으로 글을 쓰거나 영상 편집을 하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 시대는 누구나 자신만의 파이프라인을 만들 수 있는 기회를 제공합니다. 특히 4060 세대는 오랜 경험과 지혜를 자산으로 전환할 수 있는 "
+  },
+  {
+   "shot": 14,
+   "section": "두 번째 파이프라인: 디지털 시대의 부업과 지식 재산",
+   "start_hint_s": 350.5,
+   "duration_s": 25.5,
+   "broll_ko": "온라인 강의 플랫폼 화면 (강의 목록)",
+   "prompt_en": "온라인 강의 플랫폼 화면 (강의 목록) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 시대는 누구나 자신만의 파이프라인을 만들 수 있는 기회를 제공합니다. 특히 4060 세대는 오랜 경험과 지혜를 자산으로 전환할 수 있는 "
+  },
+  {
+   "shot": 15,
+   "section": "두 번째 파이프라인: 디지털 시대의 부업과 지식 재산",
+   "start_hint_s": 375.9,
+   "duration_s": 25.5,
+   "broll_ko": "책 표지 디자인이 보이는 그래픽 작업 화면",
+   "prompt_en": "책 표지 디자인이 보이는 그래픽 작업 화면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "디지털 시대는 누구나 자신만의 파이프라인을 만들 수 있는 기회를 제공합니다. 특히 4060 세대는 오랜 경험과 지혜를 자산으로 전환할 수 있는 "
+  },
+  {
+   "shot": 16,
+   "section": "세 번째 파이프라인: 안정성을 더하는 대체 투자",
+   "start_hint_s": 401.0,
+   "duration_s": 29.3,
+   "broll_ko": "금괴나 은괴가 쌓여있는 모습",
+   "prompt_en": "금괴나 은괴가 쌓여있는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "주식과 부동산 외에도 다양한 대체 투자를 통해 파이프라인을 구축할 수 있습니다. 예를 들어, 금이나 은과 같은 실물 자산은 인플레이션 헤지 수단"
+  },
+  {
+   "shot": 17,
+   "section": "세 번째 파이프라인: 안정성을 더하는 대체 투자",
+   "start_hint_s": 430.3,
+   "duration_s": 29.3,
+   "broll_ko": "태양광 패널이 설치된 지붕",
+   "prompt_en": "태양광 패널이 설치된 지붕 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "주식과 부동산 외에도 다양한 대체 투자를 통해 파이프라인을 구축할 수 있습니다. 예를 들어, 금이나 은과 같은 실물 자산은 인플레이션 헤지 수단"
+  },
+  {
+   "shot": 18,
+   "section": "세 번째 파이프라인: 안정성을 더하는 대체 투자",
+   "start_hint_s": 459.7,
+   "duration_s": 29.3,
+   "broll_ko": "P2P 금융 플랫폼의 대출 현황 그래프 (익명 처리)",
+   "prompt_en": "P2P 금융 플랫폼의 대출 현황 그래프 (익명 처리) — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "주식과 부동산 외에도 다양한 대체 투자를 통해 파이프라인을 구축할 수 있습니다. 예를 들어, 금이나 은과 같은 실물 자산은 인플레이션 헤지 수단"
+  },
+  {
+   "shot": 19,
+   "section": "나만의 파이프라인 만들기: 점검과 실행의 3단계",
+   "start_hint_s": 489.0,
+   "duration_s": 24.5,
+   "broll_ko": "체크리스트에 펜으로 표시하는 손",
+   "prompt_en": "체크리스트에 펜으로 표시하는 손 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 나만의 파이프라인을 구축하기 위한 실질적인 3단계 점검 및 실행 방법을 알아보겠습니다. 첫 번째, '나의 자원'을 점검하십시오. 현재 내가"
+  },
+  {
+   "shot": 20,
+   "section": "나만의 파이프라인 만들기: 점검과 실행의 3단계",
+   "start_hint_s": 513.5,
+   "duration_s": 24.5,
+   "broll_ko": "복잡한 퍼즐 조각들을 맞춰나가는 모습",
+   "prompt_en": "복잡한 퍼즐 조각들을 맞춰나가는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 나만의 파이프라인을 구축하기 위한 실질적인 3단계 점검 및 실행 방법을 알아보겠습니다. 첫 번째, '나의 자원'을 점검하십시오. 현재 내가"
+  },
+  {
+   "shot": 21,
+   "section": "나만의 파이프라인 만들기: 점검과 실행의 3단계",
+   "start_hint_s": 537.9,
+   "duration_s": 24.5,
+   "broll_ko": "계획표와 달력",
+   "prompt_en": "계획표와 달력 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 나만의 파이프라인을 구축하기 위한 실질적인 3단계 점검 및 실행 방법을 알아보겠습니다. 첫 번째, '나의 자원'을 점검하십시오. 현재 내가"
+  },
+  {
+   "shot": 22,
+   "section": "나만의 파이프라인 만들기: 점검과 실행의 3단계",
+   "start_hint_s": 562.4,
+   "duration_s": 24.5,
+   "broll_ko": "펜이 놓인 책상",
+   "prompt_en": "펜이 놓인 책상 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "이제 나만의 파이프라인을 구축하기 위한 실질적인 3단계 점검 및 실행 방법을 알아보겠습니다. 첫 번째, '나의 자원'을 점검하십시오. 현재 내가"
+  },
+  {
+   "shot": 23,
+   "section": "경고와 기회: 4060을 위한 현명한 자산 관리의 길",
+   "start_hint_s": 589.0,
+   "duration_s": 24.7,
+   "broll_ko": "나침반이 흔들리다가 한 방향을 가리키는 모습",
+   "prompt_en": "나침반이 흔들리다가 한 방향을 가리키는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 급변하는 경제 환경 속에서 4060 세대가 자산을 보호하고, 더 나아가 재정적 자유를 향해 나아갈 수 있는 '파이프라인 자산' 구축"
+  },
+  {
+   "shot": 24,
+   "section": "경고와 기회: 4060을 위한 현명한 자산 관리의 길",
+   "start_hint_s": 613.7,
+   "duration_s": 24.7,
+   "broll_ko": "어두운 터널 끝에서 빛이 보이는 장면",
+   "prompt_en": "어두운 터널 끝에서 빛이 보이는 장면 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 급변하는 경제 환경 속에서 4060 세대가 자산을 보호하고, 더 나아가 재정적 자유를 향해 나아갈 수 있는 '파이프라인 자산' 구축"
+  },
+  {
+   "shot": 25,
+   "section": "경고와 기회: 4060을 위한 현명한 자산 관리의 길",
+   "start_hint_s": 638.3,
+   "duration_s": 24.7,
+   "broll_ko": "길게 뻗은 도로 위를 자동차가 시원하게 달리는 모습",
+   "prompt_en": "길게 뻗은 도로 위를 자동차가 시원하게 달리는 모습 — cinematic b-roll, 16:9, soft natural light, no text, no logos, no recognizable faces",
+   "on_screen_text": null,
+   "narration_excerpt": "오늘 우리는 급변하는 경제 환경 속에서 4060 세대가 자산을 보호하고, 더 나아가 재정적 자유를 향해 나아갈 수 있는 '파이프라인 자산' 구축"
+  }
+ ]
+}
